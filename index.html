@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Shivano Royale - Discover premium products and shop them on Amazon."
+    >
+
+    <title>Shivano Royale | Discover. Choose. Shop.</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a
+                href="#"
+                class="logo"
+            >
+                Shivano <span>Royale</span>
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open menu"
+            >
+                ☰
+            </button>
+
+
+            <div
+                class="nav-links"
+                id="navLinks"
+            >
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#products">
+                    Products
+                </a>
+
+                <a href="#categories">
+                    Categories
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <button
+                class="wishlist-nav"
+                id="wishlistNav"
+                title="Wishlist"
+            >
+                ♡
+                <span id="wishlistCount">0</span>
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main>
+
+
+        <section
+            class="hero"
+            id="home"
+        >
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    CURATED FOR YOU
+                </p>
+
+                <h1>
+                    Discover products
+                    <span>worth choosing.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Explore carefully selected products,
+                    compare your options and discover
+                    your next favourite purchase.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#products"
+                        class="primary-btn"
+                    >
+                        Explore Products
+                        <span>→</span>
+                    </a>
+
+                    <a
+                        href="#categories"
+                        class="secondary-btn"
+                    >
+                        Browse Categories
+                    </a>
+
+                </div>
+
+
+                <div class="hero-trust">
+
+                    <div>
+                        <strong>Curated</strong>
+                        <span>Products</span>
+                    </div>
+
+                    <div>
+                        <strong>Amazon</strong>
+                        <span>Shopping</span>
+                    </div>
+
+                    <div>
+                        <strong>Simple</strong>
+                        <span>Discovery</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-visual">
+
+                <div class="hero-card">
+
+                    <div class="hero-card-image">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1000&q=85"
+                            alt="Premium watch"
+                        >
+
+                    </div>
+
+
+                    <div class="hero-card-info">
+
+                        <div>
+
+                            <span>
+                                Featured
+                            </span>
+
+                            <h3>
+                                Timeless Essentials
+                            </h3>
+
+                        </div>
+
+                        <span class="hero-arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="floating-badge">
+
+                    <span class="badge-icon">
+                        ✦
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Handpicked
+                        </strong>
+
+                        <small>
+                            Product discovery
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CATEGORY SECTION
+        ========================== -->
+
+        <section
+            class="categories-section"
+            id="categories"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        EXPLORE
+                    </p>
+
+                    <h2>
+                        Shop by category
+                    </h2>
+
+                </div>
+
+                <p>
+                    Find products that match your
+                    style, needs and everyday life.
+                </p>
+
+            </div>
+
+
+            <div class="category-grid">
+
+
+                <button
+                    class="category-card active"
+                    data-category="All"
+                >
+
+                    <span class="category-icon">
+                        ✦
+                    </span>
+
+                    <strong>
+                        All Products
+                    </strong>
+
+                    <small>
+                        Explore everything
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="category-card"
+                    data-category="Fashion"
+                >
+
+                    <span class="category-icon">
+                        ◇
+                    </span>
+
+                    <strong>
+                        Fashion
+                    </strong>
+
+                    <small>
+                        Everyday style
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="category-card"
+                    data-category="Electronics"
+                >
+
+                    <span class="category-icon">
+                        ◉
+                    </span>
+
+                    <strong>
+                        Electronics
+                    </strong>
+
+                    <small>
+                        Smart essentials
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="category-card"
+                    data-category="Lifestyle"
+                >
+
+                    <span class="category-icon">
+                        ♢
+                    </span>
+
+                    <strong>
+                        Lifestyle
+                    </strong>
+
+                    <small>
+                        Everyday living
+                    </small>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PRODUCTS
+        ========================== -->
+
+        <section
+            class="products-section"
+            id="products"
+        >
+
+            <div class="section-heading products-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        OUR PICKS
+                    </p>
+
+                    <h2>
+                        Featured products
+                    </h2>
+
+                </div>
+
+                <p>
+                    Discover products selected for
+                    everyday use and modern living.
+                </p>
+
+            </div>
+
+
+            <!-- Controls -->
+
+            <div class="product-controls">
+
+
+                <div class="search-box">
+
+                    <span>
+                        ⌕
+                    </span>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search products..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <select id="categoryFilter">
+
+                    <option value="All">
+                        All Categories
+                    </option>
+
+                    <option value="Fashion">
+                        Fashion
+                    </option>
+
+                    <option value="Electronics">
+                        Electronics
+                    </option>
+
+                    <option value="Lifestyle">
+                        Lifestyle
+                    </option>
+
+                </select>
+
+
+                <select id="sortFilter">
+
+                    <option value="default">
+                        Sort Products
+                    </option>
+
+                    <option value="low">
+                        Price: Low to High
+                    </option>
+
+                    <option value="high">
+                        Price: High to Low
+                    </option>
+
+                    <option value="rating">
+                        Highest Rated
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div
+                class="results-info"
+                id="resultsInfo"
+            >
+                Showing products
+            </div>
+
+
+            <!-- Product container -->
+
+            <div
+                class="product-grid"
+                id="productGrid"
+            >
+            </div>
+
+
+            <div
+                class="no-results"
+                id="noResults"
+            >
+
+                <div>
+                    🔎
+                </div>
+
+                <h3>
+                    No products found
+                </h3>
+
+                <p>
+                    Try another search or category.
+                </p>
+
+                <button
+                    id="clearFilters"
+                    class="primary-btn"
+                >
+                    Clear Filters
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             WHY SHIVANO
+        ========================== -->
+
+        <section class="why-section">
+
+            <div class="section-heading centered">
+
+                <p class="eyebrow">
+                    WHY SHIVANO
+                </p>
+
+                <h2>
+                    Shopping starts with discovery.
+                </h2>
+
+                <p>
+                    We help you discover products
+                    before you head to Amazon to buy.
+                </p>
+
+            </div>
+
+
+            <div class="why-grid">
+
+
+                <div class="why-card">
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        Discover
+                    </h3>
+
+                    <p>
+                        Explore products in one clean,
+                        simple place.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <span>
+                        02
+                    </span>
+
+                    <h3>
+                        Compare
+                    </h3>
+
+                    <p>
+                        Look through product details
+                        before making your choice.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card">
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        Shop
+                    </h3>
+
+                    <p>
+                        When you're ready, continue
+                        to Amazon to complete your purchase.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section
+            class="about-section"
+            id="about"
+        >
+
+            <div class="about-content">
+
+                <p class="eyebrow">
+                    ABOUT SHIVANO ROYALE
+                </p>
+
+                <h2>
+                    A simpler way to
+                    discover products.
+                </h2>
+
+                <p>
+                    Shivano Royale is a product discovery
+                    platform built to make online shopping
+                    easier to explore.
+                </p>
+
+                <p>
+                    We showcase selected products and
+                    provide a simple path to Amazon,
+                    where customers can view the latest
+                    product information and complete
+                    their purchase.
+                </p>
+
+            </div>
+
+
+            <div class="about-stat">
+
+                <span>
+                    ✦
+                </span>
+
+                <strong>
+                    Discover.
+                </strong>
+
+                <strong>
+                    Choose.
+                </strong>
+
+                <strong>
+                    Shop.
+                </strong>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             AMAZON DISCLOSURE
+        ========================== -->
+
+        <section class="disclosure-section">
+
+            <div class="disclosure-box">
+
+                <span>
+                    Amazon Affiliate Disclosure
+                </span>
+
+                <p>
+                    As an Amazon Associate, Shivano Royale
+                    may earn from qualifying purchases.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section
+            class="contact-section"
+            id="contact"
+        >
+
+            <div>
+
+                <p class="eyebrow">
+                    GET IN TOUCH
+                </p>
+
+                <h2>
+                    Have a question?
+                </h2>
+
+                <p>
+                    We'd love to hear from you.
+                </p>
+
+            </div>
+
+
+            <div class="contact-details">
+
+                <a href="mailto:shivanoofficial@gmail.com">
+                    <span>Email</span>
+                    shivanoofficial@gmail.com
+                </a>
+
+                <a href="tel:+918815945018">
+                    <span>Phone</span>
+                    +91 88159 45018
+                </a>
+
+                <a
+                    href="https://instagram.com/"
+                    target="_blank"
+                >
+                    <span>Instagram</span>
+                    @ShivanoRoyale
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         PRODUCT MODAL
+    ========================== -->
+
+    <div
+        class="modal"
+        id="productModal"
+    >
+
+        <div class="modal-overlay"></div>
+
+
+        <div class="modal-content">
+
+            <button
+                class="modal-close"
+                id="modalClose"
+            >
+                ×
+            </button>
+
+
+            <div
+                class="modal-product"
+                id="modalProduct"
+            >
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         WISHLIST DRAWER
+    ========================== -->
+
+    <div
+        class="wishlist-drawer"
+        id="wishlistDrawer"
+    >
+
+        <div class="drawer-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    SAVED
+                </p>
+
+                <h2>
+                    Your Wishlist
+                </h2>
+
+            </div>
+
+            <button
+                id="closeWishlist"
+                class="drawer-close"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div
+            class="wishlist-items"
+            id="wishlistItems"
+        >
+        </div>
+
+    </div>
+
+
+    <div
+        class="drawer-overlay"
+        id="drawerOverlay"
+    ></div>
+
+
+
+    <!-- =========================
+         SCROLL TOP
+    ========================== -->
+
+    <button
+        id="scrollTop"
+        class="scroll-top"
+        aria-label="Scroll to top"
+    >
+        ↑
+    </button>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-main">
+
+
+            <div class="footer-brand">
+
+                <a
+                    href="#"
+                    class="logo footer-logo"
+                >
+                    Shivano <span>Royale</span>
+                </a>
+
+                <p>
+                    Discover products worth choosing.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Explore
+                </h3>
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#products">
+                    Products
+                </a>
+
+                <a href="#categories">
+                    Categories
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Company
+                </h3>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Legal
+                </h3>
+
+                <a href="#">
+                    Privacy
+                </a>
+
+                <a href="#">
+                    Terms
+                </a>
+
+                <a href="#">
+                    Affiliate Disclosure
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Shivano Royale. All rights reserved.
+            </p>
+
+            <p>
+                Made with ♥
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
