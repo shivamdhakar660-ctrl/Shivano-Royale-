@@ -31,6 +31,10 @@ const products = [
             "images/prd1img3.png"
         ],
 
+        images: [
+            "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=1200&q=85"
+        ],
+
         description:
             "Premium Flannel Checkered Button Down Shirt.",
 
@@ -69,6 +73,10 @@ const products = [
 
         image:
             "images/prd2img1.png",
+
+        images: [
+            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=85"
+        ],
 
         images: [
             "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=85"
