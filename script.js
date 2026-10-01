@@ -1,5 +1,5 @@
 /* =====================================================
-   SHIVANO.STORE
+   SHIVANO ROYALE
    AMAZON AFFILIATE PRODUCT DISCOVERY WEBSITE
 ===================================================== */
 
@@ -16,7 +16,7 @@ let currentSearch = "";
 let currentSort = "default";
 
 let wishlist =
-    JSON.parse(localStorage.getItem("shivano.storeWishlist")) || [];
+    JSON.parse(localStorage.getItem("shivanoWishlist")) || [];
 
 
 
@@ -722,7 +722,7 @@ function toggleWishlist(id) {
 function saveWishlist() {
 
     localStorage.setItem(
-        "shivano.storeWishlist",
+        "shivanoWishlist",
         JSON.stringify(wishlist)
     );
 
