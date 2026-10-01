@@ -3,6 +3,7 @@
    PRODUCT DATABASE
 ===================================================== */
 
+
 const products = [
 
     {
@@ -10,28 +11,35 @@ const products = [
 
         asin: "B0HBQR4M3L",
 
-        name: "DEEMOON Premium Flannel Checkered Shirt",
+        name: "Premium Flannel Checkered Shirt",
 
         category: "Fashion",
 
-        price: 999,
+        price: "499",
 
-        rating: 4.5,
+        rating: 3.4,
 
-        reviews: 128,
+        reviews: 204,
+        
+        boughtText: "1k+ bought in past 30 days",
 
         badge: "POPULAR",
 
-        image:
-            "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=900&q=85",
+        images: [
+            "images/prd1img1.png", 
+            "images/prd1img2.png",
+            "images/prd1img3.png"
+        ],
 
         description:
-            "DEEMOON Premium Flannel Checkered Button Down Shirt.",
+            "Premium Flannel Checkered Button Down Shirt.",
 
         features: [
+            "Material Composition: Cotton Blend",
+            "Fit Type: Regular Fit",
+            "Collar Style: Bottom Down Collar Style",
+            "Length: Standard Length",
             "Checkered design",
-            "Button-down style",
-            "Casual everyday wear",
             "Flannel shirt"
         ],
 
@@ -49,21 +57,30 @@ const products = [
 
         category: "Fashion",
 
-        price: 1499,
+        price: "2,483",
 
-        rating: 4.4,
+        rating: 4.2,
 
-        reviews: 96,
+        reviews: 487,
 
+        boughtText: "100+ bought in past 30 days",
+        
         badge: "TRENDING",
 
         image:
-            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85",
+            "images/prd2img1.png",
+
+        images: [
+            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=85"
+        ],
 
         description:
             "U.S. Polo Assn. men's sneakers for everyday casual styling.",
 
         features: [
+            "heel Type: No heel",
+            "Closure Type: Lace-Up",
+            "Material: Polyurethane",
             "Casual sneaker design",
             "Men's footwear",
             "Everyday styling",
@@ -84,25 +101,36 @@ const products = [
 
         category: "Lifestyle",
 
-        price: 1999,
+        price: "1,993",
 
-        rating: 4.6,
+        rating: 4.4,
 
-        reviews: 74,
+        reviews: 3706,
+
+        boughtText: "1k+ bought in past 30 days",
 
         badge: "EDITOR'S PICK",
 
         image:
             "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85",
 
+        images: [
+            "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=85"
+        ],
+
         description:
-            "Titan Karishma stainless steel watch with a classic everyday design.",
+            "stylish and elegant Titan Karishma Stainless Steel Watch for men, perfect for any occasion.",
 
         features: [
-            "Titan Karishma",
-            "Stainless steel design",
-            "Classic styling",
-            "Everyday wear"
+            "Case Diameter: 38 Millimeters",
+            "Band colour: Silver",
+            "Band Material: Stainless Steel",
+            "Item Weight: 150 Grams",
+            "Display Type: Analog",
+            "Movement Type: Quartz",
+            "Special Features: Water Resistant",
+            "Power Source Type: Battery",
+            "Water Resistance Depth: 30 Meters"
         ],
 
         amazonLink:
