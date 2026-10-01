@@ -1,7 +1,27 @@
 /* =====================================================
-   SHIVANO ROYALE
+   SHIVANO.STORE
    PRODUCT DATABASE
 ===================================================== */
+
+/*
+ * MANUAL PRODUCT MANAGEMENT
+ *
+ * Har product ki saari information yahin manage karo.
+ *
+ * image  = product card ki main image
+ * images = product detail page ki gallery images
+ *
+ * Gallery me aur images add karne ke liye:
+ *
+ * images: [
+ *     "IMAGE-1-URL",
+ *     "IMAGE-2-URL",
+ *     "IMAGE-3-URL"
+ * ],
+ *
+ * category me same category name use karo:
+ * "Fashion", "Electronics", "Lifestyle", etc.
+ */
 
 const products = [
 
@@ -24,6 +44,10 @@ const products = [
 
         image:
             "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=900&q=85",
+
+        images: [
+            "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=1200&q=85"
+        ],
 
         description:
             "DEEMOON Premium Flannel Checkered Button Down Shirt.",
@@ -60,6 +84,10 @@ const products = [
         image:
             "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85",
 
+        images: [
+            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=85"
+        ],
+
         description:
             "U.S. Polo Assn. men's sneakers for everyday casual styling.",
 
@@ -94,6 +122,10 @@ const products = [
 
         image:
             "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85",
+
+        images: [
+            "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=85"
+        ],
 
         description:
             "Titan Karishma stainless steel watch with a classic everyday design.",

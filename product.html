@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,10 +12,10 @@
 
     <meta
         name="description"
-        content="Shivano Royale product details"
+        content="Shivano.store product details"
     >
 
-    <title>Product | Shivano Royale</title>
+    <title>Product | Shivano.store </title>
 
     <link
         rel="stylesheet"
@@ -39,7 +38,6 @@
         rel="stylesheet"
     >
 
-
     <style>
 
         /* =========================================
@@ -51,32 +49,38 @@
             min-height: 100vh;
         }
 
-
         .product-page-top {
             max-width: 1300px;
             margin: auto;
             padding: 28px 28px 15px;
         }
 
-
         .back-link {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 9px;
 
-            color: #666;
+            padding: 10px 15px;
+
+            color: #555;
 
             font-size: 13px;
-            font-weight: 600;
+            font-weight: 700;
+
+            background: #ffffff;
+
+            border: 1px solid var(--border);
+
+            border-radius: 10px;
+
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
 
             transition: 0.25s ease;
         }
 
-
         .back-link:hover {
             color: var(--gold);
         }
-
 
         /* =========================================
            PRODUCT MAIN
@@ -98,7 +102,6 @@
             align-items: start;
         }
 
-
         /* =========================================
            AMAZON STYLE GALLERY
         ========================================= */
@@ -107,7 +110,6 @@
             position: sticky;
             top: 100px;
         }
-
 
         .gallery-layout {
             display: grid;
@@ -118,7 +120,6 @@
 
             align-items: start;
         }
-
 
         .thumbnail-column {
             display: flex;
@@ -133,7 +134,6 @@
 
             scrollbar-width: thin;
         }
-
 
         .thumbnail {
             width: 76px;
@@ -156,18 +156,15 @@
             transition: 0.2s ease;
         }
 
-
         .thumbnail:hover {
             border-color: #999;
         }
-
 
         .thumbnail.active {
             border: 2px solid #c2933f;
 
             box-shadow: 0 0 0 1px #c2933f;
         }
-
 
         .thumbnail img {
             width: 100%;
@@ -178,13 +175,11 @@
             display: block;
         }
 
-
         .main-image-wrapper {
             position: relative;
 
             min-width: 0;
         }
-
 
         .main-product-image {
             height: 600px;
@@ -206,7 +201,6 @@
             position: relative;
         }
 
-
         .main-product-image img {
             width: 100%;
             height: 100%;
@@ -217,7 +211,6 @@
 
             transition: opacity 0.2s ease;
         }
-
 
         .gallery-arrow {
             position: absolute;
@@ -248,13 +241,11 @@
             transition: 0.2s ease;
         }
 
-
         .gallery-arrow:hover {
             background: white;
 
             border-color: #aaa;
         }
-
 
         .gallery-prev {
             left: 10px;
@@ -262,13 +253,11 @@
             border-radius: 8px;
         }
 
-
         .gallery-next {
             right: 10px;
 
             border-radius: 8px;
         }
-
 
         .image-counter {
             position: absolute;
@@ -288,7 +277,6 @@
 
             font-weight: 600;
         }
-
 
         .gallery-empty {
             position: absolute;
@@ -312,11 +300,9 @@
             background: #fafafa;
         }
 
-
         .gallery-empty strong {
             font-size: 15px;
         }
-
 
         .gallery-empty span {
             color: #888;
@@ -326,15 +312,13 @@
             line-height: 1.6;
         }
 
-
         /* =========================================
            PRODUCT INFORMATION
-        ========================================= */
+        ========================================== */
 
         .product-detail-info {
             padding-top: 4px;
         }
-
 
         .detail-category {
             display: inline-block;
@@ -351,7 +335,6 @@
             margin-bottom: 10px;
         }
 
-
         .product-detail-info h1 {
             font-family: "Playfair Display", serif;
 
@@ -363,7 +346,6 @@
 
             margin-bottom: 16px;
         }
-
 
         .amazon-rating {
             display: flex;
@@ -379,7 +361,6 @@
             font-size: 13px;
         }
 
-
         .amazon-stars {
             color: #c2933f;
 
@@ -388,16 +369,13 @@
             letter-spacing: 1px;
         }
 
-
         .rating-value {
             font-weight: 700;
         }
 
-
         .rating-count {
             color: #666;
         }
-
 
         .amazon-review-link {
             color: #8a6427;
@@ -409,7 +387,6 @@
             text-underline-offset: 3px;
         }
 
-
         .product-detail-description {
             color: var(--gray);
 
@@ -419,7 +396,6 @@
 
             margin-bottom: 24px;
         }
-
 
         /* =========================================
            AMAZON PRICE AREA
@@ -435,7 +411,6 @@
             margin-bottom: 20px;
         }
 
-
         .price-label {
             display: block;
 
@@ -450,7 +425,6 @@
             margin-bottom: 5px;
         }
 
-
         .price-value {
             font-family: "Playfair Display", serif;
 
@@ -461,7 +435,6 @@
             margin-bottom: 5px;
         }
 
-
         .price-note {
             color: #888;
 
@@ -469,7 +442,6 @@
 
             line-height: 1.6;
         }
-
 
         .availability {
             display: inline-flex;
@@ -489,7 +461,6 @@
             font-weight: 700;
         }
 
-
         /* =========================================
            ACTIONS
         ========================================== */
@@ -503,7 +474,6 @@
 
             margin-bottom: 25px;
         }
-
 
         .detail-action {
             min-height: 54px;
@@ -525,13 +495,11 @@
             text-align: center;
         }
 
-
         .detail-action.primary {
             background: #ffb000;
 
             color: #111;
         }
-
 
         .detail-action.primary:hover {
             transform: translateY(-2px);
@@ -539,20 +507,17 @@
             background: #ffca3a;
         }
 
-
         .detail-action.secondary {
             border: 1px solid var(--border);
 
             background: white;
         }
 
-
         .detail-action.secondary:hover {
             border-color: var(--gold);
 
             color: var(--gold);
         }
-
 
         /* =========================================
            TRUST
@@ -570,7 +535,6 @@
             margin-bottom: 28px;
         }
 
-
         .trust-item {
             padding: 17px 10px;
 
@@ -579,11 +543,9 @@
             border-right: 1px solid var(--border);
         }
 
-
         .trust-item:last-child {
             border-right: none;
         }
-
 
         .trust-item strong {
             display: block;
@@ -593,7 +555,6 @@
             margin-bottom: 3px;
         }
 
-
         .trust-item span {
             display: block;
 
@@ -601,7 +562,6 @@
 
             font-size: 10px;
         }
-
 
         /* =========================================
            PRODUCT DETAILS
@@ -611,13 +571,11 @@
             margin-top: 24px;
         }
 
-
         .feature-section h2 {
             font-size: 25px;
 
             margin-bottom: 16px;
         }
-
 
         .feature-list {
             list-style: none;
@@ -635,7 +593,6 @@
             overflow: hidden;
         }
 
-
         .feature-list li {
             padding: 13px 15px;
 
@@ -648,11 +605,9 @@
             border-bottom: 1px solid var(--border);
         }
 
-
         .feature-list li:last-child {
             border-bottom: none;
         }
-
 
         .feature-list li::before {
             content: "✓";
@@ -663,7 +618,6 @@
 
             margin-right: 8px;
         }
-
 
         /* =========================================
            AMAZON REVIEWS
@@ -677,13 +631,11 @@
             border-top: 1px solid #eee;
         }
 
-
         .reviews-inner {
             max-width: 1250px;
 
             margin: auto;
         }
-
 
         .reviews-header {
             display: flex;
@@ -697,11 +649,9 @@
             margin-bottom: 30px;
         }
 
-
         .reviews-header h2 {
             margin-top: 8px;
         }
-
 
         .reviews-header p {
             max-width: 430px;
@@ -712,7 +662,6 @@
 
             line-height: 1.7;
         }
-
 
         .amazon-review-card {
             padding: 30px;
@@ -732,7 +681,6 @@
             gap: 30px;
         }
 
-
         .review-card-rating {
             display: flex;
 
@@ -745,18 +693,15 @@
             margin-bottom: 8px;
         }
 
-
         .review-card-rating strong {
             font-size: 28px;
         }
-
 
         .review-stars {
             color: #c2933f;
 
             letter-spacing: 1px;
         }
-
 
         .amazon-review-card p {
             color: #777;
@@ -767,7 +712,6 @@
 
             line-height: 1.7;
         }
-
 
         .reviews-amazon-btn {
             flex: 0 0 auto;
@@ -793,11 +737,9 @@
             font-weight: 700;
         }
 
-
         .reviews-amazon-btn:hover {
             background: #2c2c2c;
         }
-
 
         /* =========================================
            SIMILAR PRODUCTS
@@ -807,13 +749,11 @@
             padding: 90px 0;
         }
 
-
         .similar-inner {
             max-width: 1250px;
 
             margin: auto;
         }
-
 
         .similar-heading {
             padding: 0 28px 30px;
@@ -827,11 +767,9 @@
             gap: 30px;
         }
 
-
         .similar-heading h2 {
             margin-top: 8px;
         }
-
 
         .similar-heading p {
             color: var(--gray);
@@ -840,7 +778,6 @@
 
             max-width: 400px;
         }
-
 
         .similar-slider {
             display: flex;
@@ -855,7 +792,6 @@
 
             scrollbar-width: thin;
         }
-
 
         .similar-card {
             flex: 0 0 280px;
@@ -873,13 +809,11 @@
             transition: 0.3s ease;
         }
 
-
         .similar-card:hover {
             transform: translateY(-5px);
 
             box-shadow: var(--shadow);
         }
-
 
         .similar-image {
             height: 270px;
@@ -888,7 +822,6 @@
 
             overflow: hidden;
         }
-
 
         .similar-image img {
             width: 100%;
@@ -899,16 +832,13 @@
             transition: 0.4s ease;
         }
 
-
         .similar-card:hover .similar-image img {
             transform: scale(1.05);
         }
 
-
         .similar-info {
             padding: 20px;
         }
-
 
         .similar-category {
             color: var(--gold);
@@ -922,13 +852,11 @@
             text-transform: uppercase;
         }
 
-
         .similar-info h3 {
             font-size: 19px;
 
             margin: 5px 0 8px;
         }
-
 
         .similar-info p {
             color: var(--gray);
@@ -940,7 +868,6 @@
             line-height: 1.5;
         }
 
-
         .similar-bottom {
             display: flex;
 
@@ -951,13 +878,11 @@
             margin-top: 16px;
         }
 
-
         .similar-price {
             font-weight: 700;
 
             font-size: 15px;
         }
-
 
         .similar-btn {
             min-height: 36px;
@@ -979,7 +904,6 @@
             cursor: pointer;
         }
 
-
         /* =========================================
            PRODUCT FOOTER
         ========================================== */
@@ -994,7 +918,6 @@
             text-align: center;
         }
 
-
         .product-footer p {
             color: #777;
 
@@ -1002,7 +925,6 @@
 
             margin-top: 6px;
         }
-
 
         /* =========================================
            RESPONSIVE
@@ -1016,21 +938,17 @@
                 gap: 40px;
             }
 
-
             .product-gallery {
                 position: static;
             }
-
 
             .main-product-image {
                 height: 550px;
             }
 
-
             .reviews-header {
                 display: block;
             }
-
 
             .reviews-header p {
                 margin-top: 15px;
@@ -1038,18 +956,15 @@
 
         }
 
-
         @media (max-width: 600px) {
 
             .product-page {
                 padding-top: 70px;
             }
 
-
             .product-page-top {
                 padding: 23px 18px 12px;
             }
-
 
             .product-detail {
                 padding: 15px 18px 60px;
@@ -1057,13 +972,11 @@
                 gap: 30px;
             }
 
-
             .gallery-layout {
                 grid-template-columns: 1fr;
 
                 gap: 12px;
             }
-
 
             .thumbnail-column {
                 order: 2;
@@ -1079,7 +992,6 @@
                 padding-bottom: 4px;
             }
 
-
             .thumbnail {
                 width: 64px;
                 height: 64px;
@@ -1087,29 +999,34 @@
                 flex-basis: 64px;
             }
 
-
             .main-product-image {
                 height: 390px;
 
                 border-radius: 12px;
+
+                width: 100%;
             }
 
+            .main-product-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center center;
+                margin: 0 auto;
+            }
 
             .gallery-arrow {
                 width: 38px;
                 height: 46px;
             }
 
-
             .product-detail-info h1 {
                 font-size: 36px;
             }
 
-
             .product-trust {
                 grid-template-columns: 1fr;
             }
-
 
             .product-trust .trust-item {
                 border-right: none;
@@ -1117,21 +1034,17 @@
                 border-bottom: 1px solid var(--border);
             }
 
-
             .product-trust .trust-item:last-child {
                 border-bottom: none;
             }
-
 
             .detail-actions {
                 grid-template-columns: 1fr;
             }
 
-
             .reviews-section {
                 padding: 65px 18px;
             }
-
 
             .amazon-review-card {
                 flex-direction: column;
@@ -1139,11 +1052,9 @@
                 align-items: flex-start;
             }
 
-
             .reviews-amazon-btn {
                 width: 100%;
             }
-
 
             .similar-heading {
                 display: block;
@@ -1151,11 +1062,9 @@
                 padding: 0 18px 25px;
             }
 
-
             .similar-heading p {
                 margin-top: 12px;
             }
-
 
             .similar-slider {
                 padding-left: 18px;
@@ -1169,9 +1078,7 @@
 
 </head>
 
-
 <body>
-
 
     <!-- =========================================
          NAVBAR
@@ -1185,9 +1092,8 @@
                 href="index.html"
                 class="logo"
             >
-                Shivano <span>Royale</span>
+                Shivano.store
             </a>
-
 
             <button
                 class="menu-toggle"
@@ -1196,7 +1102,6 @@
             >
                 ☰
             </button>
-
 
             <div
                 class="nav-links"
@@ -1225,7 +1130,6 @@
 
             </div>
 
-
             <a
                 href="index.html#products"
                 class="wishlist-nav"
@@ -1238,10 +1142,7 @@
 
     </header>
 
-
-
     <main class="product-page">
-
 
         <!-- =========================================
              BACK
@@ -1258,14 +1159,11 @@
 
         </div>
 
-
-
         <!-- =========================================
              PRODUCT DETAILS
         ========================================== -->
 
         <section class="product-detail">
-
 
             <!-- =====================================
                  GALLERY
@@ -1275,7 +1173,6 @@
 
                 <div class="gallery-layout">
 
-
                     <!-- THUMBNAILS -->
 
                     <div
@@ -1283,8 +1180,6 @@
                         id="thumbnailColumn"
                     >
                     </div>
-
-
 
                     <!-- MAIN IMAGE -->
 
@@ -1298,17 +1193,15 @@
                             >
 
                                 <strong>
-                                    Amazon product images
+                                    Product images
                                 </strong>
 
                                 <span>
-                                    Images will appear here
-                                    when Amazon Creators API
-                                    data is connected.
+                                    Add product images in
+                                    products.js to show them here.
                                 </span>
 
                             </div>
-
 
                             <img
                                 id="mainProductImage"
@@ -1316,7 +1209,6 @@
                                 alt=""
                                 style="display:none;"
                             >
-
 
                             <button
                                 type="button"
@@ -1328,7 +1220,6 @@
                                 ‹
                             </button>
 
-
                             <button
                                 type="button"
                                 class="gallery-arrow gallery-next"
@@ -1338,7 +1229,6 @@
                             >
                                 ›
                             </button>
-
 
                             <span
                                 class="image-counter"
@@ -1356,8 +1246,6 @@
 
             </div>
 
-
-
             <!-- =====================================
                  INFORMATION
             ====================================== -->
@@ -1370,10 +1258,8 @@
                 >
                 </span>
 
-
                 <h1 id="productName">
                 </h1>
-
 
                 <div
                     class="amazon-rating"
@@ -1381,14 +1267,11 @@
                 >
                 </div>
 
-
                 <p
                     class="product-detail-description"
                     id="productDescription"
                 >
                 </p>
-
-
 
                 <!-- PRICE -->
 
@@ -1398,7 +1281,6 @@
                         Amazon price
                     </span>
 
-
                     <div
                         class="price-value"
                         id="productPrice"
@@ -1406,15 +1288,13 @@
                         Check Amazon
                     </div>
 
-
                     <span
                         class="price-note"
                         id="priceNote"
                     >
-                        Current price will be shown from Amazon
-                        when Creators API is connected.
+                        Price is maintained manually in products.js.
+                        Check Amazon for the latest price.
                     </span>
-
 
                     <span
                         class="availability"
@@ -1424,8 +1304,6 @@
                     </span>
 
                 </div>
-
-
 
                 <!-- ACTIONS -->
 
@@ -1441,7 +1319,6 @@
                         View on Amazon ↗
                     </a>
 
-
                     <a
                         href="#"
                         target="_blank"
@@ -1453,8 +1330,6 @@
                     </a>
 
                 </div>
-
-
 
                 <!-- TRUST -->
 
@@ -1472,7 +1347,6 @@
 
                     </div>
 
-
                     <div class="trust-item">
 
                         <strong>
@@ -1485,22 +1359,19 @@
 
                     </div>
 
-
                     <div class="trust-item">
 
                         <strong>
-                            Live data
+                            Product data
                         </strong>
 
                         <span>
-                            API powered
+                            Manually managed
                         </span>
 
                     </div>
 
                 </div>
-
-
 
                 <!-- FEATURES -->
 
@@ -1509,7 +1380,6 @@
                     <h2>
                         Product details
                     </h2>
-
 
                     <ul
                         class="feature-list"
@@ -1522,8 +1392,6 @@
             </div>
 
         </section>
-
-
 
         <!-- =========================================
              AMAZON REVIEWS
@@ -1547,15 +1415,13 @@
 
                     </div>
 
-
                     <p>
-                        Ratings and reviews are displayed from
-                        the original Amazon product listing
-                        when the Amazon API provides them.
+                        Product information is maintained in
+                        the Shivano.store product database.
+                        Check Amazon for the latest listing details.
                     </p>
 
                 </div>
-
 
                 <div class="amazon-review-card">
 
@@ -1567,7 +1433,6 @@
                         >
                         </div>
 
-
                         <p>
                             For the latest customer reviews,
                             verified ratings and review count,
@@ -1575,7 +1440,6 @@
                         </p>
 
                     </div>
-
 
                     <a
                         href="#"
@@ -1592,8 +1456,6 @@
             </div>
 
         </section>
-
-
 
         <!-- =========================================
              SIMILAR PRODUCTS
@@ -1617,14 +1479,12 @@
 
                     </div>
 
-
                     <p>
                         Explore other products available
-                        through Shivano Royale.
+                        through <Shivano.store
                     </p>
 
                 </div>
-
 
                 <div
                     class="similar-slider"
@@ -1638,8 +1498,6 @@
 
     </main>
 
-
-
     <!-- =========================================
          FOOTER
     ========================================== -->
@@ -1647,7 +1505,7 @@
     <footer class="product-footer">
 
         <strong>
-            Shivano Royale
+            Shivano.store
         </strong>
 
         <p>
@@ -1655,85 +1513,26 @@
         </p>
 
         <p>
-            As an Amazon Associate, Shivano Royale
+            As an Amazon Associate, Shivano.store
             may earn from qualifying purchases.
         </p>
 
         <p>
-            © 2026 Shivano Royale. All rights reserved.
+            © 2026 Shivano.store. All rights reserved.
         </p>
 
     </footer>
 
-
+    <script src="products.js"></script>
 
     <script>
 
         /* =========================================
            PRODUCT DATA
-           
-           IMPORTANT:
-           Only ASIN + Amazon links are stored here.
-           Amazon images, price, availability, title,
-           rating and other live data will come from
-           Creators API through the backend.
+
+           Product information is managed in products.js.
+           This page only reads the selected product.
         ========================================== */
-
-        const products = [
-
-            {
-                id: 1,
-
-                asin:
-                    "B0HBQR4M3L",
-
-                category:
-                    "Fashion",
-
-                amazonLink:
-                    "https://link.amazon/B0bFtzPDW",
-
-                amazonPage:
-                    "https://www.amazon.in/dp/B0HBQR4M3L"
-            },
-
-
-            {
-                id: 2,
-
-                asin:
-                    "B0DQ8B858G",
-
-                category:
-                    "Fashion",
-
-                amazonLink:
-                    "https://link.amazon/B086lCdBP",
-
-                amazonPage:
-                    "https://www.amazon.in/dp/B0DQ8B858G"
-            },
-
-
-            {
-                id: 3,
-
-                asin:
-                    "B00ISNVQMW",
-
-                category:
-                    "Lifestyle",
-
-                amazonLink:
-                    "https://link.amazon/B0hajaGmS",
-
-                amazonPage:
-                    "https://www.amazon.in/dp/B00ISNVQMW"
-            }
-
-        ];
-
-
 
         /* =========================================
            GET PRODUCT
@@ -1744,19 +1543,15 @@
                 window.location.search
             );
 
-
         const productId =
             Number(
                 params.get("id")
             );
 
-
         const product =
             products.find(
                 item => item.id === productId
             );
-
-
 
         /* =========================================
            FALLBACK
@@ -1769,13 +1564,11 @@
 
         }
 
-
-
         /* =========================================
            API DATA NORMALIZER
-           
+
            Expected backend response:
-           
+
            {
                asin: "...",
                itemInfo: {
@@ -1834,15 +1627,12 @@
 
             };
 
-
-
             /* =====================================
                FEATURES
             ===================================== */
 
             const apiFeatures =
                 data?.itemInfo?.features;
-
 
             if (
                 Array.isArray(apiFeatures)
@@ -1871,8 +1661,6 @@
 
             }
 
-
-
             /* =====================================
                PRIMARY IMAGE
             ===================================== */
@@ -1882,7 +1670,6 @@
                 data?.images?.primary?.medium?.url ||
                 data?.images?.primary?.small?.url;
 
-
             if (primaryImage) {
 
                 normalized.images.push(
@@ -1891,15 +1678,12 @@
 
             }
 
-
-
             /* =====================================
                VARIANT IMAGES
             ===================================== */
 
             const variants =
                 data?.images?.variants;
-
 
             if (
                 Array.isArray(variants)
@@ -1911,7 +1695,6 @@
                         variant?.large?.url ||
                         variant?.medium?.url ||
                         variant?.small?.url;
-
 
                     if (
                         image &&
@@ -1928,8 +1711,6 @@
 
             }
 
-
-
             /* =====================================
                OFFER / PRICE
             ===================================== */
@@ -1939,7 +1720,6 @@
                 data?.offers?.listings ||
                 [];
 
-
             const listing =
                 listings.find(
                     item =>
@@ -1947,13 +1727,11 @@
                 ) ||
                 listings[0];
 
-
             if (listing) {
 
                 const money =
                     listing?.price?.money ||
                     listing?.price;
-
 
                 if (money) {
 
@@ -1962,13 +1740,11 @@
                         money.value ||
                         null;
 
-
                     normalized.currency =
                         money.currency ||
                         "INR";
 
                 }
-
 
                 normalized.availability =
                     listing?.availability?.message ||
@@ -1976,8 +1752,6 @@
                     null;
 
             }
-
-
 
             /* =====================================
                RATING
@@ -1988,17 +1762,13 @@
                 data?.itemInfo?.byLineInfo?.rating ||
                 null;
 
-
             normalized.reviews =
                 data?.customerReviews?.count ||
                 null;
 
-
             return normalized;
 
         }
-
-
 
         /* =========================================
            PAGE ELEMENTS
@@ -2009,37 +1779,30 @@
                 "mainProductImage"
             );
 
-
         const thumbnailColumn =
             document.getElementById(
                 "thumbnailColumn"
             );
-
 
         const galleryEmpty =
             document.getElementById(
                 "galleryEmpty"
             );
 
-
         const galleryPrev =
             document.getElementById(
                 "galleryPrev"
             );
-
 
         const galleryNext =
             document.getElementById(
                 "galleryNext"
             );
 
-
         const imageCounter =
             document.getElementById(
                 "imageCounter"
             );
-
-
 
         /* =========================================
            GALLERY STATE
@@ -2048,8 +1811,6 @@
         let galleryImages = [];
 
         let currentImageIndex = 0;
-
-
 
         /* =========================================
            SET GALLERY
@@ -2062,9 +1823,7 @@
                     ? images.filter(Boolean)
                     : [];
 
-
             currentImageIndex = 0;
-
 
             if (
                 galleryImages.length === 0
@@ -2092,32 +1851,26 @@
 
             }
 
-
             galleryEmpty.style.display =
                 "none";
 
-
             mainImage.style.display =
                 "block";
-
 
             galleryPrev.style.display =
                 galleryImages.length > 1
                     ? "flex"
                     : "none";
 
-
             galleryNext.style.display =
                 galleryImages.length > 1
                     ? "flex"
                     : "none";
 
-
             imageCounter.style.display =
                 galleryImages.length > 1
                     ? "block"
                     : "none";
-
 
             thumbnailColumn.innerHTML =
                 galleryImages
@@ -2142,7 +1895,6 @@
                     )
                     .join("");
 
-
             thumbnailColumn
                 .querySelectorAll(".thumbnail")
                 .forEach(
@@ -2164,12 +1916,9 @@
                     }
                 );
 
-
             showImage(0);
 
         }
-
-
 
         /* =========================================
            SHOW IMAGE
@@ -2185,7 +1934,6 @@
 
             }
 
-
             if (
                 index < 0
             ) {
@@ -2195,7 +1943,6 @@
 
             }
 
-
             if (
                 index >= galleryImages.length
             ) {
@@ -2204,14 +1951,11 @@
 
             }
 
-
             currentImageIndex =
                 index;
 
-
             mainImage.style.opacity =
                 "0.35";
-
 
             setTimeout(
                 () => {
@@ -2229,7 +1973,6 @@
                 100
             );
 
-
             thumbnailColumn
                 .querySelectorAll(".thumbnail")
                 .forEach(
@@ -2243,13 +1986,10 @@
                     }
                 );
 
-
             imageCounter.textContent =
                 `${currentImageIndex + 1} / ${galleryImages.length}`;
 
         }
-
-
 
         /* =========================================
            GALLERY ARROWS
@@ -2266,7 +2006,6 @@
             }
         );
 
-
         galleryNext.addEventListener(
             "click",
             function () {
@@ -2277,8 +2016,6 @@
 
             }
         );
-
-
 
         /* =========================================
            KEYBOARD GALLERY
@@ -2298,7 +2035,6 @@
 
                 }
 
-
                 if (
                     event.key === "ArrowRight"
                 ) {
@@ -2312,8 +2048,6 @@
             }
         );
 
-
-
         /* =========================================
            TOUCH SWIPE
         ========================================== */
@@ -2321,7 +2055,6 @@
         let touchStartX = 0;
 
         let touchEndX = 0;
-
 
         mainImage.addEventListener(
             "touchstart",
@@ -2336,7 +2069,6 @@
             }
         );
 
-
         mainImage.addEventListener(
             "touchend",
             function (event) {
@@ -2344,10 +2076,8 @@
                 touchEndX =
                     event.changedTouches[0].screenX;
 
-
                 const difference =
                     touchStartX - touchEndX;
-
 
                 if (
                     Math.abs(difference) < 50
@@ -2356,7 +2086,6 @@
                     return;
 
                 }
-
 
                 if (
                     difference > 0
@@ -2382,8 +2111,6 @@
             }
         );
 
-
-
         /* =========================================
            FORMAT PRICE
         ========================================== */
@@ -2403,7 +2130,6 @@
 
             }
 
-
             if (
                 currency === "INR"
             ) {
@@ -2416,7 +2142,6 @@
 
             }
 
-
             return (
                 currency +
                 " " +
@@ -2425,8 +2150,6 @@
             );
 
         }
-
-
 
         /* =========================================
            STAR RATING
@@ -2442,12 +2165,10 @@
 
             }
 
-
             const rounded =
                 Math.round(
                     Number(rating)
                 );
-
 
             return (
                 "★".repeat(
@@ -2466,8 +2187,6 @@
 
         }
 
-
-
         /* =========================================
            RENDER PRODUCT
         ========================================== */
@@ -2476,48 +2195,46 @@
             amazonData = null
         ) {
 
+            /*
+             * For now the website uses the manually managed
+             * product data from products.js.
+             *
+             * Later, when the Amazon API is available,
+             * amazonData can be passed here and merged
+             * through normalizeAmazonProduct().
+             */
+
             const live =
                 amazonData
-                    ? normalizeAmazonProduct(
-                        amazonData
-                    )
-                    : null;
-
+                    ? {
+                        ...product,
+                        ...normalizeAmazonProduct(amazonData)
+                    }
+                    : product;
 
             const productName =
+                live?.name ||
                 live?.title ||
-                "";
-
+                "Product details";
 
             document.title =
-                productName
-                    ? `${productName} | Shivano Royale`
-                    : `Product | Shivano Royale`;
-
-
+                `${productName} | Shivano.store`;
 
             document.getElementById(
                 "productCategory"
             ).textContent =
-                product.category;
-
-
+                product.category || "Product";
 
             document.getElementById(
                 "productName"
             ).textContent =
-                productName ||
-                "Amazon product details";
-
-
+                productName;
 
             document.getElementById(
                 "productDescription"
             ).textContent =
                 live?.description ||
-                "Product details will appear here from Amazon when Creators API data is connected.";
-
-
+                "Product description will be added here.";
 
             /* =====================================
                PRICE
@@ -2526,20 +2243,17 @@
             document.getElementById(
                 "productPrice"
             ).textContent =
-                formatPrice(
-                    live?.price,
-                    live?.currency
-                );
-
+                live?.price != null
+                    ? formatPrice(
+                        live.price,
+                        live.currency || "INR"
+                    )
+                    : "Check Amazon";
 
             document.getElementById(
                 "priceNote"
             ).textContent =
-                live?.price
-                    ? "Price shown from the Amazon offer data. Price and availability may change."
-                    : "Current Amazon price will appear here after the Creators API is connected.";
-
-
+                "Price is maintained manually in products.js. Check Amazon for the latest price.";
 
             /* =====================================
                AVAILABILITY
@@ -2550,10 +2264,7 @@
                     "availability"
                 );
 
-
-            if (
-                live?.availability
-            ) {
+            if (live?.availability) {
 
                 availability.textContent =
                     live.availability;
@@ -2570,8 +2281,6 @@
 
             }
 
-
-
             /* =====================================
                LINKS
             ===================================== */
@@ -2581,19 +2290,15 @@
             ).href =
                 product.amazonLink;
 
-
             document.getElementById(
                 "reviewButton"
             ).href =
                 product.amazonLink;
 
-
             document.getElementById(
                 "reviewsMainButton"
             ).href =
                 product.amazonLink;
-
-
 
             /* =====================================
                RATING
@@ -2604,16 +2309,12 @@
                     "amazonRating"
                 );
 
-
             const reviewSummary =
                 document.getElementById(
                     "reviewSummary"
                 );
 
-
-            if (
-                live?.rating
-            ) {
+            if (live?.rating) {
 
                 ratingBox.innerHTML = `
 
@@ -2645,7 +2346,6 @@
                     </a>
 
                 `;
-
 
                 reviewSummary.innerHTML = `
 
@@ -2679,7 +2379,6 @@
 
                 `;
 
-
                 reviewSummary.innerHTML = `
 
                     <strong>
@@ -2694,18 +2393,20 @@
 
             }
 
-
-
             /* =====================================
                GALLERY
             ===================================== */
 
+            const manualImages =
+                Array.isArray(product.images) &&
+                product.images.length
+                    ? product.images
+                    : [product.image];
+
             setGallery(
-                live?.images || [],
+                manualImages,
                 productName
             );
-
-
 
             /* =====================================
                FEATURES
@@ -2716,20 +2417,15 @@
                     "featureList"
                 );
 
-
             const features =
                 live?.features || [];
 
-
-            if (
-                features.length === 0
-            ) {
+            if (features.length === 0) {
 
                 featureList.innerHTML = `
 
                     <li>
-                        Product features will appear
-                        when Amazon API data is connected.
+                        Product details will be added in products.js.
                     </li>
 
                 `;
@@ -2750,11 +2446,9 @@
 
         }
 
-
-
         /* =========================================
            INITIAL STATE
-           
+
            No fake images.
            No fake price.
            No fake ratings.
@@ -2766,21 +2460,19 @@
 
         }
 
-
-
         /* =========================================
            AMAZON API CONNECTION
-           
+
            IMPORTANT:
-           
+
            Browser must NOT call Amazon Creators API
            directly because credentials must remain
            server-side.
-           
+
            Later your backend can expose:
-           
+
            /api/product?asin=B0HBQR4M3L
-           
+
            and return Amazon API JSON.
         ========================================== */
 
@@ -2793,7 +2485,6 @@
                         `/api/product?asin=${encodeURIComponent(product.asin)}`
                     );
 
-
                 if (
                     !response.ok
                 ) {
@@ -2804,10 +2495,8 @@
 
                 }
 
-
                 const data =
                     await response.json();
-
 
                 renderProduct(data);
 
@@ -2824,8 +2513,6 @@
 
         }
 
-
-
         /*
          * Keep this disabled until the backend
          * /api/product endpoint is created.
@@ -2834,10 +2521,7 @@
          * uncomment the next line.
          */
 
-
         // loadAmazonProduct();
-
-
 
         /* =========================================
            SIMILAR PRODUCTS
@@ -2849,12 +2533,10 @@
                     item.id !== product.id
             );
 
-
         const similarSlider =
             document.getElementById(
                 "similarSlider"
             );
-
 
         similarSlider.innerHTML =
             similarProducts
@@ -2865,25 +2547,13 @@
 
                             <div class="similar-image">
 
-                                <div
-                                    style="
-                                        height:100%;
-                                        display:flex;
-                                        align-items:center;
-                                        justify-content:center;
-                                        padding:25px;
-                                        text-align:center;
-                                        color:#888;
-                                        font-size:12px;
-                                    "
+                                <img
+                                    src="${item.image}"
+                                    alt="${item.name}"
+                                    loading="lazy"
                                 >
-                                    Amazon image
-                                    will appear here
-                                    after API connection.
-                                </div>
 
                             </div>
-
 
                             <div class="similar-info">
 
@@ -2891,24 +2561,19 @@
                                     ${item.category}
                                 </span>
 
-
                                 <h3>
-                                    Amazon Product
+                                    ${item.name}
                                 </h3>
 
-
                                 <p>
-                                    ASIN:
-                                    ${item.asin}
+                                    ${item.description}
                                 </p>
-
 
                                 <div class="similar-bottom">
 
                                     <span class="similar-price">
-                                        Check Amazon
+                                        ₹${Number(item.price || 0).toLocaleString("en-IN")}
                                     </span>
-
 
                                     <button
                                         class="similar-btn"
@@ -2926,8 +2591,6 @@
                     `
                 )
                 .join("");
-
-
 
         /* =========================================
            SIMILAR PRODUCT CLICK
@@ -2953,8 +2616,6 @@
                 }
             );
 
-
-
         /* =========================================
            MOBILE MENU
         ========================================== */
@@ -2964,12 +2625,10 @@
                 "menuToggle"
             );
 
-
         const navLinks =
             document.getElementById(
                 "navLinks"
             );
-
 
         menuToggle.addEventListener(
             "click",
@@ -2981,7 +2640,6 @@
 
             }
         );
-
 
         navLinks
             .querySelectorAll("a")
@@ -3007,4 +2665,3 @@
 </body>
 
 </html>
-```
