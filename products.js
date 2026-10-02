@@ -25,12 +25,12 @@ const products = [
         badge: "POPULAR",
 
         image:
-            "images/prd1img1.png",
+            "images/prd1vr1img1.png",
 
         images: [
-            "images/prd1img1.png",
-            "images/prd1img2.png",
-            "images/prd1img3.png"
+            "images/prd1vr1img1.png",
+            "images/prd1vr1img2.png",
+            "images/prd1vr1img3.png"
         ],
 
         description:
@@ -79,13 +79,13 @@ const products = [
             "TRENDING",
 
         image:
-            "images/prd2img1.png",
+            "images/prd2vr1img1.png",
 
         images: [
-            "images/prd2img1.png",
-            "images/prd2img2.png",
-            "images/prd2img3.png",
-            "images/prd2img4.png"
+            "images/prd2vr1img1.png",
+            "images/prd2vr1img2.png",
+            "images/prd2vr1img3.png",
+            "images/prd2vr1img4.png"
         ],
 
         description:
@@ -136,13 +136,13 @@ const products = [
             "EDITOR'S PICK",
 
         image:
-            "images/prd3img1.png",
+            "images/prd3vr1img1.png",
 
         images: [
-            "images/prd3img1.png",
-            "images/prd3img2.png",
-            "images/prd3img3.png",
-            "images/prd3img4.png"
+            "images/prd3vr1img1.png",
+            "images/prd3vr1img2.png",
+            "images/prd3vr1img3.png",
+            "images/prd3vr1img4.png"
         ],
 
         description:
@@ -195,12 +195,12 @@ const products = [
             "Trending Western",
 
         image:
-            "images/prd4img1.png",
+            "images/prd4vr1img1.png",
 
         images: [
-            "images/prd4img1.png",
-            "images/prd4img2.png",
-            "images/prd4img3.png"
+            "images/prd4vr1img1.png",
+            "images/prd4vr1img2.png",
+            "images/prd4vr1img3.png"
         ],
 
         description:
@@ -238,12 +238,12 @@ const products = [
                         "Black",
 
                     image:
-                        "images/prd4img1.png",
+                        "images/prd4vr1img1.png",
 
                     images: [
-                        "images/prd4img1.png",
-                        "images/prd4img2.png",
-                        "images/prd4img3.png"
+                        "images/prd4vr1img1.png",
+                        "images/prd4vr1img2.png",
+                        "images/prd4vr1img3.png",
                     ],
 
                     price:
@@ -284,12 +284,12 @@ const products = [
                         "Navy Blue",
 
                     image:
-                        "images/prd4img1.png",
+                        "images/prd4vr2img1.png",
 
                     images: [
-                        "images/prd4img1.png",
-                        "images/prd4img2.png",
-                        "images/prd4img3.png"
+                        "images/prd4vr2img1.png",
+                        "images/prd4vr2img2.png",
+                        "images/prd4vr2img3.png"
                     ],
 
                     price:
@@ -329,12 +329,12 @@ const products = [
                         "White",
 
                     image:
-                        "images/prd4img1.png",
+                        "images/prd4vr3img1.png",
 
                     images: [
-                        "images/prd4img1.png",
-                        "images/prd4img2.png",
-                        "images/prd4img3.png"
+                        "images/prd4vr3img1.png",
+                        "images/prd4vr3img2.png",
+                        "images/prd4vr3img3.png"
                     ],
 
                     price:
@@ -374,12 +374,12 @@ const products = [
                         "Brown",
 
                     image:
-                        "images/prd4img1.png",
+                        "images/prd4vr4img1.png",
 
                     images: [
-                        "images/prd4img1.png",
-                        "images/prd4img2.png",
-                        "images/prd4img3.png"
+                        "images/prd4vr4img1.png",
+                        "images/prd4vr4img2.png",
+                        "images/prd4vr4img3.png"
                     ],
 
                     price:
@@ -419,12 +419,12 @@ const products = [
                         "Dark Grey",
 
                     image:
-                        "images/prd4img1.png",
+                        "images/prd4vr5img1.png",
 
                     images: [
-                        "images/prd4img1.png",
-                        "images/prd4img2.png",
-                        "images/prd4img3.png"
+                        "images/prd4vr5img1.png",
+                        "images/prd4vr5img2.png",
+                        "images/prd4vr5img3.png"
                     ],
 
                     price:
@@ -464,12 +464,12 @@ const products = [
                         "Light Grey",
 
                     image:
-                        "images/prd4img1.png",
+                        "images/prd4vr6img1.png",
 
                     images: [
-                        "images/prd4img1.png",
-                        "images/prd4img2.png",
-                        "images/prd4img3.png"
+                        "images/prd4vr6img1.png",
+                        "images/prd4vr6img2.png",
+                        "images/prd4vr6img3.png"
                     ],
 
                     price:
