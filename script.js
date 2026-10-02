@@ -1,5 +1,5 @@
 /* =====================================================
-   SHIVANO ROYALE
+   Shivano.store
    AMAZON AFFILIATE PRODUCT DISCOVERY WEBSITE
 ===================================================== */
 

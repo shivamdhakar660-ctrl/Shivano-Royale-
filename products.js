@@ -1,5 +1,5 @@
 /* =====================================================
-   SHIVANO ROYALE
+   Shivano.store
    PRODUCT DATABASE
 ===================================================== */
 
@@ -25,14 +25,13 @@ const products = [
 
         badge: "POPULAR",
 
+         image:
+            "images/prd1img1.png",
+
         images: [
             "images/prd1img1.png", 
             "images/prd1img2.png",
             "images/prd1img3.png"
-        ],
-
-        images: [
-            "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=1200&q=85"
         ],
 
         description:
@@ -61,11 +60,11 @@ const products = [
 
         category: "Fashion",
 
-        price: "2,483",
+        price: "2529",
 
         rating: 4.2,
 
-        reviews: 487,
+        reviews: 489,
 
         boughtText: "100+ bought in past 30 days",
         
@@ -74,12 +73,11 @@ const products = [
         image:
             "images/prd2img1.png",
 
-        images: [
-            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=85"
-        ],
-
-        images: [
-            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=85"
+       images: [
+            "images/prd2img1.png", 
+            "images/prd2img2.png",
+            "images/prd2img3.png",
+            "images/prd2img4.png"
         ],
 
         description:
@@ -107,9 +105,9 @@ const products = [
 
         name: "Titan Karishma Stainless Steel Watch",
 
-        category: "Lifestyle",
+        category: "Fashion",
 
-        price: "1,993",
+        price: "1993",
 
         rating: 4.4,
 
@@ -120,10 +118,13 @@ const products = [
         badge: "EDITOR'S PICK",
 
         image:
-            "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85",
+            "images/prd3img1.png",
 
         images: [
-            "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=85"
+            "images/prd3img1.png",
+            "images/prd3img2.png",
+            "images/prd3img3.png",
+            "images/prd3img4.png"
         ],
 
         description:
@@ -143,6 +144,52 @@ const products = [
 
         amazonLink:
             "https://link.amazon/B0hajaGmS"
-    }
+    },
+
+    {
+        id: 4,
+
+        asin: "B00ISNVQMW",
+
+        name: "Men's Basic Half-Open Collar T-Shirt,Textured fabric Solid Colour",
+
+        category: "Fashion",
+
+        price: "373",
+
+        rating: 3.9,
+
+        reviews: "274+",
+
+        boughtText: "100+ bought in past 30 days",
+
+        badge: "Trending Western",
+
+         image:
+            "images/prd4img1.png",
+
+        images: [
+            "images/prd4img1.png", 
+            "images/prd4img2.png",
+            "images/prd4img3.png",
+        ],
+
+        description:
+            "Premium waffle knit fabric for softness and breathability.Classic Henly neckline with button placket. Long sleeves for versatile, all-season wear. Comfortable slim fit with a modern look. East to style for casual, streetwear, or smart-casual outfits.",
+
+        features: [
+            "Material: PolyCotton",
+            "Fit type: Relaxed fit",
+            "Sleeve Type: Long Sleeves",
+            "Collar style: Half-Open Collar",
+            "Style: Western",
+            "Sleeve cuff style: Plain Hem",
+            "Country of Origin: India"
+        ],
+
+        amazonLink:
+            "https://link.amazon/B0aIwdXj1"
+    },
+
 
 ];
