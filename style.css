@@ -2219,3 +2219,159 @@ main {
     }
 
 }
+/* =====================================================
+   MOBILE PRODUCT CARD - REMOVE EXCESS EMPTY SPACE
+   ONLY MOBILE PRODUCT CARD SPACING
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .product-card {
+        height: 365px;
+        min-height: 365px;
+    }
+
+
+    .product-info {
+        height: 205px;
+        min-height: 205px;
+        padding: 11px;
+    }
+
+
+    .product-title {
+        height: 43px;
+        min-height: 43px;
+        margin: 3px 0 4px;
+    }
+
+
+    .product-description {
+        height: 34px;
+        min-height: 34px;
+        max-height: 34px;
+        margin: 0;
+    }
+
+
+    .product-rating {
+        height: 17px;
+        min-height: 17px;
+        margin-top: 6px;
+    }
+
+
+    .product-bottom {
+        margin-top: 10px;
+        min-height: 48px;
+        gap: 5px;
+    }
+
+
+    .product-price {
+        font-size: 15px;
+    }
+
+
+    .product-price-note {
+        font-size: 7px;
+        max-width: 72px;
+    }
+
+
+    .details-btn,
+    .amazon-btn {
+        min-height: 32px;
+        padding: 0 6px;
+        font-size: 8px;
+    }
+
+}
+/* =====================================================
+   DISCOVERY BAR
+   Search + All Categories only
+===================================================== */
+
+.discovery-bar {
+    grid-template-columns: minmax(0, 1fr) 190px;
+    min-height: 56px;
+    gap: 8px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .discovery-bar {
+        grid-template-columns:
+            minmax(0, 1fr)
+            160px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .discovery-bar {
+        min-height: 56px;
+
+        padding: 7px 18px;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            150px;
+
+        grid-template-rows: 42px;
+
+        gap: 7px;
+    }
+
+    .discovery-search {
+        min-width: 0;
+    }
+
+    .discovery-bar select {
+        width: 100%;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .discovery-bar {
+        min-height: 56px;
+
+        padding: 7px 10px;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            135px;
+
+        grid-template-rows: 42px;
+
+        gap: 7px;
+    }
+
+    .discovery-search {
+        height: 42px;
+    }
+
+    .discovery-bar select {
+        height: 42px;
+        font-size: 11px;
+    }
+
+}

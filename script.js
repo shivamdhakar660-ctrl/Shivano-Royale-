@@ -13,8 +13,6 @@ let currentCategory = "All";
 
 let currentSearch = "";
 
-let currentSort = "default";
-
 let wishlist =
     JSON.parse(localStorage.getItem("shivanoWishlist")) || [];
 
@@ -32,9 +30,6 @@ const searchInput =
 
 const categoryFilter =
     document.getElementById("categoryFilter");
-
-const sortFilter =
-    document.getElementById("sortFilter");
 
 const resultsInfo =
     document.getElementById("resultsInfo");
@@ -136,34 +131,6 @@ function renderProducts() {
             });
 
     }
-
-
-    /* SORT */
-
-    if (currentSort === "low") {
-
-        filteredProducts.sort(
-            (a, b) => a.price - b.price
-        );
-
-    }
-
-    else if (currentSort === "high") {
-
-        filteredProducts.sort(
-            (a, b) => b.price - a.price
-        );
-
-    }
-
-    else if (currentSort === "rating") {
-
-        filteredProducts.sort(
-            (a, b) => b.rating - a.rating
-        );
-
-    }
-
 
     /* RESULTS */
 
@@ -395,25 +362,6 @@ categoryFilter.addEventListener(
 );
 
 
-
-/* =====================================================
-   SORT
-===================================================== */
-
-sortFilter.addEventListener(
-    "change",
-    function () {
-
-        currentSort =
-            this.value;
-
-        renderProducts();
-
-    }
-);
-
-
-
 /* =====================================================
    CATEGORY CARDS
 ===================================================== */
@@ -474,14 +422,10 @@ clearFilters.addEventListener(
 
         currentCategory = "All";
 
-        currentSort = "default";
-
         searchInput.value = "";
 
         categoryFilter.value = "All";
-
-        sortFilter.value = "default";
-
+        
         updateCategoryCards();
 
         renderProducts();
@@ -1001,67 +945,256 @@ scrollTop.addEventListener(
 
 /* =====================================================
    SMART HEADER
-   Downward scroll = header moves away with the page
-   Upward scroll = header comes back
+   Keep header still for a short scroll distance.
+   After that, move it upward at exactly the same
+   distance as the page scrolls.
 ===================================================== */
 
 const siteHeader =
     document.querySelector(".site-header");
 
+const mainContent =
+    document.querySelector("main");
+
 let lastScrollY =
     window.scrollY;
 
+let headerOffset =
+    0;
 
-window.addEventListener(
-    "scroll",
-    function () {
+let lastDirection =
+    "none";
 
-        const currentScrollY =
-            window.scrollY;
+const HEADER_START_DELAY =
+    90;
 
-
-        /* Always show the header at the very top. */
-
-        if (currentScrollY <= 10) {
-
-            siteHeader.classList.remove(
-                "header-hidden"
-            );
-
-            lastScrollY =
-                currentScrollY;
-
-            return;
-
-        }
+let downwardStartY =
+    window.scrollY;
 
 
-        /* Scrolling down: hide the header. */
 
-        if (currentScrollY > lastScrollY) {
+function setHeaderSpace() {
 
-            siteHeader.classList.add(
-                "header-hidden"
-            );
+    if (!siteHeader) {
 
-        }
+        return;
+
+    }
 
 
-        /* Scrolling up: show the header. */
+    /*
+     * Remove transition so the header follows the
+     * finger/mouse at the same speed instead of
+     * moving with a delayed effect.
+     */
 
-        else if (currentScrollY < lastScrollY) {
+    siteHeader.style.transition =
+        "none";
 
-            siteHeader.classList.remove(
-                "header-hidden"
-            );
 
-        }
+    const headerHeight =
+        siteHeader.offsetHeight;
 
+
+    /*
+     * Store the real header height.
+     */
+
+    document.documentElement.style.setProperty(
+        "--smart-header-space",
+        `${headerHeight}px`
+    );
+
+
+    /*
+     * Keep OUR PICKS / Featured products
+     * below the complete header.
+     */
+
+    if (mainContent) {
+
+        mainContent.style.paddingTop =
+            `${headerHeight}px`;
+
+    }
+
+}
+
+
+
+function updateSmartHeader() {
+
+    if (!siteHeader) {
+
+        return;
+
+    }
+
+
+    const currentScrollY =
+        window.scrollY;
+
+
+
+    /* =================================================
+       TOP OF PAGE
+    ================================================= */
+
+    if (currentScrollY <= 0) {
+
+        headerOffset =
+            0;
+
+        downwardStartY =
+            currentScrollY;
+
+        lastDirection =
+            "none";
+
+        siteHeader.style.transform =
+            "translateY(0)";
 
         lastScrollY =
             currentScrollY;
 
-    },
+        return;
+
+    }
+
+
+
+    const delta =
+        currentScrollY - lastScrollY;
+
+
+
+    /* =================================================
+       SCROLLING DOWN
+    ================================================= */
+
+    if (delta > 0) {
+
+
+        /*
+         * Start counting again when the user
+         * changes from UP to DOWN.
+         */
+
+        if (
+            lastDirection !== "down"
+        ) {
+
+            downwardStartY =
+                currentScrollY;
+
+        }
+
+
+        lastDirection =
+            "down";
+
+
+        const downDistance =
+            currentScrollY -
+            downwardStartY;
+
+
+
+        /*
+         * FIRST 90px:
+         *
+         * Header stays completely still.
+         *
+         * AFTER 90px:
+         *
+         * Header moves upward at exactly
+         * the same distance as the page.
+         */
+
+        headerOffset =
+            Math.max(
+                0,
+                Math.min(
+                    siteHeader.offsetHeight,
+                    downDistance -
+                        HEADER_START_DELAY
+                )
+            );
+
+    }
+
+
+
+    /* =================================================
+       SCROLLING UP
+    ================================================= */
+
+    else if (delta < 0) {
+
+        lastDirection =
+            "up";
+
+
+        /*
+         * As soon as the user scrolls upward,
+         * the header comes back smoothly.
+         *
+         * The amount it comes back is exactly
+         * the amount the page moved upward.
+         */
+
+        headerOffset =
+            Math.max(
+                0,
+                headerOffset + delta
+            );
+
+    }
+
+
+
+    /*
+     * Apply the exact calculated movement.
+     */
+
+    siteHeader.style.transform =
+        `translateY(-${headerOffset}px)`;
+
+
+    lastScrollY =
+        currentScrollY;
+
+}
+
+
+
+/* =====================================================
+   HEADER HEIGHT
+===================================================== */
+
+setHeaderSpace();
+
+
+
+/* Recalculate when screen size changes. */
+
+window.addEventListener(
+    "resize",
+    setHeaderSpace,
+    {
+        passive: true
+    }
+);
+
+
+
+/* =====================================================
+   HEADER SCROLL LISTENER
+===================================================== */
+
+window.addEventListener(
+    "scroll",
+    updateSmartHeader,
     {
         passive: true
     }
