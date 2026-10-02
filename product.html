@@ -3,2664 +3,2623 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<meta
+    name="description"
+    content="Shivano Store product details"
+>
 
-    <meta
-        name="description"
-        content="Shivano.store product details"
-    >
+<title>Product | Shivano Store</title>
 
-    <title>Product | Shivano.store</title>
+<link
+    rel="stylesheet"
+    href="style.css"
+>
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+>
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+    crossorigin
+>
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-        crossorigin
-    >
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet"
-    >
 
-    <style>
+<style>
 
-        /* =========================================
-           PRODUCT PAGE
-        ========================================= */
+.product-page {
+    padding-top: 78px;
+    min-height: 100vh;
+}
 
-        .product-page {
-            padding-top: 78px;
-            min-height: 100vh;
-        }
+.product-page-top {
+    max-width: 1300px;
+    margin: auto;
+    padding: 28px 28px 15px;
+}
 
-        .product-page-top {
-            max-width: 1300px;
-            margin: auto;
-            padding: 28px 28px 15px;
-        }
+.back-link {
+    display: inline-flex;
+    gap: 8px;
+    color: #666;
+    font-size: 13px;
+    font-weight: 600;
+}
 
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 9px;
+.product-detail {
+    max-width: 1300px;
+    margin: auto;
+    padding: 20px 28px 80px;
 
-            padding: 10px 15px;
+    display: grid;
 
-            color: #555;
+    grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(400px, 0.95fr);
 
-            font-size: 13px;
-            font-weight: 700;
+    gap: 60px;
 
-            background: #ffffff;
+    align-items: start;
+}
 
-            border: 1px solid var(--border);
+.product-gallery {
+    position: sticky;
+    top: 100px;
+}
 
-            border-radius: 10px;
+.gallery-layout {
+    display: grid;
 
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+    grid-template-columns:
+        82px
+        minmax(0, 1fr);
 
-            transition: 0.25s ease;
-        }
+    gap: 16px;
+}
 
-        .back-link:hover {
-            color: var(--gold);
-        }
+.thumbnail-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
-        /* =========================================
-           PRODUCT MAIN
-        ========================================= */
+    max-height: 600px;
+    overflow-y: auto;
+}
 
-        .product-detail {
-            max-width: 1300px;
+.thumbnail {
+    width: 76px;
+    height: 76px;
 
-            margin: auto;
+    flex: 0 0 76px;
 
-            padding: 20px 28px 80px;
+    border-radius: 9px;
+    overflow: hidden;
 
-            display: grid;
+    border: 1px solid #d7d2c9;
 
-            grid-template-columns: minmax(0, 1.05fr) minmax(400px, 0.95fr);
+    background: #fff;
 
-            gap: 60px;
+    padding: 0;
 
-            align-items: start;
-        }
+    cursor: pointer;
+}
 
-        /* =========================================
-           AMAZON STYLE GALLERY
-        ========================================= */
+.thumbnail.active {
+    border: 2px solid #c2933f;
+    box-shadow: 0 0 0 1px #c2933f;
+}
 
-        .product-gallery {
-            position: sticky;
-            top: 100px;
-        }
+.thumbnail img {
+    width: 100%;
+    height: 100%;
 
-        .gallery-layout {
-            display: grid;
+    object-fit: contain;
 
-            grid-template-columns: 82px minmax(0, 1fr);
+    display: block;
+}
 
-            gap: 16px;
+.main-image-wrapper {
+    position: relative;
+    min-width: 0;
+}
 
-            align-items: start;
-        }
+.main-product-image {
+    height: 600px;
 
-        .thumbnail-column {
-            display: flex;
+    border-radius: 18px;
 
-            flex-direction: column;
+    overflow: hidden;
 
-            gap: 10px;
+    background: #fafafa;
 
-            max-height: 600px;
+    border: 1px solid #e3dfd7;
 
-            overflow-y: auto;
+    display: flex;
 
-            scrollbar-width: thin;
-        }
+    align-items: center;
+    justify-content: center;
 
-        .thumbnail {
-            width: 76px;
-            height: 76px;
+    position: relative;
+}
 
-            flex: 0 0 76px;
+.main-product-image img {
+    width: 100%;
+    height: 100%;
 
-            border-radius: 9px;
+    object-fit: contain;
+}
 
-            overflow: hidden;
+.gallery-arrow {
+    position: absolute;
 
-            border: 1px solid #d7d2c9;
+    top: 50%;
 
-            background: white;
+    transform: translateY(-50%);
 
-            padding: 0;
+    width: 44px;
+    height: 54px;
 
-            cursor: pointer;
+    border: 1px solid #ddd;
 
-            transition: 0.2s ease;
-        }
+    background: rgba(255,255,255,.92);
 
-        .thumbnail:hover {
-            border-color: #999;
-        }
+    font-size: 25px;
 
-        .thumbnail.active {
-            border: 2px solid #c2933f;
+    cursor: pointer;
+}
 
-            box-shadow: 0 0 0 1px #c2933f;
-        }
+.gallery-prev {
+    left: 10px;
+}
 
-        .thumbnail img {
-            width: 100%;
-            height: 100%;
+.gallery-next {
+    right: 10px;
+}
 
-            object-fit: contain;
+.image-counter {
+    position: absolute;
 
-            display: block;
-        }
+    bottom: 12px;
+    right: 12px;
 
-        .main-image-wrapper {
-            position: relative;
+    background: rgba(0,0,0,.68);
 
-            min-width: 0;
-        }
+    color: #fff;
 
-        .main-product-image {
-            height: 600px;
+    padding: 6px 10px;
 
-            border-radius: 18px;
+    border-radius: 20px;
 
-            overflow: hidden;
+    font-size: 11px;
+}
 
-            background: #fafafa;
+.gallery-empty {
+    position: absolute;
 
-            border: 1px solid #e3dfd7;
+    inset: 0;
 
-            display: flex;
+    display: flex;
 
-            align-items: center;
+    align-items: center;
+    justify-content: center;
 
-            justify-content: center;
+    flex-direction: column;
 
-            position: relative;
-        }
+    gap: 10px;
 
-        .main-product-image img {
-            width: 100%;
-            height: 100%;
+    text-align: center;
 
-            object-fit: contain;
+    padding: 30px;
 
-            display: block;
+    background: #fafafa;
+}
 
-            transition: opacity 0.2s ease;
-        }
+.gallery-empty span {
+    color: #888;
+    font-size: 12px;
+}
 
-        .gallery-arrow {
-            position: absolute;
+.detail-category {
+    display: inline-block;
 
-            top: 50%;
+    color: var(--gold);
 
-            transform: translateY(-50%);
+    font-size: 11px;
 
-            width: 44px;
-            height: 54px;
+    font-weight: 700;
 
-            border: 1px solid #ddd;
+    letter-spacing: 1.7px;
 
-            background: rgba(255,255,255,0.92);
+    text-transform: uppercase;
 
-            display: flex;
+    margin-bottom: 10px;
+}
 
-            align-items: center;
+.product-detail-info h1 {
+    font-family: "Playfair Display", serif;
 
-            justify-content: center;
+    font-size:
+        clamp(34px, 3.8vw, 52px);
 
-            font-size: 25px;
+    line-height: 1.08;
 
-            cursor: pointer;
+    margin: 0 0 16px;
+}
 
-            z-index: 5;
+.amazon-rating {
+    display: flex;
 
-            transition: 0.2s ease;
-        }
+    align-items: center;
 
-        .gallery-arrow:hover {
-            background: white;
+    flex-wrap: wrap;
 
-            border-color: #aaa;
-        }
+    gap: 9px;
 
-        .gallery-prev {
-            left: 10px;
+    margin-bottom: 20px;
 
-            border-radius: 8px;
-        }
+    font-size: 13px;
+}
 
-        .gallery-next {
-            right: 10px;
+.amazon-stars,
+.review-stars {
+    color: #c2933f;
 
-            border-radius: 8px;
-        }
+    letter-spacing: 1px;
+}
 
-        .image-counter {
-            position: absolute;
+.rating-value {
+    font-weight: 700;
+}
 
-            bottom: 12px;
-            right: 12px;
+.rating-count {
+    color: #666;
+}
 
-            background: rgba(0,0,0,0.68);
+.amazon-review-link {
+    color: #8a6427;
 
-            color: white;
+    font-weight: 600;
 
-            padding: 6px 10px;
+    text-decoration: underline;
+}
 
-            border-radius: 20px;
+.product-detail-description {
+    color: var(--gray);
 
-            font-size: 11px;
+    font-size: 15px;
 
-            font-weight: 600;
-        }
+    line-height: 1.8;
 
-        .gallery-empty {
-            position: absolute;
+    margin-bottom: 24px;
+}
 
-            inset: 0;
 
-            display: flex;
+/* =========================================
+   AMAZON STYLE COLOUR VARIATIONS
+========================================= */
 
-            align-items: center;
+.variation-section {
+    margin: 6px 0 24px;
+}
 
-            justify-content: center;
+.variation-group {
+    margin-bottom: 20px;
+}
 
-            flex-direction: column;
+.variation-label {
+    display: block;
 
-            gap: 10px;
+    margin-bottom: 10px;
 
-            text-align: center;
+    color: #222;
 
-            padding: 30px;
+    font-size: 14px;
 
-            background: #fafafa;
-        }
+    font-weight: 600;
+}
 
-        .gallery-empty strong {
-            font-size: 15px;
-        }
+.variation-options {
+    display: flex;
 
-        .gallery-empty span {
-            color: #888;
+    flex-wrap: wrap;
 
-            font-size: 12px;
+    gap: 10px;
+}
 
-            line-height: 1.6;
-        }
+.variation-image-option {
+    width: 82px;
 
-        /* =========================================
-           PRODUCT INFORMATION
-        ========================================== */
+    min-height: 112px;
 
-        .product-detail-info {
-            padding-top: 4px;
-        }
+    padding: 0;
 
-        .detail-category {
-            display: inline-block;
+    background: #fff;
 
-            color: var(--gold);
+    border: 1px solid #c8c8c8;
 
-            font-size: 11px;
-            font-weight: 700;
+    border-radius: 9px;
 
-            letter-spacing: 1.7px;
+    overflow: hidden;
 
-            text-transform: uppercase;
+    cursor: pointer;
 
-            margin-bottom: 10px;
-        }
+    text-align: left;
+}
 
-        .product-detail-info h1 {
-            font-family: "Playfair Display", serif;
+.variation-image-option.active {
+    border: 2px solid #2162a1;
+}
 
-            font-size: clamp(34px, 3.8vw, 52px);
+.variation-image-option img {
+    display: block;
 
-            line-height: 1.08;
+    width: 100%;
 
-            letter-spacing: -1.2px;
+    height: 72px;
 
-            margin-bottom: 16px;
-        }
+    object-fit: contain;
 
-        .amazon-rating {
-            display: flex;
+    background: #fafafa;
+}
 
-            align-items: center;
+.variation-option-text,
+.variation-option-price {
+    display: block;
 
-            flex-wrap: wrap;
+    text-align: center;
+}
 
-            gap: 9px;
+.variation-option-text {
+    padding: 7px 5px 4px;
 
-            margin-bottom: 20px;
+    font-size: 11px;
+}
 
-            font-size: 13px;
-        }
+.variation-option-price {
+    padding-bottom: 6px;
 
-        .amazon-stars {
-            color: #c2933f;
+    font-size: 11px;
+}
 
-            font-size: 17px;
 
-            letter-spacing: 1px;
-        }
+/* =========================================
+   PRICE
+========================================= */
 
-        .rating-value {
-            font-weight: 700;
-        }
+.price-box {
+    padding: 22px 0;
 
-        .rating-count {
-            color: #666;
-        }
+    border-top:
+        1px solid var(--border);
 
-        .amazon-review-link {
-            color: #8a6427;
+    border-bottom:
+        1px solid var(--border);
 
-            font-weight: 600;
+    margin-bottom: 20px;
+}
 
-            text-decoration: underline;
+.price-label {
+    display: block;
 
-            text-underline-offset: 3px;
-        }
+    color: #777;
 
-        .product-detail-description {
-            color: var(--gray);
+    font-size: 11px;
 
-            font-size: 15px;
+    text-transform: uppercase;
 
-            line-height: 1.8;
+    letter-spacing: 1.3px;
+}
 
-            margin-bottom: 24px;
-        }
+.price-value {
+    font-family:
+        "Playfair Display", serif;
 
-        /* =========================================
-           AMAZON PRICE AREA
-        ========================================== */
+    font-size: 34px;
 
-        .price-box {
-            padding: 22px 0;
+    font-weight: 700;
 
-            border-top: 1px solid var(--border);
+    margin: 4px 0;
+}
 
-            border-bottom: 1px solid var(--border);
+.price-note {
+    color: #888;
 
-            margin-bottom: 20px;
-        }
+    font-size: 11px;
+}
 
-        .price-label {
-            display: block;
+.availability {
+    display: inline-flex;
 
-            color: #777;
+    margin-top: 9px;
 
-            font-size: 11px;
+    padding: 6px 10px;
 
-            text-transform: uppercase;
+    border-radius: 6px;
 
-            letter-spacing: 1.3px;
+    background: #f3f7f1;
 
-            margin-bottom: 5px;
-        }
+    color: #34733c;
 
-        .price-value {
-            font-family: "Playfair Display", serif;
+    font-size: 11px;
 
-            font-size: 34px;
+    font-weight: 700;
+}
 
-            font-weight: 700;
 
-            margin-bottom: 5px;
-        }
+/* =========================================
+   ACTIONS
+========================================= */
 
-        .price-note {
-            color: #888;
+.detail-actions {
+    display: grid;
 
-            font-size: 11px;
+    grid-template-columns:
+        1fr 1fr;
 
-            line-height: 1.6;
-        }
+    gap: 12px;
 
-        .availability {
-            display: inline-flex;
+    margin-bottom: 25px;
+}
 
-            margin-top: 9px;
+.detail-action {
+    min-height: 54px;
 
-            padding: 6px 10px;
+    border-radius: 9px;
 
-            border-radius: 6px;
+    display: flex;
 
-            background: #f3f7f1;
+    align-items: center;
+    justify-content: center;
 
-            color: #34733c;
+    font-size: 13px;
 
-            font-size: 11px;
+    font-weight: 700;
 
-            font-weight: 700;
-        }
+    text-align: center;
+}
 
-        /* =========================================
-           ACTIONS
-        ========================================== */
+.detail-action.primary {
+    background: #ffb000;
 
-        .detail-actions {
-            display: grid;
+    color: #111;
+}
 
-            grid-template-columns: 1fr 1fr;
+.detail-action.secondary {
+    border: 1px solid var(--border);
 
-            gap: 12px;
+    background: #fff;
+}
 
-            margin-bottom: 25px;
-        }
 
-        .detail-action {
-            min-height: 54px;
+/* =========================================
+   TRUST
+========================================= */
 
-            border-radius: 9px;
+.product-trust {
+    display: grid;
 
-            display: flex;
+    grid-template-columns:
+        repeat(3, 1fr);
 
-            align-items: center;
+    border-top:
+        1px solid var(--border);
 
-            justify-content: center;
+    border-bottom:
+        1px solid var(--border);
 
-            font-size: 13px;
+    margin-bottom: 28px;
+}
 
-            font-weight: 700;
+.trust-item {
+    padding: 17px 10px;
 
-            transition: 0.25s ease;
+    text-align: center;
 
-            text-align: center;
-        }
+    border-right:
+        1px solid var(--border);
+}
 
-        .detail-action.primary {
-            background: #ffb000;
+.trust-item:last-child {
+    border-right: 0;
+}
 
-            color: #111;
-        }
+.trust-item strong,
+.trust-item span {
+    display: block;
+}
 
-        .detail-action.primary:hover {
-            transform: translateY(-2px);
+.trust-item strong {
+    font-size: 12px;
+}
 
-            background: #ffca3a;
-        }
+.trust-item span {
+    color: #888;
 
-        .detail-action.secondary {
-            border: 1px solid var(--border);
+    font-size: 10px;
+}
 
-            background: white;
-        }
 
-        .detail-action.secondary:hover {
-            border-color: var(--gold);
+/* =========================================
+   FEATURES
+========================================= */
 
-            color: var(--gold);
-        }
+.feature-section h2 {
+    font-size: 25px;
 
-        /* =========================================
-           TRUST
-        ========================================== */
+    margin-bottom: 16px;
+}
 
-        .product-trust {
-            display: grid;
+.feature-list {
+    list-style: none;
 
-            grid-template-columns: repeat(3, 1fr);
+    display: grid;
 
-            border-top: 1px solid var(--border);
+    gap: 0;
 
-            border-bottom: 1px solid var(--border);
+    border: 1px solid var(--border);
 
-            margin-bottom: 28px;
-        }
+    border-radius: 10px;
 
-        .trust-item {
-            padding: 17px 10px;
+    overflow: hidden;
 
-            text-align: center;
+    padding: 0;
+}
 
-            border-right: 1px solid var(--border);
-        }
+.feature-list li {
+    padding: 13px 15px;
 
-        .trust-item:last-child {
-            border-right: none;
-        }
+    background: #fff;
 
-        .trust-item strong {
-            display: block;
+    font-size: 12px;
 
-            font-size: 12px;
+    color: #555;
 
-            margin-bottom: 3px;
-        }
+    border-bottom:
+        1px solid var(--border);
+}
 
-        .trust-item span {
-            display: block;
+.feature-list li:last-child {
+    border-bottom: 0;
+}
 
-            color: #888;
+.feature-list li::before {
+    content: "✓";
 
-            font-size: 10px;
-        }
+    color: var(--gold);
 
-        /* =========================================
-           PRODUCT DETAILS
-        ========================================== */
+    font-weight: 700;
 
-        .feature-section {
-            margin-top: 24px;
-        }
+    margin-right: 8px;
+}
 
-        .feature-section h2 {
-            font-size: 25px;
 
-            margin-bottom: 16px;
-        }
+/* =========================================
+   REVIEWS
+========================================= */
 
-        .feature-list {
-            list-style: none;
+.reviews-section {
+    background: #fff;
 
-            display: grid;
+    padding: 85px 28px;
 
-            grid-template-columns: 1fr;
+    border-top:
+        1px solid #eee;
+}
 
-            gap: 0;
+.reviews-inner {
+    max-width: 1250px;
 
-            border: 1px solid var(--border);
+    margin: auto;
+}
 
-            border-radius: 10px;
+.reviews-header {
+    display: flex;
 
-            overflow: hidden;
-        }
+    justify-content: space-between;
 
-        .feature-list li {
-            padding: 13px 15px;
+    align-items: end;
 
-            background: #fff;
+    gap: 30px;
 
-            font-size: 12px;
+    margin-bottom: 30px;
+}
 
-            color: #555;
+.reviews-header h2 {
+    margin-top: 8px;
+}
 
-            border-bottom: 1px solid var(--border);
-        }
+.reviews-header p {
+    max-width: 430px;
 
-        .feature-list li:last-child {
-            border-bottom: none;
-        }
+    color: var(--gray);
 
-        .feature-list li::before {
-            content: "✓";
+    font-size: 13px;
 
-            color: var(--gold);
+    line-height: 1.7;
+}
 
-            font-weight: 700;
+.amazon-review-card {
+    padding: 30px;
 
-            margin-right: 8px;
-        }
+    border: 1px solid var(--border);
 
-        /* =========================================
-           AMAZON REVIEWS
-        ========================================== */
+    border-radius: 15px;
 
-        .reviews-section {
-            background: white;
+    background: #fbfaf8;
 
-            padding: 85px 28px;
+    display: flex;
 
-            border-top: 1px solid #eee;
-        }
+    align-items: center;
 
-        .reviews-inner {
-            max-width: 1250px;
+    justify-content: space-between;
 
-            margin: auto;
-        }
+    gap: 30px;
+}
 
-        .reviews-header {
-            display: flex;
+.review-card-rating {
+    display: flex;
 
-            justify-content: space-between;
+    align-items: center;
 
-            align-items: end;
+    flex-wrap: wrap;
 
-            gap: 30px;
+    gap: 12px;
 
-            margin-bottom: 30px;
-        }
+    margin-bottom: 8px;
+}
 
-        .reviews-header h2 {
-            margin-top: 8px;
-        }
+.review-card-rating strong {
+    font-size: 28px;
+}
 
-        .reviews-header p {
-            max-width: 430px;
+.amazon-review-card p {
+    color: #777;
 
-            color: var(--gray);
+    font-size: 13px;
 
-            font-size: 13px;
+    max-width: 650px;
 
-            line-height: 1.7;
-        }
+    line-height: 1.7;
+}
 
-        .amazon-review-card {
-            padding: 30px;
+.reviews-amazon-btn {
+    min-height: 48px;
 
-            border: 1px solid var(--border);
+    padding: 0 20px;
 
-            border-radius: 15px;
+    border-radius: 9px;
 
-            background: #fbfaf8;
+    display: inline-flex;
 
-            display: flex;
+    align-items: center;
 
-            align-items: center;
+    justify-content: center;
 
-            justify-content: space-between;
+    background: var(--black);
 
-            gap: 30px;
-        }
+    color: #fff;
 
-        .review-card-rating {
-            display: flex;
+    font-size: 12px;
 
-            align-items: center;
+    font-weight: 700;
+}
 
-            flex-wrap: wrap;
 
-            gap: 12px;
+/* =========================================
+   SIMILAR
+========================================= */
 
-            margin-bottom: 8px;
-        }
+.similar-section {
+    padding: 90px 0;
+}
 
-        .review-card-rating strong {
-            font-size: 28px;
-        }
+.similar-inner {
+    max-width: 1250px;
 
-        .review-stars {
-            color: #c2933f;
+    margin: auto;
+}
 
-            letter-spacing: 1px;
-        }
+.similar-heading {
+    padding:
+        0 28px 30px;
 
-        .amazon-review-card p {
-            color: #777;
+    display: flex;
 
-            font-size: 13px;
+    justify-content: space-between;
 
-            max-width: 650px;
+    align-items: end;
 
-            line-height: 1.7;
-        }
+    gap: 30px;
+}
 
-        .reviews-amazon-btn {
-            flex: 0 0 auto;
+.similar-heading h2 {
+    margin-top: 8px;
+}
 
-            min-height: 48px;
+.similar-heading p {
+    color: var(--gray);
 
-            padding: 0 20px;
+    font-size: 13px;
 
-            border-radius: 9px;
+    max-width: 400px;
+}
 
-            display: inline-flex;
+.similar-slider {
+    display: flex;
 
-            align-items: center;
+    gap: 20px;
 
-            justify-content: center;
+    overflow-x: auto;
 
-            background: var(--black);
+    padding:
+        0 28px 15px;
 
-            color: white;
+    scroll-snap-type: x mandatory;
+}
 
-            font-size: 12px;
+.similar-card {
+    flex: 0 0 280px;
 
-            font-weight: 700;
-        }
+    scroll-snap-align: start;
 
-        .reviews-amazon-btn:hover {
-            background: #2c2c2c;
-        }
+    background: #fff;
 
-        /* =========================================
-           SIMILAR PRODUCTS
-        ========================================== */
+    border: 1px solid #e6e2db;
 
-        .similar-section {
-            padding: 90px 0;
-        }
+    border-radius: 15px;
 
-        .similar-inner {
-            max-width: 1250px;
+    overflow: hidden;
+}
 
-            margin: auto;
-        }
+.similar-image {
+    height: 270px;
 
-        .similar-heading {
-            padding: 0 28px 30px;
+    background: #fafafa;
+}
 
-            display: flex;
+.similar-image img {
+    width: 100%;
 
-            justify-content: space-between;
+    height: 100%;
 
-            align-items: end;
+    object-fit: contain;
+}
 
-            gap: 30px;
-        }
+.similar-info {
+    padding: 20px;
+}
 
-        .similar-heading h2 {
-            margin-top: 8px;
-        }
+.similar-category {
+    color: var(--gold);
 
-        .similar-heading p {
-            color: var(--gray);
+    font-size: 9px;
 
-            font-size: 13px;
+    font-weight: 700;
 
-            max-width: 400px;
-        }
+    letter-spacing: 1.3px;
 
-        .similar-slider {
-            display: flex;
+    text-transform: uppercase;
+}
 
-            gap: 20px;
+.similar-info h3 {
+    font-size: 19px;
 
-            overflow-x: auto;
+    margin: 5px 0 8px;
+}
 
-            padding: 0 28px 15px;
+.similar-info p {
+    color: var(--gray);
 
-            scroll-snap-type: x mandatory;
+    font-size: 12px;
 
-            scrollbar-width: thin;
-        }
+    min-height: 38px;
 
-        .similar-card {
-            flex: 0 0 280px;
+    line-height: 1.5;
 
-            scroll-snap-align: start;
+    overflow: hidden;
 
-            background: white;
+    display: -webkit-box;
 
-            border: 1px solid #e6e2db;
+    -webkit-box-orient: vertical;
 
-            border-radius: 15px;
+    -webkit-line-clamp: 2;
 
-            overflow: hidden;
+    line-clamp: 2;
+}
 
-            transition: 0.3s ease;
-        }
+.similar-bottom {
+    display: flex;
 
-        .similar-card:hover {
-            transform: translateY(-5px);
+    justify-content: space-between;
 
-            box-shadow: var(--shadow);
-        }
+    align-items: center;
 
-        .similar-image {
-            height: 270px;
+    margin-top: 16px;
+}
 
-            background: #fafafa;
+.similar-price {
+    font-weight: 700;
 
-            overflow: hidden;
-        }
+    font-size: 15px;
+}
 
-        .similar-image img {
-            width: 100%;
-            height: 100%;
+.similar-btn {
+    min-height: 36px;
 
-            object-fit: contain;
+    padding: 0 12px;
 
-            transition: 0.4s ease;
-        }
+    border-radius: 8px;
 
-        .similar-card:hover .similar-image img {
-            transform: scale(1.05);
-        }
+    background: var(--black);
 
-        .similar-info {
-            padding: 20px;
-        }
+    color: #fff;
 
-        .similar-category {
-            color: var(--gold);
+    border: 0;
 
-            font-size: 9px;
+    font-size: 10px;
 
-            font-weight: 700;
+    font-weight: 700;
 
-            letter-spacing: 1.3px;
+    cursor: pointer;
+}
 
-            text-transform: uppercase;
-        }
 
-        .similar-info h3 {
-            font-size: 19px;
+/* =========================================
+   FOOTER
+========================================= */
 
-            margin: 5px 0 8px;
-        }
+.product-footer {
+    background: #101010;
 
-        .similar-info p {
-            color: var(--gray);
+    color: #fff;
 
-            font-size: 12px;
+    padding: 35px 28px;
 
-            min-height: 38px;
+    text-align: center;
+}
 
-            line-height: 1.5;
-        }
+.product-footer p {
+    color: #777;
 
-        .similar-bottom {
-            display: flex;
+    font-size: 11px;
 
-            justify-content: space-between;
+    margin-top: 6px;
+}
 
-            align-items: center;
 
-            margin-top: 16px;
-        }
+/* =========================================
+   MOBILE
+========================================= */
 
-        .similar-price {
-            font-weight: 700;
+@media (max-width: 900px) {
 
-            font-size: 15px;
-        }
+    .product-detail {
+        grid-template-columns: 1fr;
 
-        .similar-btn {
-            min-height: 36px;
+        gap: 40px;
+    }
 
-            padding: 0 12px;
+    .product-gallery {
+        position: static;
+    }
 
-            border-radius: 8px;
+    .main-product-image {
+        height: 550px;
+    }
 
-            background: var(--black);
+    .reviews-header {
+        display: block;
+    }
 
-            color: white;
+    .reviews-header p {
+        margin-top: 15px;
+    }
 
-            border: none;
+}
 
-            font-size: 10px;
 
-            font-weight: 700;
+@media (max-width: 600px) {
 
-            cursor: pointer;
-        }
+    .product-page {
+        padding-top: 70px;
+    }
 
-        /* =========================================
-           PRODUCT FOOTER
-        ========================================== */
+    .product-page-top {
+        padding:
+            23px 18px 12px;
+    }
 
-        .product-footer {
-            background: #101010;
+    .product-detail {
+        padding:
+            15px 18px 60px;
 
-            color: white;
+        gap: 30px;
+    }
 
-            padding: 35px 28px;
+    .gallery-layout {
+        grid-template-columns:
+            62px minmax(0, 1fr);
 
-            text-align: center;
-        }
+        gap: 10px;
+    }
 
-        .product-footer p {
-            color: #777;
+    .thumbnail {
+        width: 58px;
+        height: 58px;
 
-            font-size: 11px;
+        flex-basis: 58px;
+    }
 
-            margin-top: 6px;
-        }
+    .main-product-image {
+        height: 420px;
+    }
 
-        /* =========================================
-           RESPONSIVE
-        ========================================== */
+    .detail-actions {
+        grid-template-columns: 1fr;
+    }
 
-        @media (max-width: 900px) {
+    .product-trust {
+        grid-template-columns: 1fr;
+    }
 
-            .product-detail {
-                grid-template-columns: 1fr;
+    .trust-item {
+        border-right: 0;
 
-                gap: 40px;
-            }
+        border-bottom:
+            1px solid var(--border);
+    }
 
-            .product-gallery {
-                position: static;
-            }
+    .trust-item:last-child {
+        border-bottom: 0;
+    }
 
-            .main-product-image {
-                height: 550px;
-            }
+    .amazon-review-card {
+        flex-direction: column;
 
-            .reviews-header {
-                display: block;
-            }
+        align-items: flex-start;
+    }
 
-            .reviews-header p {
-                margin-top: 15px;
-            }
+    .similar-heading {
+        display: block;
+    }
 
-        }
+    .similar-heading p {
+        margin-top: 15px;
+    }
 
-        @media (max-width: 600px) {
+    .reviews-section {
+        padding:
+            60px 18px;
+    }
 
-            .product-page {
-                padding-top: 70px;
-            }
+    .similar-slider {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
 
-            .product-page-top {
-                padding: 23px 18px 12px;
-            }
+}
 
-            .product-detail {
-                padding: 15px 18px 60px;
-
-                gap: 30px;
-            }
-
-            .gallery-layout {
-                grid-template-columns: 1fr;
-
-                gap: 12px;
-            }
-
-            .thumbnail-column {
-                order: 2;
-
-                flex-direction: row;
-
-                overflow-x: auto;
-
-                overflow-y: hidden;
-
-                max-height: none;
-
-                padding-bottom: 4px;
-            }
-
-            .thumbnail {
-                width: 64px;
-                height: 64px;
-
-                flex-basis: 64px;
-            }
-
-            .main-product-image {
-                height: 390px;
-
-                border-radius: 12px;
-
-                width: 100%;
-            }
-
-            .main-product-image img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-                object-position: center center;
-                margin: 0 auto;
-            }
-
-            .gallery-arrow {
-                width: 38px;
-                height: 46px;
-            }
-
-            .product-detail-info h1 {
-                font-size: 36px;
-            }
-
-            .product-trust {
-                grid-template-columns: 1fr;
-            }
-
-            .product-trust .trust-item {
-                border-right: none;
-
-                border-bottom: 1px solid var(--border);
-            }
-
-            .product-trust .trust-item:last-child {
-                border-bottom: none;
-            }
-
-            .detail-actions {
-                grid-template-columns: 1fr;
-            }
-
-            .reviews-section {
-                padding: 65px 18px;
-            }
-
-            .amazon-review-card {
-                flex-direction: column;
-
-                align-items: flex-start;
-            }
-
-            .reviews-amazon-btn {
-                width: 100%;
-            }
-
-            .similar-heading {
-                display: block;
-
-                padding: 0 18px 25px;
-            }
-
-            .similar-heading p {
-                margin-top: 12px;
-            }
-
-            .similar-slider {
-                padding-left: 18px;
-
-                padding-right: 18px;
-            }
-
-        }
-
-    </style>
+</style>
 
 </head>
 
+
 <body>
 
-    <!-- =========================================
-         NAVBAR
-    ========================================== -->
 
-    <header class="site-header">
+<header class="site-header">
 
-        <nav class="navbar">
+<nav class="navbar">
 
-            <a
-                href="index.html"
-                class="logo"
-            >
-                Shivano <span>Royale</span>
-            </a>
+<a
+    href="index.html"
+    class="logo"
+>
+    Shivano <span>Store</span>
+</a>
 
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                aria-label="Open menu"
-            >
-                ☰
-            </button>
 
-            <div
-                class="nav-links"
-                id="navLinks"
-            >
+<button
+    class="menu-toggle"
+    id="menuToggle"
+    aria-label="Open menu"
+>
+    ☰
+</button>
 
-                <a href="index.html">
-                    Home
-                </a>
 
-                <a href="index.html#products">
-                    Products
-                </a>
+<div
+    class="nav-links"
+    id="navLinks"
+>
 
-                <a href="index.html#categories">
-                    Categories
-                </a>
+    <a href="index.html">
+        Home
+    </a>
 
-                <a href="index.html#about">
-                    About
-                </a>
+    <a href="index.html#products">
+        Products
+    </a>
 
-                <a href="index.html#contact">
-                    Contact
-                </a>
+    <a href="index.html#categories">
+        Categories
+    </a>
 
-            </div>
+    <a href="index.html#about">
+        About
+    </a>
 
-            <a
-                href="index.html#products"
-                class="wishlist-nav"
-                title="Back to products"
-            >
-                ←
-            </a>
+    <a href="index.html#contact">
+        Contact
+    </a>
 
-        </nav>
+</div>
 
-    </header>
 
-    <main class="product-page">
+<a
+    href="index.html#products"
+    class="wishlist-nav"
+    title="Back to products"
+>
+    ←
+</a>
 
-        <!-- =========================================
-             BACK
-        ========================================== -->
+</nav>
 
-        <div class="product-page-top">
+</header>
 
-            <a
-                href="index.html#products"
-                class="back-link"
-            >
-                ← Back to products
-            </a>
 
-        </div>
+<main class="product-page">
 
-        <!-- =========================================
-             PRODUCT DETAILS
-        ========================================== -->
 
-        <section class="product-detail">
+<div class="product-page-top">
 
-            <!-- =====================================
-                 GALLERY
-            ====================================== -->
+<a
+    href="index.html#products"
+    class="back-link"
+>
+    ← Back to products
+</a>
 
-            <div class="product-gallery">
+</div>
 
-                <div class="gallery-layout">
 
-                    <!-- THUMBNAILS -->
+<section class="product-detail">
 
-                    <div
-                        class="thumbnail-column"
-                        id="thumbnailColumn"
+
+<div class="product-gallery">
+
+<div class="gallery-layout">
+
+
+<div
+    class="thumbnail-column"
+    id="thumbnailColumn"
+>
+</div>
+
+
+<div class="main-image-wrapper">
+
+<div class="main-product-image">
+
+
+<div
+    class="gallery-empty"
+    id="galleryEmpty"
+>
+
+<strong>
+    Product images
+</strong>
+
+<span>
+    Images are controlled from products.js.
+</span>
+
+</div>
+
+
+<img
+    id="mainProductImage"
+    src=""
+    alt=""
+    style="display:none"
+>
+
+
+<button
+    type="button"
+    class="gallery-arrow gallery-prev"
+    id="galleryPrev"
+    aria-label="Previous image"
+    style="display:none"
+>
+    ‹
+</button>
+
+
+<button
+    type="button"
+    class="gallery-arrow gallery-next"
+    id="galleryNext"
+    aria-label="Next image"
+    style="display:none"
+>
+    ›
+</button>
+
+
+<span
+    class="image-counter"
+    id="imageCounter"
+    style="display:none"
+>
+    1 / 1
+</span>
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="product-detail-info">
+
+
+<span
+    class="detail-category"
+    id="productCategory"
+>
+</span>
+
+
+<h1 id="productName">
+</h1>
+
+
+<div
+    class="amazon-rating"
+    id="amazonRating"
+>
+</div>
+
+
+<p
+    class="product-detail-description"
+    id="productDescription"
+>
+</p>
+
+
+<section
+    class="variation-section"
+    id="variationSection"
+    style="display:none"
+>
+
+<div id="variationGroups">
+</div>
+
+</section>
+
+
+<div class="price-box">
+
+<span class="price-label">
+    Amazon price
+</span>
+
+
+<div
+    class="price-value"
+    id="productPrice"
+>
+    Check Amazon
+</div>
+
+
+<span
+    class="price-note"
+    id="priceNote"
+>
+    Check Amazon for the latest price and availability.
+</span>
+
+
+<span
+    class="availability"
+    id="availability"
+    style="display:none"
+>
+</span>
+
+</div>
+
+
+<div class="detail-actions">
+
+
+<a
+    href="#"
+    target="_blank"
+    rel="nofollow sponsored noopener"
+    class="detail-action primary"
+    id="amazonButton"
+>
+    View on Amazon ↗
+</a>
+
+
+<a
+    href="#"
+    target="_blank"
+    rel="nofollow sponsored noopener"
+    class="detail-action secondary"
+    id="reviewButton"
+>
+    Reviews on Amazon ↗
+</a>
+
+</div>
+
+
+<div class="product-trust">
+
+
+<div class="trust-item">
+    <strong>Amazon</strong>
+    <span>Original listing</span>
+</div>
+
+
+<div class="trust-item">
+    <strong>Secure</strong>
+    <span>Purchase on Amazon</span>
+</div>
+
+
+<div class="trust-item">
+    <strong>Live data</strong>
+    <span>API ready</span>
+</div>
+
+
+</div>
+
+
+<div class="feature-section">
+
+<h2>
+    Product details
+</h2>
+
+
+<ul
+    class="feature-list"
+    id="featureList"
+>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="reviews-section">
+
+<div class="reviews-inner">
+
+
+<div class="reviews-header">
+
+<div>
+
+<p class="eyebrow">
+    CUSTOMER FEEDBACK
+</p>
+
+<h2>
+    Reviews on Amazon
+</h2>
+
+</div>
+
+
+<p>
+    Ratings and reviews are controlled by the product data
+    and can later be connected to Amazon API data.
+</p>
+
+</div>
+
+
+<div class="amazon-review-card">
+
+
+<div>
+
+<div
+    class="review-card-rating"
+    id="reviewSummary"
+>
+</div>
+
+
+<p>
+    For the latest customer reviews, verified ratings
+    and review count, continue to the original Amazon listing.
+</p>
+
+</div>
+
+
+<a
+    href="#"
+    target="_blank"
+    rel="nofollow sponsored noopener"
+    class="reviews-amazon-btn"
+    id="reviewsMainButton"
+>
+    Read Reviews on Amazon ↗
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="similar-section">
+
+<div class="similar-inner">
+
+
+<div class="similar-heading">
+
+<div>
+
+<p class="eyebrow">
+    YOU MAY ALSO LIKE
+</p>
+
+<h2>
+    Similar products
+</h2>
+
+</div>
+
+
+<p>
+    Explore other products available through Shivano Store.
+</p>
+
+</div>
+
+
+<div
+    class="similar-slider"
+    id="similarSlider"
+>
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer class="product-footer">
+
+<strong>
+    Shivano Store
+</strong>
+
+<p>
+    Discover products worth choosing.
+</p>
+
+<p>
+    As an Amazon Associate, Shivano Store earns from qualifying purchases.
+</p>
+
+</footer>
+
+
+<script src="products.js"></script>
+
+
+<script>
+
+const params =
+    new URLSearchParams(location.search);
+
+const productId =
+    Number(params.get("id")) || 1;
+
+const product =
+    products.find(
+        item => item.id === productId
+    ) || products[0];
+
+
+const $ =
+    id => document.getElementById(id);
+
+
+const mainImage =
+    $("mainProductImage");
+
+const thumbs =
+    $("thumbnailColumn");
+
+const empty =
+    $("galleryEmpty");
+
+const prev =
+    $("galleryPrev");
+
+const next =
+    $("galleryNext");
+
+const counter =
+    $("imageCounter");
+
+const variationSection =
+    $("variationSection");
+
+const variationGroups =
+    $("variationGroups");
+
+
+let galleryImages = [];
+
+let currentImageIndex = 0;
+
+let activeVariantProduct =
+    product;
+
+let selectedVariation =
+    "";
+
+
+/* =========================================
+   HELPERS
+========================================= */
+
+function esc(value) {
+
+    return String(value ?? "")
+
+        .replace(/&/g, "&amp;")
+
+        .replace(/</g, "&lt;")
+
+        .replace(/>/g, "&gt;")
+
+        .replace(/"/g, "&quot;")
+
+        .replace(/'/g, "&#039;");
+}
+
+
+function price(value) {
+
+    if (
+        value === null ||
+        value === undefined ||
+        value === ""
+    ) {
+        return "Check Amazon";
+    }
+
+
+    const number =
+        Number(value);
+
+
+    if (!Number.isFinite(number)) {
+        return String(value);
+    }
+
+
+    return "₹" +
+        number.toLocaleString("en-IN");
+}
+
+
+function stars(value) {
+
+    if (!value) return "";
+
+
+    const number =
+        Math.round(Number(value));
+
+
+    return (
+        "★".repeat(
+            Math.min(5, number)
+        ) +
+        "☆".repeat(
+            Math.max(0, 5 - number)
+        )
+    );
+}
+
+
+/* =========================================
+   GALLERY
+========================================= */
+
+function setGallery(images, name) {
+
+    galleryImages =
+        Array.isArray(images)
+            ? images.filter(Boolean)
+            : [];
+
+
+    currentImageIndex = 0;
+
+
+    if (!galleryImages.length) {
+
+        mainImage.style.display = "none";
+
+        empty.style.display = "flex";
+
+        prev.style.display = "none";
+
+        next.style.display = "none";
+
+        counter.style.display = "none";
+
+        thumbs.innerHTML = "";
+
+        return;
+    }
+
+
+    empty.style.display = "none";
+
+    mainImage.style.display = "block";
+
+
+    prev.style.display =
+        galleryImages.length > 1
+            ? "block"
+            : "none";
+
+
+    next.style.display =
+        galleryImages.length > 1
+            ? "block"
+            : "none";
+
+
+    counter.style.display =
+        galleryImages.length > 1
+            ? "block"
+            : "none";
+
+
+    thumbs.innerHTML =
+        galleryImages
+            .map(
+                (src, index) => `
+                    <button
+                        type="button"
+                        class="thumbnail ${
+                            index === 0
+                                ? "active"
+                                : ""
+                        }"
+                        data-index="${index}"
                     >
-                    </div>
-
-                    <!-- MAIN IMAGE -->
-
-                    <div class="main-image-wrapper">
-
-                        <div class="main-product-image">
-
-                            <div
-                                class="gallery-empty"
-                                id="galleryEmpty"
-                            >
-
-                                <strong>
-                                    Product images
-                                </strong>
-
-                                <span>
-                                    Add product images in
-                                    products.js to show them here.
-                                </span>
-
-                            </div>
-
-                            <img
-                                id="mainProductImage"
-                                src=""
-                                alt=""
-                                style="display:none;"
-                            >
-
-                            <button
-                                type="button"
-                                class="gallery-arrow gallery-prev"
-                                id="galleryPrev"
-                                aria-label="Previous image"
-                                style="display:none;"
-                            >
-                                ‹
-                            </button>
-
-                            <button
-                                type="button"
-                                class="gallery-arrow gallery-next"
-                                id="galleryNext"
-                                aria-label="Next image"
-                                style="display:none;"
-                            >
-                                ›
-                            </button>
-
-                            <span
-                                class="image-counter"
-                                id="imageCounter"
-                                style="display:none;"
-                            >
-                                1 / 1
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- =====================================
-                 INFORMATION
-            ====================================== -->
-
-            <div class="product-detail-info">
-
-                <span
-                    class="detail-category"
-                    id="productCategory"
-                >
-                </span>
-
-                <h1 id="productName">
-                </h1>
-
-                <div
-                    class="amazon-rating"
-                    id="amazonRating"
-                >
-                </div>
-
-                <p
-                    class="product-detail-description"
-                    id="productDescription"
-                >
-                </p>
-
-                <!-- PRICE -->
-
-                <div class="price-box">
-
-                    <span class="price-label">
-                        Amazon price
-                    </span>
-
-                    <div
-                        class="price-value"
-                        id="productPrice"
-                    >
-                        Check Amazon
-                    </div>
-
-                    <span
-                        class="price-note"
-                        id="priceNote"
-                    >
-                        Price is maintained manually in products.js.
-                        Check Amazon for the latest price.
-                    </span>
-
-                    <span
-                        class="availability"
-                        id="availability"
-                        style="display:none;"
-                    >
-                    </span>
-
-                </div>
-
-                <!-- ACTIONS -->
-
-                <div class="detail-actions">
-
-                    <a
-                        href="#"
-                        target="_blank"
-                        rel="nofollow sponsored noopener"
-                        class="detail-action primary"
-                        id="amazonButton"
-                    >
-                        View on Amazon ↗
-                    </a>
-
-                    <a
-                        href="#"
-                        target="_blank"
-                        rel="nofollow sponsored noopener"
-                        class="detail-action secondary"
-                        id="reviewButton"
-                    >
-                        Reviews on Amazon ↗
-                    </a>
-
-                </div>
-
-                <!-- TRUST -->
-
-                <div class="product-trust">
-
-                    <div class="trust-item">
-
-                        <strong>
-                            Amazon
-                        </strong>
-
-                        <span>
-                            Original listing
-                        </span>
-
-                    </div>
-
-                    <div class="trust-item">
-
-                        <strong>
-                            Secure
-                        </strong>
-
-                        <span>
-                            Purchase on Amazon
-                        </span>
-
-                    </div>
-
-                    <div class="trust-item">
-
-                        <strong>
-                            Product data
-                        </strong>
-
-                        <span>
-                            Manually managed
-                        </span>
-
-                    </div>
-
-                </div>
-
-                <!-- FEATURES -->
-
-                <div class="feature-section">
-
-                    <h2>
-                        Product details
-                    </h2>
-
-                    <ul
-                        class="feature-list"
-                        id="featureList"
-                    >
-                    </ul>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- =========================================
-             AMAZON REVIEWS
-        ========================================== -->
-
-        <section class="reviews-section">
-
-            <div class="reviews-inner">
-
-                <div class="reviews-header">
-
-                    <div>
-
-                        <p class="eyebrow">
-                            CUSTOMER FEEDBACK
-                        </p>
-
-                        <h2>
-                            Reviews on Amazon
-                        </h2>
-
-                    </div>
-
-                    <p>
-                        Product information is maintained in
-                        the Shivano.store product database.
-                        Check Amazon for the latest listing details.
-                    </p>
-
-                </div>
-
-                <div class="amazon-review-card">
-
-                    <div>
-
-                        <div
-                            class="review-card-rating"
-                            id="reviewSummary"
+                        <img
+                            src="${esc(src)}"
+                            alt="${esc(name)} image ${index + 1}"
                         >
-                        </div>
+                    </button>
+                `
+            )
+            .join("");
 
-                        <p>
-                            For the latest customer reviews,
-                            verified ratings and review count,
-                            continue to the original Amazon listing.
-                        </p>
 
-                    </div>
+    thumbs
+        .querySelectorAll(".thumbnail")
+        .forEach(button => {
 
-                    <a
-                        href="#"
-                        target="_blank"
-                        rel="nofollow sponsored noopener"
-                        class="reviews-amazon-btn"
-                        id="reviewsMainButton"
-                    >
-                        Read Reviews on Amazon ↗
-                    </a>
+            button.onclick = () => {
 
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- =========================================
-             SIMILAR PRODUCTS
-        ========================================== -->
-
-        <section class="similar-section">
-
-            <div class="similar-inner">
-
-                <div class="similar-heading">
-
-                    <div>
-
-                        <p class="eyebrow">
-                            YOU MAY ALSO LIKE
-                        </p>
-
-                        <h2>
-                            Similar products
-                        </h2>
-
-                    </div>
-
-                    <p>
-                        Explore other products available
-                        through Shivano.store.
-                    </p>
-
-                </div>
-
-                <div
-                    class="similar-slider"
-                    id="similarSlider"
-                >
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    <!-- =========================================
-         FOOTER
-    ========================================== -->
-
-    <footer class="product-footer">
-
-        <strong>
-            Shivano.store
-        </strong>
-
-        <p>
-            Discover products worth choosing.
-        </p>
-
-        <p>
-            As an Amazon Associate, Shivano.store
-            may earn from qualifying purchases.
-        </p>
-
-        <p>
-            © 2026 Shivano.store. All rights reserved.
-        </p>
-
-    </footer>
-
-    <script src="products.js"></script>
-
-    <script>
-
-        /* =========================================
-           PRODUCT DATA
-
-           Product information is managed in products.js.
-           This page only reads the selected product.
-        ========================================== */
-
-        /* =========================================
-           GET PRODUCT
-        ========================================== */
-
-        const params =
-            new URLSearchParams(
-                window.location.search
-            );
-
-        const productId =
-            Number(
-                params.get("id")
-            );
-
-        const product =
-            products.find(
-                item => item.id === productId
-            );
-
-        /* =========================================
-           FALLBACK
-        ========================================== */
-
-        if (!product) {
-
-            window.location.href =
-                "index.html#products";
-
-        }
-
-        /* =========================================
-           API DATA NORMALIZER
-
-           Expected backend response:
-
-           {
-               asin: "...",
-               itemInfo: {
-                   title: ...,
-                   features: ...
-               },
-               images: {
-                   primary: {...},
-                   variants: [...]
-               },
-               offersV2: {
-                   listings: [...]
-               }
-           }
-
-        ========================================== */
-
-        function normalizeAmazonProduct(data) {
-
-            const normalized = {
-
-                asin:
-                    data?.asin ||
-                    product.asin,
-
-                title:
-                    data?.itemInfo?.title?.displayValue ||
-                    data?.itemInfo?.title ||
-                    "",
-
-                description:
-                    data?.itemInfo?.contentInfo?.displayValue ||
-                    data?.itemInfo?.productOverview?.displayValue ||
-                    "",
-
-                features:
-                    [],
-
-                images:
-                    [],
-
-                price:
-                    null,
-
-                currency:
-                    "INR",
-
-                availability:
-                    null,
-
-                rating:
-                    null,
-
-                reviews:
-                    null
+                showImage(
+                    Number(
+                        button.dataset.index
+                    )
+                );
 
             };
 
-            /* =====================================
-               FEATURES
-            ===================================== */
+        });
 
-            const apiFeatures =
-                data?.itemInfo?.features;
 
-            if (
-                Array.isArray(apiFeatures)
-            ) {
+    showImage(0);
+}
 
-                normalized.features =
-                    apiFeatures
-                        .map(feature => {
 
-                            if (
-                                typeof feature === "string"
-                            ) {
+function showImage(index) {
 
-                                return feature;
+    if (!galleryImages.length) {
+        return;
+    }
 
-                            }
 
-                            return (
-                                feature?.displayValue ||
-                                feature?.value ||
-                                ""
-                            );
+    if (index < 0) {
+        index =
+            galleryImages.length - 1;
+    }
 
-                        })
-                        .filter(Boolean);
 
-            }
+    if (
+        index >=
+        galleryImages.length
+    ) {
+        index = 0;
+    }
 
-            /* =====================================
-               PRIMARY IMAGE
-            ===================================== */
 
-            const primaryImage =
-                data?.images?.primary?.large?.url ||
-                data?.images?.primary?.medium?.url ||
-                data?.images?.primary?.small?.url;
+    currentImageIndex = index;
 
-            if (primaryImage) {
 
-                normalized.images.push(
-                    primaryImage
+    mainImage.src =
+        galleryImages[index];
+
+
+    mainImage.alt =
+        `${activeVariantProduct.name || product.name} image ${index + 1}`;
+
+
+    counter.textContent =
+        `${index + 1} / ${galleryImages.length}`;
+
+
+    thumbs
+        .querySelectorAll(".thumbnail")
+        .forEach(
+            (thumbnail, number) => {
+
+                thumbnail.classList.toggle(
+                    "active",
+                    number === index
                 );
 
             }
+        );
+}
 
-            /* =====================================
-               VARIANT IMAGES
-            ===================================== */
 
-            const variants =
-                data?.images?.variants;
+prev.onclick = () => {
 
-            if (
-                Array.isArray(variants)
-            ) {
+    showImage(
+        currentImageIndex - 1
+    );
 
-                variants.forEach(variant => {
+};
 
-                    const image =
-                        variant?.large?.url ||
-                        variant?.medium?.url ||
-                        variant?.small?.url;
+
+next.onclick = () => {
+
+    showImage(
+        currentImageIndex + 1
+    );
+
+};
+
+
+/* =========================================
+   COLOUR VARIATIONS
+========================================= */
+
+function getVariationOptions() {
+
+    const variations =
+        product.variations;
+
+
+    if (!variations) {
+        return [];
+    }
+
+
+    if (
+        Array.isArray(
+            variations.options
+        )
+    ) {
+        return variations.options;
+    }
+
+
+    if (
+        Array.isArray(
+            variations
+        )
+    ) {
+        return variations;
+    }
+
+
+    const colorGroup =
+        (variations.groups || [])
+            .find(group => {
+
+                const key =
+                    String(
+                        group.key || ""
+                    ).toLowerCase();
+
+
+                return (
+                    key === "color" ||
+                    key === "colour"
+                );
+
+            });
+
+
+    return Array.isArray(
+        colorGroup?.options
+    )
+        ? colorGroup.options
+        : [];
+}
+
+
+function renderVariations() {
+
+    const options =
+        getVariationOptions()
+            .map(option =>
+
+                typeof option === "string"
+
+                    ? {
+                        value: option
+                    }
+
+                    : option
+
+            );
+
+
+    if (!options.length) {
+
+        variationSection.style.display =
+            "none";
+
+        variationGroups.innerHTML =
+            "";
+
+        return;
+    }
+
+
+    variationSection.style.display =
+        "block";
+
+
+    const defaultValue =
+        product.variations.defaultSelection ||
+        product.variations.defaultColour ||
+        product.variations.defaultColor ||
+        options[0].value;
+
+
+    if (
+        !selectedVariation ||
+        !options.some(
+            option =>
+                option.value ===
+                selectedVariation
+        )
+    ) {
+        selectedVariation =
+            defaultValue;
+    }
+
+
+    const selected =
+        options.find(
+            option =>
+                option.value ===
+                selectedVariation
+        ) || options[0];
+
+
+    selectedVariation =
+        selected.value;
+
+
+    variationGroups.innerHTML = `
+
+        <div class="variation-group">
+
+            <span class="variation-label">
+
+                Colour:
+
+                <strong>
+                    ${esc(selected.value)}
+                </strong>
+
+            </span>
+
+
+            <div class="variation-options">
+
+                ${options
+                    .map(option => `
+
+                        <button
+                            type="button"
+                            class="variation-image-option ${
+                                option.value ===
+                                selectedVariation
+                                    ? "active"
+                                    : ""
+                            }"
+                            data-value="${esc(option.value)}"
+                            aria-label="${esc(option.value)}"
+                        >
+
+                            ${
+                                option.image
+
+                                    ? `
+                                        <img
+                                            src="${esc(option.image)}"
+                                            alt="${esc(option.value)}"
+                                        >
+                                    `
+
+                                    : `
+                                        <span
+                                            style="
+                                                height:72px;
+                                                display:flex;
+                                                align-items:center;
+                                                justify-content:center;
+                                                font-size:10px;
+                                                color:#888;
+                                            "
+                                        >
+                                            No image
+                                        </span>
+                                    `
+                            }
+
+
+                            <span
+                                class="variation-option-text"
+                            >
+                                ${esc(option.value)}
+                            </span>
+
+
+                            ${
+                                option.price !==
+                                    undefined &&
+                                option.price !==
+                                    null &&
+                                option.price !== ""
+
+                                    ? `
+                                        <span
+                                            class="variation-option-price"
+                                        >
+                                            ₹${Number(
+                                                option.price
+                                            ).toLocaleString(
+                                                "en-IN"
+                                            )}
+                                        </span>
+                                    `
+
+                                    : ""
+                            }
+
+                        </button>
+
+                    `)
+                    .join("")}
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    variationGroups
+        .querySelectorAll(
+            "[data-value]"
+        )
+        .forEach(button => {
+
+            button.onclick = () => {
+
+                selectedVariation =
+                    button.dataset.value;
+
+
+                const option =
+                    options.find(
+                        item =>
+                            item.value ===
+                            selectedVariation
+                    );
+
+
+                if (option) {
+                    applyVariant(option);
+                }
+
+
+                renderVariations();
+
+            };
+
+        });
+
+}
+
+
+/* =========================================
+   RATING
+========================================= */
+
+function renderRating(
+    rating,
+    reviews,
+    link
+) {
+
+    if (rating) {
+
+        $("amazonRating").innerHTML = `
+
+            <span class="amazon-stars">
+                ${stars(rating)}
+            </span>
+
+            <span class="rating-value">
+                ${esc(rating)}
+            </span>
+
+            <span class="rating-count">
+                (${esc(reviews ?? "")} ratings)
+            </span>
+
+            <a
+                href="${esc(link)}"
+                target="_blank"
+                rel="nofollow sponsored noopener"
+                class="amazon-review-link"
+            >
+                Reviews on Amazon ↗
+            </a>
+
+        `;
+
+
+        $("reviewSummary").innerHTML = `
+
+            <strong>
+                ${esc(rating)}
+            </strong>
+
+            <span class="review-stars">
+                ${stars(rating)}
+            </span>
+
+            <span class="rating-count">
+                ${esc(reviews ?? "")}
+                Amazon ratings
+            </span>
+
+        `;
+
+    }
+
+    else {
+
+        $("amazonRating").innerHTML = `
+
+            <span class="amazon-review-link">
+                Rating and reviews available on Amazon
+            </span>
+
+        `;
+
+
+        $("reviewSummary").innerHTML = `
+
+            <strong>
+                Amazon
+            </strong>
+
+            <span class="rating-count">
+                See current rating and reviews
+            </span>
+
+        `;
+
+    }
+
+}
+
+
+/* =========================================
+   APPLY SELECTED COLOUR
+========================================= */
+
+function applyVariant(variant) {
+
+    if (!variant) {
+        return;
+    }
+
+
+    activeVariantProduct = {
+
+        ...product,
+
+        ...variant,
+
+        name:
+            variant.name ||
+            product.name,
+
+        description:
+            variant.description ??
+            product.description,
+
+        features:
+            Array.isArray(
+                variant.features
+            )
+                ? variant.features
+                : product.features,
+
+        rating:
+            variant.rating ??
+            product.rating,
+
+        reviews:
+            variant.reviews ??
+            product.reviews,
+
+        image:
+            variant.image ||
+            product.image,
+
+        images:
+            variant.images ||
+            (
+                variant.image
+                    ? [variant.image]
+                    : product.images
+            ),
+
+        price:
+            variant.price ??
+            product.price,
+
+        amazonLink:
+            variant.amazonLink ||
+            variant.detailPageURL ||
+            product.amazonLink
+
+    };
+
+
+    renderPage(
+        activeVariantProduct,
+        true
+    );
+}
+
+
+/* =========================================
+   RENDER PRODUCT
+========================================= */
+
+function renderPage(
+    data,
+    variant = false
+) {
+
+    const current =
+        data || product;
+
+
+    document.title =
+        `${current.name || product.name} | Shivano Store`;
+
+
+    $("productCategory").textContent =
+        current.category ||
+        product.category ||
+        "";
+
+
+    $("productName").textContent =
+        current.name ||
+        "Amazon product details";
+
+
+    $("productDescription").textContent =
+        current.description ||
+        "";
+
+
+    $("productPrice").textContent =
+        price(current.price);
+
+
+    $("priceNote").textContent =
+        "Check Amazon for the latest price and availability.";
+
+
+    const amazonLink =
+        current.amazonLink ||
+        product.amazonLink;
+
+
+    $("amazonButton").href =
+        amazonLink;
+
+
+    $("reviewButton").href =
+        amazonLink;
+
+
+    $("reviewsMainButton").href =
+        amazonLink;
+
+
+    renderRating(
+        current.rating,
+        current.reviews,
+        amazonLink
+    );
+
+
+    $("featureList").innerHTML =
+
+        Array.isArray(
+            current.features
+        ) &&
+        current.features.length
+
+            ? current.features
+                .map(
+                    feature =>
+                        `<li>${esc(feature)}</li>`
+                )
+                .join("")
+
+            : `
+                <li>
+                    Product features will appear here.
+                </li>
+            `;
+
+
+    setGallery(
+
+        Array.isArray(
+            current.images
+        )
+            ? current.images
+
+            : current.image
+                ? [current.image]
+                : [],
+
+        current.name ||
+        product.name
+
+    );
+
+
+    if (!variant) {
+
+        selectedVariation =
+            product.variations?.defaultSelection ||
+            product.variations?.defaultColour ||
+            product.variations?.defaultColor ||
+            "";
+
+
+        renderVariations();
+
+    }
+
+}
+
+
+/* =========================================
+   INITIAL RENDER
+========================================= */
+
+renderPage(product);
+
+
+/* =========================================
+   SIMILAR PRODUCTS
+========================================= */
+
+$("similarSlider").innerHTML =
+
+    products
+
+        .filter(
+            item =>
+                item.id !== product.id
+        )
+
+        .map(
+            item => `
+
+                <article
+                    class="similar-card"
+                >
+
+                    <div
+                        class="similar-image"
+                    >
+
+                        <img
+                            src="${esc(item.image || "")}"
+                            alt="${esc(item.name || "Product")}"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div
+                        class="similar-info"
+                    >
+
+                        <span
+                            class="similar-category"
+                        >
+                            ${esc(item.category || "")}
+                        </span>
+
+
+                        <h3>
+                            ${esc(
+                                item.name ||
+                                "Product"
+                            )}
+                        </h3>
+
+
+                        <p>
+                            ${esc(
+                                item.description ||
+                                ""
+                            )}
+                        </p>
+
+
+                        <div
+                            class="similar-bottom"
+                        >
+
+                            <span
+                                class="similar-price"
+                            >
+                                ${price(item.price)}
+                            </span>
+
+
+                            <button
+                                class="similar-btn"
+                                data-product-id="${item.id}"
+                            >
+                                View
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            `
+        )
+
+        .join("");
+
+
+$("similarSlider")
+    .querySelectorAll(
+        "[data-product-id]"
+    )
+    .forEach(button => {
+
+        button.onclick = () => {
+
+            location.href =
+                `product.html?id=${
+                    button.dataset.productId
+                }`;
+
+        };
+
+    });
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+$("menuToggle").onclick = () => {
+
+    $("navLinks")
+        .classList
+        .toggle("show");
+
+};
+
+
+$("navLinks")
+    .querySelectorAll("a")
+    .forEach(link => {
+
+        link.onclick = () => {
+
+            $("navLinks")
+                .classList
+                .remove("show");
+
+        };
+
+    });
+
+
+/* =========================================
+   FUTURE AMAZON API
+
+   Browser
+       ↓
+   Your backend
+       ↓
+   Amazon Creators API
+
+   Amazon credentials should remain
+   on the backend.
+========================================= */
+
+async function loadAmazonProduct() {
+
+    try {
+
+        const response =
+            await fetch(
+                `/api/product?asin=${
+                    encodeURIComponent(
+                        product.asin
+                    )
+                }`
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Amazon product endpoint unavailable"
+            );
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+        renderPage(data);
+
+    }
+
+    catch (error) {
+
+        console.log(
+            "Amazon API not connected yet:",
+            error.message
+        );
+
+    }
+
+}
+
+
+async function loadAmazonVariations() {
+
+    try {
+
+        const response =
+            await fetch(
+                `/api/variations?asin=${
+                    encodeURIComponent(
+                        product.asin
+                    )
+                }`
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Amazon variations endpoint unavailable"
+            );
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+        const items =
+            data?.variationsResult?.items ||
+            data?.items ||
+            [];
+
+
+        const options = [];
+
+
+        items.forEach(item => {
+
+            (
+                item.variationAttributes ||
+                []
+            )
+                .forEach(attribute => {
+
+                    const key =
+                        String(
+                            attribute.name ||
+                            ""
+                        ).toLowerCase();
+
 
                     if (
-                        image &&
-                        !normalized.images.includes(image)
+                        key !== "color" &&
+                        key !== "colour"
                     ) {
-
-                        normalized.images.push(
-                            image
-                        );
-
+                        return;
                     }
+
+
+                    options.push({
+
+                        value:
+                            attribute.value,
+
+                        image:
+                            item?.images
+                                ?.primary
+                                ?.large
+                                ?.url ||
+                            item?.image,
+
+                        asin:
+                            item?.asin,
+
+                        amazonLink:
+                            item?.detailPageURL ||
+                            item?.detailPageUrl,
+
+                        price:
+                            item?.offersV2
+                                ?.listings?.[0]
+                                ?.price?.money
+                                ?.amount
+
+                    });
 
                 });
 
-            }
+        });
 
-            /* =====================================
-               OFFER / PRICE
-            ===================================== */
 
-            const listings =
-                data?.offersV2?.listings ||
-                data?.offers?.listings ||
-                [];
-
-            const listing =
-                listings.find(
-                    item =>
-                        item?.isBuyBoxWinner === true
-                ) ||
-                listings[0];
-
-            if (listing) {
-
-                const money =
-                    listing?.price?.money ||
-                    listing?.price;
-
-                if (money) {
-
-                    normalized.price =
-                        money.amount ||
-                        money.value ||
-                        null;
-
-                    normalized.currency =
-                        money.currency ||
-                        "INR";
-
-                }
-
-                normalized.availability =
-                    listing?.availability?.message ||
-                    listing?.availability?.type ||
-                    null;
-
-            }
-
-            /* =====================================
-               RATING
-            ===================================== */
-
-            normalized.rating =
-                data?.customerReviews?.starRating ||
-                data?.itemInfo?.byLineInfo?.rating ||
-                null;
-
-            normalized.reviews =
-                data?.customerReviews?.count ||
-                null;
-
-            return normalized;
-
-        }
-
-        /* =========================================
-           PAGE ELEMENTS
-        ========================================== */
-
-        const mainImage =
-            document.getElementById(
-                "mainProductImage"
-            );
-
-        const thumbnailColumn =
-            document.getElementById(
-                "thumbnailColumn"
-            );
-
-        const galleryEmpty =
-            document.getElementById(
-                "galleryEmpty"
-            );
-
-        const galleryPrev =
-            document.getElementById(
-                "galleryPrev"
-            );
-
-        const galleryNext =
-            document.getElementById(
-                "galleryNext"
-            );
-
-        const imageCounter =
-            document.getElementById(
-                "imageCounter"
-            );
-
-        /* =========================================
-           GALLERY STATE
-        ========================================== */
-
-        let galleryImages = [];
-
-        let currentImageIndex = 0;
-
-        /* =========================================
-           SET GALLERY
-        ========================================== */
-
-        function setGallery(images, productName) {
-
-            galleryImages =
-                Array.isArray(images)
-                    ? images.filter(Boolean)
-                    : [];
-
-            currentImageIndex = 0;
-
-            if (
-                galleryImages.length === 0
-            ) {
-
-                mainImage.style.display =
-                    "none";
-
-                galleryEmpty.style.display =
-                    "flex";
-
-                galleryPrev.style.display =
-                    "none";
-
-                galleryNext.style.display =
-                    "none";
-
-                imageCounter.style.display =
-                    "none";
-
-                thumbnailColumn.innerHTML =
-                    "";
-
-                return;
-
-            }
-
-            galleryEmpty.style.display =
-                "none";
-
-            mainImage.style.display =
-                "block";
-
-            galleryPrev.style.display =
-                galleryImages.length > 1
-                    ? "flex"
-                    : "none";
-
-            galleryNext.style.display =
-                galleryImages.length > 1
-                    ? "flex"
-                    : "none";
-
-            imageCounter.style.display =
-                galleryImages.length > 1
-                    ? "block"
-                    : "none";
-
-            thumbnailColumn.innerHTML =
-                galleryImages
-                    .map(
-                        (image, index) => `
-
-                            <button
-                                class="thumbnail ${index === 0 ? "active" : ""}"
-                                type="button"
-                                data-index="${index}"
-                                aria-label="Product image ${index + 1}"
-                            >
-
-                                <img
-                                    src="${image}"
-                                    alt="${productName} image ${index + 1}"
-                                >
-
-                            </button>
-
-                        `
+        const uniqueOptions =
+            [
+                ...new Map(
+                    options.map(
+                        option =>
+                            [
+                                option.value,
+                                option
+                            ]
                     )
-                    .join("");
+                ).values()
+            ];
 
-            thumbnailColumn
-                .querySelectorAll(".thumbnail")
-                .forEach(
-                    thumbnail => {
 
-                        thumbnail.addEventListener(
-                            "click",
-                            function () {
+        if (uniqueOptions.length) {
 
-                                showImage(
-                                    Number(
-                                        this.dataset.index
-                                    )
-                                );
+            product.variations = {
 
-                            }
-                        );
+                defaultSelection:
+                    uniqueOptions[0].value,
 
-                    }
-                );
+                options:
+                    uniqueOptions
 
-            showImage(0);
+            };
+
+
+            selectedVariation =
+                "";
+
+            renderVariations();
 
         }
 
-        /* =========================================
-           SHOW IMAGE
-        ========================================== */
+    }
 
-        function showImage(index) {
+    catch (error) {
 
-            if (
-                galleryImages.length === 0
-            ) {
-
-                return;
-
-            }
-
-            if (
-                index < 0
-            ) {
-
-                index =
-                    galleryImages.length - 1;
-
-            }
-
-            if (
-                index >= galleryImages.length
-            ) {
-
-                index = 0;
-
-            }
-
-            currentImageIndex =
-                index;
-
-            mainImage.style.opacity =
-                "0.35";
-
-            setTimeout(
-                () => {
-
-                    mainImage.src =
-                        galleryImages[currentImageIndex];
-
-                    mainImage.alt =
-                        `${product.name} image ${currentImageIndex + 1}`;
-
-                    mainImage.style.opacity =
-                        "1";
-
-                },
-                100
-            );
-
-            thumbnailColumn
-                .querySelectorAll(".thumbnail")
-                .forEach(
-                    (thumbnail, thumbnailIndex) => {
-
-                        thumbnail.classList.toggle(
-                            "active",
-                            thumbnailIndex === currentImageIndex
-                        );
-
-                    }
-                );
-
-            imageCounter.textContent =
-                `${currentImageIndex + 1} / ${galleryImages.length}`;
-
-        }
-
-        /* =========================================
-           GALLERY ARROWS
-        ========================================== */
-
-        galleryPrev.addEventListener(
-            "click",
-            function () {
-
-                showImage(
-                    currentImageIndex - 1
-                );
-
-            }
+        console.log(
+            "Amazon variations API not connected yet:",
+            error.message
         );
 
-        galleryNext.addEventListener(
-            "click",
-            function () {
+    }
 
-                showImage(
-                    currentImageIndex + 1
-                );
+}
 
-            }
-        );
 
-        /* =========================================
-           KEYBOARD GALLERY
-        ========================================== */
+/*
+    API ko abhi intentionally call nahi kiya gaya.
 
-        document.addEventListener(
-            "keydown",
-            function (event) {
+    Jab backend ready ho:
 
-                if (
-                    event.key === "ArrowLeft"
-                ) {
+    loadAmazonProduct();
+    loadAmazonVariations();
+*/
 
-                    showImage(
-                        currentImageIndex - 1
-                    );
-
-                }
-
-                if (
-                    event.key === "ArrowRight"
-                ) {
-
-                    showImage(
-                        currentImageIndex + 1
-                    );
-
-                }
-
-            }
-        );
-
-        /* =========================================
-           TOUCH SWIPE
-        ========================================== */
-
-        let touchStartX = 0;
-
-        let touchEndX = 0;
-
-        mainImage.addEventListener(
-            "touchstart",
-            function (event) {
-
-                touchStartX =
-                    event.changedTouches[0].screenX;
-
-            },
-            {
-                passive: true
-            }
-        );
-
-        mainImage.addEventListener(
-            "touchend",
-            function (event) {
-
-                touchEndX =
-                    event.changedTouches[0].screenX;
-
-                const difference =
-                    touchStartX - touchEndX;
-
-                if (
-                    Math.abs(difference) < 50
-                ) {
-
-                    return;
-
-                }
-
-                if (
-                    difference > 0
-                ) {
-
-                    showImage(
-                        currentImageIndex + 1
-                    );
-
-                }
-
-                else {
-
-                    showImage(
-                        currentImageIndex - 1
-                    );
-
-                }
-
-            },
-            {
-                passive: true
-            }
-        );
-
-        /* =========================================
-           FORMAT PRICE
-        ========================================== */
-
-        function formatPrice(
-            amount,
-            currency = "INR"
-        ) {
-
-            if (
-                amount === null ||
-                amount === undefined ||
-                amount === ""
-            ) {
-
-                return "Check Amazon";
-
-            }
-
-            if (
-                currency === "INR"
-            ) {
-
-                return (
-                    "₹" +
-                    Number(amount)
-                        .toLocaleString("en-IN")
-                );
-
-            }
-
-            return (
-                currency +
-                " " +
-                Number(amount)
-                    .toLocaleString()
-            );
-
-        }
-
-        /* =========================================
-           STAR RATING
-        ========================================== */
-
-        function createStars(rating) {
-
-            if (
-                !rating
-            ) {
-
-                return "";
-
-            }
-
-            const rounded =
-                Math.round(
-                    Number(rating)
-                );
-
-            return (
-                "★".repeat(
-                    Math.min(
-                        5,
-                        rounded
-                    )
-                ) +
-                "☆".repeat(
-                    Math.max(
-                        0,
-                        5 - rounded
-                    )
-                )
-            );
-
-        }
-
-        /* =========================================
-           RENDER PRODUCT
-        ========================================== */
-
-        function renderProduct(
-            amazonData = null
-        ) {
-
-            /*
-             * For now the website uses the manually managed
-             * product data from products.js.
-             *
-             * Later, when the Amazon API is available,
-             * amazonData can be passed here and merged
-             * through normalizeAmazonProduct().
-             */
-
-            const live =
-                amazonData
-                    ? {
-                        ...product,
-                        ...normalizeAmazonProduct(amazonData)
-                    }
-                    : product;
-
-            const productName =
-                live?.name ||
-                live?.title ||
-                "Product details";
-
-            document.title =
-                `${productName} | Shivano.store`;
-
-            document.getElementById(
-                "productCategory"
-            ).textContent =
-                product.category || "Product";
-
-            document.getElementById(
-                "productName"
-            ).textContent =
-                productName;
-
-            document.getElementById(
-                "productDescription"
-            ).textContent =
-                live?.description ||
-                "Product description will be added here.";
-
-            /* =====================================
-               PRICE
-            ===================================== */
-
-            document.getElementById(
-                "productPrice"
-            ).textContent =
-                live?.price != null
-                    ? formatPrice(
-                        live.price,
-                        live.currency || "INR"
-                    )
-                    : "Check Amazon";
-
-            document.getElementById(
-                "priceNote"
-            ).textContent =
-                "Price is maintained manually in products.js. Check Amazon for the latest price.";
-
-            /* =====================================
-               AVAILABILITY
-            ===================================== */
-
-            const availability =
-                document.getElementById(
-                    "availability"
-                );
-
-            if (live?.availability) {
-
-                availability.textContent =
-                    live.availability;
-
-                availability.style.display =
-                    "inline-flex";
-
-            }
-
-            else {
-
-                availability.style.display =
-                    "none";
-
-            }
-
-            /* =====================================
-               LINKS
-            ===================================== */
-
-            document.getElementById(
-                "amazonButton"
-            ).href =
-                product.amazonLink;
-
-            document.getElementById(
-                "reviewButton"
-            ).href =
-                product.amazonLink;
-
-            document.getElementById(
-                "reviewsMainButton"
-            ).href =
-                product.amazonLink;
-
-            /* =====================================
-               RATING
-            ===================================== */
-
-            const ratingBox =
-                document.getElementById(
-                    "amazonRating"
-                );
-
-            const reviewSummary =
-                document.getElementById(
-                    "reviewSummary"
-                );
-
-            if (live?.rating) {
-
-                ratingBox.innerHTML = `
-
-                    <span class="amazon-stars">
-                        ${createStars(live.rating)}
-                    </span>
-
-                    <span class="rating-value">
-                        ${live.rating}
-                    </span>
-
-                    ${
-                        live.reviews
-                            ? `
-                                <span class="rating-count">
-                                    (${live.reviews} ratings)
-                                </span>
-                            `
-                            : ""
-                    }
-
-                    <a
-                        href="${product.amazonLink}"
-                        target="_blank"
-                        rel="nofollow sponsored noopener"
-                        class="amazon-review-link"
-                    >
-                        Reviews on Amazon ↗
-                    </a>
-
-                `;
-
-                reviewSummary.innerHTML = `
-
-                    <strong>
-                        ${live.rating}
-                    </strong>
-
-                    <span class="review-stars">
-                        ${createStars(live.rating)}
-                    </span>
-
-                    <span class="rating-count">
-                        ${
-                            live.reviews
-                                ? `${live.reviews} Amazon ratings`
-                                : "Amazon ratings"
-                        }
-                    </span>
-
-                `;
-
-            }
-
-            else {
-
-                ratingBox.innerHTML = `
-
-                    <span class="amazon-review-link">
-                        Rating and reviews available on Amazon
-                    </span>
-
-                `;
-
-                reviewSummary.innerHTML = `
-
-                    <strong>
-                        Amazon
-                    </strong>
-
-                    <span class="rating-count">
-                        See current rating and reviews
-                    </span>
-
-                `;
-
-            }
-
-            /* =====================================
-               GALLERY
-            ===================================== */
-
-            const manualImages =
-                Array.isArray(product.images) &&
-                product.images.length
-                    ? product.images
-                    : [product.image];
-
-            setGallery(
-                manualImages,
-                productName
-            );
-
-            /* =====================================
-               FEATURES
-            ===================================== */
-
-            const featureList =
-                document.getElementById(
-                    "featureList"
-                );
-
-            const features =
-                live?.features || [];
-
-            if (features.length === 0) {
-
-                featureList.innerHTML = `
-
-                    <li>
-                        Product details will be added in products.js.
-                    </li>
-
-                `;
-
-            }
-
-            else {
-
-                featureList.innerHTML =
-                    features
-                        .map(
-                            feature =>
-                                `<li>${feature}</li>`
-                        )
-                        .join("");
-
-            }
-
-        }
-
-        /* =========================================
-           INITIAL STATE
-
-           No fake images.
-           No fake price.
-           No fake ratings.
-        ========================================== */
-
-        if (product) {
-
-            renderProduct();
-
-        }
-
-        /* =========================================
-           AMAZON API CONNECTION
-
-           IMPORTANT:
-
-           Browser must NOT call Amazon Creators API
-           directly because credentials must remain
-           server-side.
-
-           Later your backend can expose:
-
-           /api/product?asin=B0HBQR4M3L
-
-           and return Amazon API JSON.
-        ========================================== */
-
-        async function loadAmazonProduct() {
-
-            try {
-
-                const response =
-                    await fetch(
-                        `/api/product?asin=${encodeURIComponent(product.asin)}`
-                    );
-
-                if (
-                    !response.ok
-                ) {
-
-                    throw new Error(
-                        "Amazon API endpoint unavailable"
-                    );
-
-                }
-
-                const data =
-                    await response.json();
-
-                renderProduct(data);
-
-            }
-
-            catch (error) {
-
-                console.log(
-                    "Amazon API not connected yet:",
-                    error.message
-                );
-
-            }
-
-        }
-
-        /*
-         * Keep this disabled until the backend
-         * /api/product endpoint is created.
-         *
-         * When Creators API backend is ready,
-         * uncomment the next line.
-         */
-
-        // loadAmazonProduct();
-
-        /* =========================================
-           SIMILAR PRODUCTS
-        ========================================== */
-
-        const similarProducts =
-            products.filter(
-                item =>
-                    item.id !== product.id
-            );
-
-        const similarSlider =
-            document.getElementById(
-                "similarSlider"
-            );
-
-        similarSlider.innerHTML =
-            similarProducts
-                .map(
-                    item => `
-
-                        <article class="similar-card">
-
-                            <div class="similar-image">
-
-                                <img
-                                    src="${item.image}"
-                                    alt="${item.name}"
-                                    loading="lazy"
-                                >
-
-                            </div>
-
-                            <div class="similar-info">
-
-                                <span class="similar-category">
-                                    ${item.category}
-                                </span>
-
-                                <h3>
-                                    ${item.name}
-                                </h3>
-
-                                <p>
-                                    ${item.description}
-                                </p>
-
-                                <div class="similar-bottom">
-
-                                    <span class="similar-price">
-                                        ₹${Number(item.price || 0).toLocaleString("en-IN")}
-                                    </span>
-
-                                    <button
-                                        class="similar-btn"
-                                        data-product-id="${item.id}"
-                                    >
-                                        View
-                                    </button>
-
-                                </div>
-
-                            </div>
-
-                        </article>
-
-                    `
-                )
-                .join("");
-
-        /* =========================================
-           SIMILAR PRODUCT CLICK
-        ========================================== */
-
-        similarSlider
-            .querySelectorAll(
-                "[data-product-id]"
-            )
-            .forEach(
-                button => {
-
-                    button.addEventListener(
-                        "click",
-                        function () {
-
-                            window.location.href =
-                                `product.html?id=${this.dataset.productId}`;
-
-                        }
-                    );
-
-                }
-            );
-
-        /* =========================================
-           MOBILE MENU
-        ========================================== */
-
-        const menuToggle =
-            document.getElementById(
-                "menuToggle"
-            );
-
-        const navLinks =
-            document.getElementById(
-                "navLinks"
-            );
-
-        menuToggle.addEventListener(
-            "click",
-            function () {
-
-                navLinks.classList.toggle(
-                    "show"
-                );
-
-            }
-        );
-
-        navLinks
-            .querySelectorAll("a")
-            .forEach(
-                link => {
-
-                    link.addEventListener(
-                        "click",
-                        function () {
-
-                            navLinks.classList.remove(
-                                "show"
-                            );
-
-                        }
-                    );
-
-                }
-            );
-
-    </script>
+</script>
 
 </body>
 

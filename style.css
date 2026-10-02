@@ -714,6 +714,15 @@ h2 {
     font-size: 13px;
 
     min-height: 42px;
+    max-height: 42px;
+
+    overflow: hidden;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+
+    line-clamp: 2;
 }
 
 .product-rating {
