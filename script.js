@@ -984,6 +984,7 @@ window.addEventListener(
     }
 );
 
+
 scrollTop.addEventListener(
     "click",
     function () {
@@ -995,6 +996,78 @@ scrollTop.addEventListener(
 
     }
 );
+
+
+
+/* =====================================================
+   SMART HEADER
+   Downward scroll = header moves away with the page
+   Upward scroll = header comes back
+===================================================== */
+
+const siteHeader =
+    document.querySelector(".site-header");
+
+let lastScrollY =
+    window.scrollY;
+
+
+window.addEventListener(
+    "scroll",
+    function () {
+
+        const currentScrollY =
+            window.scrollY;
+
+
+        /* Always show the header at the very top. */
+
+        if (currentScrollY <= 10) {
+
+            siteHeader.classList.remove(
+                "header-hidden"
+            );
+
+            lastScrollY =
+                currentScrollY;
+
+            return;
+
+        }
+
+
+        /* Scrolling down: hide the header. */
+
+        if (currentScrollY > lastScrollY) {
+
+            siteHeader.classList.add(
+                "header-hidden"
+            );
+
+        }
+
+
+        /* Scrolling up: show the header. */
+
+        else if (currentScrollY < lastScrollY) {
+
+            siteHeader.classList.remove(
+                "header-hidden"
+            );
+
+        }
+
+
+        lastScrollY =
+            currentScrollY;
+
+    },
+    {
+        passive: true
+    }
+);
+
+
 
 /* =====================================================
    INITIAL LOAD

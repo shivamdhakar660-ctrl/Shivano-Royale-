@@ -36,6 +36,18 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
         rel="stylesheet"
     >
+
+    <style id="smart-header-style">
+        /* Amazon-style smart header: hide on downward scroll, show on upward scroll. */
+        .site-header {
+            transition: transform 0.25s ease;
+            will-change: transform;
+        }
+
+        .site-header.header-hidden {
+            transform: translateY(-100%);
+        }
+    </style>
 </head>
 
 
@@ -106,129 +118,40 @@
 
         </nav>
 
+        <div class="discovery-bar">
+
+            <div class="discovery-all">
+                <span>☰</span>
+                All
+            </div>
+
+            <div class="discovery-search search-box">
+                <span>⌕</span>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search products..."
+                    autocomplete="off"
+                >
+            </div>
+
+            <select id="categoryFilter" aria-label="Product category">
+                <option value="All">All Categories</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Lifestyle">Lifestyle</option>
+            </select>
+
+            <select id="sortFilter" aria-label="Sort products">
+                <option value="default">Sort Products</option>
+                <option value="low">Price: Low to High</option>
+                <option value="high">Price: High to Low</option>
+                <option value="rating">Highest Rated</option>
+            </select>
+
+        </div>
+
     </header>
- 
-
-         </section>
-        <!-- =========================
-             CATEGORY SECTION
-        ========================== -->
-
-        <section
-            class="categories-section"
-            id="categories"
-        >
-
-            <div class="section-heading">
-
-                <div>
-
-                    <p class="eyebrow">
-                        EXPLORE
-                    </p>
-
-                    <h2>
-                        Shop by category
-                    </h2>
-
-                </div>
-
-                <p>
-                    Find products that match your
-                    style, needs and everyday life.
-                </p>
-
-            </div>
-
-
-            <div class="category-grid">
-
-
-                <button
-                    class="category-card active"
-                    data-category="All"
-                >
-
-                    <span class="category-icon">
-                        ✦
-                    </span>
-
-                    <strong>
-                        All Products
-                    </strong>
-
-                    <small>
-                        Explore everything
-                    </small>
-
-                </button>
-
-
-                <button
-                    class="category-card"
-                    data-category="Fashion"
-                >
-
-                    <span class="category-icon">
-                        ◇
-                    </span>
-
-                    <strong>
-                        Fashion
-                    </strong>
-
-                    <small>
-                        Everyday style
-                    </small>
-
-                </button>
-
-
-                <button
-                    class="category-card"
-                    data-category="Electronics"
-                >
-
-                    <span class="category-icon">
-                        ◉
-                    </span>
-
-                    <strong>
-                        Electronics
-                    </strong>
-
-                    <small>
-                        Smart essentials
-                    </small>
-
-                </button>
-
-
-                <button
-                    class="category-card"
-                    data-category="Lifestyle"
-                >
-
-                    <span class="category-icon">
-                        ♢
-                    </span>
-
-                    <strong>
-                        Lifestyle
-                    </strong>
-
-                    <small>
-                        Everyday living
-                    </small>
-
-                </button>
-
-
-            </div>
-
-        </section>
-
-
 
         <!-- =========================
              PRODUCTS
@@ -253,75 +176,7 @@
 
                 </div>
 
-                <p>
-                    Discover products selected for
-                    everyday use and modern living.
-                </p>
 
-            </div>
-
-
-            <!-- Controls -->
-
-            <div class="product-controls">
-
-
-                <div class="search-box">
-
-                    <span>
-                        ⌕
-                    </span>
-
-                    <input
-                        type="text"
-                        id="searchInput"
-                        placeholder="Search products..."
-                        autocomplete="off"
-                    >
-
-                </div>
-
-
-                <select id="categoryFilter">
-
-                    <option value="All">
-                        All Categories
-                    </option>
-
-                    <option value="Fashion">
-                        Fashion
-                    </option>
-
-                    <option value="Electronics">
-                        Electronics
-                    </option>
-
-                    <option value="Lifestyle">
-                        Lifestyle
-                    </option>
-
-                </select>
-
-
-                <select id="sortFilter">
-
-                    <option value="default">
-                        Sort Products
-                    </option>
-
-                    <option value="low">
-                        Price: Low to High
-                    </option>
-
-                    <option value="high">
-                        Price: High to Low
-                    </option>
-
-                    <option value="rating">
-                        Highest Rated
-                    </option>
-
-                </select>
 
             </div>
 
@@ -390,8 +245,7 @@
                 </h2>
 
                 <p>
-                    We help you discover products
-                    before you head to Amazon to buy.
+                    Discover first. Shop on Amazon when ready.
                 </p>
 
             </div>
@@ -411,8 +265,7 @@
                     </h3>
 
                     <p>
-                        Explore products in one clean,
-                        simple place.
+                        Explore products simply.
                     </p>
 
                 </div>
@@ -429,8 +282,7 @@
                     </h3>
 
                     <p>
-                        Look through product details
-                        before making your choice.
+                        Check details before choosing.
                     </p>
 
                 </div>
@@ -447,8 +299,7 @@
                     </h3>
 
                     <p>
-                        When you're ready, continue
-                        to Amazon to complete your purchase.
+                        Continue to Amazon to shop.
                     </p>
 
                 </div>
