@@ -3736,3 +3736,73 @@ and (
     }
 
 }
+
+/* =========================================================
+   FIX — FEATURED PRODUCTS / #PRODUCTS POSITION
+   ONLY THIS FIX
+========================================================= */
+
+@media (min-width: 901px) {
+
+    html {
+        scroll-padding-top: 96px !important;
+    }
+
+    #products {
+        scroll-margin-top: 96px !important;
+    }
+
+    main {
+        padding-top: 78px !important;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    html {
+        scroll-padding-top: 70px !important;
+    }
+
+    #products {
+        scroll-margin-top: 70px !important;
+    }
+
+}
+
+/* =========================================================
+   FINAL FIX — FEATURED PRODUCTS MUST START BELOW HEADER
+========================================================= */
+
+html {
+    scroll-padding-top: 0 !important;
+}
+
+#products {
+    scroll-margin-top: 0 !important;
+}
+
+@media (min-width: 901px) {
+
+    main {
+        padding-top: 0 !important;
+    }
+
+    #products {
+        padding-top: 28px !important;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    main {
+        padding-top: 0 !important;
+    }
+
+    #products {
+        padding-top: 20px !important;
+    }
+
+}
