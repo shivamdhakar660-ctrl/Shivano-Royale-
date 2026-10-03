@@ -1,4 +1,4 @@
-   <!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -69,6 +69,33 @@
                 Shivano <span>Store</span>
             </a>
 
+            <button
+                type="button"
+                class="header-search-trigger"
+                id="homeSearchTrigger"
+                aria-label="Open product search"
+            >
+                <span>⌕</span>
+                <span>Search</span>
+            </button>
+
+            <div class="header-search-panel" id="homeSearchPanel">
+                <span class="header-search-icon">⌕</span>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search products..."
+                    autocomplete="off"
+                >
+                <button
+                    type="button"
+                    class="header-search-close"
+                    id="homeSearchClose"
+                    aria-label="Close search"
+                >
+                    ×
+                </button>
+            </div>
 
             <button
                 class="menu-toggle"
@@ -78,34 +105,16 @@
                 ☰
             </button>
 
-
             <div
                 class="nav-links"
                 id="navLinks"
             >
-
-                <a href="#home">
-                    Home
-                </a>
-
-                <a href="#products">
-                    Products
-                </a>
-
-                <a href="#categories">
-                    Categories
-                </a>
-
-                <a href="#about">
-                    About
-                </a>
-
-                <a href="#contact">
-                    Contact
-                </a>
-
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#categories">Categories</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
             </div>
-
 
             <button
                 class="wishlist-nav"
@@ -118,43 +127,13 @@
 
         </nav>
 
- <div class="discovery-bar">
-
-    <div class="discovery-search search-box">
-        <span>⌕</span>
-
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Search products..."
-            autocomplete="off"
-        >
-    </div>
-
-
-    <select
-        id="categoryFilter"
-        aria-label="Product category"
-    >
-        <option value="All">
-            All Categories
-        </option>
-
-        <option value="Fashion">
-            Fashion
-        </option>
-
-        <option value="Electronics">
-            Electronics
-        </option>
-
-        <option value="Lifestyle">
-            Lifestyle
-        </option>
-    </select>
-
-</div>
-
+        <div class="discovery-bar">
+            <div
+                class="category-shortcuts"
+                id="categoryShortcuts"
+                aria-label="Product categories"
+            ></div>
+        </div>
     </header>
 
         <!-- =========================

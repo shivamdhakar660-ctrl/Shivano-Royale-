@@ -1013,6 +1013,122 @@
 
 }
 
+
+
+/* =====================================================
+   REQUESTED PRODUCT-PAGE UI CHANGES
+===================================================== */
+
+#productSearchButton {
+    display: none;
+}
+
+.product-page-top .back-link {
+    display: inline-flex;
+}
+
+.product-search-results {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 18px 45px rgba(0,0,0,.12);
+    overflow: hidden;
+    display: none;
+    z-index: 1100;
+}
+
+.header-search-panel.open .product-search-results.has-results {
+    display: block;
+}
+
+.product-search-result {
+    width: 100%;
+    padding: 11px 14px;
+    border: 0;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-search-result:last-child {
+    border-bottom: 0;
+}
+
+.product-search-result img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    background: #f7f6f2;
+    border-radius: 6px;
+}
+
+.product-search-result strong {
+    font-size: 12px;
+    color: #222;
+}
+
+.product-search-result small {
+    display: block;
+    color: #888;
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.navbar.search-open .productSearchButton,
+.navbar.search-open #productSearchButton {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .header-search-trigger {
+        display: none;
+    }
+
+    #productSearchButton {
+        display: grid;
+        place-items: center;
+        margin-left: 0;
+        font-size: 20px;
+    }
+
+    .navbar.search-open #productSearchButton {
+        display: none;
+    }
+
+    .navbar.search-open .header-search-panel {
+        display: flex;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-product-image .gallery-arrow {
+        width: 34px;
+        height: 42px;
+        border-color: #666;
+        background: rgba(70,70,70,.9);
+        color: #eee;
+        font-size: 20px;
+    }
+
+    .main-product-image .gallery-prev {
+        left: 7px;
+    }
+
+    .main-product-image .gallery-next {
+        right: 7px;
+    }
+
+    .main-product-image {
+        cursor: pointer;
+    }
+}
 </style>
 
 </head>
@@ -1032,6 +1148,34 @@
     Shivano <span>Store</span>
 </a>
 
+<button
+    type="button"
+    class="header-search-trigger"
+    id="productSearchTrigger"
+    aria-label="Open product search"
+>
+    <span>⌕</span>
+    <span>Search</span>
+</button>
+
+<div class="header-search-panel" id="productSearchPanel">
+    <span class="header-search-icon">⌕</span>
+    <input
+        type="text"
+        id="productSearchInput"
+        placeholder="Search products..."
+        autocomplete="off"
+    >
+    <button
+        type="button"
+        class="header-search-close"
+        id="productSearchClose"
+        aria-label="Close search"
+    >
+        ×
+    </button>
+    <div class="product-search-results" id="productSearchResults"></div>
+</div>
 
 <button
     class="menu-toggle"
@@ -1041,42 +1185,26 @@
     ☰
 </button>
 
-
 <div
     class="nav-links"
     id="navLinks"
 >
-
-    <a href="index.html">
-        Home
-    </a>
-
-    <a href="index.html#products">
-        Products
-    </a>
-
-    <a href="index.html#categories">
-        Categories
-    </a>
-
-    <a href="index.html#about">
-        About
-    </a>
-
-    <a href="index.html#contact">
-        Contact
-    </a>
-
+    <a href="index.html">Home</a>
+    <a href="index.html#products">Products</a>
+    <a href="index.html#categories">Categories</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
 </div>
 
-
-<a
-    href="index.html#products"
+<button
+    type="button"
     class="wishlist-nav"
-    title="Back to products"
+    id="productSearchButton"
+    title="Search products"
+    aria-label="Search products"
 >
-    ←
-</a>
+    ⌕
+</button>
 
 </nav>
 
@@ -1429,6 +1557,50 @@
 </section>
 
 </main>
+
+
+<div
+    class="product-lightbox"
+    id="productLightbox"
+    aria-hidden="true"
+>
+    <div class="lightbox-inner">
+        <button
+            type="button"
+            class="lightbox-close"
+            id="lightboxClose"
+            aria-label="Close image viewer"
+        >×</button>
+
+        <div class="lightbox-image-wrap">
+            <button
+                type="button"
+                class="lightbox-arrow lightbox-prev"
+                id="lightboxPrev"
+                aria-label="Previous image"
+            >‹</button>
+
+            <img
+                class="lightbox-image"
+                id="lightboxImage"
+                src=""
+                alt=""
+            >
+
+            <button
+                type="button"
+                class="lightbox-arrow lightbox-next"
+                id="lightboxNext"
+                aria-label="Next image"
+            >›</button>
+        </div>
+
+        <div
+            class="lightbox-thumbs"
+            id="lightboxThumbs"
+        ></div>
+    </div>
+</div>
 
 
 <footer class="product-footer">
@@ -1796,6 +1968,108 @@ function getVariationOptions() {
         ? colorGroup.options
         : [];
 }
+
+
+/* =========================================
+   FULL-SCREEN IMAGE VIEWER
+========================================= */
+
+const productLightbox =
+    $("productLightbox");
+
+const lightboxImage =
+    $("lightboxImage");
+
+const lightboxThumbs =
+    $("lightboxThumbs");
+
+const lightboxClose =
+    $("lightboxClose");
+
+const lightboxPrev =
+    $("lightboxPrev");
+
+const lightboxNext =
+    $("lightboxNext");
+
+
+function renderLightbox() {
+
+    if (!galleryImages.length) {
+        return;
+    }
+
+    lightboxImage.src =
+        galleryImages[currentImageIndex];
+
+    lightboxImage.alt =
+        `${activeVariantProduct.name || product.name} image ${currentImageIndex + 1}`;
+
+    lightboxThumbs.innerHTML =
+        galleryImages
+            .map((src, index) => `
+                <button
+                    type="button"
+                    class="lightbox-thumb ${index === currentImageIndex ? "active" : ""}"
+                    data-lightbox-index="${index}"
+                >
+                    <img src="${esc(src)}" alt="Image ${index + 1}">
+                </button>
+            `)
+            .join("");
+
+    lightboxThumbs
+        .querySelectorAll("[data-lightbox-index]")
+        .forEach(button => {
+            button.onclick = () => {
+                showImage(Number(button.dataset.lightboxIndex));
+                renderLightbox();
+            };
+        });
+}
+
+
+function openLightbox() {
+
+    if (!galleryImages.length) {
+        return;
+    }
+
+    renderLightbox();
+    productLightbox.classList.add("show");
+    productLightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+}
+
+
+function closeLightbox() {
+
+    productLightbox.classList.remove("show");
+    productLightbox.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+}
+
+
+mainImage.addEventListener("click", openLightbox);
+lightboxClose.addEventListener("click", closeLightbox);
+
+productLightbox.addEventListener("click", event => {
+    if (event.target === productLightbox) {
+        closeLightbox();
+    }
+});
+
+lightboxPrev.addEventListener("click", () => {
+    if (!galleryImages.length) return;
+    showImage(currentImageIndex - 1);
+    renderLightbox();
+});
+
+lightboxNext.addEventListener("click", () => {
+    if (!galleryImages.length) return;
+    showImage(currentImageIndex + 1);
+    renderLightbox();
+});
 
 
 function renderVariations() {
@@ -2297,6 +2571,7 @@ $("similarSlider").innerHTML =
 
                 <article
                     class="similar-card"
+                    data-product-id="${item.id}"
                 >
 
                     <div
@@ -2370,22 +2645,154 @@ $("similarSlider").innerHTML =
 
 
 $("similarSlider")
-    .querySelectorAll(
-        "[data-product-id]"
-    )
-    .forEach(button => {
+    .querySelectorAll(".similar-card")
+    .forEach(card => {
 
-        button.onclick = () => {
+        card.addEventListener("click", event => {
+
+            const amazonLink =
+                event.target.closest(".similar-btn");
+
+            const productId =
+                card.dataset.productId;
+
+            if (!productId) {
+                return;
+            }
 
             location.href =
-                `product.html?id=${
-                    button.dataset.productId
-                }`;
+                `product.html?id=${productId}`;
 
-        };
+        });
 
     });
 
+
+
+
+/* =========================================
+   PRODUCT-PAGE SEARCH
+========================================= */
+
+const productSearchTrigger =
+    $("productSearchTrigger");
+
+const productSearchButton =
+    $("productSearchButton");
+
+const productSearchPanel =
+    $("productSearchPanel");
+
+const productSearchClose =
+    $("productSearchClose");
+
+const productSearchInput =
+    $("productSearchInput");
+
+const productSearchResults =
+    $("productSearchResults");
+
+
+function openProductSearch() {
+
+    document
+        .querySelector(".navbar")
+        ?.classList
+        .add("search-open");
+
+    productSearchPanel.classList.add("open");
+
+    setTimeout(() => {
+        productSearchInput.focus();
+    }, 0);
+}
+
+
+function closeProductSearch() {
+
+    document
+        .querySelector(".navbar")
+        ?.classList
+        .remove("search-open");
+
+    productSearchPanel.classList.remove("open");
+    productSearchResults.classList.remove("has-results");
+    productSearchResults.innerHTML = "";
+    productSearchInput.value = "";
+}
+
+
+function renderProductSearchResults(query) {
+
+    const search =
+        query.toLowerCase().trim();
+
+    if (!search) {
+        productSearchResults.classList.remove("has-results");
+        productSearchResults.innerHTML = "";
+        return;
+    }
+
+    const matches =
+        products
+            .filter(item =>
+                `${item.name} ${item.category} ${item.description}`
+                    .toLowerCase()
+                    .includes(search)
+            )
+            .slice(0, 6);
+
+    productSearchResults.innerHTML =
+        matches.length
+            ? matches.map(item => `
+                <button
+                    type="button"
+                    class="product-search-result"
+                    data-search-product-id="${item.id}"
+                >
+                    <img src="${esc(item.image || "")}" alt="${esc(item.name || "Product")}">
+                    <span>
+                        <strong>${esc(item.name || "Product")}</strong>
+                        <small>${esc(item.category || "")}</small>
+                    </span>
+                </button>
+            `).join("")
+            : `<div class="product-search-result">\n                    <span><strong>No products found</strong></span>\n               </div>`;
+
+    productSearchResults.classList.add("has-results");
+
+    productSearchResults
+        .querySelectorAll("[data-search-product-id]")
+        .forEach(button => {
+            button.onclick = () => {
+                location.href =
+                    `product.html?id=${button.dataset.searchProductId}`;
+            };
+        });
+}
+
+
+productSearchTrigger?.addEventListener(
+    "click",
+    openProductSearch
+);
+
+productSearchButton?.addEventListener(
+    "click",
+    openProductSearch
+);
+
+productSearchClose?.addEventListener(
+    "click",
+    closeProductSearch
+);
+
+productSearchInput?.addEventListener(
+    "input",
+    event => {
+        renderProductSearchResults(event.target.value);
+    }
+);
 
 /* =========================================
    MOBILE MENU

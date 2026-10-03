@@ -28,8 +28,17 @@ const productGrid =
 const searchInput =
     document.getElementById("searchInput");
 
-const categoryFilter =
-    document.getElementById("categoryFilter");
+const categoryShortcuts =
+    document.getElementById("categoryShortcuts");
+
+const homeSearchTrigger =
+    document.getElementById("homeSearchTrigger");
+
+const homeSearchPanel =
+    document.getElementById("homeSearchPanel");
+
+const homeSearchClose =
+    document.getElementById("homeSearchClose");
 
 const resultsInfo =
     document.getElementById("resultsInfo");
@@ -132,10 +141,15 @@ function renderProducts() {
 
     }
 
+
     /* RESULTS */
 
-    resultsInfo.textContent =
-        `Showing ${filteredProducts.length} product${filteredProducts.length !== 1 ? "s" : ""}`;
+    if (resultsInfo) {
+
+        resultsInfo.textContent =
+            `Showing ${filteredProducts.length} product${filteredProducts.length !== 1 ? "s" : ""}`;
+
+    }
 
 
     /* EMPTY */
@@ -180,7 +194,10 @@ function createProductCard(product) {
 
     return `
 
-        <article class="product-card">
+        <article
+            class="product-card"
+            data-product-id="${product.id}"
+        >
 
             <div class="product-image">
 
@@ -245,7 +262,7 @@ function createProductCard(product) {
 
                     <div class="product-price">
 
-                        ₹${product.price.toLocaleString("en-IN")}
+                        ₹${Number(product.price).toLocaleString("en-IN")}
 
                         <span class="product-price-note">
                             Check latest price on Amazon ↗
@@ -329,82 +346,131 @@ function getStars(rating) {
    SEARCH
 ===================================================== */
 
-searchInput.addEventListener(
-    "input",
-    function () {
+if (searchInput) {
 
-        currentSearch =
-            this.value;
-
-        renderProducts();
-
-    }
-);
-
-
-
-/* =====================================================
-   CATEGORY FILTER
-===================================================== */
-
-categoryFilter.addEventListener(
-    "change",
-    function () {
-
-        currentCategory =
-            this.value;
-
-        updateCategoryCards();
-
-        renderProducts();
-
-    }
-);
-
-
-/* =====================================================
-   CATEGORY CARDS
-===================================================== */
-
-categoryCards.forEach(card => {
-
-    card.addEventListener(
-        "click",
+    searchInput.addEventListener(
+        "input",
         function () {
 
-            currentCategory =
-                this.dataset.category;
-
-            categoryFilter.value =
-                currentCategory;
-
-            updateCategoryCards();
+            currentSearch =
+                this.value;
 
             renderProducts();
-
-            document
-                .getElementById("products")
-                .scrollIntoView({
-                    behavior: "smooth"
-                });
 
         }
     );
 
-});
+}
 
 
 
-function updateCategoryCards() {
+/* =====================================================
+   CATEGORY SHORTCUTS
+   Categories are read directly from products.js.
+===================================================== */
 
-    categoryCards.forEach(card => {
+function getProductCategories() {
 
-        card.classList.toggle(
-            "active",
-            card.dataset.category === currentCategory
-        );
+    const uniqueCategories =
+        [...new Set(
+            products
+                .map(product => product.category)
+                .filter(Boolean)
+        )];
 
-    });
+    return [
+        "All",
+        ...uniqueCategories
+    ];
+
+}
+
+
+
+function renderCategoryShortcuts() {
+
+    if (!categoryShortcuts) {
+
+        return;
+
+    }
+
+
+    categoryShortcuts.innerHTML =
+        getProductCategories()
+            .map(category => {
+
+                return `
+
+                    <button
+                        type="button"
+                        class="category-shortcut ${
+                            category === currentCategory
+                                ? "active"
+                                : ""
+                        }"
+                        data-category="${escapeHtml(category)}"
+                    >
+
+                        ${
+                            category === "All"
+                                ? "All Categories"
+                                : escapeHtml(category)
+                        }
+
+                    </button>
+
+                `;
+
+            })
+            .join("");
+
+
+    categoryShortcuts
+        .querySelectorAll("[data-category]")
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    currentCategory =
+                        this.dataset.category;
+
+                    renderCategoryShortcuts();
+
+                    renderProducts();
+
+
+                    const productsSection =
+                        document.getElementById("products");
+
+
+                    if (productsSection) {
+
+                        productsSection.scrollIntoView({
+                            behavior: "smooth"
+                        });
+
+                    }
+
+                }
+            );
+
+        });
+
+}
+
+
+
+function escapeHtml(value) {
+
+    return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
 
 }
 
@@ -414,24 +480,32 @@ function updateCategoryCards() {
    CLEAR FILTERS
 ===================================================== */
 
-clearFilters.addEventListener(
-    "click",
-    function () {
+if (clearFilters) {
 
-        currentSearch = "";
+    clearFilters.addEventListener(
+        "click",
+        function () {
 
-        currentCategory = "All";
+            currentSearch = "";
 
-        searchInput.value = "";
+            currentCategory = "All";
 
-        categoryFilter.value = "All";
-        
-        updateCategoryCards();
 
-        renderProducts();
+            if (searchInput) {
 
-    }
-);
+                searchInput.value = "";
+
+            }
+
+
+            renderCategoryShortcuts();
+
+            renderProducts();
+
+        }
+    );
+
+}
 
 
 
@@ -442,6 +516,7 @@ clearFilters.addEventListener(
 document.addEventListener(
     "click",
     function (event) {
+
 
         /* Amazon link clicked */
 
@@ -480,6 +555,7 @@ document.addEventListener(
                     detailsButton.dataset.details
                 );
 
+
             openProductModal(productId);
 
             return;
@@ -502,28 +578,17 @@ document.addEventListener(
         }
 
 
-        /*
-         * Find the product using
-         * the Details button inside the card.
-         */
-
-        const cardDetailsButton =
-            productCard.querySelector(
-                "[data-details]"
+        const productId =
+            Number(
+                productCard.dataset.productId
             );
 
 
-        if (!cardDetailsButton) {
+        if (!productId) {
 
             return;
 
         }
-
-
-        const productId =
-            Number(
-                cardDetailsButton.dataset.details
-            );
 
 
         openProductModal(productId);
@@ -561,6 +626,13 @@ function openProductModal(productId) {
 
 function closeModal() {
 
+    if (!productModal) {
+
+        return;
+
+    }
+
+
     productModal.classList.remove("show");
 
     document.body.style.overflow = "";
@@ -568,18 +640,37 @@ function closeModal() {
 }
 
 
-modalClose.addEventListener(
-    "click",
-    closeModal
-);
 
+if (modalClose) {
 
-productModal
-    .querySelector(".modal-overlay")
-    .addEventListener(
+    modalClose.addEventListener(
         "click",
         closeModal
     );
+
+}
+
+
+
+if (productModal) {
+
+    const modalOverlay =
+        productModal.querySelector(
+            ".modal-overlay"
+        );
+
+
+    if (modalOverlay) {
+
+        modalOverlay.addEventListener(
+            "click",
+            closeModal
+        );
+
+    }
+
+}
+
 
 
 document.addEventListener(
@@ -676,6 +767,13 @@ function saveWishlist() {
 
 function updateWishlistCount() {
 
+    if (!wishlistCount) {
+
+        return;
+
+    }
+
+
     wishlistCount.textContent =
         wishlist.length;
 
@@ -718,48 +816,79 @@ function updateWishlistButtons() {
    WISHLIST DRAWER
 ===================================================== */
 
-wishlistNav.addEventListener(
-    "click",
-    function () {
+if (wishlistNav) {
 
-        renderWishlist();
+    wishlistNav.addEventListener(
+        "click",
+        function () {
 
-        wishlistDrawer.classList.add("show");
+            renderWishlist();
 
-        drawerOverlay.classList.add("show");
+            wishlistDrawer.classList.add("show");
 
-        document.body.style.overflow = "hidden";
+            drawerOverlay.classList.add("show");
 
-    }
-);
+            document.body.style.overflow = "hidden";
+
+        }
+    );
+
+}
 
 
 
 function closeWishlistDrawer() {
 
-    wishlistDrawer.classList.remove("show");
+    if (wishlistDrawer) {
 
-    drawerOverlay.classList.remove("show");
+        wishlistDrawer.classList.remove("show");
+
+    }
+
+
+    if (drawerOverlay) {
+
+        drawerOverlay.classList.remove("show");
+
+    }
+
 
     document.body.style.overflow = "";
 
 }
 
 
-closeWishlist.addEventListener(
-    "click",
-    closeWishlistDrawer
-);
+
+if (closeWishlist) {
+
+    closeWishlist.addEventListener(
+        "click",
+        closeWishlistDrawer
+    );
+
+}
 
 
-drawerOverlay.addEventListener(
-    "click",
-    closeWishlistDrawer
-);
+
+if (drawerOverlay) {
+
+    drawerOverlay.addEventListener(
+        "click",
+        closeWishlistDrawer
+    );
+
+}
 
 
 
 function renderWishlist() {
+
+    if (!wishlistItems) {
+
+        return;
+
+    }
+
 
     const savedProducts =
         products.filter(
@@ -819,7 +948,7 @@ function renderWishlist() {
                         </h3>
 
                         <p>
-                            ₹${product.price.toLocaleString("en-IN")}
+                            ₹${Number(product.price).toLocaleString("en-IN")}
                         </p>
 
                     </div>
@@ -874,34 +1003,124 @@ document.addEventListener(
 
 
 /* =====================================================
+   HEADER SEARCH
+===================================================== */
+
+function openHomeSearch() {
+
+    const navbar =
+        document.querySelector(".navbar");
+
+
+    if (!navbar || !homeSearchPanel) {
+
+        return;
+
+    }
+
+
+    navbar.classList.add("search-open");
+
+    homeSearchPanel.classList.add("open");
+
+
+    setTimeout(
+        function () {
+
+            if (searchInput) {
+
+                searchInput.focus();
+
+            }
+
+        },
+        0
+    );
+
+}
+
+
+
+function closeHomeSearch() {
+
+    const navbar =
+        document.querySelector(".navbar");
+
+
+    if (!navbar || !homeSearchPanel) {
+
+        return;
+
+    }
+
+
+    navbar.classList.remove("search-open");
+
+    homeSearchPanel.classList.remove("open");
+
+}
+
+
+
+if (homeSearchTrigger) {
+
+    homeSearchTrigger.addEventListener(
+        "click",
+        openHomeSearch
+    );
+
+}
+
+
+
+if (homeSearchClose) {
+
+    homeSearchClose.addEventListener(
+        "click",
+        closeHomeSearch
+    );
+
+}
+
+
+
+/* =====================================================
    MOBILE MENU
 ===================================================== */
 
-menuToggle.addEventListener(
-    "click",
-    function () {
+if (menuToggle) {
 
-        navLinks.classList.toggle("show");
+    menuToggle.addEventListener(
+        "click",
+        function () {
 
-    }
-);
+            navLinks.classList.toggle("show");
+
+        }
+    );
+
+}
 
 
 
-navLinks
-    .querySelectorAll("a")
-    .forEach(link => {
+if (navLinks) {
 
-        link.addEventListener(
-            "click",
-            function () {
+    navLinks
+        .querySelectorAll("a")
+        .forEach(link => {
 
-                navLinks.classList.remove("show");
+            link.addEventListener(
+                "click",
+                function () {
 
-            }
-        );
+                    navLinks.classList.remove("show");
 
-    });
+                }
+            );
+
+        });
+
+}
 
 
 
@@ -912,6 +1131,13 @@ navLinks
 window.addEventListener(
     "scroll",
     function () {
+
+        if (!scrollTop) {
+
+            return;
+
+        }
+
 
         if (window.scrollY > 500) {
 
@@ -929,17 +1155,22 @@ window.addEventListener(
 );
 
 
-scrollTop.addEventListener(
-    "click",
-    function () {
 
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+if (scrollTop) {
 
-    }
-);
+    scrollTop.addEventListener(
+        "click",
+        function () {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+    );
+
+}
 
 
 
@@ -996,10 +1227,6 @@ function setHeaderSpace() {
         siteHeader.offsetHeight;
 
 
-    /*
-     * Store the real header height.
-     */
-
     document.documentElement.style.setProperty(
         "--smart-header-space",
         `${headerHeight}px`
@@ -1051,8 +1278,10 @@ function updateSmartHeader() {
         lastDirection =
             "none";
 
+
         siteHeader.style.transform =
             "translateY(0)";
+
 
         lastScrollY =
             currentScrollY;
@@ -1075,11 +1304,6 @@ function updateSmartHeader() {
     if (delta > 0) {
 
 
-        /*
-         * Start counting again when the user
-         * changes from UP to DOWN.
-         */
-
         if (
             lastDirection !== "down"
         ) {
@@ -1098,18 +1322,6 @@ function updateSmartHeader() {
             currentScrollY -
             downwardStartY;
 
-
-
-        /*
-         * FIRST 90px:
-         *
-         * Header stays completely still.
-         *
-         * AFTER 90px:
-         *
-         * Header moves upward at exactly
-         * the same distance as the page.
-         */
 
         headerOffset =
             Math.max(
@@ -1135,14 +1347,6 @@ function updateSmartHeader() {
             "up";
 
 
-        /*
-         * As soon as the user scrolls upward,
-         * the header comes back smoothly.
-         *
-         * The amount it comes back is exactly
-         * the amount the page moved upward.
-         */
-
         headerOffset =
             Math.max(
                 0,
@@ -1152,10 +1356,6 @@ function updateSmartHeader() {
     }
 
 
-
-    /*
-     * Apply the exact calculated movement.
-     */
 
     siteHeader.style.transform =
         `translateY(-${headerOffset}px)`;
@@ -1175,8 +1375,6 @@ function updateSmartHeader() {
 setHeaderSpace();
 
 
-
-/* Recalculate when screen size changes. */
 
 window.addEventListener(
     "resize",
@@ -1208,6 +1406,6 @@ window.addEventListener(
 
 updateWishlistCount();
 
-updateCategoryCards();
+renderCategoryShortcuts();
 
 renderProducts();

@@ -142,7 +142,6 @@ const products = [
             "images/prd3vr1img1.png",
             "images/prd3vr1img2.png",
             "images/prd3vr1img3.png",
-            "images/prd3vr1img4.png"
         ],
 
         description:
