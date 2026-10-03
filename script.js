@@ -273,15 +273,8 @@ function createProductCard(product) {
 
                     <div class="product-actions">
 
-                        <button
-                            class="details-btn"
-                            data-details="${product.id}"
-                        >
-                            Details
-                        </button>
 
-
-                        <a
+                    <a
                             href="${product.amazonLink}"
                             target="_blank"
                             rel="nofollow sponsored noopener"

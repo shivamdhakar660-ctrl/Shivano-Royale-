@@ -3806,3 +3806,26 @@ html {
     }
 
 }
+
+/* =========================================================
+   FINAL MOBILE HEADER / PRODUCTS FIX
+========================================================= */
+
+@media (max-width: 900px) {
+
+    main {
+        padding-top: 0 !important;
+    }
+
+    #products {
+        padding-top: 20px !important;
+        scroll-margin-top: 0 !important;
+    }
+
+}
+
+@media (max-width: 600px) {
+    #productGrid {
+        padding-top: 10px !important;
+    }
+}
