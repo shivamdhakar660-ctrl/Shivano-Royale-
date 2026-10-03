@@ -2728,3 +2728,1011 @@ main {
     .lightbox-prev { left: 2px; }
     .lightbox-next { right: 2px; }
 }
+
+/* =====================================================
+   SHIVANO STORE
+   HEADER POSITION UPDATE
+===================================================== */
+
+
+/* =====================================================
+   DESKTOP HEADER
+===================================================== */
+
+@media (min-width: 901px) {
+
+    .navbar {
+        display: grid !important;
+
+        grid-template-columns:
+            auto
+            minmax(0, 1fr)
+            auto
+            auto;
+
+        align-items: center;
+
+        column-gap: 24px;
+    }
+
+
+    .logo {
+        grid-column: 1;
+    }
+
+
+    .nav-links {
+        grid-column: 2;
+
+        justify-content: center;
+
+        margin: 0 auto;
+    }
+
+
+    /*
+     * Wishlist comes immediately before search.
+     */
+
+    .wishlist-nav {
+        grid-column: 3;
+    }
+
+
+    /*
+     * Search stays at the extreme right.
+     */
+
+    .header-search-trigger,
+    .header-search-panel,
+    #productSearchButton {
+        grid-column: 4;
+    }
+
+
+    .header-search-trigger {
+        justify-self: end;
+    }
+
+
+    .header-search-panel {
+        justify-self: end;
+    }
+
+
+    /*
+     * Product-page dynamically created wishlist.
+     */
+
+    .product-page-wishlist {
+        grid-column: 3;
+
+        width: 43px;
+        height: 43px;
+
+        border: 1px solid var(--border);
+
+        border-radius: 50%;
+
+        background: var(--white);
+
+        color: var(--black);
+
+        font-size: 20px;
+
+        display: grid;
+
+        place-items: center;
+
+        cursor: pointer;
+    }
+
+
+    .product-page-wishlist.saved {
+        color: var(--gold);
+
+        border-color: var(--gold);
+    }
+
+}
+
+
+
+/* =====================================================
+   HOME + PRODUCT PAGE
+   SEARCH
+===================================================== */
+
+.header-search-trigger {
+
+    border: 1px solid var(--border);
+
+    background: var(--white);
+
+    border-radius: 100px;
+
+    min-height: 42px;
+
+    padding: 0 15px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    color: #333;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+
+.header-search-trigger:hover {
+
+    border-color: var(--gold);
+
+    color: var(--gold);
+
+}
+
+
+
+/* =====================================================
+   MOBILE HEADER
+   ORDER:
+   SEARCH → WISHLIST → THREE LINES
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+
+        display: flex !important;
+
+        align-items: center;
+
+        gap: 8px;
+
+        padding-left: 18px;
+
+        padding-right: 12px;
+    }
+
+
+    /*
+     * Logo remains on the left.
+     */
+
+    .logo {
+
+        order: 1;
+
+        margin-right: auto;
+    }
+
+
+    /*
+     * Search
+     */
+
+    .header-search-trigger {
+
+        order: 2;
+
+        width: 42px;
+
+        height: 42px;
+
+        min-height: 42px;
+
+        padding: 0;
+
+        border-radius: 50%;
+
+        font-size: 19px;
+    }
+
+
+    .header-search-trigger span:last-child {
+
+        display: none;
+
+    }
+
+
+    /*
+     * Home wishlist
+     */
+
+    .navbar > .wishlist-nav {
+
+        order: 3;
+
+        flex: 0 0 42px;
+
+        width: 42px;
+
+        height: 42px;
+
+        margin: 0;
+
+    }
+
+
+    /*
+     * Product-page wishlist
+     */
+
+    .product-page-wishlist {
+
+        order: 3;
+
+        flex: 0 0 42px;
+
+        width: 42px;
+
+        height: 42px;
+
+        border: 1px solid var(--border);
+
+        border-radius: 50%;
+
+        background: var(--white);
+
+        font-size: 20px;
+
+        display: grid;
+
+        place-items: center;
+
+        cursor: pointer;
+    }
+
+
+    .product-page-wishlist.saved {
+
+        color: var(--gold);
+
+        border-color: var(--gold);
+    }
+
+
+    /*
+     * Three lines ALWAYS extreme right.
+     */
+
+    .menu-toggle {
+
+        order: 4;
+
+        flex: 0 0 42px;
+
+        width: 42px;
+
+        height: 42px;
+
+        margin: 0 !important;
+
+        display: grid !important;
+
+        place-items: center;
+
+        border: 0;
+
+        background: transparent;
+
+        font-size: 27px;
+    }
+
+
+    /*
+     * Mobile navigation dropdown
+     */
+
+    .nav-links {
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        z-index: 1001;
+    }
+
+
+    /*
+     * When search opens, it occupies the header area.
+     */
+
+    .navbar.search-open {
+
+        gap: 8px;
+    }
+
+
+    .navbar.search-open .logo {
+
+        display: none;
+    }
+
+
+    .navbar.search-open
+    .header-search-panel {
+
+        order: 1;
+
+        flex: 1;
+
+        display: flex;
+
+        min-width: 0;
+    }
+
+
+    .navbar.search-open
+    .wishlist-nav,
+
+    .navbar.search-open
+    .product-page-wishlist,
+
+    .navbar.search-open
+    .menu-toggle {
+
+        display: none !important;
+    }
+
+}
+
+
+
+/* =====================================================
+   PRODUCT SEARCH PANEL
+===================================================== */
+
+.header-search-panel {
+
+    position: relative;
+}
+
+
+.product-search-results {
+
+    z-index: 1200;
+}
+
+
+
+/* =====================================================
+   ALL CATEGORIES MENU
+===================================================== */
+
+.all-categories-menu {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 3000;
+
+    background: rgba(0,0,0,.32);
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    padding: 90px 18px 30px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity .2s ease,
+        visibility .2s ease;
+}
+
+
+.all-categories-menu.show {
+
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+.all-categories-panel {
+
+    width: min(
+        520px,
+        100%
+    );
+
+    max-height: 75vh;
+
+    overflow-y: auto;
+
+    background: var(--cream);
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.18);
+
+    padding: 18px;
+}
+
+
+.all-categories-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 14px;
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.all-categories-header strong {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 22px;
+}
+
+
+.all-categories-header button {
+
+    width: 34px;
+
+    height: 34px;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--border);
+
+    background: white;
+
+    font-size: 20px;
+}
+
+
+.all-categories-options {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    padding-top: 16px;
+}
+
+
+.all-category-option {
+
+    min-height: 40px;
+
+    padding: 0 14px;
+
+    border-radius: 100px;
+
+    border: 1px solid var(--border);
+
+    background: white;
+
+    color: #333;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+
+.all-category-option:hover,
+
+.all-category-option.active {
+
+    background: var(--black);
+
+    border-color: var(--black);
+
+    color: white;
+}
+
+
+
+/* =====================================================
+   SIMILAR PRODUCTS
+   SAME CARD SCALE AS HOME
+===================================================== */
+
+.similar-slider {
+
+    display: grid;
+
+    grid-auto-flow: column;
+
+    grid-auto-columns:
+        minmax(240px, 1fr);
+
+    grid-template-rows: auto;
+
+    gap: 18px;
+
+    overflow-x: auto;
+}
+
+
+.similar-card {
+
+    width: 100%;
+
+    min-width: 0;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.similar-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0,0,0,.08);
+}
+
+
+.similar-image {
+
+    height: 220px;
+}
+
+
+.similar-info {
+
+    padding: 14px;
+}
+
+
+.similar-info h3 {
+
+    font-size: 16px;
+}
+
+
+.similar-info p {
+
+    min-height: 36px;
+
+    max-height: 36px;
+}
+
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (
+    min-width: 601px
+)
+and (
+    max-width: 900px
+) {
+
+    .similar-slider {
+
+        grid-auto-columns:
+            minmax(220px, 1fr);
+    }
+
+}
+
+
+
+/* =====================================================
+   PHONE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .similar-slider {
+
+        grid-auto-columns:
+            calc(
+                100vw - 36px
+            );
+
+        gap: 14px;
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+    }
+
+
+    .similar-card {
+
+        width: 100%;
+    }
+
+
+    .similar-image {
+
+        height: 220px;
+    }
+
+
+    .similar-info {
+
+        padding: 12px;
+    }
+
+
+    .similar-info h3 {
+
+        font-size: 15px;
+
+        line-height: 1.3;
+    }
+
+
+    .similar-info p {
+
+        font-size: 11px;
+
+        min-height: 34px;
+
+        max-height: 34px;
+    }
+
+
+    .similar-bottom {
+
+        margin-top: 10px;
+    }
+
+}
+
+
+
+/* =====================================================
+   PRODUCT PAGE SEARCH BUTTON
+===================================================== */
+
+#productSearchButton {
+
+    border: 1px solid var(--border);
+
+    background: var(--white);
+
+    color: var(--black);
+
+    border-radius: 100px;
+
+    width: 43px;
+
+    height: 43px;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 19px;
+
+    cursor: pointer;
+}
+
+
+#productSearchButton:hover {
+
+    border-color: var(--gold);
+
+    color: var(--gold);
+}
+
+
+
+/* =====================================================
+   PRODUCT PAGE BACK BUTTON
+===================================================== */
+
+.back-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 42px;
+
+    padding: 0 16px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 100px;
+
+    background: white;
+
+    color: #444;
+
+    transition: .2s ease;
+}
+
+
+.back-link:hover {
+
+    border-color: var(--gold);
+
+    color: var(--gold);
+
+}
+
+/* =========================================================
+   PC HEADER — EXACT FINAL POSITION
+   MOBILE KO TOUCH NAHI KARNA
+========================================================= */
+
+@media (min-width: 901px) {
+
+    /* Header ki sirf ek horizontal row */
+    .site-header {
+        height: 78px !important;
+    }
+
+    .navbar {
+        position: relative !important;
+
+        width: 100% !important;
+        max-width: 1250px !important;
+
+        height: 78px !important;
+
+        margin: 0 auto !important;
+
+        padding: 0 28px !important;
+
+        display: block !important;
+    }
+
+
+    /* =========================================
+       LEFT — SHIVANO STORE
+    ========================================= */
+
+    .navbar .logo {
+        position: absolute !important;
+
+        left: 28px !important;
+        top: 50% !important;
+
+        transform: translateY(-50%) !important;
+
+        margin: 0 !important;
+
+        display: block !important;
+    }
+
+
+    /* =========================================
+       CENTER — MENU OPTIONS
+       Home / Products / Categories / About / Contact
+    ========================================= */
+
+    .navbar .nav-links {
+        position: absolute !important;
+
+        left: 50% !important;
+        top: 50% !important;
+
+        transform: translate(-50%, -50%) !important;
+
+        width: auto !important;
+        height: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 32px !important;
+
+        background: transparent !important;
+
+        border: none !important;
+        box-shadow: none !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    .navbar .nav-links a {
+        position: static !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* =========================================
+       WISHLIST — SEARCH KE JUST LEFT
+    ========================================= */
+
+    .navbar .wishlist-nav {
+        position: absolute !important;
+
+        right: 156px !important;
+        top: 50% !important;
+
+        transform: translateY(-50%) !important;
+
+        margin: 0 !important;
+
+        display: grid !important;
+
+        place-items: center !important;
+    }
+
+
+    /* =========================================
+       SEARCH — EXTREME RIGHT
+    ========================================= */
+
+    .navbar .header-search-trigger {
+        position: absolute !important;
+
+        right: 28px !important;
+        top: 50% !important;
+
+        transform: translateY(-50%) !important;
+
+        margin: 0 !important;
+    }
+
+
+    .navbar .header-search-panel {
+        position: absolute !important;
+
+        right: 28px !important;
+        top: 50% !important;
+
+        transform: translateY(-50%) !important;
+
+        margin: 0 !important;
+    }
+
+
+    /* =========================================
+       PC PAR THREE-LINE MENU NAHI
+    ========================================= */
+
+    .navbar .menu-toggle {
+        display: none !important;
+    }
+
+
+    /* =========================================
+       YELLOW EXTRA SPACE — COMPLETELY REMOVE
+       PC ONLY
+    ========================================= */
+
+    .site-header .discovery-bar {
+        display: none !important;
+
+        height: 0 !important;
+        min-height: 0 !important;
+
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+
+    /* Main content header ke just neeche se start */
+    main {
+        padding-top: 78px !important;
+    }
+
+}
+
+/* =========================================================
+   FINAL FIX — FEATURED PRODUCTS + MOBILE MENU
+   ONLY THESE CHANGES
+========================================================= */
+
+
+/* =========================================================
+   PC
+   Featured products header ke bilkul neeche start ho
+========================================================= */
+
+@media (min-width: 901px) {
+
+    main {
+        padding-top: 78px !important;
+    }
+
+    .products-section {
+        scroll-margin-top: 78px;
+    }
+
+}
+
+
+/* =========================================================
+   PHONE / TABLET
+   Header ke neeche content properly visible ho
+========================================================= */
+
+@media (max-width: 900px) {
+
+    main {
+        padding-top: 70px !important;
+    }
+
+    .products-section {
+        scroll-margin-top: 70px;
+    }
+
+
+    /* Three-line menu button clickable rahe */
+    .menu-toggle {
+        position: relative !important;
+
+        z-index: 1002 !important;
+
+        pointer-events: auto !important;
+
+        cursor: pointer !important;
+    }
+
+
+    /* Menu open hone par clearly visible */
+    .nav-links.show {
+        display: flex !important;
+
+        visibility: visible !important;
+
+        opacity: 1 !important;
+
+        z-index: 1001 !important;
+    }
+
+}

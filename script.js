@@ -1409,3 +1409,641 @@ updateWishlistCount();
 renderCategoryShortcuts();
 
 renderProducts();
+
+/* =====================================================
+   SHIVANO STORE — HEADER / WISHLIST / CATEGORY UPDATE
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* =================================================
+       HEADER ELEMENTS
+    ================================================= */
+
+    const navbar =
+        document.querySelector(".navbar");
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const wishlistNav =
+        document.getElementById("wishlistNav");
+
+
+    /* =================================================
+       PRODUCT PAGE WISHLIST BUTTON
+       Product page par dynamically add hoga.
+    ================================================= */
+
+    if (
+        navbar &&
+        document.querySelector(".product-page") &&
+        !document.getElementById("productPageWishlist")
+    ) {
+
+        const productWishlist =
+            document.createElement("button");
+
+        productWishlist.type = "button";
+
+        productWishlist.id =
+            "productPageWishlist";
+
+        productWishlist.className =
+            "product-page-wishlist";
+
+        productWishlist.setAttribute(
+            "aria-label",
+            "Wishlist"
+        );
+
+        productWishlist.title =
+            "Wishlist";
+
+        productWishlist.innerHTML =
+            "♡";
+
+        navbar.appendChild(
+            productWishlist
+        );
+
+
+        function updateProductWishlistIcon() {
+
+            const params =
+                new URLSearchParams(
+                    window.location.search
+                );
+
+            const productId =
+                Number(
+                    params.get("id")
+                );
+
+
+            if (
+                typeof wishlist === "undefined"
+            ) {
+                return;
+            }
+
+
+            if (
+                wishlist.includes(productId)
+            ) {
+
+                productWishlist.innerHTML =
+                    "♥";
+
+                productWishlist.classList.add(
+                    "saved"
+                );
+
+            }
+
+            else {
+
+                productWishlist.innerHTML =
+                    "♡";
+
+                productWishlist.classList.remove(
+                    "saved"
+                );
+
+            }
+
+        }
+
+
+        productWishlist.addEventListener(
+            "click",
+            function () {
+
+                const params =
+                    new URLSearchParams(
+                        window.location.search
+                    );
+
+                const productId =
+                    Number(
+                        params.get("id")
+                    );
+
+
+                if (!productId) {
+                    return;
+                }
+
+
+                if (
+                    typeof toggleWishlist ===
+                    "function"
+                ) {
+
+                    toggleWishlist(
+                        productId
+                    );
+
+                }
+
+
+                updateProductWishlistIcon();
+
+            }
+        );
+
+
+        updateProductWishlistIcon();
+
+    }
+
+
+
+    /* =================================================
+       WISHLIST PRODUCTS
+       Clicking a saved product opens product page.
+    ================================================= */
+
+    document.addEventListener(
+        "click",
+        function (event) {
+
+            const wishlistItem =
+                event.target.closest(
+                    ".wishlist-item"
+                );
+
+
+            if (!wishlistItem) {
+                return;
+            }
+
+
+            /*
+             * Don't redirect when user clicks
+             * the remove button.
+             */
+
+            if (
+                event.target.closest(
+                    "[data-remove-wishlist]"
+                )
+            ) {
+
+                return;
+
+            }
+
+
+            const removeButton =
+                wishlistItem.querySelector(
+                    "[data-remove-wishlist]"
+                );
+
+
+            if (!removeButton) {
+                return;
+            }
+
+
+            const productId =
+                Number(
+                    removeButton.dataset
+                        .removeWishlist
+                );
+
+
+            if (!productId) {
+                return;
+            }
+
+
+            window.location.href =
+                `product.html?id=${productId}`;
+
+        }
+    );
+
+
+
+    /* =================================================
+       ALL CATEGORIES
+       Clicking "All Categories" opens every category.
+    ================================================= */
+
+    const categoryShortcuts =
+        document.getElementById(
+            "categoryShortcuts"
+        );
+
+
+    if (categoryShortcuts) {
+
+        categoryShortcuts.addEventListener(
+            "click",
+            function (event) {
+
+                const button =
+                    event.target.closest(
+                        ".category-shortcut"
+                    );
+
+
+                if (!button) {
+                    return;
+                }
+
+
+                const category =
+                    button.dataset.category;
+
+
+                /*
+                 * All Categories button
+                 */
+
+                if (
+                    category === "All"
+                ) {
+
+                    showAllCategoriesMenu();
+
+                }
+
+            }
+        );
+
+    }
+
+
+
+    function showAllCategoriesMenu() {
+
+        /*
+         * Remove old menu first.
+         */
+
+        const oldMenu =
+            document.getElementById(
+                "allCategoriesMenu"
+            );
+
+
+        if (oldMenu) {
+
+            oldMenu.remove();
+
+        }
+
+
+        const categories = [
+            ...new Set(
+                products
+                    .map(
+                        product =>
+                            product.category
+                    )
+                    .filter(Boolean)
+            )
+        ];
+
+
+        const menu =
+            document.createElement(
+                "div"
+            );
+
+
+        menu.id =
+            "allCategoriesMenu";
+
+        menu.className =
+            "all-categories-menu";
+
+
+        menu.innerHTML = `
+
+            <div
+                class="all-categories-panel"
+            >
+
+                <div
+                    class="all-categories-header"
+                >
+
+                    <strong>
+                        All Categories
+                    </strong>
+
+                    <button
+                        type="button"
+                        id="closeAllCategories"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="all-categories-options"
+                >
+
+                    <button
+                        type="button"
+                        class="all-category-option active"
+                        data-all-category="All"
+                    >
+                        All Products
+                    </button>
+
+
+                    ${categories
+                        .map(
+                            category => `
+                                <button
+                                    type="button"
+                                    class="all-category-option"
+                                    data-all-category="${escapeHtml(category)}"
+                                >
+                                    ${escapeHtml(category)}
+                                </button>
+                            `
+                        )
+                        .join("")
+                    }
+
+                </div>
+
+            </div>
+
+        `;
+
+
+        document.body.appendChild(
+            menu
+        );
+
+
+        requestAnimationFrame(
+            function () {
+
+                menu.classList.add(
+                    "show"
+                );
+
+            }
+        );
+
+
+        const closeButton =
+            document.getElementById(
+                "closeAllCategories"
+            );
+
+
+        if (closeButton) {
+
+            closeButton.addEventListener(
+                "click",
+                closeAllCategoriesMenu
+            );
+
+        }
+
+
+        menu.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    event.target === menu
+                ) {
+
+                    closeAllCategoriesMenu();
+
+                    return;
+
+                }
+
+
+                const option =
+                    event.target.closest(
+                        "[data-all-category]"
+                    );
+
+
+                if (!option) {
+                    return;
+                }
+
+
+                const selected =
+                    option.dataset.allCategory;
+
+
+                if (
+                    typeof currentCategory !==
+                    "undefined"
+                ) {
+
+                    currentCategory =
+                        selected;
+
+                }
+
+
+                if (
+                    typeof renderCategoryShortcuts ===
+                    "function"
+                ) {
+
+                    renderCategoryShortcuts();
+
+                }
+
+
+                if (
+                    typeof renderProducts ===
+                    "function"
+                ) {
+
+                    renderProducts();
+
+                }
+
+
+                closeAllCategoriesMenu();
+
+
+                const productsSection =
+                    document.getElementById(
+                        "products"
+                    );
+
+
+                if (productsSection) {
+
+                    productsSection.scrollIntoView({
+                        behavior: "smooth"
+                    });
+
+                }
+
+            }
+        );
+
+    }
+
+
+
+    function closeAllCategoriesMenu() {
+
+        const menu =
+            document.getElementById(
+                "allCategoriesMenu"
+            );
+
+
+        if (!menu) {
+            return;
+        }
+
+
+        menu.classList.remove(
+            "show"
+        );
+
+
+        setTimeout(
+            function () {
+
+                menu.remove();
+
+            },
+            220
+        );
+
+    }
+
+
+
+    /* =================================================
+       PRODUCT SEARCH → PRODUCT PAGE
+    ================================================= */
+
+    document.addEventListener(
+        "click",
+        function (event) {
+
+            const searchResult =
+                event.target.closest(
+                    "[data-search-product-id]"
+                );
+
+
+            if (!searchResult) {
+                return;
+            }
+
+
+            const productId =
+                searchResult.dataset
+                    .searchProductId;
+
+
+            if (!productId) {
+                return;
+            }
+
+
+            window.location.href =
+                `product.html?id=${productId}`;
+
+        }
+    );
+
+
+
+    /* =================================================
+       MOBILE MENU
+    ================================================= */
+
+    if (menuToggle) {
+
+        menuToggle.addEventListener(
+            "click",
+            function () {
+
+                if (!navLinks) {
+                    return;
+                }
+
+
+                navLinks.classList.toggle(
+                    "show"
+                );
+
+            }
+        );
+
+    }
+
+});
+
+/* =========================================================
+   MOBILE MENU — RELIABLE CLICK FIX
+========================================================= */
+
+(function () {
+
+    const menuButton =
+        document.getElementById("menuToggle");
+
+    const mobileNav =
+        document.getElementById("navLinks");
+
+
+    if (!menuButton || !mobileNav) {
+        return;
+    }
+
+
+    /*
+     * Existing menu logic ko disturb nahi karna.
+     * Ye sirf tab fallback ke roop mein kaam karega
+     * jab menu already open/closed state change na kare.
+     */
+
+    menuButton.addEventListener(
+        "click",
+        function (event) {
+
+            event.preventDefault();
+
+            mobileNav.classList.toggle("show");
+
+        }
+    );
+
+
+    /*
+     * Menu option click karne par menu close.
+     */
+
+    mobileNav
+        .querySelectorAll("a")
+        .forEach(function (link) {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    mobileNav.classList.remove("show");
+
+                }
+            );
+
+        });
+
+})();
