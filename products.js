@@ -104,11 +104,252 @@ const products = [
         amazonLink:
             "https://link.amazon/B086lCdBP",
 
-        variations: null
-    },
+                variations: {
+
+            defaultSelection:
+                "Beige",
+
+            options: [
+
+                {
+                    value:
+                        "Beige",
+
+                    image:
+                        "images/prd2vr1img1.png",
+
+                    images: [
+                        "images/prd2vr1img1.png",
+                        "images/prd2vr1img2.png",
+                        "images/prd2vr1img3.png",
+                        "images/prd2vr1img4.png"
+                    ],
+
+                    price:
+                        "2729",
+
+                    asin:
+                        "B0DQ8B858G",
+
+                    amazonLink:
+                        "https://link.amazon/B086lCdBP",
+
+                    name:
+                        "U.S. Polo Assn. Men's Sneakers",
+
+                    description:
+                        "U.S. Polo Assn. men's sneakers for everyday casual styling.",
+
+                    features: [
+                        "heel Type: No heel",
+                        "Closure Type: Lace-Up",
+                        "Material: Polyurethane",
+                        "Casual sneaker design",
+                        "Men's footwear",
+                        "Everyday styling",
+                        "U.S. Polo Assn."
+                    ],
+
+                    rating:
+                        4.2,
+
+                    reviews:
+                        "494+"
+                },
 
 
-    {
+                {
+                    value:
+                        "Cream",
+
+                    image:
+                        "images/prd2vr2img1.png",
+
+                    images: [
+                        "images/prd2vr2img1.png",
+                        "images/prd2vr2img2.png",
+                        "images/prd2vr2img3.png",
+                        "images/prd2vr1img4.png"
+                    ],
+
+                    price:
+                        "2299",
+
+                    asin:
+                        "B0DQP3DGLY",
+
+                    amazonLink:
+                        "https://link.amazon/B086lCdBP",
+
+                    name:
+                        "U.S. Polo Assn. Men's Sneakers",
+
+                    description:
+                        "U.S. Polo Assn. men's sneakers for everyday casual styling.",
+
+                    features: [
+                        "heel Type: No heel",
+                        "Closure Type: Lace-Up",
+                        "Material: Polyurethane",
+                        "Casual sneaker design",
+                        "Men's footwear",
+                        "Everyday styling",
+                        "U.S. Polo Assn."
+                    ],
+
+                    rating:
+                        4.2,
+
+                    reviews:
+                        "494+"
+                },
+
+
+                {
+                    value:
+                        "Off White",
+
+                    image:
+                        "images/prd2vr3img1.png",
+
+                    images: [
+                        "images/prd2vr3img1.png",
+                        "images/prd2vr3img2.png",
+                        "images/prd2vr3img3.png",
+                        "images/prd2vr1img4.png"
+                    ],
+
+                    price:
+                        "2529",
+
+                    asin:
+                        "B0DQ8C1ZZG",
+
+                    amazonLink:
+                        "https://link.amazon/B086lCdBP",
+
+                    name:
+                        "U.S. Polo Assn. Men's Sneakers",
+
+                    description:
+                        "U.S. Polo Assn. men's sneakers for everyday casual styling.",
+
+                    features: [
+                        "heel Type: No heel",
+                        "Closure Type: Lace-Up",
+                        "Material: Polyurethane",
+                        "Casual sneaker design",
+                        "Men's footwear",
+                        "Everyday styling",
+                        "U.S. Polo Assn."
+                    ],
+
+                    rating:
+                        4.2,
+
+                    reviews:
+                        "494+"
+                },
+
+
+                {
+                    value:
+                        "Tan",
+
+                    image:
+                        "images/prd2vr4img1.png",
+
+                    images: [
+                        "images/prd2vr4img1.png",
+                        "images/prd2vr4img2.png",
+                        "images/prd2vr4img3.png",
+                        "images/prd2vr1img4.png"
+                    ],
+
+                    price:
+                        "2300",
+
+                    asin:
+                        "B0DQ8957W2",
+
+                    amazonLink:
+                        "https://link.amazon/B086lCdBP",
+
+                    name:
+                        "U.S. Polo Assn. Men's Sneakers",
+
+                    description:
+                        "U.S. Polo Assn. men's sneakers for everyday casual styling.",
+
+                    features: [
+                        "heel Type: No heel",
+                        "Closure Type: Lace-Up",
+                        "Material: Polyurethane",
+                        "Casual sneaker design",
+                        "Men's footwear",
+                        "Everyday styling",
+                        "U.S. Polo Assn."
+                    ],
+
+                    rating:
+                        4.2,
+
+                    reviews:
+                        "494+"
+                },
+
+                 {
+                    value:
+                        "White",
+
+                    image:
+                        "images/prd2vr5img1.png",
+
+                    images: [
+                        "images/prd2vr5img1.png",
+                        "images/prd2vr5img2.png",
+                        "images/prd2vr5img3.png",
+                        "images/prd2vr1img4.png"
+                    ],
+
+                    price:
+                        "2621",
+
+                    asin:
+                        "B0DQ88ZJCZ",
+
+                    amazonLink:
+                        "https://link.amazon/B086lCdBP",
+
+                    name:
+                        "U.S. Polo Assn. Men's Sneakers",
+
+                    description:
+                        "U.S. Polo Assn. men's sneakers for everyday casual styling.",
+
+                    features: [
+                        "heel Type: No heel",
+                        "Closure Type: Lace-Up",
+                        "Material: Polyurethane",
+                        "Casual sneaker design",
+                        "Men's footwear",
+                        "Everyday styling",
+                        "U.S. Polo Assn."
+                    ],
+
+                    rating:
+                        4.2,
+
+                    reviews:
+                        "494+"
+                },
+
+
+            ]
+
+        },
+        
+    },{
         id: 3,
 
         asin:
