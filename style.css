@@ -48,7 +48,7 @@ img {
 
 :root {
     --black: #111111;
-    --dark: #1b1b1b;
+    --dark: #111111;
     --cream: #f8f7f4;
     --white: #ffffff;
     --gold: #b18a45;
@@ -3599,7 +3599,7 @@ and (
     .navbar .wishlist-nav {
         position: absolute !important;
 
-        right: 156px !important;
+        right: 28px !important;
         top: 50% !important;
 
         transform: translateY(-50%) !important;
@@ -3619,7 +3619,7 @@ and (
     .navbar .header-search-trigger {
         position: absolute !important;
 
-        right: 28px !important;
+        right: 85px !important;
         top: 50% !important;
 
         transform: translateY(-50%) !important;
@@ -3828,4 +3828,355 @@ html {
     #productGrid {
         padding-top: 10px !important;
     }
+}
+
+/* =========================================================
+   FINAL REQUESTED CHANGES
+========================================================= */
+
+
+/* =========================================================
+   FINAL PC HOME HEADER
+   Search aur Wishlist ki position swap
+========================================================= */
+
+@media (min-width: 901px) {
+
+    .home-page .navbar .header-search-trigger,
+    .home-page .navbar .header-search-panel {
+        grid-column: 3 !important;
+    }
+
+    .home-page .navbar .wishlist-nav {
+        grid-column: 4 !important;
+    }
+
+
+    /* =====================================================
+       PRODUCT PAGE
+       PC par extra circular search button hide
+       ===================================================== */
+
+    body:not(.home-page) #productSearchButton {
+        display: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE MENU
+   Menu options proper buttons ki tarah
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        padding: 12px 18px !important;
+        gap: 8px !important;
+    }
+
+
+    .nav-links a {
+
+        width: 100%;
+
+        min-height: 44px;
+
+        padding: 0 14px;
+
+        display: flex;
+
+        align-items: center;
+
+        border: 1px solid var(--border);
+
+        border-radius: 10px;
+
+        background: #fff;
+
+        color: #333;
+
+        font-size: 13px;
+
+        font-weight: 600;
+
+    }
+
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+
+        color: var(--black);
+
+        border-color: var(--gold);
+
+        background: #fbfaf8;
+
+    }
+
+
+    /* =====================================================
+       PRODUCT PAGE HOME + BACK BUTTONS
+       ===================================================== */
+
+    .product-top-actions {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 8px;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .product-home-btn {
+
+        min-height: 40px;
+
+        padding: 0 14px;
+
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border: 1px solid var(--border);
+
+        border-radius: 9px;
+
+        background: #fff;
+
+        color: #333;
+
+        font-size: 13px;
+
+        font-weight: 600;
+
+    }
+
+
+    .product-home-btn:hover,
+    .product-home-btn:focus-visible {
+
+        color: var(--black);
+
+        border-color: var(--gold);
+
+    }
+
+}
+
+
+/* =========================================================
+   PC PRODUCT PAGE HOME BUTTON
+========================================================= */
+
+@media (min-width: 901px) {
+
+    .product-top-actions {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+
+    }
+
+
+    .product-home-btn {
+
+        min-height: 40px;
+
+        padding: 0 14px;
+
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border: 1px solid var(--border);
+
+        border-radius: 9px;
+
+        background: #fff;
+
+        color: #333;
+
+        font-size: 13px;
+
+        font-weight: 600;
+
+    }
+
+
+    .product-home-btn:hover,
+    .product-home-btn:focus-visible {
+
+        color: var(--black);
+
+        border-color: var(--gold);
+
+        transform: translateY(-1px);
+
+    }
+
+}
+
+
+/* =========================================================
+   ALL CATEGORIES
+   Normal filter button only.
+   Koi dropdown/menu nahi.
+========================================================= */
+
+.category-shortcut[data-category="All"] {
+
+    cursor: pointer;
+
+}
+
+/* =========================================================
+   PC HOME HEADER ORDER
+   Search = Wishlist ke left
+   Wishlist = sabse right
+========================================================= */
+
+@media (min-width: 901px) {
+
+    .home-page .navbar .header-search-trigger,
+    .home-page .navbar .header-search-panel {
+        grid-column: 3 !important;
+        grid-row: 1 !important;
+    }
+
+    .home-page .navbar .wishlist-nav {
+        grid-column: 4 !important;
+        grid-row: 1 !important;
+        justify-self: end !important;
+    }
+
+}
+
+/* =========================================================
+   FIXED WISHLIST
+   Home + Product page: always visible at bottom-right.
+========================================================= */
+
+.floating-wishlist {
+    position: fixed !important;
+    right: 24px !important;
+    bottom: 24px !important;
+    z-index: 5000 !important;
+    width: 52px !important;
+    height: 52px !important;
+    margin: 0 !important;
+    display: grid !important;
+    place-items: center !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 50% !important;
+    background: #fff !important;
+    color: var(--black) !important;
+    font-size: 23px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,.16) !important;
+    cursor: pointer !important;
+}
+
+.floating-wishlist:hover,
+.floating-wishlist:focus-visible {
+    transform: translateY(-2px);
+    border-color: var(--gold) !important;
+}
+
+.floating-wishlist.saved {
+    color: var(--gold) !important;
+    border-color: var(--gold) !important;
+}
+
+.floating-wishlist #wishlistCount,
+.floating-wishlist #productWishlistCount {
+    top: -5px !important;
+    right: -4px !important;
+}
+
+.product-detail-wishlist-btn {
+    cursor: pointer;
+}
+
+.product-detail-wishlist-btn:hover,
+.product-detail-wishlist-btn:focus-visible {
+    border-color: var(--gold);
+    transform: translateY(-1px);
+}
+
+.product-detail-wishlist-btn.saved,
+.product-detail-wishlist-btn.saved:hover,
+.product-detail-wishlist-btn.saved:focus-visible,
+.product-detail-wishlist-btn.saved:active {
+    background: var(--black) !important;
+    border-color: var(--black) !important;
+    color: #fff !important;
+}
+
+@media (max-width: 600px) {
+    .floating-wishlist {
+        right: 16px !important;
+        bottom: 16px !important;
+        width: 48px !important;
+        height: 48px !important;
+        font-size: 21px !important;
+    }
+}
+
+/* =========================================================
+   PRODUCT PAGE FLOATING WISHLIST
+   HOME PAGE Jaisa Look — PC + PHONE
+   Position unchanged
+========================================================= */
+
+#productWishlistNav.floating-wishlist {
+
+    border-radius: 50% !important;
+
+    display: grid !important;
+    place-items: center !important;
+
+    padding: 0  !important;
+
+    box-sizing: border-box !important;
+}
+
+#productWishlistNav
+#productWishlistCount {
+
+    position: absolute !important;
+
+    top: -5px !important;
+    right: -4px !important;
+
+    min-width: 20px !important;
+    height: 20px !important;
+
+    padding: 0 5px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 50% !important;
+
+    background: #111 !important;
+    color: #fff !important;
+
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+
+    box-sizing: border-box !important;
 }

@@ -1129,6 +1129,42 @@
         cursor: pointer;
     }
 }
+
+
+/* =====================================================
+   PRODUCT PAGE HOME BUTTON
+===================================================== */
+
+.product-top-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.product-home-btn {
+    min-height: 40px;
+    padding: 0 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: #fff;
+    color: #333;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.product-home-btn:hover,
+.product-home-btn:focus-visible {
+    color: var(--black);
+    border-color: var(--gold);
+    transform: translateY(-1px);
+}
+
 </style>
 
 </head>
@@ -1191,7 +1227,6 @@
 >
     <a href="index.html">Home</a>
     <a href="index.html#products">Products</a>
-    <a href="index.html#categories">Categories</a>
     <a href="index.html#about">About</a>
     <a href="index.html#contact">Contact</a>
 </div>
@@ -1211,10 +1246,66 @@
 </header>
 
 
+<button
+    type="button"
+    class="wishlist-nav floating-wishlist"
+    id="productWishlistNav"
+    title="Wishlist"
+    aria-label="Open wishlist"
+>
+    ♡
+    <span id="productWishlistCount">0</span>
+</button>
+
+
+<div
+    class="wishlist-drawer"
+    id="productWishlistDrawer"
+>
+
+    <div class="drawer-header">
+
+        <div>
+            <p class="eyebrow">SAVED</p>
+            <h2>Liked Products</h2>
+        </div>
+
+        <button
+            type="button"
+            id="productCloseWishlist"
+            class="drawer-close"
+        >
+            ×
+        </button>
+
+    </div>
+
+    <div
+        class="wishlist-items"
+        id="productWishlistItems"
+    ></div>
+
+</div>
+
+<div
+    class="drawer-overlay"
+    id="productDrawerOverlay"
+></div>
+
+
 <main class="product-page">
 
 
 <div class="product-page-top">
+
+<div class="product-top-actions">
+
+<a
+    href="index.html"
+    class="product-home-btn"
+>
+    ⌂ Home
+</a>
 
 <a
     href="index.html#products"
@@ -1222,6 +1313,8 @@
 >
     ← Back to products
 </a>
+
+</div>
 
 </div>
 
@@ -1397,15 +1490,13 @@
 </a>
 
 
-<a
-    href="#"
-    target="_blank"
-    rel="nofollow sponsored noopener"
-    class="detail-action secondary"
-    id="reviewButton"
+<button
+    type="button"
+    class="detail-action secondary product-detail-wishlist-btn"
+    id="productReviewWishlistButton"
 >
-    Reviews on Amazon ↗
-</a>
+    Like ♡
+</button>
 
 </div>
 
@@ -1675,6 +1766,252 @@ let activeVariantProduct =
 
 let selectedVariation =
     "";
+
+
+/* =========================================
+   WISHLIST
+========================================= */
+
+let wishlist =
+    JSON.parse(
+        localStorage.getItem("shivanoWishlist")
+    ) || [];
+
+
+const productWishlistNav =
+    $("productWishlistNav");
+
+const productWishlistCount =
+    $("productWishlistCount");
+
+const productWishlistDrawer =
+    $("productWishlistDrawer");
+
+const productWishlistItems =
+    $("productWishlistItems");
+
+const productCloseWishlist =
+    $("productCloseWishlist");
+
+const productDrawerOverlay =
+    $("productDrawerOverlay");
+
+const productReviewWishlistButton =
+    $("productReviewWishlistButton");
+
+
+function saveWishlist() {
+
+    localStorage.setItem(
+        "shivanoWishlist",
+        JSON.stringify(wishlist)
+    );
+
+}
+
+
+function updateProductWishlistUI() {
+
+    const saved =
+        wishlist.includes(product.id);
+
+
+    if (productWishlistCount) {
+        productWishlistCount.textContent =
+            wishlist.length;
+    }
+
+
+    if (productWishlistNav) {
+        productWishlistNav.firstChild.textContent =
+            saved ? "♥" : "♡";
+
+        productWishlistNav.classList.toggle(
+            "saved",
+            saved
+        );
+    }
+
+
+    if (productReviewWishlistButton) {
+        productReviewWishlistButton.textContent =
+            saved
+                ? "Liked ♥"
+                : "Like ♡";
+
+        productReviewWishlistButton.classList.toggle(
+            "saved",
+            saved
+        );
+
+        productReviewWishlistButton.setAttribute(
+            "aria-pressed",
+            saved ? "true" : "false"
+        );
+    }
+
+}
+
+
+function toggleProductWishlist() {
+
+    if (wishlist.includes(product.id)) {
+
+        wishlist =
+            wishlist.filter(
+                item => item !== product.id
+            );
+
+    }
+
+    else {
+        wishlist.push(product.id);
+    }
+
+    saveWishlist();
+    updateProductWishlistUI();
+    renderProductWishlist();
+
+}
+
+
+function renderProductWishlist() {
+
+    if (!productWishlistItems) {
+        return;
+    }
+
+    const savedProducts =
+        products.filter(
+            item => wishlist.includes(item.id)
+        );
+
+    if (!savedProducts.length) {
+
+        productWishlistItems.innerHTML = `
+            <div class="empty-wishlist">
+                <div style="font-size:40px;">♡</div>
+                <h3>Liked Products is empty</h3>
+                <p>Save products you want to remember later.</p>
+            </div>
+        `;
+
+        return;
+    }
+
+    productWishlistItems.innerHTML =
+        savedProducts
+            .map(item => `
+                <div class="wishlist-item">
+                    <div class="wishlist-item-image">
+                        <img
+                            src="${esc(item.image)}"
+                            alt="${esc(item.name)}"
+                        >
+                    </div>
+                    <div>
+                        <h3>${esc(item.name)}</h3>
+                        <p>₹${Number(item.price).toLocaleString("en-IN")}</p>
+                    </div>
+                    <button
+                        type="button"
+                        class="remove-wishlist"
+                        data-product-remove-wishlist="${item.id}"
+                    >
+                        ×
+                    </button>
+                </div>
+            `)
+            .join("");
+
+}
+
+
+if (productWishlistNav) {
+
+    productWishlistNav.addEventListener(
+        "click",
+        function () {
+            renderProductWishlist();
+            productWishlistDrawer.classList.add("show");
+            productDrawerOverlay.classList.add("show");
+            document.body.style.overflow = "hidden";
+        }
+    );
+
+}
+
+
+if (productReviewWishlistButton) {
+
+    productReviewWishlistButton.addEventListener(
+        "click",
+        toggleProductWishlist
+    );
+
+}
+
+
+if (productCloseWishlist) {
+
+    productCloseWishlist.addEventListener(
+        "click",
+        closeProductWishlist
+    );
+
+}
+
+
+if (productDrawerOverlay) {
+
+    productDrawerOverlay.addEventListener(
+        "click",
+        closeProductWishlist
+    );
+
+}
+
+
+function closeProductWishlist() {
+
+    productWishlistDrawer.classList.remove("show");
+    productDrawerOverlay.classList.remove("show");
+    document.body.style.overflow = "";
+
+}
+
+
+document.addEventListener(
+    "click",
+    function (event) {
+
+        const removeButton =
+            event.target.closest(
+                "[data-product-remove-wishlist]"
+            );
+
+        if (!removeButton) {
+            return;
+        }
+
+        const id =
+            Number(
+                removeButton.dataset.productRemoveWishlist
+            );
+
+        if (!id) {
+            return;
+        }
+
+        wishlist =
+            wishlist.filter(item => item !== id);
+
+        saveWishlist();
+        updateProductWishlistUI();
+        renderProductWishlist();
+
+    }
+);
 
 
 /* =========================================
@@ -2477,10 +2814,6 @@ function renderPage(
         amazonLink;
 
 
-    $("reviewButton").href =
-        amazonLink;
-
-
     $("reviewsMainButton").href =
         amazonLink;
 
@@ -2551,6 +2884,7 @@ function renderPage(
 ========================================= */
 
 renderPage(product);
+updateProductWishlistUI();
 
 
 /* =========================================

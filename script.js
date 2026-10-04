@@ -4,7 +4,6 @@
 ===================================================== */
 
 
-
 /* =====================================================
    STATE
 ===================================================== */
@@ -274,7 +273,7 @@ function createProductCard(product) {
                     <div class="product-actions">
 
 
-                    <a
+                        <a
                             href="${product.amazonLink}"
                             target="_blank"
                             rel="nofollow sponsored noopener"
@@ -901,7 +900,7 @@ function renderWishlist() {
                 </div>
 
                 <h3>
-                    Your wishlist is empty
+                    Liked Products is empty
                 </h3>
 
                 <p>
@@ -1255,7 +1254,6 @@ function updateSmartHeader() {
         window.scrollY;
 
 
-
     /* =================================================
        TOP OF PAGE
     ================================================= */
@@ -1403,8 +1401,10 @@ renderCategoryShortcuts();
 
 renderProducts();
 
+
+
 /* =====================================================
-   SHIVANO STORE — HEADER / WISHLIST / CATEGORY UPDATE
+   SHIVANO STORE — HEADER / WISHLIST UPDATE
 ===================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -1455,6 +1455,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         productWishlist.innerHTML =
             "♡";
+
 
         navbar.appendChild(
             productWishlist
@@ -1620,308 +1621,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =================================================
-       ALL CATEGORIES
-       Clicking "All Categories" opens every category.
-    ================================================= */
-
-    const categoryShortcuts =
-        document.getElementById(
-            "categoryShortcuts"
-        );
-
-
-    if (categoryShortcuts) {
-
-        categoryShortcuts.addEventListener(
-            "click",
-            function (event) {
-
-                const button =
-                    event.target.closest(
-                        ".category-shortcut"
-                    );
-
-
-                if (!button) {
-                    return;
-                }
-
-
-                const category =
-                    button.dataset.category;
-
-
-                /*
-                 * All Categories button
-                 */
-
-                if (
-                    category === "All"
-                ) {
-
-                    showAllCategoriesMenu();
-
-                }
-
-            }
-        );
-
-    }
-
-
-
-    function showAllCategoriesMenu() {
-
-        /*
-         * Remove old menu first.
-         */
-
-        const oldMenu =
-            document.getElementById(
-                "allCategoriesMenu"
-            );
-
-
-        if (oldMenu) {
-
-            oldMenu.remove();
-
-        }
-
-
-        const categories = [
-            ...new Set(
-                products
-                    .map(
-                        product =>
-                            product.category
-                    )
-                    .filter(Boolean)
-            )
-        ];
-
-
-        const menu =
-            document.createElement(
-                "div"
-            );
-
-
-        menu.id =
-            "allCategoriesMenu";
-
-        menu.className =
-            "all-categories-menu";
-
-
-        menu.innerHTML = `
-
-            <div
-                class="all-categories-panel"
-            >
-
-                <div
-                    class="all-categories-header"
-                >
-
-                    <strong>
-                        All Categories
-                    </strong>
-
-                    <button
-                        type="button"
-                        id="closeAllCategories"
-                    >
-                        ×
-                    </button>
-
-                </div>
-
-
-                <div
-                    class="all-categories-options"
-                >
-
-                    <button
-                        type="button"
-                        class="all-category-option active"
-                        data-all-category="All"
-                    >
-                        All Products
-                    </button>
-
-
-                    ${categories
-                        .map(
-                            category => `
-                                <button
-                                    type="button"
-                                    class="all-category-option"
-                                    data-all-category="${escapeHtml(category)}"
-                                >
-                                    ${escapeHtml(category)}
-                                </button>
-                            `
-                        )
-                        .join("")
-                    }
-
-                </div>
-
-            </div>
-
-        `;
-
-
-        document.body.appendChild(
-            menu
-        );
-
-
-        requestAnimationFrame(
-            function () {
-
-                menu.classList.add(
-                    "show"
-                );
-
-            }
-        );
-
-
-        const closeButton =
-            document.getElementById(
-                "closeAllCategories"
-            );
-
-
-        if (closeButton) {
-
-            closeButton.addEventListener(
-                "click",
-                closeAllCategoriesMenu
-            );
-
-        }
-
-
-        menu.addEventListener(
-            "click",
-            function (event) {
-
-                if (
-                    event.target === menu
-                ) {
-
-                    closeAllCategoriesMenu();
-
-                    return;
-
-                }
-
-
-                const option =
-                    event.target.closest(
-                        "[data-all-category]"
-                    );
-
-
-                if (!option) {
-                    return;
-                }
-
-
-                const selected =
-                    option.dataset.allCategory;
-
-
-                if (
-                    typeof currentCategory !==
-                    "undefined"
-                ) {
-
-                    currentCategory =
-                        selected;
-
-                }
-
-
-                if (
-                    typeof renderCategoryShortcuts ===
-                    "function"
-                ) {
-
-                    renderCategoryShortcuts();
-
-                }
-
-
-                if (
-                    typeof renderProducts ===
-                    "function"
-                ) {
-
-                    renderProducts();
-
-                }
-
-
-                closeAllCategoriesMenu();
-
-
-                const productsSection =
-                    document.getElementById(
-                        "products"
-                    );
-
-
-                if (productsSection) {
-
-                    productsSection.scrollIntoView({
-                        behavior: "smooth"
-                    });
-
-                }
-
-            }
-        );
-
-    }
-
-
-
-    function closeAllCategoriesMenu() {
-
-        const menu =
-            document.getElementById(
-                "allCategoriesMenu"
-            );
-
-
-        if (!menu) {
-            return;
-        }
-
-
-        menu.classList.remove(
-            "show"
-        );
-
-
-        setTimeout(
-            function () {
-
-                menu.remove();
-
-            },
-            220
-        );
-
-    }
-
-
-
-    /* =================================================
        PRODUCT SEARCH → PRODUCT PAGE
     ================================================= */
 
@@ -1983,6 +1682,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+
+
 
 /* =========================================================
    MOBILE MENU — RELIABLE CLICK FIX

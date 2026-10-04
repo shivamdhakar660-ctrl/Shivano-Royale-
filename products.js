@@ -116,10 +116,10 @@ const products = [
 
         name:
             "Titan Karishma Stainless Steel Watch",
-
+        
         category:
             "Fashion",
-
+        
         price:
             "1993",
 
