@@ -3655,19 +3655,16 @@ and (
     ========================================= */
 
     .site-header .discovery-bar {
-        display: none !important;
-
-        height: 0 !important;
-        min-height: 0 !important;
-
-        padding: 0 !important;
+        display: grid !important;
+        height: auto !important;
+        min-height: 56px !important;
+        padding: 7px 18px !important;
         margin: 0 !important;
     }
 
-
-    /* Main content header ke just neeche se start */
+    /* Main content header + category bar ke just neeche se start */
     main {
-        padding-top: 78px !important;
+        padding-top: 134px !important;
     }
 
 }
@@ -3686,11 +3683,11 @@ and (
 @media (min-width: 901px) {
 
     main {
-        padding-top: 78px !important;
+        padding-top: 134px !important;
     }
 
     .products-section {
-        scroll-margin-top: 78px;
+        scroll-margin-top: 134px !important;
     }
 
 }
@@ -3704,11 +3701,11 @@ and (
 @media (max-width: 900px) {
 
     main {
-        padding-top: 70px !important;
+        padding-top: 182px !important;
     }
 
     .products-section {
-        scroll-margin-top: 70px;
+        scroll-margin-top: 182px !important;
     }
 
 
@@ -4180,3 +4177,8 @@ html {
 
     box-sizing: border-box !important;
 }
+
+/* FINAL CATEGORY BAR VISIBILITY + HEADER CLEARANCE */
+.site-header .discovery-bar { display: grid !important; visibility: visible !important; height: auto !important; min-height: 56px !important; }
+@media (min-width: 901px) { main { padding-top: 134px !important; } }
+@media (max-width: 900px) { main { padding-top: 182px !important; } }

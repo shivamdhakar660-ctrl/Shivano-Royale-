@@ -1872,5 +1872,159 @@ const products = [
 
             ]
         }
-    },   
+    }, 
+    
+    {
+        id: 9,
+
+        asin:
+            "B0GWXJ26QM",
+
+        name:
+            "Men's Plain Pollycotton Relax Fit Round Neck T-Shirt",
+
+        category:
+            "T-Shirts",
+
+        price:
+            "329",
+
+        rating:
+            3.5,
+
+        reviews:
+            "103+",
+
+        boughtText:
+            "100+ bought in last 30 days",
+
+        badge:
+            "casual wear",
+
+        image:
+            "images/prd9vr1img1.png",
+
+        images: [
+            "images/prd9vr1img1.png",
+            "images/prd9vr1img2.png",
+            "images/prd9vr1img3.png",
+            "images/prd9vr1img4.png",
+        ],
+
+        description:
+            "Soft Polycotton Fabric: Made from a breathable and lightweight polycotton blend for all-day comfort. Relax Fit Design: Provides a loose and comfortable fit, allowing easy movement and a relaxed feel. Classic Round Neck Style: Timeless crew neck design suitable for casual, gym, and everyday wear. Half Sleeve Comfort: Features half sleeves for warm weather and active use, keeping you cool and comfortable. Versatile Everyday Wear: Suitable for casual outings, workouts, travel, and home wear",
+
+        features: [
+            "Material: PolyCotton",
+            "Fit type: Relaxed fit",
+            "Sleeve Type: half Sleeves",
+            "Collar style: Round neck",
+            "Neck Style: Crew Neck",
+            "Country of Origin: India"
+        ],
+
+        amazonLink:
+            "https://link.amazon/B02PAo0r3",
+
+    variations: {
+
+          defaultSelection:
+          "Black",
+
+            options: [
+
+    
+    
+                {
+                    value:
+                        "Black",
+
+                    image:
+                        "images/prd9vr1img1.png",
+
+                    images: [
+                        "images/prd9vr1img1.png",
+                        "images/prd9vr1img2.png",
+                        "images/prd9vr1img3.png",
+                        "images/prd9vr1img4.png"
+                    ],
+
+                    price:
+                        "329",
+
+                    asin:
+                        "B0GWXJ26QM",
+
+                    amazonLink:
+                        "https://link.amazon/B02PAo0r3",
+
+                    name:
+                        "Men's Plain Pollycotton Relax Fit Round Neck T-Shirt",
+
+                    description:
+                        "Soft Polycotton Fabric: Made from a breathable and lightweight polycotton blend for all-day comfort. Relax Fit Design: Provides a loose and comfortable fit, allowing easy movement and a relaxed feel. Classic Round Neck Style: Timeless crew neck design suitable for casual, gym, and everyday wear. Half Sleeve Comfort: Features half sleeves for warm weather and active use, keeping you cool and comfortable. Versatile Everyday Wear: Suitable for casual outings, workouts, travel, and home wear",
+                    
+                    features:[
+                    "Material: PolyCotton",
+                    "Fit type: Relaxed fit",
+                    "Sleeve Type: half Sleeves",
+                    "Collar style: Round neck",
+                    "Neck Style: Crew Neck",
+                    "Country of Origin: India"
+                    ],
+
+                    rating:
+                        3.5,
+
+                    reviews:
+                        "103+"
+                },
+
+                {
+                    value:
+                        "White",
+
+                    image:
+                        "images/prd9vr2img1.png",
+
+                    images: [
+                        "images/prd9vr2img1.png",
+                        "images/prd9vr2img2.png",
+                        "images/prd9vr2img3.png",
+                        "images/prd9vr2img4.png"
+                    ],
+
+                    price:
+                        "329",
+
+                    asin:
+                        "B0GWXBKY4G",
+
+                    amazonLink:
+                        "https://link.amazon/B02PAo0r3",
+
+                    name:
+                        "en's Plain Pollycotton Relax Fit Round Neck T-Shirt",
+
+                    description:
+                        "Soft Polycotton Fabric: Made from a breathable and lightweight polycotton blend for all-day comfort. Relax Fit Design: Provides a loose and comfortable fit, allowing easy movement and a relaxed feel. Classic Round Neck Style: Timeless crew neck design suitable for casual, gym, and everyday wear. Half Sleeve Comfort: Features half sleeves for warm weather and active use, keeping you cool and comfortable. Versatile Everyday Wear: Suitable for casual outings, workouts, travel, and home wear",
+                    
+                    features:[
+                        "Material: PolyCotton",
+                        "Fit type: Relaxed fit",
+                        "Sleeve Type: half Sleeves",
+                        "Collar style: Round neck",
+                        "Neck Style: Crew Neck",
+                        "Country of Origin: India"
+                    ],
+
+                    rating:
+                        3.5,
+
+                    reviews:
+                        "103+"
+                },
+            ]
+        }
+    }, 
 ]
