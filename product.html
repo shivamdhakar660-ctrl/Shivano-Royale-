@@ -1902,7 +1902,10 @@ function renderProductWishlist() {
     productWishlistItems.innerHTML =
         savedProducts
             .map(item => `
-                <div class="wishlist-item">
+                <div
+                    class="wishlist-item"
+                    data-product-id="${item.id}"
+                >
                     <div class="wishlist-item-image">
                         <img
                             src="${esc(item.image)}"
@@ -1984,6 +1987,34 @@ function closeProductWishlist() {
 document.addEventListener(
     "click",
     function (event) {
+
+        const wishlistItem =
+            event.target.closest(
+                ".wishlist-item[data-product-id]"
+            );
+
+        if (wishlistItem) {
+
+            if (
+                event.target.closest(
+                    "[data-product-remove-wishlist]"
+                )
+            ) {
+                return;
+            }
+
+            const productId =
+                Number(
+                    wishlistItem.dataset.productId
+                );
+
+            if (productId) {
+                location.href =
+                    `product.html?id=${productId}`;
+                return;
+            }
+
+        }
 
         const removeButton =
             event.target.closest(

@@ -1623,7 +1623,7 @@ const products = [
         }
     },
 
-     {
+    {
         id: 8,
 
         asin:
@@ -1654,10 +1654,10 @@ const products = [
             "images/prd8vr1img1.png",
 
         images: [
-            "images/prd7vr1img1.png",
-            "images/prd7vr1img2.png",
-            "images/prd7vr1img3.png",
-            "images/prd7vr1img4.png",
+            "images/prd8vr1img1.png",
+            "images/prd8vr1img2.png",
+            "images/prd8vr1img3.png",
+            "images/prd8vr1img4.png",
         ],
 
         description:
@@ -1725,10 +1725,10 @@ const products = [
                     ],
 
                     rating:
-                        4.0,
+                        2.7,
 
                     reviews:
-                        "615+"
+                        "20+"
                 },
 
                 {
@@ -1771,10 +1771,10 @@ const products = [
                     ],
 
                     rating:
-                        4.0,
+                        2.7,
 
                     reviews:
-                        "615+"
+                        "20+"
                 },
 
                 {
@@ -1817,10 +1817,10 @@ const products = [
                     ],
 
                     rating:
-                        4.0,
+                        2.7,
 
                     reviews:
-                        "615+"
+                        "20+"
                 },
 
                 {
@@ -1863,10 +1863,10 @@ const products = [
                     ],
 
                     rating:
-                        4.0,
+                        2.7,
 
                     reviews:
-                        "615+"
+                        "20+"
                 },
 
 
