@@ -4182,3 +4182,37 @@ html {
 .site-header .discovery-bar { display: grid !important; visibility: visible !important; height: auto !important; min-height: 56px !important; }
 @media (min-width: 901px) { main { padding-top: 134px !important; } }
 @media (max-width: 900px) { main { padding-top: 182px !important; } }
+
+/* =====================================================
+   MOBILE CATEGORY BAR WIDTH FIX ONLY
+   Do not change category button colors
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .discovery-bar {
+        grid-template-columns: minmax(0, 1fr) !important;
+        grid-template-rows: 42px !important;
+    }
+
+    .category-shortcuts {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .discovery-bar {
+        grid-template-columns: minmax(0, 1fr) !important;
+        grid-template-rows: 42px !important;
+    }
+
+    .category-shortcuts {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+}
