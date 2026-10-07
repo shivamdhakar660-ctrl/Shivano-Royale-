@@ -42,7 +42,7 @@
 <style>
 
 .product-page {
-    padding-top: 78px;
+    padding-top: 0;
     min-height: 100vh;
 }
 
@@ -935,7 +935,7 @@
 @media (max-width: 600px) {
 
     .product-page {
-        padding-top: 70px;
+        padding-top: 0 !important;
     }
 
     .product-page-top {
@@ -1490,13 +1490,15 @@
 </a>
 
 
-<button
-    type="button"
-    class="detail-action secondary product-detail-wishlist-btn"
-    id="productReviewWishlistButton"
+<a
+    href="#"
+    target="_blank"
+    rel="nofollow sponsored noopener"
+    class="detail-action secondary"
+    id="reviewButton"
 >
-    Like ♡
-</button>
+    Reviews on Amazon ↗
+</a>
 
 </div>
 
@@ -1602,6 +1604,15 @@
 >
     Read Reviews on Amazon ↗
 </a>
+
+
+<button
+    type="button"
+    class="product-review-wishlist-btn"
+    id="productReviewWishlistButton"
+>
+    Add in Wishlist ♡
+</button>
 
 </div>
 
@@ -1836,17 +1847,12 @@ function updateProductWishlistUI() {
     if (productReviewWishlistButton) {
         productReviewWishlistButton.textContent =
             saved
-                ? "Liked ♥"
-                : "Like ♡";
+                ? "Remove from Wishlist ♥"
+                : "Add in Wishlist ♡";
 
         productReviewWishlistButton.classList.toggle(
             "saved",
             saved
-        );
-
-        productReviewWishlistButton.setAttribute(
-            "aria-pressed",
-            saved ? "true" : "false"
         );
     }
 
@@ -1902,10 +1908,7 @@ function renderProductWishlist() {
     productWishlistItems.innerHTML =
         savedProducts
             .map(item => `
-                <div
-                    class="wishlist-item"
-                    data-product-id="${item.id}"
-                >
+                <div class="wishlist-item">
                     <div class="wishlist-item-image">
                         <img
                             src="${esc(item.image)}"
@@ -1987,34 +1990,6 @@ function closeProductWishlist() {
 document.addEventListener(
     "click",
     function (event) {
-
-        const wishlistItem =
-            event.target.closest(
-                ".wishlist-item[data-product-id]"
-            );
-
-        if (wishlistItem) {
-
-            if (
-                event.target.closest(
-                    "[data-product-remove-wishlist]"
-                )
-            ) {
-                return;
-            }
-
-            const productId =
-                Number(
-                    wishlistItem.dataset.productId
-                );
-
-            if (productId) {
-                location.href =
-                    `product.html?id=${productId}`;
-                return;
-            }
-
-        }
 
         const removeButton =
             event.target.closest(
@@ -2842,6 +2817,10 @@ function renderPage(
 
 
     $("amazonButton").href =
+        amazonLink;
+
+
+    $("reviewButton").href =
         amazonLink;
 
 

@@ -1872,6 +1872,8 @@ const products = [
 
             ]
         }
+    
+
     }, 
     
     {
@@ -2024,7 +2026,120 @@ const products = [
                     reviews:
                         "103+"
                 },
+
             ]
         }
-    }, 
+    },
+
+     {
+        id: 10,
+
+        asin:
+            "B0GP6PR1S8",
+
+        name:
+            "Men's Latest Casual Jacket Low-Cut Standing Collar.",
+
+        category:
+            "Jackets",
+
+        price:
+            "499",
+
+        rating:
+            3.4,
+
+        reviews:
+            "33+",
+
+        boughtText:
+            "100+ bought in last 30 days",
+
+        badge:
+            "casual wear",
+
+        image:
+            "images/prd10vr1img1.png",
+
+        images: [
+            "images/prd10vr1img1.png",
+            "images/prd10vr1img2.png",
+            "images/prd10vr1img3.png",
+            "images/prd10vr1img4.png",
+            "images/prd10vr1img5.png",
+        ],
+
+        description:
+            "Comfort & Style: Best Winter wear with style of Bomber Jacket with Regular Fit. Comfortable and durable: This bomber jacket It has a ribbed collar and cozy fit. It also has a smooth zipper closure and multiple pockets. Fit and size: This bomber jacket has a slim and Regular fit that is neither too tight nor too loose. It runs true to size, but you can refer to the size chart in the product images to find your best fit.",
+
+        features: [
+            "Material: Polyster 80%, Cotton 20%",
+            "Fit type: Regular fit",
+            "Sleeve Type: full Sleeves",
+            "Length: Standard Length",
+            "Care instructions: Machine Wash",
+            "Country of Origin: India"
+        ],
+
+        amazonLink:
+            "https://link.amazon/B0j1WMeDV",
+
+    variations: {
+
+          defaultSelection:
+          "Grey",
+
+            options: [
+
+    
+    
+                {
+                    value:
+                        "Grey",
+
+                    image:
+                        "images/prd10vr1img1.png",
+
+                    images: [
+                        "images/prd10vr1img1.png",
+                        "images/prd10vr1img2.png",
+                        "images/prd10vr1img3.png",
+                        "images/prd10vr1img4.png",
+                        "images/prd10vr1img5.png"
+                    ],
+
+                    price:
+                        "499",
+
+                    asin:
+                        "B0GP6PR1S8",
+
+                    amazonLink:
+                        "https://link.amazon/B0j1WMeDV",
+
+                    name:
+                        "Men's Latest Casual Jacket Low-Cut Standing Collar.",
+
+                    description:
+                        "Comfort & Style: Best Winter wear with style of Bomber Jacket with Regular Fit. Comfortable and durable: This bomber jacket It has a ribbed collar and cozy fit. It also has a smooth zipper closure and multiple pockets. Fit and size: This bomber jacket has a slim and Regular fit that is neither too tight nor too loose. It runs true to size, but you can refer to the size chart in the product images to find your best fit.",
+                    
+                    features: [
+                        "Material: Polyster 80%, Cotton 20%",
+                        "Fit type: Regular fit",
+                        "Sleeve Type: full Sleeves",
+                        "Length: Standard Length",
+                        "Care instructions: Machine Wash",
+                        "Country of Origin: India"
+                    ],
+
+                    rating:
+                        3.4,
+
+                    reviews:
+                        "33+"
+                },
+
+            ]
+        }
+    },
 ]
