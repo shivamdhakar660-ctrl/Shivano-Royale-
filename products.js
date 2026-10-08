@@ -2817,4 +2817,4 @@ const products = [
             ]
         }
     },
-]
+] 
