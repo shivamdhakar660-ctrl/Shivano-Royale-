@@ -2031,7 +2031,7 @@ const products = [
         }
     },
 
-     {
+    {
         id: 10,
 
         asin:
@@ -2142,4 +2142,684 @@ const products = [
             ]
         }
     },
+
+    {
+        id: 11,
+
+        asin:
+            "B0FY2R7QPX",
+
+        name:
+            "Men's Half Zipper Color Block Hooded Sweatshirt.",
+
+        category:
+            "Hoodies",
+
+        price:
+            "499",
+
+        rating:
+            3.7,
+
+        reviews:
+            "319+",
+
+        boughtText:
+            "50+ bought in last 30 days",
+
+        badge:
+            "Winter wear",
+
+        image:
+            "images/prd11vr1img1.png",
+
+        images: [
+            "images/prd11vr1img1.png",
+            "images/prd11vr1img2.png",
+            "images/prd11vr1img3.png",
+            "images/prd11vr1img4.png",
+        ],
+
+        description:
+            "Men's Half-Zip Colorblock Hoodie- Modern, sporty design for a stylish everyday look. Athletic Detailing: Dual stripes on sleeves add a bold, dynamic touch. Hooded Neckline: Offers extra warmth and casual appeal. Minimalist Design: No pockets for a clean, sleek silhouette. Ideal For: Streetwear, gym sessions, travel, and casual outings",
+
+        features: [
+            "Material: Fleece",
+            "Fit type: Regular fit",
+            "Sleeve Type: Long Sleeves",
+            "Length: Standard Length",
+            "Neck Style: Hooded Neck",
+            "Country of Origin: India"
+        ],
+
+        amazonLink:
+            "https://link.amazon/B03lCsw6R",
+
+    variations: {
+
+          defaultSelection:
+          "Coffee::Black",
+
+            options: [
+
+    
+    
+                {
+                    value:
+                        "Coffee::Black",
+
+                    image:
+                        "images/prd11vr1img1.png",
+
+                    images: [
+                        "images/prd11vr1img1.png",
+                        "images/prd11vr1img2.png",
+                        "images/prd11vr1img3.png",
+                        "images/prd11vr1img4.png",
+                    ],
+
+                    price:
+                        "499",
+
+                    asin:
+                        "B0FY2R7QPX",
+
+                    amazonLink:
+                        "https://link.amazon/B03lCsw6R",
+
+                    name:
+                        "Men's Half Zipper Color Block Hooded Sweatshirt.",
+
+                    description:
+                        "Comfort & Style: Best Winter wear with style of Bomber Jacket with Regular Fit. Comfortable and durable: This bomber jacket It has a ribbed collar and cozy fit. It also has a smooth zipper closure and multiple pockets. Fit and size: This bomber jacket has a slim and Regular fit that is neither too tight nor too loose. It runs true to size, but you can refer to the size chart in the product images to find your best fit.",
+                    
+                    features: [
+                        "Material: Fleece",
+                        "Fit type: Regular fit",
+                        "Sleeve Type: Long Sleeves",
+                        "Length: Standard Length",
+                        "Neck Style: Hooded Neck",
+                        "Country of Origin: India"
+                    ],
+
+                    rating:
+                        3.4,
+
+                    reviews:
+                        "319+"
+                },
+
+                {
+                    value:
+                        "Black::Darkgrey",
+
+                    image:
+                        "images/prd11vr2img1.png",
+
+                    images: [
+                        "images/prd11vr2img1.png",
+                        "images/prd11vr2img2.png",
+                        "images/prd11vr2img3.png",
+                        "images/prd11vr2img4.png",
+                    ],
+
+                    price:
+                        "499",
+
+                    asin:
+                        "B0FY2ZS9HL",
+
+                    amazonLink:
+                        "https://link.amazon/B03lCsw6R",
+
+                    name:
+                        "Men's Half Zipper Color Block Hooded Sweatshirt.",
+
+                    description:
+                        "Comfort & Style: Best Winter wear with style of Bomber Jacket with Regular Fit. Comfortable and durable: This bomber jacket It has a ribbed collar and cozy fit. It also has a smooth zipper closure and multiple pockets. Fit and size: This bomber jacket has a slim and Regular fit that is neither too tight nor too loose. It runs true to size, but you can refer to the size chart in the product images to find your best fit.",
+                    
+                    features: [
+                        "Material: Fleece",
+                        "Fit type: Regular fit",
+                        "Sleeve Type: Long Sleeves",
+                        "Length: Standard Length",
+                        "Neck Style: Hooded Neck",
+                        "Country of Origin: India"
+                    ],
+
+                    rating:
+                        3.4,
+
+                    reviews:
+                        "319+"
+                },
+
+                {
+                    value:
+                        "DarkGrey::Black",
+
+                    image:
+                        "images/prd11vr3img1.png",
+
+                    images: [
+                        "images/prd11vr3img1.png",
+                        "images/prd11vr3img2.png",
+                        "images/prd11vr3img3.png",
+                        "images/prd11vr3img4.png",
+                    ],
+
+                    price:
+                        "499",
+
+                    asin:
+                        "B0FY2VBNCM",
+
+                    amazonLink:
+                        "https://link.amazon/B03lCsw6R",
+
+                    name:
+                        "Men's Half Zipper Color Block Hooded Sweatshirt.",
+
+                    description:
+                        "Comfort & Style: Best Winter wear with style of Bomber Jacket with Regular Fit. Comfortable and durable: This bomber jacket It has a ribbed collar and cozy fit. It also has a smooth zipper closure and multiple pockets. Fit and size: This bomber jacket has a slim and Regular fit that is neither too tight nor too loose. It runs true to size, but you can refer to the size chart in the product images to find your best fit.",
+                    
+                    features: [
+                        "Material: Fleece",
+                        "Fit type: Regular fit",
+                        "Sleeve Type: Long Sleeves",
+                        "Length: Standard Length",
+                        "Neck Style: Hooded Neck",
+                        "Country of Origin: India"
+                    ],
+
+                    rating:
+                        3.4,
+
+                    reviews:
+                        "319+"
+                },
+       
+            ]
+        }
+    },
+
+    {    
+        id: 12,
+
+        asin:
+            "B0DBDMYWK3",
+
+        name:
+            "Hoodie Sweatshirt For Unisex",
+
+        category:
+            "Hoodies",
+
+        price:
+            "529",
+
+        rating:
+            3.8,
+
+        reviews:
+            "2239+",
+
+        boughtText:
+            "100+ bought in last 30 days",
+
+        badge:
+            "Winter wear",
+
+        image:
+            "images/prd12vr1img1.png",
+
+        images: [
+            "images/prd12vr1img1.png",
+            "images/prd12vr1img2.png",
+            "images/prd12vr1img3.png",
+            "images/prd12vr1img4.png",
+            "images/prd12vr1img5.png",
+        ],
+
+        description:
+            "Hoodies || Sweatshirt for Unisex || Unisex Hoodie.Actual Products color may vary with product due to monitor settings. Wash care: machine wash cold, tumble dry low, do not bleach. Check our size chart to get your best fit",
+
+        features: [
+            "Material: Polyster",
+            "Fit type: Regular fit",
+            "Sleeve Type: Long Sleeves",
+            "Length: Standard Length",
+            "Neck Style: Hooded Neck",
+            "Country of Origin: India"
+        ],
+
+        amazonLink:
+            "https://link.amazon/B021ZQQqq",
+
+    variations: {
+
+          defaultSelection:
+          "Black",
+
+            options: [
+
+    
+    
+                {
+                    value:
+                        "Black",
+
+                    image:
+                        "images/prd12vr1img1.png",
+
+                    images: [
+                        "images/prd12vr1img1.png",
+                        "images/prd12vr1img2.png",
+                        "images/prd12vr1img3.png",
+                        "images/prd12vr1img4.png",
+                        "images/prd12vr1img5.png",
+                    ],
+
+                    price:
+                        "529",
+
+                    asin:
+                        "B0DBDMYWK3",
+
+                    amazonLink:
+                        "https://link.amazon/B021ZQQqq",
+
+                    name:
+                        "Hoodie Sweatshirt For Unisex",
+
+                    description:
+                        "Hoodies || Sweatshirt for Unisex || Unisex Hoodie.Actual Products color may vary with product due to monitor settings. Wash care: machine wash cold, tumble dry low, do not bleach. Check our size chart to get your best fit.",
+                    
+                    features: [
+                        "Material: Fleece",
+                        "Fit type: Regular fit",
+                        "Sleeve Type: Long Sleeves",
+                        "Length: Standard Length",
+                        "Neck Style: Hooded Neck",
+                        "Country of Origin: India"
+                    ],
+
+                    rating:
+                        3.8,
+
+                    reviews:
+                        "2239+"
+                
+                },
+
+                
+                {
+                    value:
+                        "Brown",
+
+                    image:
+                        "images/prd12vr2img1.png",
+
+                    images: [
+                        "images/prd12vr2img1.png",
+                        "images/prd12vr2img2.png",
+                        "images/prd12vr2img3.png",
+                        "images/prd12vr2img4.png",
+                        "images/prd12vr2img5.png",
+                    ],
+
+                    price:
+                        "529",
+
+                    asin:
+                        "B0DBDP7RMN",
+
+                    amazonLink:
+                        "https://link.amazon/B021ZQQqq",
+
+                    name:
+                        "Hoodie Sweatshirt For Unisex",
+
+                    description:
+                        "Hoodies || Sweatshirt for Unisex || Unisex Hoodie.Actual Products color may vary with product due to monitor settings. Wash care: machine wash cold, tumble dry low, do not bleach. Check our size chart to get your best fit.",
+                    
+                    features: [
+                        "Material: Fleece",
+                        "Fit type: Regular fit",
+                        "Sleeve Type: Long Sleeves",
+                        "Length: Standard Length",
+                        "Neck Style: Hooded Neck",
+                        "Country of Origin: India"
+                    ],
+
+                    rating:
+                        3.8,
+
+                    reviews:
+                        "2239+"
+                
+                },
+            ]
+        }
+    },
+
+    {    
+        id: 13,
+
+        asin:
+            "B0CJJ7KDJZ",
+
+        name:
+            "Cotton Fleece | Hooded Neck Full Sleeve | Regular Fit Sweatshirt | Solid Hoodie for Men ",
+
+        category:
+            "Hoodies",
+
+        price:
+            "799",
+
+        rating:
+            3.9,
+
+        reviews:
+            "1409+",
+
+        boughtText:
+            "",
+
+        badge:
+            "Winter wear",
+
+        image:
+            "images/prd13vr1img1.png",
+
+        images: [
+            "images/prd13vr1img1.png",
+            "images/prd13vr1img2.png",
+            "images/prd13vr1img3.png",
+            "images/prd13vr1img4.png",
+        ],
+
+        description:
+            "Pick Your Fit - Regular or oversized, designed for maximum comfort and easygoing vibes. Hood Love - Adjustable hoods with drawstring to keep you cosy, street-ready, and camera-ready. Expressive Designs - Bright solids and big, bold front and back prints guaranteed to turn heads. Colour & Shape Retention - Maintains vibrancy and fit wash after wash. Style It Your Way - Throw on with jeans, joggers, or layer under a bomber on chilly winter nights.",
+
+        features: [
+            "Material: Cotton Polly Fleece",
+            "Fit type: Regular fit",
+            "Sleeve Type: Long Sleeves",
+            "Length: Standard Length",
+            "Neck Style: Hooded Neck",
+            "Country of Origin: India"
+        ],
+
+        amazonLink:
+            "https://link.amazon/B0hXYEX8J",
+
+    variations: {
+
+          defaultSelection:
+          "Beige",
+
+            options: [
+
+    
+    
+                {
+                    value:
+                        "Beige",
+
+                    image:
+                        "images/prd13vr1img1.png",
+
+                    images: [
+                        "images/prd13vr1img1.png",
+                        "images/prd13vr1img2.png",
+                        "images/prd13vr1img3.png",
+                        "images/prd13vr1img4.png",
+                    ],
+
+                    price:
+                        "799",
+
+                    asin:
+                        "B0CJJ7KDJZ",
+
+                    amazonLink:
+                        "https://link.amazon/B0hXYEX8J",
+
+                    name:
+                        "Cotton Fleece | Hooded Neck Full Sleeve | Regular Fit Sweatshirt | Solid Hoodie for Men ",
+
+                    description:
+                        "Pick Your Fit - Regular or oversized, designed for maximum comfort and easygoing vibes. Hood Love - Adjustable hoods with drawstring to keep you cosy, street-ready, and camera-ready. Expressive Designs - Bright solids and big, bold front and back prints guaranteed to turn heads. Colour & Shape Retention - Maintains vibrancy and fit wash after wash. Style It Your Way - Throw on with jeans, joggers, or layer under a bomber on chilly winter nights.",
+                    
+                    features: [
+                        "Material: Cotton Polly Fleece",
+                        "Fit type: Regular fit",
+                        "Sleeve Type: Long Sleeves",
+                        "Length: Standard Length",
+                        "Neck Style: Hooded Neck",
+                        "Country of Origin: India"
+                    ],
+
+                    rating:
+                        3.9,
+
+                    reviews:
+                        "1409+"
+                
+                },
+
+                {
+                    value:
+                        "Black",
+
+                    image:
+                        "images/prd13vr2img1.png",
+
+                    images: [
+                        "images/prd13vr2img1.png",
+                        "images/prd13vr2img2.png",
+                        "images/prd13vr2img3.png",
+                        "images/prd13vr2img4.png",
+                    ],
+
+                    price:
+                        "800",
+
+                    asin:
+                        "B0CJJ6MJWR",
+
+                    amazonLink:
+                        "https://link.amazon/B0hXYEX8J",
+
+                    name:
+                        "Cotton Fleece | Hooded Neck Full Sleeve | Regular Fit Sweatshirt | Solid Hoodie for Men ",
+
+                    description:
+                        "Pick Your Fit - Regular or oversized, designed for maximum comfort and easygoing vibes. Hood Love - Adjustable hoods with drawstring to keep you cosy, street-ready, and camera-ready. Expressive Designs - Bright solids and big, bold front and back prints guaranteed to turn heads. Colour & Shape Retention - Maintains vibrancy and fit wash after wash. Style It Your Way - Throw on with jeans, joggers, or layer under a bomber on chilly winter nights.",
+                    
+                    features: [
+                        "Material: Cotton Polly Fleece",
+                        "Fit type: Regular fit",
+                        "Sleeve Type: Long Sleeves",
+                        "Length: Standard Length",
+                        "Neck Style: Hooded Neck",
+                        "Country of Origin: India"
+                    ],
+
+                    rating:
+                        3.9,
+
+                    reviews:
+                        "1409+"
+                
+                },
+            ]
+        }
+    },
+
+    {    
+        id: 14,
+
+        asin:
+            "B0DHS61VNW",
+
+        name:
+            "Hooded (Sweatshirt) for Mans| Winter Wear for Mans Fleece",
+
+        category:
+            "Hoodies",
+
+        price:
+            "529",
+
+        rating:
+            3.8,
+
+        reviews:
+            "460+",
+
+        boughtText:
+            "50+ Bought in last 30 days",
+
+        badge:
+            "Winter wear",
+
+        image:
+            "images/prd14vr1img1.png",
+
+        images: [
+            "images/prd14vr1img1.png",
+            "images/prd14vr1img2.png",
+            "images/prd14vr1img3.png",
+            "images/prd14vr1img4.png",
+        ],
+
+        description:
+            "Neckline: Round Neck, Details:Pullover, Sleeve Length: Full Sleeve, Sleeve Type: Regular Sleeve. Length: Regular, Fit Type: Regular Fit. Fabric: 5 % Stretchable , Composition: 95 % Polyster",
+
+        features: [
+            "Material: 5 % Stretchable, Composition: 95% Polyster",
+            "Material Type: Fleece",
+            "Fit type: Regular fit",
+            "Sleeve Type: Long Sleeves",
+            "Length: Standard Length",
+            "Neck Style: Hooded Neck",
+            "Country of Origin: India"
+        ],
+
+        amazonLink:
+            "https://link.amazon/B0hXYEX8J",
+
+    variations: {
+
+          defaultSelection:
+          "Brown",
+
+            options: [
+
+    
+    
+                {
+                    value:
+                        "Brown",
+
+                    image:
+                        "images/prd14vr1img1.png",
+
+                    images: [
+                        "images/prd14vr1img1.png",
+                        "images/prd14vr1img2.png",
+                        "images/prd14vr1img3.png",
+                        "images/prd14vr1img4.png",
+                    ],
+
+                    price:
+                        "529",
+
+                    asin:
+                        "B0DHS61VNW",
+
+                    amazonLink:
+                        "https://link.amazon/B0hXYEX8J",
+
+                    name:
+                        "Hooded (Sweatshirt) for Mans| Winter Wear for Mans Fleece",
+
+                    description:
+                        "Neckline: Round Neck, Details:Pullover, Sleeve Length: Full Sleeve, Sleeve Type: Regular Sleeve. Length: Regular, Fit Type: Regular Fit. Fabric: 5 % Stretchable , Composition: 95 % Polyster",
+                    
+                    features: [
+                        "Material: 5 % Stretchable, Composition: 95% Polyster",
+                        "Material Type: Fleece",
+                        "Fit type: Regular fit",
+                        "Sleeve Type: Long Sleeves",
+                        "Length: Standard Length",
+                        "Neck Style: Hooded Neck",
+                        "Country of Origin: India"
+                    ],
+
+                    rating:
+                        3.8,
+
+                    reviews:
+                        "460+"
+                
+                },
+
+                {
+                    value:
+                        "Black",
+
+                    image:
+                        "images/prd14vr2img1.png",
+
+                    images: [
+                        "images/prd14vr2img1.png",
+                        "images/prd14vr2img2.png",
+                        "images/prd14vr2img3.png",
+                        "images/prd14vr2img4.png",
+                    ],
+
+                    price:
+                        "469",
+
+                    asin:
+                        "B0DHS6SSPS",
+
+                    amazonLink:
+                        "https://link.amazon/B0hXYEX8J",
+
+                    name:
+                        "Hooded (Sweatshirt) for Mans| Winter Wear for Mans Fleece",
+
+                    description:
+                        "Neckline: Round Neck, Details:Pullover, Sleeve Length: Full Sleeve, Sleeve Type: Regular Sleeve. Length: Regular, Fit Type: Regular Fit. Fabric: 5 % Stretchable , Composition: 95 % Polyster",
+                    
+                    features: [
+                        "Material: 5 % Stretchable, Composition: 95% Polyster",
+                        "Material Type: Fleece",
+                        "Fit type: Regular fit",
+                        "Sleeve Type: Long Sleeves",
+                        "Length: Standard Length",
+                        "Neck Style: Hooded Neck",
+                        "Country of Origin: India"
+                    ],
+
+                    rating:
+                        3.8,
+
+                    reviews:
+                        "460+"
+                
+                },
+            ]
+        }
+    },
 ]
+
+
+
+
+
