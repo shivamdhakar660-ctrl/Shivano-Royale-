@@ -2818,8 +2818,3 @@ const products = [
         }
     },
 ]
-
-
-
-
-
