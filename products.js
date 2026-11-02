@@ -348,9 +348,9 @@ const products = [
             ]
 
         },
-        
+
     },
-    
+
     {
         id: 3,
 
@@ -359,10 +359,10 @@ const products = [
 
         name:
             "Titan Karishma Stainless Steel Watch",
-        
+
         category:
             "Watches",
-        
+
         price:
             "1993",
 
@@ -994,8 +994,8 @@ const products = [
 
             options: [
 
-    
-    
+
+
                 {
                     value:
                         "Black",
@@ -1023,7 +1023,7 @@ const products = [
 
                     description:
                         "Soft Polycotton Fabric: Breathable and lightweight material for all-day comfort in every season. Classic Round Neck Design: Timeless crew neck style suitable for casual, sports, and daily wear. Half Sleeve Comfort Fit: Provides easy movement and relaxed feel for work, travel, or gym. Solid Color Versatility: Easy to pair with jeans, joggers, shorts, or track pants. Perfect for Every Occasion: Ideal for casual outings, office wear, workouts, and home wea",
-                    
+
                     features:[
                         "Material: PolyCotton",
                         "Fit type: Relaxed fit",
@@ -1068,7 +1068,7 @@ const products = [
 
                     description:
                         "Soft Polycotton Fabric: Breathable and lightweight material for all-day comfort in every season. Classic Round Neck Design: Timeless crew neck style suitable for casual, sports, and daily wear. Half Sleeve Comfort Fit: Provides easy movement and relaxed feel for work, travel, or gym. Solid Color Versatility: Easy to pair with jeans, joggers, shorts, or track pants. Perfect for Every Occasion: Ideal for casual outings, office wear, workouts, and home wea",
-                    
+
                     features:[
                         "Material: PolyCotton",
                         "Fit type: Relaxed fit",
@@ -1150,8 +1150,8 @@ const products = [
 
             options: [
 
-    
-    
+
+
                 {
                     value:
                         "Black/White/Green117/Cork",
@@ -1181,7 +1181,7 @@ const products = [
 
                     description:
                         "A Half sleeve,Round Neck Oversized T-Shirt with 4 combo of Multicolour. More comfortable for your classic everyday look.",
-                    
+
                     features:[
                         "Material: Cotton",
                         "Fit type: Oversized fit",
@@ -1228,7 +1228,7 @@ const products = [
 
                     description:
                         "A Half sleeve,Round Neck Oversized T-Shirt with 4 combo of Multicolour. More comfortable for your classic everyday look.",
-                    
+
                     features:[
                           "Material: Cotton",
                         "Fit type: Oversized fit",
@@ -1275,7 +1275,7 @@ const products = [
 
                     description:
                         "A Half sleeve,Round Neck Oversized T-Shirt with 4 combo of Multicolour. More comfortable for your classic everyday look.",
-                    
+
                     features:[
                           "Material: Cotton",
                         "Fit type: Oversized fit",
@@ -1322,7 +1322,7 @@ const products = [
 
                     description:
                         "A Half sleeve,Round Neck Oversized T-Shirt with 4 combo of Multicolour. More comfortable for your classic everyday look.",
-                    
+
                     features:[
                           "Material: Cotton",
                         "Fit type: Oversized fit",
@@ -1369,7 +1369,7 @@ const products = [
 
                     description:
                         "A Half sleeve,Round Neck Oversized T-Shirt with 4 combo of Multicolour. More comfortable for your classic everyday look.",
-                    
+
                     features:[
                           "Material: Cotton",
                         "Fit type: Oversized fit",
@@ -1416,7 +1416,7 @@ const products = [
 
                     description:
                         "A Half sleeve,Round Neck Oversized T-Shirt with 4 combo of Multicolour. More comfortable for your classic everyday look.",
-                    
+
                     features:[
                           "Material: Cotton",
                         "Fit type: Oversized fit",
@@ -1463,7 +1463,7 @@ const products = [
 
                     description:
                         "A Half sleeve,Round Neck Oversized T-Shirt with 4 combo of Multicolour. More comfortable for your classic everyday look.",
-                    
+
                     features:[
                           "Material: Cotton",
                         "Fit type: Oversized fit",
@@ -1510,7 +1510,7 @@ const products = [
 
                     description:
                         "A Half sleeve,Round Neck Oversized T-Shirt with 4 combo of Multicolour. More comfortable for your classic everyday look.",
-                    
+
                     features:[
                           "Material: Cotton",
                         "Fit type: Oversized fit",
@@ -1556,7 +1556,7 @@ const products = [
 
                     description:
                         "A Half sleeve,Round Neck Oversized T-Shirt with 4 combo of Multicolour. More comfortable for your classic everyday look.",
-                    
+
                     features:[
                           "Material: Cotton",
                         "Fit type: Oversized fit",
@@ -1602,7 +1602,7 @@ const products = [
 
                     description:
                         "A Half sleeve,Round Neck Oversized T-Shirt with 4 combo of Multicolour. More comfortable for your classic everyday look.",
-                    
+
                     features:[
                           "Material: Cotton",
                         "Fit type: Oversized fit",
@@ -1683,8 +1683,8 @@ const products = [
 
             options: [
 
-    
-    
+
+
                 {
                     value:
                         "Black",
@@ -1713,7 +1713,7 @@ const products = [
 
                     description:
                         "Material and Quality: Premium bio-washed soft and smooth skin friendly 100% cotton ,blend with high quality Acid Wash with sharp details with minimal Print which give standout and refined touch. Sleeve type: Half Sleeve; Neck Type: Round Neck; Fitting type: Oversized Fit; Age Range Description: Adult; Occasion: Casual.",
-                    
+
                     features:[
                        "Material: 100% Cotton",
                        "Fit type: Oversized fit",
@@ -1759,7 +1759,7 @@ const products = [
 
                     description:
                         "Material and Quality: Premium bio-washed soft and smooth skin friendly 100% cotton ,blend with high quality Acid Wash with sharp details with minimal Print which give standout and refined touch. Sleeve type: Half Sleeve; Neck Type: Round Neck; Fitting type: Oversized Fit; Age Range Description: Adult; Occasion: Casual.",
-                    
+
                     features:[
                        "Material: 100% Cotton",
                        "Fit type: Oversized fit",
@@ -1805,7 +1805,7 @@ const products = [
 
                     description:
                         "Material and Quality: Premium bio-washed soft and smooth skin friendly 100% cotton ,blend with high quality Acid Wash with sharp details with minimal Print which give standout and refined touch. Sleeve type: Half Sleeve; Neck Type: Round Neck; Fitting type: Oversized Fit; Age Range Description: Adult; Occasion: Casual.",
-                    
+
                     features:[
                        "Material: 100% Cotton",
                        "Fit type: Oversized fit",
@@ -1851,7 +1851,7 @@ const products = [
 
                     description:
                         "Material and Quality: Premium bio-washed soft and smooth skin friendly 100% cotton ,blend with high quality Acid Wash with sharp details with minimal Print which give standout and refined touch. Sleeve type: Half Sleeve; Neck Type: Round Neck; Fitting type: Oversized Fit; Age Range Description: Adult; Occasion: Casual.",
-                    
+
                     features:[
                        "Material: 100% Cotton",
                        "Fit type: Oversized fit",
@@ -1872,10 +1872,10 @@ const products = [
 
             ]
         }
-    
+
 
     }, 
-    
+
     {
         id: 9,
 
@@ -1935,8 +1935,8 @@ const products = [
 
             options: [
 
-    
-    
+
+
                 {
                     value:
                         "Black",
@@ -1965,7 +1965,7 @@ const products = [
 
                     description:
                         "Soft Polycotton Fabric: Made from a breathable and lightweight polycotton blend for all-day comfort. Relax Fit Design: Provides a loose and comfortable fit, allowing easy movement and a relaxed feel. Classic Round Neck Style: Timeless crew neck design suitable for casual, gym, and everyday wear. Half Sleeve Comfort: Features half sleeves for warm weather and active use, keeping you cool and comfortable. Versatile Everyday Wear: Suitable for casual outings, workouts, travel, and home wear",
-                    
+
                     features:[
                     "Material: PolyCotton",
                     "Fit type: Relaxed fit",
@@ -2010,7 +2010,7 @@ const products = [
 
                     description:
                         "Soft Polycotton Fabric: Made from a breathable and lightweight polycotton blend for all-day comfort. Relax Fit Design: Provides a loose and comfortable fit, allowing easy movement and a relaxed feel. Classic Round Neck Style: Timeless crew neck design suitable for casual, gym, and everyday wear. Half Sleeve Comfort: Features half sleeves for warm weather and active use, keeping you cool and comfortable. Versatile Everyday Wear: Suitable for casual outings, workouts, travel, and home wear",
-                    
+
                     features:[
                         "Material: PolyCotton",
                         "Fit type: Relaxed fit",
@@ -2091,8 +2091,8 @@ const products = [
 
             options: [
 
-    
-    
+
+
                 {
                     value:
                         "Grey",
@@ -2122,7 +2122,7 @@ const products = [
 
                     description:
                         "Comfort & Style: Best Winter wear with style of Bomber Jacket with Regular Fit. Comfortable and durable: This bomber jacket It has a ribbed collar and cozy fit. It also has a smooth zipper closure and multiple pockets. Fit and size: This bomber jacket has a slim and Regular fit that is neither too tight nor too loose. It runs true to size, but you can refer to the size chart in the product images to find your best fit.",
-                    
+
                     features: [
                         "Material: Polyster 80%, Cotton 20%",
                         "Fit type: Regular fit",
@@ -2202,8 +2202,8 @@ const products = [
 
             options: [
 
-    
-    
+
+
                 {
                     value:
                         "Coffee::Black",
@@ -2232,7 +2232,7 @@ const products = [
 
                     description:
                         "Comfort & Style: Best Winter wear with style of Bomber Jacket with Regular Fit. Comfortable and durable: This bomber jacket It has a ribbed collar and cozy fit. It also has a smooth zipper closure and multiple pockets. Fit and size: This bomber jacket has a slim and Regular fit that is neither too tight nor too loose. It runs true to size, but you can refer to the size chart in the product images to find your best fit.",
-                    
+
                     features: [
                         "Material: Fleece",
                         "Fit type: Regular fit",
@@ -2277,7 +2277,7 @@ const products = [
 
                     description:
                         "Comfort & Style: Best Winter wear with style of Bomber Jacket with Regular Fit. Comfortable and durable: This bomber jacket It has a ribbed collar and cozy fit. It also has a smooth zipper closure and multiple pockets. Fit and size: This bomber jacket has a slim and Regular fit that is neither too tight nor too loose. It runs true to size, but you can refer to the size chart in the product images to find your best fit.",
-                    
+
                     features: [
                         "Material: Fleece",
                         "Fit type: Regular fit",
@@ -2322,7 +2322,7 @@ const products = [
 
                     description:
                         "Comfort & Style: Best Winter wear with style of Bomber Jacket with Regular Fit. Comfortable and durable: This bomber jacket It has a ribbed collar and cozy fit. It also has a smooth zipper closure and multiple pockets. Fit and size: This bomber jacket has a slim and Regular fit that is neither too tight nor too loose. It runs true to size, but you can refer to the size chart in the product images to find your best fit.",
-                    
+
                     features: [
                         "Material: Fleece",
                         "Fit type: Regular fit",
@@ -2338,7 +2338,7 @@ const products = [
                     reviews:
                         "319+"
                 },
-       
+
             ]
         }
     },
@@ -2403,8 +2403,8 @@ const products = [
 
             options: [
 
-    
-    
+
+
                 {
                     value:
                         "Black",
@@ -2434,7 +2434,7 @@ const products = [
 
                     description:
                         "Hoodies || Sweatshirt for Unisex || Unisex Hoodie.Actual Products color may vary with product due to monitor settings. Wash care: machine wash cold, tumble dry low, do not bleach. Check our size chart to get your best fit.",
-                    
+
                     features: [
                         "Material: Fleece",
                         "Fit type: Regular fit",
@@ -2449,10 +2449,10 @@ const products = [
 
                     reviews:
                         "2239+"
-                
+
                 },
 
-                
+
                 {
                     value:
                         "Brown",
@@ -2482,7 +2482,7 @@ const products = [
 
                     description:
                         "Hoodies || Sweatshirt for Unisex || Unisex Hoodie.Actual Products color may vary with product due to monitor settings. Wash care: machine wash cold, tumble dry low, do not bleach. Check our size chart to get your best fit.",
-                    
+
                     features: [
                         "Material: Fleece",
                         "Fit type: Regular fit",
@@ -2497,7 +2497,7 @@ const products = [
 
                     reviews:
                         "2239+"
-                
+
                 },
             ]
         }
@@ -2562,8 +2562,8 @@ const products = [
 
             options: [
 
-    
-    
+
+
                 {
                     value:
                         "Beige",
@@ -2592,7 +2592,7 @@ const products = [
 
                     description:
                         "Pick Your Fit - Regular or oversized, designed for maximum comfort and easygoing vibes. Hood Love - Adjustable hoods with drawstring to keep you cosy, street-ready, and camera-ready. Expressive Designs - Bright solids and big, bold front and back prints guaranteed to turn heads. Colour & Shape Retention - Maintains vibrancy and fit wash after wash. Style It Your Way - Throw on with jeans, joggers, or layer under a bomber on chilly winter nights.",
-                    
+
                     features: [
                         "Material: Cotton Polly Fleece",
                         "Fit type: Regular fit",
@@ -2607,7 +2607,7 @@ const products = [
 
                     reviews:
                         "1409+"
-                
+
                 },
 
                 {
@@ -2638,7 +2638,7 @@ const products = [
 
                     description:
                         "Pick Your Fit - Regular or oversized, designed for maximum comfort and easygoing vibes. Hood Love - Adjustable hoods with drawstring to keep you cosy, street-ready, and camera-ready. Expressive Designs - Bright solids and big, bold front and back prints guaranteed to turn heads. Colour & Shape Retention - Maintains vibrancy and fit wash after wash. Style It Your Way - Throw on with jeans, joggers, or layer under a bomber on chilly winter nights.",
-                    
+
                     features: [
                         "Material: Cotton Polly Fleece",
                         "Fit type: Regular fit",
@@ -2653,7 +2653,7 @@ const products = [
 
                     reviews:
                         "1409+"
-                
+
                 },
             ]
         }
@@ -2719,8 +2719,8 @@ const products = [
 
             options: [
 
-    
-    
+
+
                 {
                     value:
                         "Brown",
@@ -2749,7 +2749,7 @@ const products = [
 
                     description:
                         "Neckline: Round Neck, Details:Pullover, Sleeve Length: Full Sleeve, Sleeve Type: Regular Sleeve. Length: Regular, Fit Type: Regular Fit. Fabric: 5 % Stretchable , Composition: 95 % Polyster",
-                    
+
                     features: [
                         "Material: 5 % Stretchable, Composition: 95% Polyster",
                         "Material Type: Fleece",
@@ -2765,7 +2765,7 @@ const products = [
 
                     reviews:
                         "460+"
-                
+
                 },
 
                 {
@@ -2796,7 +2796,7 @@ const products = [
 
                     description:
                         "Neckline: Round Neck, Details:Pullover, Sleeve Length: Full Sleeve, Sleeve Type: Regular Sleeve. Length: Regular, Fit Type: Regular Fit. Fabric: 5 % Stretchable , Composition: 95 % Polyster",
-                    
+
                     features: [
                         "Material: 5 % Stretchable, Composition: 95% Polyster",
                         "Material Type: Fleece",
@@ -2812,7 +2812,7 @@ const products = [
 
                     reviews:
                         "460+"
-                
+
                 },
             ]
         }
