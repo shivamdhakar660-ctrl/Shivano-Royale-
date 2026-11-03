@@ -598,7 +598,6 @@ h2 {
 
     gap: 22px;
 }
-
 .product-card {
     position: relative;
 
@@ -1198,8 +1197,7 @@ footer {
 
 .modal-product {
     display: grid;
-
-    grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
 }
 
 .modal-product-image {
@@ -1795,7 +1793,7 @@ main {
     grid-template-columns: 30px 1fr;
     grid-template-rows: 1fr 1fr;
     column-gap: 8px;
-    align-items: center;
+        align-items: center;
 }
 
 .category-card:hover,
@@ -2395,7 +2393,7 @@ main {
     color: var(--black);
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+        justify-content: center;
     gap: 7px;
     font-size: 12px;
     font-weight: 600;
@@ -2994,8 +2992,7 @@ main {
 
 
     .product-page-wishlist.saved {
-
-        color: var(--gold);
+                color: var(--gold);
 
         border-color: var(--gold);
     }
@@ -3595,8 +3592,7 @@ and (
     /* =========================================
        WISHLIST — SEARCH KE JUST LEFT
     ========================================= */
-
-    .navbar .wishlist-nav {
+        .navbar .wishlist-nav {
         position: absolute !important;
 
         right: 28px !important;
@@ -4194,8 +4190,7 @@ html {
         grid-template-columns: minmax(0, 1fr) !important;
         grid-template-rows: 42px !important;
     }
-
-    .category-shortcuts {
+        .category-shortcuts {
         width: 100% !important;
         min-width: 0 !important;
     }
@@ -4215,4 +4210,181 @@ html {
         min-width: 0 !important;
     }
 
+}
+/* FIX: Reduce extra top gap on product pages */
+body:not(.home-page) main {
+    padding-top: 78px !important;
+}
+
+/* SHIVANO: Compact fashion product cards */
+
+/* Hide description only on product cards */
+.product-card .product-description {
+    display: none !important;
+}
+
+/* Compact card information */
+.product-info {
+    padding: 12px;
+}
+
+.product-title {
+    font-size: 16px;
+    line-height: 1.35;
+    margin: 5px 0 8px;
+}
+
+/* Portrait product images */
+.product-image {
+    height: auto;
+    aspect-ratio: 3 / 4;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Reduce excess spacing */
+.product-rating {
+    margin-top: 8px;
+}
+
+.product-bottom {
+    margin-top: 12px;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.product-price {
+    font-size: 18px;
+}
+
+/* Tablet and mobile product grid */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 0 12px;
+    }
+
+    .product-info {
+        padding: 10px;
+    }
+
+    .product-title {
+        font-size: 14px;
+    }
+
+    .product-price {
+        font-size: 16px;
+    }
+
+    .product-actions {
+        width: 100%;
+    }
+
+    .amazon-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* =====================================================
+   CATEGORY COLLECTIONS
+   ===================================================== */
+
+.collection-browser {
+    max-width: 1250px;
+    margin: 0 auto 28px;
+    padding: 0 28px;
+}
+.collection-browser-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 16px;
+}
+.collection-browser-heading h3 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(22px, 2.5vw, 30px);
+    margin: 0;
+}
+.collection-browser-heading p {
+    color: var(--gray);
+    font-size: 13px;
+    margin-top: 3px;
+}
+.collection-card-list { display: grid; gap: 14px; }
+.collection-card {
+    padding: 20px 22px 22px;
+    background: #fff;
+    border: 1px solid #eeeae3;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: border-color .2s ease, transform .2s ease;
+}
+.collection-card:hover {
+    border-color: var(--gold-light);
+    transform: translateY(-2px);
+}
+.collection-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+.collection-card-top h3 {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(17px, 2vw, 23px);
+    font-weight: 600;
+    line-height: 1.3;
+}
+.collection-card-top p { color: #888; font-size: 13px; margin-top: 3px; }
+.collection-see-all {
+    color: #333;
+    font-size: 13px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    white-space: nowrap;
+}
+.collection-card-images {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+.collection-card-image {
+    height: clamp(125px, 19vw, 220px);
+    overflow: hidden;
+    border-radius: 9px;
+    background: #f3f3f3;
+}
+.collection-card-image img { width: 100%; height: 100%; object-fit: cover; }
+.collection-back-heading {
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.collection-back-btn {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #fff;
+    padding: 9px 13px;
+    color: #333;
+    font-size: 12px;
+    font-weight: 600;
+}
+@media (max-width: 600px) {
+    .collection-browser { padding: 0 16px; }
+    .collection-card { padding: 15px 13px; border-radius: 12px; }
+    .collection-card-top { margin-bottom: 12px; }
+    .collection-card-top h3 { font-size: 16px; }
+    .collection-card-top p, .collection-see-all { font-size: 11px; }
+    .collection-card-images { gap: 6px; }
+    .collection-card-image { height: 112px; }
 }

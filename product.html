@@ -1,1489 +1,2229 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 
 <head>
 
+
 <meta charset="UTF-8">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
 
 <meta
-    name="description"
-    content="Shivano Store product details"
+
+name="viewport"
+
+content="width=device-width, initial-scale=1.0"
+
 >
+
+
+<meta
+
+name="description"
+
+content="Shivano Store product details"
+
+>
+
 
 <title>Product | Shivano Store</title>
 
-<link
-    rel="icon"
-    type="image/png"
-    href="images/shivano-logo.png"
->
 
 <link
-    rel="stylesheet"
-    href="style.css"
+
+rel="icon"
+
+type="image/png"
+
+href="images/shivano-logo.png"
+
 >
 
-<link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
->
 
 <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-    crossorigin
+
+rel="stylesheet"
+
+href="style.css"
+
 >
 
+
 <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-    rel="stylesheet"
+
+rel="preconnect"
+
+href="https://fonts.googleapis.com"
+
 >
+
+
+<link
+
+rel="preconnect"
+
+href="https://fonts.googleapis.com"
+
+crossorigin
+
+>
+
+
+<link
+
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+
+rel="stylesheet"
+
+>
+
 
 
 <style>
 
+
 .product-page {
-    padding-top: 0;
-    min-height: 100vh;
+
+padding-top: 0;
+
+min-height: 100vh;
+
 }
+
 
 .product-page-top {
-    max-width: 1300px;
-    margin: auto;
-    padding: 28px 28px 15px;
+
+max-width: 1300px;
+
+margin: auto;
+
+padding: 28px 28px 15px;
+
 }
+
 
 .back-link {
-    display: inline-flex;
-    gap: 8px;
-    color: #666;
-    font-size: 13px;
-    font-weight: 600;
+
+display: inline-flex;
+
+gap: 8px;
+
+color: #666;
+
+font-size: 13px;
+
+font-weight: 600;
+
 }
+
 
 .product-detail {
-    max-width: 1300px;
-    margin: auto;
-    padding: 20px 28px 80px;
 
-    display: grid;
+max-width: 1300px;
 
-    grid-template-columns:
-        minmax(0, 1.05fr)
-        minmax(400px, 0.95fr);
+margin: auto;
 
-    gap: 60px;
+padding: 20px 28px 80px;
 
-    align-items: start;
+
+display: grid;
+
+
+grid-template-columns:
+
+minmax(0, 1.05fr)
+
+minmax(400px, 0.95fr);
+
+
+gap: 60px;
+
+
+align-items: start;
+
 }
+
 
 .product-gallery {
-    position: sticky;
-    top: 100px;
+
+position: sticky;
+
+top: 100px;
+
 }
+
 
 .gallery-layout {
-    display: grid;
 
-    grid-template-columns:
-        82px
-        minmax(0, 1fr);
+display: grid;
 
-    gap: 16px;
+
+grid-template-columns:
+
+82px
+
+minmax(0, 1fr);
+
+
+gap: 16px;
+
 }
+
 
 .thumbnail-column {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 
-    max-height: 600px;
-    overflow-y: auto;
+display: flex;
+
+flex-direction: column;
+
+gap: 10px;
+
+
+max-height: 600px;
+
+overflow-y: auto;
+
 }
+
 
 .thumbnail {
-    width: 76px;
-    height: 76px;
 
-    flex: 0 0 76px;
+width: 76px;
 
-    border-radius: 9px;
-    overflow: hidden;
+height: 76px;
 
-    border: 1px solid #d7d2c9;
 
-    background: #fff;
+flex: 0 0 76px;
 
-    padding: 0;
 
-    cursor: pointer;
+border-radius: 9px;
+
+overflow: hidden;
+
+
+border: 1px solid #d7d2c9;
+
+
+background: #fff;
+
+
+padding: 0;
+
+
+cursor: pointer;
+
 }
+
 
 .thumbnail.active {
-    border: 2px solid #c2933f;
-    box-shadow: 0 0 0 1px #c2933f;
+
+border: 2px solid #c2933f;
+
+box-shadow: 0 0 0 1px #c2933f;
+
 }
+
 
 .thumbnail img {
-    width: 100%;
-    height: 100%;
 
-    object-fit: contain;
+width: 100%;
 
-    display: block;
+height: 100%;
+
+
+object-fit: contain;
+
+
+display: block;
+
 }
+
 
 .main-image-wrapper {
-    position: relative;
-    min-width: 0;
+
+position: relative;
+
+min-width: 0;
+
 }
+
 
 .main-product-image {
-    height: 600px;
 
-    border-radius: 18px;
+height: 600px;
 
-    overflow: hidden;
 
-    background: #fafafa;
+border-radius: 18px;
 
-    border: 1px solid #e3dfd7;
 
-    display: flex;
+overflow: hidden;
 
-    align-items: center;
-    justify-content: center;
 
-    position: relative;
+background: #fafafa;
+
+
+border: 1px solid #e3dfd7;
+
+
+display: flex;
+
+
+align-items: center;
+
+justify-content: center;
+
+
+position: relative;
+
 }
+
 
 .main-product-image img {
-    width: 100%;
-    height: 100%;
 
-    object-fit: contain;
+width: 100%;
+
+height: 100%;
+
+
+object-fit: contain;
+
 }
+
 
 .gallery-arrow {
-    position: absolute;
 
-    top: 50%;
+position: absolute;
 
-    transform: translateY(-50%);
 
-    width: 44px;
-    height: 54px;
+top: 50%;
 
-    border: 1px solid #ddd;
 
-    background: rgba(255,255,255,.92);
+transform: translateY(-50%);
 
-    font-size: 25px;
 
-    cursor: pointer;
+width: 44px;
+
+height: 54px;
+
+
+border: 1px solid #ddd;
+
+
+background: rgba(255,255,255,.92);
+
+
+font-size: 25px;
+
+
+cursor: pointer;
+
 }
+
 
 .gallery-prev {
-    left: 10px;
+
+left: 10px;
+
 }
+
 
 .gallery-next {
-    right: 10px;
+
+right: 10px;
+
 }
+
 
 .image-counter {
-    position: absolute;
 
-    bottom: 12px;
-    right: 12px;
+position: absolute;
 
-    background: rgba(0,0,0,.68);
 
-    color: #fff;
+bottom: 12px;
 
-    padding: 6px 10px;
+right: 12px;
 
-    border-radius: 20px;
 
-    font-size: 11px;
+background: rgba(0,0,0,.68);
+
+
+color: #fff;
+
+
+padding: 6px 10px;
+
+
+border-radius: 20px;
+
+
+font-size: 11px;
+
 }
+
 
 .gallery-empty {
-    position: absolute;
 
-    inset: 0;
+position: absolute;
 
-    display: flex;
 
-    align-items: center;
-    justify-content: center;
+inset: 0;
 
-    flex-direction: column;
 
-    gap: 10px;
+display: flex;
 
-    text-align: center;
 
-    padding: 30px;
+align-items: center;
 
-    background: #fafafa;
+justify-content: center;
+
+
+flex-direction: column;
+
+
+gap: 10px;
+
+
+text-align: center;
+
+
+padding: 30px;
+
+
+background: #fafafa;
+
 }
+
 
 .gallery-empty span {
-    color: #888;
-    font-size: 12px;
+
+color: #888;
+
+font-size: 12px;
+
 }
+
 
 .detail-category {
-    display: inline-block;
 
-    color: var(--gold);
+display: inline-block;
 
-    font-size: 11px;
 
-    font-weight: 700;
+color: var(--gold);
 
-    letter-spacing: 1.7px;
 
-    text-transform: uppercase;
+font-size: 11px;
 
-    margin-bottom: 10px;
+
+font-weight: 700;
+
+
+letter-spacing: 1.7px;
+
+
+text-transform: uppercase;
+
+
+margin-bottom: 10px;
+
 }
+
 
 .product-detail-info h1 {
-    font-family: "Playfair Display", serif;
 
-    font-size:
-        clamp(34px, 3.8vw, 52px);
+font-family: "Playfair Display", serif;
 
-    line-height: 1.08;
 
-    margin: 0 0 16px;
+font-size:
+
+clamp(34px, 3.8vw, 52px);
+
+
+line-height: 1.08;
+
+
+margin: 0 0 16px;
+
 }
 
-.amazon-rating {
-    display: flex;
 
-    align-items: center;
 
-    flex-wrap: wrap;
 
-    gap: 9px;
 
-    margin-bottom: 20px;
 
-    font-size: 13px;
-}
 
-.amazon-stars,
-.review-stars {
-    color: #c2933f;
 
-    letter-spacing: 1px;
-}
 
-.rating-value {
-    font-weight: 700;
-}
 
-.rating-count {
-    color: #666;
-}
 
-.amazon-review-link {
-    color: #8a6427;
 
-    font-weight: 600;
 
-    text-decoration: underline;
-}
+
+
+
 
 .product-detail-description {
-    color: var(--gray);
 
-    font-size: 15px;
+color: var(--gray);
 
-    line-height: 1.8;
 
-    margin-bottom: 24px;
+font-size: 15px;
+
+
+line-height: 1.8;
+
+
+margin-bottom: 24px;
+
 }
 
 
-/* =========================================
-   AMAZON STYLE COLOUR VARIATIONS
+
+ /* =========================================
+
+AMAZON STYLE COLOUR VARIATIONS
+
 ========================================= */
+
 
 .variation-section {
-    margin: 6px 0 24px;
+
+margin: 6px 0 24px;
+
 }
+
 
 .variation-group {
-    margin-bottom: 20px;
+
+margin-bottom: 20px;
+
 }
+
 
 .variation-label {
-    display: block;
 
-    margin-bottom: 10px;
+display: block;
 
-    color: #222;
 
-    font-size: 14px;
+margin-bottom: 10px;
 
-    font-weight: 600;
+
+color: #222;
+
+
+font-size: 14px;
+
+
+font-weight: 600;
+
 }
+
 
 .variation-options {
-    display: flex;
 
-    flex-wrap: wrap;
+display: flex;
 
-    gap: 10px;
+
+flex-wrap: wrap;
+
+
+gap: 10px;
+
 }
+
 
 .variation-image-option {
-    width: 82px;
 
-    min-height: 112px;
+width: 82px;
 
-    padding: 0;
 
-    background: #fff;
+min-height: 112px;
 
-    border: 1px solid #c8c8c8;
 
-    border-radius: 9px;
+padding: 0;
 
-    overflow: hidden;
 
-    cursor: pointer;
+background: #fff;
 
-    text-align: left;
+
+border: 1px solid #c8c8c8;
+
+
+border-radius: 9px;
+
+
+overflow: hidden;
+
+
+cursor: pointer;
+
+
+text-align: left;
+
 }
+
 
 .variation-image-option.active {
-    border: 2px solid #2162a1;
+
+border: 2px solid #2162a1;
+
 }
+
 
 .variation-image-option img {
-    display: block;
 
-    width: 100%;
+display: block;
 
-    height: 72px;
 
-    object-fit: contain;
+width: 100%;
 
-    background: #fafafa;
+
+height: 72px;
+
+
+object-fit: contain;
+
+
+background: #fafafa;
+
 }
+
 
 .variation-option-text,
-.variation-option-price {
-    display: block;
 
-    text-align: center;
+.variation-option-price {
+
+display: block;
+
+
+text-align: center;
+
 }
+
 
 .variation-option-text {
-    padding: 7px 5px 4px;
 
-    font-size: 11px;
+padding: 7px 5px 4px;
+
+
+font-size: 11px;
+
 }
+
 
 .variation-option-price {
-    padding-bottom: 6px;
 
-    font-size: 11px;
+padding-bottom: 6px;
+
+
+font-size: 11px;
+
 }
 
 
-/* =========================================
-   PRICE
+
+ /* =========================================
+
+PRICE
+
 ========================================= */
+
 
 .price-box {
-    padding: 22px 0;
 
-    border-top:
-        1px solid var(--border);
+padding: 22px 0;
 
-    border-bottom:
-        1px solid var(--border);
 
-    margin-bottom: 20px;
+border-top:
+
+1px solid var(--border);
+
+
+border-bottom:
+
+1px solid var(--border);
+
+
+margin-bottom: 20px;
+
 }
+
 
 .price-label {
-    display: block;
 
-    color: #777;
+display: block;
 
-    font-size: 11px;
 
-    text-transform: uppercase;
+color: #777;
 
-    letter-spacing: 1.3px;
+
+font-size: 11px;
+
+
+text-transform: uppercase;
+
+
+letter-spacing: 1.3px;
+
 }
+
 
 .price-value {
-    font-family:
-        "Playfair Display", serif;
 
-    font-size: 34px;
+font-family:
 
-    font-weight: 700;
+"Playfair Display", serif;
 
-    margin: 4px 0;
+
+font-size: 34px;
+
+
+font-weight: 700;
+
+
+margin: 4px 0;
+
 }
+
 
 .price-note {
-    color: #888;
 
-    font-size: 11px;
+color: #888;
+
+
+font-size: 11px;
+
 }
+
 
 .availability {
-    display: inline-flex;
 
-    margin-top: 9px;
+display: inline-flex;
 
-    padding: 6px 10px;
 
-    border-radius: 6px;
+margin-top: 9px;
 
-    background: #f3f7f1;
 
-    color: #34733c;
+padding: 6px 10px;
 
-    font-size: 11px;
 
-    font-weight: 700;
+border-radius: 6px;
+
+
+background: #f3f7f1;
+
+
+color: #34733c;
+
+
+font-size: 11px;
+
+
+font-weight: 700;
+
 }
 
 
-/* =========================================
-   ACTIONS
+
+ /* =========================================
+
+ACTIONS
+
 ========================================= */
+
 
 .detail-actions {
-    display: grid;
 
-    grid-template-columns:
-        1fr 1fr;
+display: grid;
 
-    gap: 12px;
 
-    margin-bottom: 25px;
+grid-template-columns:
+
+1fr;
+
+
+gap: 12px;
+
+
+margin-bottom: 25px;
+
 }
+
 
 .detail-action {
-    min-height: 54px;
 
-    border-radius: 9px;
+min-height: 54px;
 
-    display: flex;
 
-    align-items: center;
-    justify-content: center;
+border-radius: 9px;
 
-    font-size: 13px;
 
-    font-weight: 700;
+display: flex;
 
-    text-align: center;
+
+align-items: center;
+
+justify-content: center;
+
+
+font-size: 13px;
+
+
+font-weight: 700;
+
+
+text-align: center;
+
 }
+
 
 .detail-action.primary {
-    background: #ffb000;
 
-    color: #111;
+background: #ffb000;
+
+
+color: #111;
+
 }
+
 
 .detail-action.secondary {
-    border: 1px solid var(--border);
 
-    background: #fff;
+border: 1px solid var(--border);
+
+
+background: #fff;
+
 }
 
 
-/* =========================================
-   TRUST
+
+ /* =========================================
+
+TRUST
+
 ========================================= */
+
 
 .product-trust {
-    display: grid;
 
-    grid-template-columns:
-        repeat(3, 1fr);
+display: grid;
 
-    border-top:
-        1px solid var(--border);
 
-    border-bottom:
-        1px solid var(--border);
+grid-template-columns:
 
-    margin-bottom: 28px;
+repeat(3, 1fr);
+
+
+border-top:
+
+1px solid var(--border);
+
+
+border-bottom:
+
+1px solid var(--border);
+
+
+margin-bottom: 28px;
+
 }
+
 
 .trust-item {
-    padding: 17px 10px;
 
-    text-align: center;
+padding: 17px 10px;
 
-    border-right:
-        1px solid var(--border);
+
+text-align: center;
+
+
+border-right:
+
+1px solid var(--border);
+
 }
+
 
 .trust-item:last-child {
-    border-right: 0;
+
+border-right: 0;
+
 }
+
 
 .trust-item strong,
+
 .trust-item span {
-    display: block;
+
+display: block;
+
 }
+
 
 .trust-item strong {
-    font-size: 12px;
+
+font-size: 12px;
+
 }
+
 
 .trust-item span {
-    color: #888;
 
-    font-size: 10px;
+color: #888;
+
+
+font-size: 10px;
+
 }
 
 
-/* =========================================
-   FEATURES
+
+ /* =========================================
+
+FEATURES
+
 ========================================= */
+
 
 .feature-section h2 {
-    font-size: 25px;
 
-    margin-bottom: 16px;
+font-size: 25px;
+
+
+margin-bottom: 16px;
+
 }
+
 
 .feature-list {
-    list-style: none;
 
-    display: grid;
+list-style: none;
 
-    gap: 0;
 
-    border: 1px solid var(--border);
+display: grid;
 
-    border-radius: 10px;
 
-    overflow: hidden;
+gap: 0;
 
-    padding: 0;
+
+border: 1px solid var(--border);
+
+
+border-radius: 10px;
+
+
+overflow: hidden;
+
+
+padding: 0;
+
 }
+
 
 .feature-list li {
-    padding: 13px 15px;
 
-    background: #fff;
+padding: 13px 15px;
 
-    font-size: 12px;
 
-    color: #555;
+background: #fff;
 
-    border-bottom:
-        1px solid var(--border);
+
+font-size: 12px;
+
+
+color: #555;
+
+
+border-bottom:
+
+1px solid var(--border);
+
 }
+
 
 .feature-list li:last-child {
-    border-bottom: 0;
+
+border-bottom: 0;
+
 }
+
 
 .feature-list li::before {
-    content: "✓";
 
-    color: var(--gold);
+content: "✓";
 
-    font-weight: 700;
 
-    margin-right: 8px;
+color: var(--gold);
+
+
+font-weight: 700;
+
+
+margin-right: 8px;
+
 }
 
 
-/* =========================================
-   REVIEWS
+
+ /* =========================================
+
+SIMILAR
+
 ========================================= */
 
-.reviews-section {
-    background: #fff;
-
-    padding: 85px 28px;
-
-    border-top:
-        1px solid #eee;
-}
-
-.reviews-inner {
-    max-width: 1250px;
-
-    margin: auto;
-}
-
-.reviews-header {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: end;
-
-    gap: 30px;
-
-    margin-bottom: 30px;
-}
-
-.reviews-header h2 {
-    margin-top: 8px;
-}
-
-.reviews-header p {
-    max-width: 430px;
-
-    color: var(--gray);
-
-    font-size: 13px;
-
-    line-height: 1.7;
-}
-
-.amazon-review-card {
-    padding: 30px;
-
-    border: 1px solid var(--border);
-
-    border-radius: 15px;
-
-    background: #fbfaf8;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 30px;
-}
-
-.review-card-rating {
-    display: flex;
-
-    align-items: center;
-
-    flex-wrap: wrap;
-
-    gap: 12px;
-
-    margin-bottom: 8px;
-}
-
-.review-card-rating strong {
-    font-size: 28px;
-}
-
-.amazon-review-card p {
-    color: #777;
-
-    font-size: 13px;
-
-    max-width: 650px;
-
-    line-height: 1.7;
-}
-
-.reviews-amazon-btn {
-    min-height: 48px;
-
-    padding: 0 20px;
-
-    border-radius: 9px;
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background: var(--black);
-
-    color: #fff;
-
-    font-size: 12px;
-
-    font-weight: 700;
-}
-
-
-/* =========================================
-   SIMILAR
-========================================= */
 
 .similar-section {
-    padding: 90px 0;
+
+padding: 90px 0;
+
 }
+
 
 .similar-inner {
-    max-width: 1250px;
 
-    margin: auto;
+max-width: 1250px;
+
+
+margin: auto;
+
 }
+
 
 .similar-heading {
-    padding:
-        0 28px 30px;
 
-    display: flex;
+padding:
 
-    justify-content: space-between;
+0 28px 30px;
 
-    align-items: end;
 
-    gap: 30px;
+display: flex;
+
+
+justify-content: space-between;
+
+
+align-items: end;
+
+
+gap: 30px;
+
 }
+
 
 .similar-heading h2 {
-    margin-top: 8px;
+
+margin-top: 8px;
+
 }
+
 
 .similar-heading p {
-    color: var(--gray);
 
-    font-size: 13px;
+color: var(--gray);
 
-    max-width: 400px;
+
+font-size: 13px;
+
+
+max-width: 400px;
+
 }
+
 
 .similar-slider {
-    display: flex;
 
-    gap: 20px;
+display: flex;
 
-    overflow-x: auto;
 
-    padding:
-        0 28px 15px;
+gap: 20px;
 
-    scroll-snap-type: x mandatory;
+
+overflow-x: auto;
+
+
+padding:
+
+0 28px 15px;
+
+
+scroll-snap-type: x mandatory;
+
 }
+
 
 .similar-card {
-    flex: 0 0 280px;
 
-    scroll-snap-align: start;
+flex: 0 0 280px;
 
-    background: #fff;
 
-    border: 1px solid #e6e2db;
+scroll-snap-align: start;
 
-    border-radius: 15px;
 
-    overflow: hidden;
+background: #fff;
+
+
+border: 1px solid #e6e2db;
+
+
+border-radius: 15px;
+
+
+overflow: hidden;
+
 }
+
 
 .similar-image {
-    height: 270px;
 
-    background: #fafafa;
+height: 270px;
+
+
+background: #fafafa;
+
 }
+
 
 .similar-image img {
-    width: 100%;
 
-    height: 100%;
+width: 100%;
 
-    object-fit: contain;
+
+height: 100%;
+
+
+object-fit: contain;
+
 }
+
 
 .similar-info {
-    padding: 20px;
+
+padding: 20px;
+
 }
+
 
 .similar-category {
-    color: var(--gold);
 
-    font-size: 9px;
+color: var(--gold);
 
-    font-weight: 700;
 
-    letter-spacing: 1.3px;
+font-size: 9px;
 
-    text-transform: uppercase;
+
+font-weight: 700;
+
+
+letter-spacing: 1.3px;
+
+
+text-transform: uppercase;
+
 }
+
 
 .similar-info h3 {
-    font-size: 19px;
 
-    margin: 5px 0 8px;
+font-size: 19px;
+
+
+margin: 5px 0 8px;
+
 }
+
 
 .similar-info p {
-    color: var(--gray);
 
-    font-size: 12px;
+color: var(--gray);
 
-    min-height: 38px;
 
-    line-height: 1.5;
+font-size: 12px;
 
-    overflow: hidden;
 
-    display: -webkit-box;
+min-height: 38px;
 
-    -webkit-box-orient: vertical;
 
-    -webkit-line-clamp: 2;
+line-height: 1.5;
 
-    line-clamp: 2;
+
+overflow: hidden;
+
+
+display: -webkit-box;
+
+
+-webkit-box-orient: vertical;
+
+
+-webkit-line-clamp: 2;
+
+
+line-clamp: 2;
+
 }
+
 
 .similar-bottom {
-    display: flex;
 
-    justify-content: space-between;
+display: flex;
 
-    align-items: center;
 
-    margin-top: 16px;
+justify-content: space-between;
+
+
+align-items: center;
+
+
+margin-top: 16px;
+
 }
+
 
 .similar-price {
-    font-weight: 700;
 
-    font-size: 15px;
+font-weight: 700;
+
+
+font-size: 15px;
+
 }
+
 
 .similar-btn {
-    min-height: 36px;
 
-    padding: 0 12px;
+min-height: 36px;
 
-    border-radius: 8px;
 
-    background: var(--black);
+padding: 0 12px;
 
-    color: #fff;
 
-    border: 0;
+border-radius: 8px;
 
-    font-size: 10px;
 
-    font-weight: 700;
+background: var(--black);
 
-    cursor: pointer;
+
+color: #fff;
+
+
+border: 0;
+
+
+font-size: 10px;
+
+
+font-weight: 700;
+
+
+cursor: pointer;
+
 }
 
 
-/* =========================================
-   FOOTER
+
+ /* =========================================
+
+FOOTER
+
 ========================================= */
+
 
 .product-footer {
-    background: #101010;
 
-    color: #fff;
+background: #101010;
 
-    padding: 35px 28px;
 
-    text-align: center;
+color: #fff;
+
+
+padding: 35px 28px;
+
+
+text-align: center;
+
 }
+
 
 .product-footer p {
-    color: #777;
 
-    font-size: 11px;
+color: #777;
 
-    margin-top: 6px;
+
+font-size: 11px;
+
+
+margin-top: 6px;
+
 }
 
 
-/* =========================================
-   MOBILE
+
+ /* =========================================
+
+MOBILE
+
 ========================================= */
 
+
 @media (max-width: 900px) {
 
-    .product-detail {
-        grid-template-columns: 1fr;
 
-        gap: 40px;
-    }
+.product-detail {
 
-    .product-gallery {
-        position: static;
-    }
+grid-template-columns: 1fr;
 
-    .main-product-image {
-        height: 550px;
-    }
 
-    .reviews-header {
-        display: block;
-    }
-
-    .reviews-header p {
-        margin-top: 15px;
-    }
+gap: 40px;
 
 }
+
+
+.product-gallery {
+
+position: static;
+
+}
+
+
+.main-product-image {
+
+height: 550px;
+
+}
+
+
+
+
+}
+
 
 
 @media (max-width: 600px) {
 
-    .product-page {
-        padding-top: 0 !important;
-    }
 
-    .product-page-top {
-        padding:
-            23px 18px 12px;
-    }
+.product-page {
 
-    .product-detail {
-        padding:
-            15px 18px 60px;
+padding-top: 0 !important;
 
-        gap: 30px;
-    }
+}
 
-    .gallery-layout {
-        grid-template-columns:
-            62px minmax(0, 1fr);
 
-        gap: 10px;
-    }
+.product-page-top {
 
-    .thumbnail {
-        width: 58px;
-        height: 58px;
+padding:
 
-        flex-basis: 58px;
-    }
+23px 18px 12px;
 
-    .main-product-image {
-        height: 420px;
-    }
+}
 
-    .detail-actions {
-        grid-template-columns: 1fr;
-    }
 
-    .product-trust {
-        grid-template-columns: 1fr;
-    }
+.product-detail {
 
-    .trust-item {
-        border-right: 0;
+padding:
 
-        border-bottom:
-            1px solid var(--border);
-    }
+15px 18px 60px;
 
-    .trust-item:last-child {
-        border-bottom: 0;
-    }
 
-    .amazon-review-card {
-        flex-direction: column;
+gap: 30px;
 
-        align-items: flex-start;
-    }
+}
 
-    .similar-heading {
-        display: block;
-    }
 
-    .similar-heading p {
-        margin-top: 15px;
-    }
+.gallery-layout {
 
-    .reviews-section {
-        padding:
-            60px 18px;
-    }
+grid-template-columns:
 
-    .similar-slider {
-        padding-left: 18px;
-        padding-right: 18px;
-    }
+62px minmax(0, 1fr);
+
+
+gap: 10px;
+
+}
+
+
+.thumbnail {
+
+width: 58px;
+
+height: 58px;
+
+
+flex-basis: 58px;
+
+}
+
+
+.main-product-image {
+
+height: 420px;
+
+}
+
+
+.detail-actions {
+
+grid-template-columns: 1fr;
+
+}
+
+
+.product-trust {
+
+grid-template-columns: 1fr;
+
+}
+
+
+.trust-item {
+
+border-right: 0;
+
+
+border-bottom:
+
+1px solid var(--border);
+
+}
+
+
+.trust-item:last-child {
+
+border-bottom: 0;
 
 }
 
 
 
-/* =====================================================
-   REQUESTED PRODUCT-PAGE UI CHANGES
+.similar-heading {
+
+display: block;
+
+}
+
+
+.similar-heading p {
+
+margin-top: 15px;
+
+}
+
+
+
+.similar-slider {
+
+padding-left: 18px;
+
+padding-right: 18px;
+
+}
+
+
+}
+
+
+
+
+ /* =====================================================
+
+REQUESTED PRODUCT-PAGE UI CHANGES
+
 ===================================================== */
+
 
 #productSearchButton {
-    display: none;
+
+display: none;
+
 }
+
 
 .product-page-top .back-link {
-    display: inline-flex;
+
+display: inline-flex;
+
 }
+
 
 .product-search-results {
-    position: absolute;
-    top: calc(100% + 8px);
-    left: 0;
-    right: 0;
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    box-shadow: 0 18px 45px rgba(0,0,0,.12);
-    overflow: hidden;
-    display: none;
-    z-index: 1100;
+
+position: absolute;
+
+top: calc(100% + 8px);
+
+left: 0;
+
+right: 0;
+
+background: #fff;
+
+border: 1px solid var(--border);
+
+border-radius: 12px;
+
+box-shadow: 0 18px 45px rgba(0,0,0,.12);
+
+overflow: hidden;
+
+display: none;
+
+z-index: 1100;
+
 }
+
 
 .header-search-panel.open .product-search-results.has-results {
-    display: block;
+
+display: block;
+
 }
+
 
 .product-search-result {
-    width: 100%;
-    padding: 11px 14px;
-    border: 0;
-    border-bottom: 1px solid #eee;
-    background: #fff;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+
+width: 100%;
+
+padding: 11px 14px;
+
+border: 0;
+
+border-bottom: 1px solid #eee;
+
+background: #fff;
+
+text-align: left;
+
+display: flex;
+
+align-items: center;
+
+gap: 10px;
+
 }
+
 
 .product-search-result:last-child {
-    border-bottom: 0;
+
+border-bottom: 0;
+
 }
+
 
 .product-search-result img {
-    width: 42px;
-    height: 42px;
-    object-fit: contain;
-    background: #f7f6f2;
-    border-radius: 6px;
+
+width: 42px;
+
+height: 42px;
+
+object-fit: contain;
+
+background: #f7f6f2;
+
+border-radius: 6px;
+
 }
+
 
 .product-search-result strong {
-    font-size: 12px;
-    color: #222;
+
+font-size: 12px;
+
+color: #222;
+
 }
+
 
 .product-search-result small {
-    display: block;
-    color: #888;
-    font-size: 10px;
-    margin-top: 2px;
+
+display: block;
+
+color: #888;
+
+font-size: 10px;
+
+margin-top: 2px;
+
 }
+
 
 .navbar.search-open .productSearchButton,
+
 .navbar.search-open #productSearchButton {
-    display: none;
+
+display: none;
+
 }
+
 
 @media (max-width: 900px) {
-    .header-search-trigger {
-        display: none;
-    }
 
-    #productSearchButton {
-        display: grid;
-        place-items: center;
-        margin-left: 0;
-        font-size: 20px;
-    }
 
-    .navbar.search-open #productSearchButton {
-        display: none;
-    }
+.header-search-trigger {
 
-    .navbar.search-open .header-search-panel {
-        display: flex;
-    }
+display: none;
+
 }
+
+
+#productSearchButton {
+
+display: grid;
+
+place-items: center;
+
+margin-left: 0;
+
+font-size: 20px;
+
+}
+
+
+.navbar.search-open #productSearchButton {
+
+display: none;
+
+}
+
+
+.navbar.search-open .header-search-panel {
+
+display: flex;
+
+}
+
+}
+
 
 @media (max-width: 600px) {
-    .main-product-image .gallery-arrow {
-        width: 34px;
-        height: 42px;
-        border-color: #666;
-        background: rgba(70,70,70,.9);
-        color: #eee;
-        font-size: 20px;
-    }
 
-    .main-product-image .gallery-prev {
-        left: 7px;
-    }
 
-    .main-product-image .gallery-next {
-        right: 7px;
-    }
+.main-product-image .gallery-arrow {
 
-    .main-product-image {
-        cursor: pointer;
-    }
+width: 34px;
+
+height: 42px;
+
+border-color: #666;
+
+background: rgba(70,70,70,.9);
+
+color: #eee;
+
+font-size: 20px;
+
 }
 
 
-/* =====================================================
-   PRODUCT PAGE HOME BUTTON
+.main-product-image .gallery-prev {
+
+left: 7px;
+
+}
+
+
+.main-product-image .gallery-next {
+
+right: 7px;
+
+}
+
+
+.main-product-image {
+
+cursor: pointer;
+
+}
+
+}
+
+
+
+ /* =====================================================
+
+PRODUCT PAGE HOME BUTTON
+
 ===================================================== */
 
+
 .product-top-actions {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
+
+display: flex;
+
+align-items: center;
+
+gap: 10px;
+
+flex-wrap: wrap;
+
 }
+
 
 .product-home-btn {
-    min-height: 40px;
-    padding: 0 14px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid var(--border);
-    border-radius: 9px;
-    background: #fff;
-    color: #333;
-    font-size: 13px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: .2s ease;
+
+min-height: 40px;
+
+padding: 0 14px;
+
+display: inline-flex;
+
+align-items: center;
+
+justify-content: center;
+
+border: 1px solid var(--border);
+
+border-radius: 9px;
+
+background: #fff;
+
+color: #333;
+
+font-size: 13px;
+
+font-weight: 600;
+
+text-decoration: none;
+
+transition: .2s ease;
+
 }
 
+
 .product-home-btn:hover,
+
 .product-home-btn:focus-visible {
-    color: var(--black);
-    border-color: var(--gold);
-    transform: translateY(-1px);
+
+color: var(--black);
+
+border-color: var(--gold);
+
+transform: translateY(-1px);
+
 }
+
 
 </style>
 
+
 </head>
+
 
 
 <body>
 
 
+
 <header class="site-header">
+
 
 <nav class="navbar">
 
+
 <a
-    href="index.html"
-    class="logo"
+
+href="index.html"
+
+class="logo"
+
 >
-    Shivano <span>Store</span>
+
+Shivano <span>Store</span>
+
 </a>
 
+
 <button
-    type="button"
-    class="header-search-trigger"
-    id="productSearchTrigger"
-    aria-label="Open product search"
+
+type="button"
+
+class="header-search-trigger"
+
+id="productSearchTrigger"
+
+aria-label="Open product search"
+
 >
-    <span>⌕</span>
-    <span>Search</span>
+
+<span>⌕</span>
+
+<span>Search</span>
+
 </button>
+
 
 <div class="header-search-panel" id="productSearchPanel">
-    <span class="header-search-icon">⌕</span>
-    <input
-        type="text"
-        id="productSearchInput"
-        placeholder="Search products..."
-        autocomplete="off"
-    >
-    <button
-        type="button"
-        class="header-search-close"
-        id="productSearchClose"
-        aria-label="Close search"
-    >
-        ×
-    </button>
-    <div class="product-search-results" id="productSearchResults"></div>
-</div>
+
+<span class="header-search-icon">⌕</span>
+
+<input
+
+type="text"
+
+id="productSearchInput"
+
+placeholder="Search products..."
+
+autocomplete="off"
+
+>
 
 <button
-    class="menu-toggle"
-    id="menuToggle"
-    aria-label="Open menu"
+
+type="button"
+
+class="header-search-close"
+
+id="productSearchClose"
+
+aria-label="Close search"
+
 >
-    ☰
+
+×
+
 </button>
+
+<div class="product-search-results" id="productSearchResults"></div>
+
+</div>
+
+
+<button
+
+class="menu-toggle"
+
+id="menuToggle"
+
+aria-label="Open menu"
+
+>
+
+☰
+
+</button>
+
 
 <div
-    class="nav-links"
-    id="navLinks"
+
+class="nav-links"
+
+id="navLinks"
+
 >
-    <a href="index.html">Home</a>
-    <a href="index.html#products">Products</a>
-    <a href="index.html#about">About</a>
-    <a href="index.html#contact">Contact</a>
+
+<a href="index.html">Home</a>
+
+<a href="index.html#products">Products</a>
+
+<a href="index.html#about">About</a>
+
+<a href="index.html#contact">Contact</a>
+
 </div>
 
+
 <button
-    type="button"
-    class="wishlist-nav"
-    id="productSearchButton"
-    title="Search products"
-    aria-label="Search products"
+
+type="button"
+
+class="wishlist-nav"
+
+id="productSearchButton"
+
+title="Search products"
+
+aria-label="Search products"
+
 >
-    ⌕
+
+⌕
+
 </button>
 
+
 </nav>
+
 
 </header>
 
 
+
 <button
-    type="button"
-    class="wishlist-nav floating-wishlist"
-    id="productWishlistNav"
-    title="Wishlist"
-    aria-label="Open wishlist"
+
+type="button"
+
+class="wishlist-nav floating-wishlist"
+
+id="productWishlistNav"
+
+title="Wishlist"
+
+aria-label="Open wishlist"
+
 >
-    ♡
-    <span id="productWishlistCount">0</span>
+
+♡
+
+<span id="productWishlistCount">0</span>
+
 </button>
 
 
+
 <div
-    class="wishlist-drawer"
-    id="productWishlistDrawer"
+
+class="wishlist-drawer"
+
+id="productWishlistDrawer"
+
 >
 
-    <div class="drawer-header">
 
-        <div>
-            <p class="eyebrow">SAVED</p>
-            <h2>Liked Products</h2>
-        </div>
+<div class="drawer-header">
 
-        <button
-            type="button"
-            id="productCloseWishlist"
-            class="drawer-close"
-        >
-            ×
-        </button>
 
-    </div>
+<div>
 
-    <div
-        class="wishlist-items"
-        id="productWishlistItems"
-    ></div>
+<p class="eyebrow">SAVED</p>
+
+<h2>Liked Products</h2>
 
 </div>
 
+
+<button
+
+type="button"
+
+id="productCloseWishlist"
+
+class="drawer-close"
+
+>
+
+×
+
+</button>
+
+
+</div>
+
+
 <div
-    class="drawer-overlay"
-    id="productDrawerOverlay"
+
+class="wishlist-items"
+
+id="productWishlistItems"
+
 ></div>
+
+
+</div>
+
+
+<div
+
+class="drawer-overlay"
+
+id="productDrawerOverlay"
+
+></div>
+
 
 
 <main class="product-page">
 
 
+
 <div class="product-page-top">
+
 
 <div class="product-top-actions">
 
-<a
-    href="index.html"
-    class="product-home-btn"
->
-    ⌂ Home
-</a>
 
 <a
-    href="index.html#products"
-    class="back-link"
+
+href="index.html"
+
+class="product-home-btn"
+
 >
-    ← Back to products
+
+⌂ Home
+
 </a>
+
+
+<a
+
+href="index.html#products"
+
+class="back-link"
+
+>
+
+← Back to products
+
+</a>
+
 
 </div>
 
+
 </div>
+
 
 
 <section class="product-detail">
 
 
+
 <div class="product-gallery">
+
 
 <div class="gallery-layout">
 
 
+
 <div
-    class="thumbnail-column"
-    id="thumbnailColumn"
+
+class="thumbnail-column"
+
+id="thumbnailColumn"
+
 >
+
 </div>
+
 
 
 <div class="main-image-wrapper">
 
+
 <div class="main-product-image">
 
 
+
 <div
-    class="gallery-empty"
-    id="galleryEmpty"
+
+class="gallery-empty"
+
+id="galleryEmpty"
+
 >
 
+
 <strong>
-    Product images
+
+Product images
+
 </strong>
 
+
 <span>
-    Images are controlled from products.js.
+
+Images are controlled from products.js.
+
 </span>
 
+
 </div>
+
 
 
 <img
-    id="mainProductImage"
-    src=""
-    alt=""
-    style="display:none"
+
+id="mainProductImage"
+
+src=""
+
+alt=""
+
+style="display:none"
+
 >
+
 
 
 <button
-    type="button"
-    class="gallery-arrow gallery-prev"
-    id="galleryPrev"
-    aria-label="Previous image"
-    style="display:none"
+
+type="button"
+
+class="gallery-arrow gallery-prev"
+
+id="galleryPrev"
+
+aria-label="Previous image"
+
+style="display:none"
+
 >
-    ‹
+
+‹
+
 </button>
+
 
 
 <button
-    type="button"
-    class="gallery-arrow gallery-next"
-    id="galleryNext"
-    aria-label="Next image"
-    style="display:none"
+
+type="button"
+
+class="gallery-arrow gallery-next"
+
+id="galleryNext"
+
+aria-label="Next image"
+
+style="display:none"
+
 >
-    ›
+
+›
+
 </button>
+
 
 
 <span
-    class="image-counter"
-    id="imageCounter"
-    style="display:none"
+
+class="image-counter"
+
+id="imageCounter"
+
+style="display:none"
+
 >
-    1 / 1
+
+1 / 1
+
 </span>
 
 
-</div>
 
 </div>
 
-</div>
 
 </div>
+
+
+</div>
+
+
+</div>
+
 
 
 <div class="product-detail-info">
 
 
+
 <span
-    class="detail-category"
-    id="productCategory"
+
+class="detail-category"
+
+id="productCategory"
+
 >
+
 </span>
 
 
+
 <h1 id="productName">
+
 </h1>
 
 
-<div
-    class="amazon-rating"
-    id="amazonRating"
->
-</div>
-
-
 <p
-    class="product-detail-description"
-    id="productDescription"
+
+class="product-detail-description"
+
+id="productDescription"
+
 >
+
 </p>
 
 
+
 <section
-    class="variation-section"
-    id="variationSection"
-    style="display:none"
+
+class="variation-section"
+
+id="variationSection"
+
+style="display:none"
+
 >
 
+
 <div id="variationGroups">
+
 </div>
+
 
 </section>
 
 
+
 <div class="price-box">
 
+
 <span class="price-label">
-    Amazon price
+
+Amazon price
+
 </span>
+
 
 
 <div
-    class="price-value"
-    id="productPrice"
+
+class="price-value"
+
+id="productPrice"
+
 >
-    Check Amazon
+
+Check Amazon
+
 </div>
 
 
+
 <span
-    class="price-note"
-    id="priceNote"
+
+class="price-note"
+
+id="priceNote"
+
 >
-    Check Amazon for the latest price and availability.
+
+Check Amazon for the latest price and availability.
+
 </span>
 
 
+
 <span
-    class="availability"
-    id="availability"
-    style="display:none"
+
+class="availability"
+
+id="availability"
+
+style="display:none"
+
 >
+
 </span>
+
 
 </div>
+
 
 
 <div class="detail-actions">
-
 
 <a
     href="#"
@@ -1495,1889 +2235,2710 @@
     View on Amazon ↗
 </a>
 
-
-<a
-    href="#"
-    target="_blank"
-    rel="nofollow sponsored noopener"
-    class="detail-action secondary"
-    id="reviewButton"
->
-    Reviews on Amazon ↗
-</a>
-
-</div>
-
-
-<div class="product-trust">
-
-
-<div class="trust-item">
-    <strong>Amazon</strong>
-    <span>Original listing</span>
-</div>
-
-
-<div class="trust-item">
-    <strong>Secure</strong>
-    <span>Purchase on Amazon</span>
-</div>
-
-
-<div class="trust-item">
-    <strong>Live data</strong>
-    <span>API ready</span>
-</div>
-
-
-</div>
-
-
-<div class="feature-section">
-
-<h2>
-    Product details
-</h2>
-
-
-<ul
-    class="feature-list"
-    id="featureList"
->
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="reviews-section">
-
-<div class="reviews-inner">
-
-
-<div class="reviews-header">
-
-<div>
-
-<p class="eyebrow">
-    CUSTOMER FEEDBACK
-</p>
-
-<h2>
-    Reviews on Amazon
-</h2>
-
-</div>
-
-
-<p>
-    Ratings and reviews are controlled by the product data
-    and can later be connected to Amazon API data.
-</p>
-
-</div>
-
-
-<div class="amazon-review-card">
-
-
-<div>
-
-<div
-    class="review-card-rating"
-    id="reviewSummary"
->
-</div>
-
-
-<p>
-    For the latest customer reviews, verified ratings
-    and review count, continue to the original Amazon listing.
-</p>
-
-</div>
-
-
-<a
-    href="#"
-    target="_blank"
-    rel="nofollow sponsored noopener"
-    class="reviews-amazon-btn"
-    id="reviewsMainButton"
->
-    Read Reviews on Amazon ↗
-</a>
-
-
 <button
     type="button"
-    class="product-review-wishlist-btn"
-    id="productReviewWishlistButton"
+    class="detail-action secondary"
+    id="productWishlistToggleButton"
 >
     Add in Wishlist ♡
 </button>
 
 </div>
 
+
+
+<div class="product-trust">
+
+
+
+<div class="trust-item">
+
+<strong>Amazon</strong>
+
+<span>Original listing</span>
+
 </div>
+
+
+
+<div class="trust-item">
+
+<strong>Secure</strong>
+
+<span>Purchase on Amazon</span>
+
+</div>
+
+
+
+<div class="trust-item">
+
+<strong>Live data</strong>
+
+<span>API ready</span>
+
+</div>
+
+
+
+</div>
+
+
+
+<div class="feature-section">
+
+
+<h2>
+
+Product details
+
+</h2>
+
+
+
+<ul
+
+class="feature-list"
+
+id="featureList"
+
+>
+
+</ul>
+
+
+</div>
+
+
+</div>
+
 
 </section>
 
 
+
+
+
+<section class="similar-section collection-products-section" id="collectionProductsSection" style="display:none">
+    <div class="similar-inner">
+        <div class="similar-heading">
+            <div>
+                <p class="eyebrow">FROM THIS COLLECTION</p>
+                <h2 id="collectionProductsTitle">More in this collection</h2>
+            </div>
+            <p>Explore more products from the same collection.</p>
+        </div>
+        <div class="similar-slider" id="collectionProductsSlider"></div>
+    </div>
+</section>
+
 <section class="similar-section">
+
 
 <div class="similar-inner">
 
 
+
 <div class="similar-heading">
+
 
 <div>
 
+
 <p class="eyebrow">
-    YOU MAY ALSO LIKE
+
+YOU MAY ALSO LIKE
+
 </p>
 
+
 <h2>
-    Similar products
+
+Similar products
+
 </h2>
 
+
 </div>
+
 
 
 <p>
-    Explore other products available through Shivano Store.
+
+Explore other products available through Shivano Store.
+
 </p>
 
+
 </div>
+
 
 
 <div
-    class="similar-slider"
-    id="similarSlider"
+
+class="similar-slider"
+
+id="similarSlider"
+
 >
-</div>
 
 </div>
+
+
+</div>
+
 
 </section>
+
 
 </main>
 
 
+
 <div
-    class="product-lightbox"
-    id="productLightbox"
-    aria-hidden="true"
+
+class="product-lightbox"
+
+id="productLightbox"
+
+aria-hidden="true"
+
 >
-    <div class="lightbox-inner">
-        <button
-            type="button"
-            class="lightbox-close"
-            id="lightboxClose"
-            aria-label="Close image viewer"
-        >×</button>
 
-        <div class="lightbox-image-wrap">
-            <button
-                type="button"
-                class="lightbox-arrow lightbox-prev"
-                id="lightboxPrev"
-                aria-label="Previous image"
-            >‹</button>
+<div class="lightbox-inner">
 
-            <img
-                class="lightbox-image"
-                id="lightboxImage"
-                src=""
-                alt=""
-            >
+<button
 
-            <button
-                type="button"
-                class="lightbox-arrow lightbox-next"
-                id="lightboxNext"
-                aria-label="Next image"
-            >›</button>
-        </div>
+type="button"
 
-        <div
-            class="lightbox-thumbs"
-            id="lightboxThumbs"
-        ></div>
-    </div>
+class="lightbox-close"
+
+id="lightboxClose"
+
+aria-label="Close image viewer"
+
+>×</button>
+
+
+<div class="lightbox-image-wrap">
+
+<button
+
+type="button"
+
+class="lightbox-arrow lightbox-prev"
+
+id="lightboxPrev"
+
+aria-label="Previous image"
+
+>‹</button>
+
+
+<img
+
+class="lightbox-image"
+
+id="lightboxImage"
+
+src=""
+
+alt=""
+
+>
+
+
+<button
+
+type="button"
+
+class="lightbox-arrow lightbox-next"
+
+id="lightboxNext"
+
+aria-label="Next image"
+
+>›</button>
+
 </div>
+
+
+<div
+
+class="lightbox-thumbs"
+
+id="lightboxThumbs"
+
+></div>
+
+</div>
+
+</div>
+
 
 
 <footer class="product-footer">
 
+
 <strong>
-    Shivano Store
+
+Shivano Store
+
 </strong>
 
-<p>
-    Discover products worth choosing.
-</p>
 
 <p>
-    As an Amazon Associate, Shivano Store earns from qualifying purchases.
+
+Discover products worth choosing.
+
 </p>
+
+
+<p>
+
+As an Amazon Associate, Shivano Store earns from qualifying purchases.
+
+</p>
+
 
 </footer>
+
 
 
 <script src="products.js"></script>
 
 
+
 <script>
 
+
 const params =
-    new URLSearchParams(location.search);
+
+new URLSearchParams(location.search);
+
 
 const productId =
-    Number(params.get("id")) || 1;
+
+Number(params.get("id")) || 1;
+
 
 const product =
-    products.find(
-        item => item.id === productId
-    ) || products[0];
+
+products.find(
+
+item => item.id === productId
+
+) || products[0];
+
 
 
 const $ =
-    id => document.getElementById(id);
+
+id => document.getElementById(id);
+
 
 
 const mainImage =
-    $("mainProductImage");
+
+$("mainProductImage");
+
 
 const thumbs =
-    $("thumbnailColumn");
+
+$("thumbnailColumn");
+
 
 const empty =
-    $("galleryEmpty");
+
+$("galleryEmpty");
+
 
 const prev =
-    $("galleryPrev");
+
+$("galleryPrev");
+
 
 const next =
-    $("galleryNext");
+
+$("galleryNext");
+
 
 const counter =
-    $("imageCounter");
+
+$("imageCounter");
+
 
 const variationSection =
-    $("variationSection");
+
+$("variationSection");
+
 
 const variationGroups =
-    $("variationGroups");
+
+$("variationGroups");
+
 
 
 let galleryImages = [];
 
+
 let currentImageIndex = 0;
 
+
 let activeVariantProduct =
-    product;
+
+product;
+
 
 let selectedVariation =
-    "";
+
+"";
+
 
 
 /* =========================================
-   WISHLIST
+
+WISHLIST
+
 ========================================= */
 
+
 let wishlist =
-    JSON.parse(
-        localStorage.getItem("shivanoWishlist")
-    ) || [];
+
+JSON.parse(
+
+localStorage.getItem("shivanoWishlist")
+
+) || [];
+
 
 
 const productWishlistNav =
-    $("productWishlistNav");
+
+$("productWishlistNav");
+
 
 const productWishlistCount =
-    $("productWishlistCount");
+
+$("productWishlistCount");
+
 
 const productWishlistDrawer =
-    $("productWishlistDrawer");
+
+$("productWishlistDrawer");
+
 
 const productWishlistItems =
-    $("productWishlistItems");
+
+$("productWishlistItems");
+
 
 const productCloseWishlist =
-    $("productCloseWishlist");
+
+$("productCloseWishlist");
+
 
 const productDrawerOverlay =
-    $("productDrawerOverlay");
 
-const productReviewWishlistButton =
-    $("productReviewWishlistButton");
+$("productDrawerOverlay");
+
+
+const productWishlistToggleButton = $("productWishlistToggleButton");
+
 
 
 function saveWishlist() {
 
-    localStorage.setItem(
-        "shivanoWishlist",
-        JSON.stringify(wishlist)
-    );
+
+localStorage.setItem(
+
+"shivanoWishlist",
+
+JSON.stringify(wishlist)
+
+);
+
 
 }
+
 
 
 function updateProductWishlistUI() {
 
-    const saved =
-        wishlist.includes(product.id);
+
+const saved =
+
+wishlist.includes(product.id);
 
 
-    if (productWishlistCount) {
-        productWishlistCount.textContent =
-            wishlist.length;
-    }
 
+if (productWishlistCount) {
 
-    if (productWishlistNav) {
-        productWishlistNav.firstChild.textContent =
-            saved ? "♥" : "♡";
+productWishlistCount.textContent =
 
-        productWishlistNav.classList.toggle(
-            "saved",
-            saved
-        );
-    }
-
-
-    if (productReviewWishlistButton) {
-        productReviewWishlistButton.textContent =
-            saved
-                ? "Remove from Wishlist ♥"
-                : "Add in Wishlist ♡";
-
-        productReviewWishlistButton.classList.toggle(
-            "saved",
-            saved
-        );
-    }
+wishlist.length;
 
 }
 
 
+
+if (productWishlistNav) {
+
+productWishlistNav.firstChild.textContent =
+
+saved ? "♥" : "♡";
+
+
+productWishlistNav.classList.toggle(
+
+"saved",
+
+saved
+
+);
+
+
+}
+
+
+
+}
+
+
+
 function toggleProductWishlist() {
 
-    if (wishlist.includes(product.id)) {
 
-        wishlist =
-            wishlist.filter(
-                item => item !== product.id
-            );
+if (wishlist.includes(product.id)) {
 
-    }
 
-    else {
-        wishlist.push(product.id);
-    }
+wishlist =
 
-    saveWishlist();
-    updateProductWishlistUI();
-    renderProductWishlist();
+wishlist.filter(
 
+item => item !== product.id
+
+);
+
+
+}
+
+
+else {
+
+wishlist.push(product.id);
+
+}
+
+
+saveWishlist();
+
+updateProductWishlistUI();
+
+renderProductWishlist();
+
+
+
+}
+
+
+
+if (productWishlistToggleButton) {
+    productWishlistToggleButton.addEventListener("click", toggleProductWishlist);
 }
 
 
 function renderProductWishlist() {
 
-    if (!productWishlistItems) {
-        return;
-    }
 
-    const savedProducts =
-        products.filter(
-            item => wishlist.includes(item.id)
-        );
+if (!productWishlistItems) {
 
-    if (!savedProducts.length) {
-
-        productWishlistItems.innerHTML = `
-            <div class="empty-wishlist">
-                <div style="font-size:40px;">♡</div>
-                <h3>Liked Products is empty</h3>
-                <p>Save products you want to remember later.</p>
-            </div>
-        `;
-
-        return;
-    }
-
-    productWishlistItems.innerHTML =
-        savedProducts
-            .map(item => `
-                <div class="wishlist-item">
-                    <div class="wishlist-item-image">
-                        <img
-                            src="${esc(item.image)}"
-                            alt="${esc(item.name)}"
-                        >
-                    </div>
-                    <div>
-                        <h3>${esc(item.name)}</h3>
-                        <p>₹${Number(item.price).toLocaleString("en-IN")}</p>
-                    </div>
-                    <button
-                        type="button"
-                        class="remove-wishlist"
-                        data-product-remove-wishlist="${item.id}"
-                    >
-                        ×
-                    </button>
-                </div>
-            `)
-            .join("");
+return;
 
 }
+
+
+const savedProducts =
+
+products.filter(
+
+item => wishlist.includes(item.id)
+
+);
+
+
+if (!savedProducts.length) {
+
+
+productWishlistItems.innerHTML = `
+
+<div class="empty-wishlist">
+
+<div style="font-size:40px;">♡</div>
+
+<h3>Liked Products is empty</h3>
+
+<p>Save products you want to remember later.</p>
+
+</div>
+
+`;
+
+
+return;
+
+}
+
+
+productWishlistItems.innerHTML =
+
+savedProducts
+
+.map(item => `
+
+<div class="wishlist-item">
+
+<div class="wishlist-item-image">
+
+<img
+
+src="${esc(item.image)}"
+
+alt="${esc(item.name)}"
+
+>
+
+</div>
+
+<div>
+
+<h3>${esc(item.name)}</h3>
+
+<p>₹${Number(item.price).toLocaleString("en-IN")}</p>
+
+</div>
+
+<button
+
+type="button"
+
+class="remove-wishlist"
+
+data-product-remove-wishlist="${item.id}"
+
+>
+
+×
+
+</button>
+
+</div>
+
+`)
+
+.join("");
+
+
+}
+
 
 
 if (productWishlistNav) {
 
-    productWishlistNav.addEventListener(
-        "click",
-        function () {
-            renderProductWishlist();
-            productWishlistDrawer.classList.add("show");
-            productDrawerOverlay.classList.add("show");
-            document.body.style.overflow = "hidden";
-        }
-    );
+
+productWishlistNav.addEventListener(
+
+"click",
+
+function () {
+
+
+renderProductWishlist();
+
+productWishlistDrawer.classList.add("show");
+
+productDrawerOverlay.classList.add("show");
+
+document.body.style.overflow = "hidden";
+
+}
+
+);
+
 
 }
 
 
-if (productReviewWishlistButton) {
 
-    productReviewWishlistButton.addEventListener(
-        "click",
-        toggleProductWishlist
-    );
-
-}
 
 
 if (productCloseWishlist) {
 
-    productCloseWishlist.addEventListener(
-        "click",
-        closeProductWishlist
-    );
+
+productCloseWishlist.addEventListener(
+
+"click",
+
+closeProductWishlist
+
+);
+
 
 }
+
 
 
 if (productDrawerOverlay) {
 
-    productDrawerOverlay.addEventListener(
-        "click",
-        closeProductWishlist
-    );
+
+productDrawerOverlay.addEventListener(
+
+"click",
+
+closeProductWishlist
+
+);
+
 
 }
+
 
 
 function closeProductWishlist() {
 
-    productWishlistDrawer.classList.remove("show");
-    productDrawerOverlay.classList.remove("show");
-    document.body.style.overflow = "";
+
+productWishlistDrawer.classList.remove("show");
+
+productDrawerOverlay.classList.remove("show");
+
+document.body.style.overflow = "";
+
 
 }
+
 
 
 document.addEventListener(
-    "click",
-    function (event) {
 
-        const removeButton =
-            event.target.closest(
-                "[data-product-remove-wishlist]"
-            );
+"click",
 
-        if (!removeButton) {
-            return;
-        }
+function (event) {
 
-        const id =
-            Number(
-                removeButton.dataset.productRemoveWishlist
-            );
 
-        if (!id) {
-            return;
-        }
+const removeButton =
 
-        wishlist =
-            wishlist.filter(item => item !== id);
+event.target.closest(
 
-        saveWishlist();
-        updateProductWishlistUI();
-        renderProductWishlist();
+"[data-product-remove-wishlist]"
 
-    }
 );
 
 
+if (!removeButton) {
+
+return;
+
+}
+
+
+const id =
+
+Number(
+
+removeButton.dataset.productRemoveWishlist
+
+);
+
+
+if (!id) {
+
+return;
+
+}
+
+
+wishlist =
+
+wishlist.filter(item => item !== id);
+
+
+saveWishlist();
+
+updateProductWishlistUI();
+
+renderProductWishlist();
+
+
+}
+
+);
+
+
+
 /* =========================================
-   HELPERS
+
+HELPERS
+
 ========================================= */
+
 
 function esc(value) {
 
-    return String(value ?? "")
 
-        .replace(/&/g, "&amp;")
+return String(value ?? "")
 
-        .replace(/</g, "&lt;")
 
-        .replace(/>/g, "&gt;")
+.replace(/&/g, "&amp;")
 
-        .replace(/"/g, "&quot;")
 
-        .replace(/'/g, "&#039;");
+.replace(/</g, "&lt;")
+
+
+.replace(/>/g, "&gt;")
+
+
+.replace(/"/g, "&quot;")
+
+
+.replace(/'/g, "&#039;");
+
 }
+
 
 
 function price(value) {
 
-    if (
-        value === null ||
-        value === undefined ||
-        value === ""
-    ) {
-        return "Check Amazon";
-    }
 
+if (
 
-    const number =
-        Number(value);
+value === null ||
 
+value === undefined ||
 
-    if (!Number.isFinite(number)) {
-        return String(value);
-    }
+value === ""
 
+) {
 
-    return "₹" +
-        number.toLocaleString("en-IN");
+return "Check Amazon";
+
 }
+
+
+
+const number =
+
+Number(value);
+
+
+
+if (!Number.isFinite(number)) {
+
+return String(value);
+
+}
+
+
+
+return "₹" +
+
+number.toLocaleString("en-IN");
+
+}
+
 
 
 function stars(value) {
 
-    if (!value) return "";
+
+if (!value) return "";
 
 
-    const number =
-        Math.round(Number(value));
+
+const number =
+
+Math.round(Number(value));
 
 
-    return (
-        "★".repeat(
-            Math.min(5, number)
-        ) +
-        "☆".repeat(
-            Math.max(0, 5 - number)
-        )
-    );
+
+return (
+
+"★".repeat(
+
+Math.min(5, number)
+
+) +
+
+"☆".repeat(
+
+Math.max(0, 5 - number)
+
+)
+
+);
+
 }
+
 
 
 /* =========================================
-   GALLERY
+
+GALLERY
+
 ========================================= */
+
 
 function setGallery(images, name) {
 
-    galleryImages =
-        Array.isArray(images)
-            ? images.filter(Boolean)
-            : [];
+
+galleryImages =
+
+Array.isArray(images)
+
+? images.filter(Boolean)
+
+: [];
 
 
-    currentImageIndex = 0;
+
+currentImageIndex = 0;
 
 
-    if (!galleryImages.length) {
 
-        mainImage.style.display = "none";
-
-        empty.style.display = "flex";
-
-        prev.style.display = "none";
-
-        next.style.display = "none";
-
-        counter.style.display = "none";
-
-        thumbs.innerHTML = "";
-
-        return;
-    }
+if (!galleryImages.length) {
 
 
-    empty.style.display = "none";
-
-    mainImage.style.display = "block";
+mainImage.style.display = "none";
 
 
-    prev.style.display =
-        galleryImages.length > 1
-            ? "block"
-            : "none";
+empty.style.display = "flex";
 
 
-    next.style.display =
-        galleryImages.length > 1
-            ? "block"
-            : "none";
+prev.style.display = "none";
 
 
-    counter.style.display =
-        galleryImages.length > 1
-            ? "block"
-            : "none";
+next.style.display = "none";
 
 
-    thumbs.innerHTML =
-        galleryImages
-            .map(
-                (src, index) => `
-                    <button
-                        type="button"
-                        class="thumbnail ${
-                            index === 0
-                                ? "active"
-                                : ""
-                        }"
-                        data-index="${index}"
-                    >
-                        <img
-                            src="${esc(src)}"
-                            alt="${esc(name)} image ${index + 1}"
-                        >
-                    </button>
-                `
-            )
-            .join("");
+counter.style.display = "none";
 
 
-    thumbs
-        .querySelectorAll(".thumbnail")
-        .forEach(button => {
-
-            button.onclick = () => {
-
-                showImage(
-                    Number(
-                        button.dataset.index
-                    )
-                );
-
-            };
-
-        });
+thumbs.innerHTML = "";
 
 
-    showImage(0);
+return;
+
 }
+
+
+
+empty.style.display = "none";
+
+
+mainImage.style.display = "block";
+
+
+
+prev.style.display =
+
+galleryImages.length > 1
+
+? "block"
+
+: "none";
+
+
+
+next.style.display =
+
+galleryImages.length > 1
+
+? "block"
+
+: "none";
+
+
+
+counter.style.display =
+
+galleryImages.length > 1
+
+? "block"
+
+: "none";
+
+
+
+thumbs.innerHTML =
+
+galleryImages
+
+.map(
+
+(src, index) => `
+
+<button
+
+type="button"
+
+class="thumbnail ${
+
+index === 0
+
+? "active"
+
+: ""
+
+}"
+
+data-index="${index}"
+
+>
+
+<img
+
+src="${esc(src)}"
+
+alt="${esc(name)} image ${index + 1}"
+
+>
+
+</button>
+
+`
+
+)
+
+.join("");
+
+
+
+thumbs
+
+.querySelectorAll(".thumbnail")
+
+.forEach(button => {
+
+
+button.onclick = () => {
+
+
+showImage(
+
+Number(
+
+button.dataset.index
+
+)
+
+);
+
+
+};
+
+
+});
+
+
+
+showImage(0);
+
+}
+
 
 
 function showImage(index) {
 
-    if (!galleryImages.length) {
-        return;
-    }
 
+if (!galleryImages.length) {
 
-    if (index < 0) {
-        index =
-            galleryImages.length - 1;
-    }
+return;
 
-
-    if (
-        index >=
-        galleryImages.length
-    ) {
-        index = 0;
-    }
-
-
-    currentImageIndex = index;
-
-
-    mainImage.src =
-        galleryImages[index];
-
-
-    mainImage.alt =
-        `${activeVariantProduct.name || product.name} image ${index + 1}`;
-
-
-    counter.textContent =
-        `${index + 1} / ${galleryImages.length}`;
-
-
-    thumbs
-        .querySelectorAll(".thumbnail")
-        .forEach(
-            (thumbnail, number) => {
-
-                thumbnail.classList.toggle(
-                    "active",
-                    number === index
-                );
-
-            }
-        );
 }
+
+
+
+if (index < 0) {
+
+index =
+
+galleryImages.length - 1;
+
+}
+
+
+
+if (
+
+index >=
+
+galleryImages.length
+
+) {
+
+index = 0;
+
+}
+
+
+
+currentImageIndex = index;
+
+
+
+mainImage.src =
+
+galleryImages[index];
+
+
+
+mainImage.alt =
+
+`${activeVariantProduct.name || product.name} image ${index + 1}`;
+
+
+
+counter.textContent =
+
+`${index + 1} / ${galleryImages.length}`;
+
+
+
+thumbs
+
+.querySelectorAll(".thumbnail")
+
+.forEach(
+
+(thumbnail, number) => {
+
+
+thumbnail.classList.toggle(
+
+"active",
+
+number === index
+
+);
+
+
+}
+
+);
+
+}
+
 
 
 prev.onclick = () => {
 
-    showImage(
-        currentImageIndex - 1
-    );
+
+showImage(
+
+currentImageIndex - 1
+
+);
+
 
 };
+
 
 
 next.onclick = () => {
 
-    showImage(
-        currentImageIndex + 1
-    );
+
+showImage(
+
+currentImageIndex + 1
+
+);
+
 
 };
 
 
+
 /* =========================================
-   COLOUR VARIATIONS
+
+COLOUR VARIATIONS
+
 ========================================= */
+
 
 function getVariationOptions() {
 
-    const variations =
-        product.variations;
+
+const variations =
+
+product.variations;
 
 
-    if (!variations) {
-        return [];
-    }
 
+if (!variations) {
 
-    if (
-        Array.isArray(
-            variations.options
-        )
-    ) {
-        return variations.options;
-    }
+return [];
 
-
-    if (
-        Array.isArray(
-            variations
-        )
-    ) {
-        return variations;
-    }
-
-
-    const colorGroup =
-        (variations.groups || [])
-            .find(group => {
-
-                const key =
-                    String(
-                        group.key || ""
-                    ).toLowerCase();
-
-
-                return (
-                    key === "color" ||
-                    key === "colour"
-                );
-
-            });
-
-
-    return Array.isArray(
-        colorGroup?.options
-    )
-        ? colorGroup.options
-        : [];
 }
 
 
+
+if (
+
+Array.isArray(
+
+variations.options
+
+)
+
+) {
+
+return variations.options;
+
+}
+
+
+
+if (
+
+Array.isArray(
+
+variations
+
+)
+
+) {
+
+return variations;
+
+}
+
+
+
+const colorGroup =
+
+(variations.groups || [])
+
+.find(group => {
+
+
+const key =
+
+String(
+
+group.key || ""
+
+).toLowerCase();
+
+
+
+return (
+
+key === "color" ||
+
+key === "colour"
+
+);
+
+
+});
+
+
+
+return Array.isArray(
+
+colorGroup?.options
+
+)
+
+? colorGroup.options
+
+: [];
+
+}
+
+
+
 /* =========================================
-   FULL-SCREEN IMAGE VIEWER
+
+FULL-SCREEN IMAGE VIEWER
+
 ========================================= */
 
+
 const productLightbox =
-    $("productLightbox");
+
+$("productLightbox");
+
 
 const lightboxImage =
-    $("lightboxImage");
+
+$("lightboxImage");
+
 
 const lightboxThumbs =
-    $("lightboxThumbs");
+
+$("lightboxThumbs");
+
 
 const lightboxClose =
-    $("lightboxClose");
+
+$("lightboxClose");
+
 
 const lightboxPrev =
-    $("lightboxPrev");
+
+$("lightboxPrev");
+
 
 const lightboxNext =
-    $("lightboxNext");
+
+$("lightboxNext");
+
 
 
 function renderLightbox() {
 
-    if (!galleryImages.length) {
-        return;
-    }
 
-    lightboxImage.src =
-        galleryImages[currentImageIndex];
+if (!galleryImages.length) {
 
-    lightboxImage.alt =
-        `${activeVariantProduct.name || product.name} image ${currentImageIndex + 1}`;
+return;
 
-    lightboxThumbs.innerHTML =
-        galleryImages
-            .map((src, index) => `
-                <button
-                    type="button"
-                    class="lightbox-thumb ${index === currentImageIndex ? "active" : ""}"
-                    data-lightbox-index="${index}"
-                >
-                    <img src="${esc(src)}" alt="Image ${index + 1}">
-                </button>
-            `)
-            .join("");
-
-    lightboxThumbs
-        .querySelectorAll("[data-lightbox-index]")
-        .forEach(button => {
-            button.onclick = () => {
-                showImage(Number(button.dataset.lightboxIndex));
-                renderLightbox();
-            };
-        });
 }
+
+
+lightboxImage.src =
+
+galleryImages[currentImageIndex];
+
+
+lightboxImage.alt =
+
+`${activeVariantProduct.name || product.name} image ${currentImageIndex + 1}`;
+
+
+lightboxThumbs.innerHTML =
+
+galleryImages
+
+.map((src, index) => `
+
+<button
+
+type="button"
+
+class="lightbox-thumb ${index === currentImageIndex ? "active" : ""}"
+
+data-lightbox-index="${index}"
+
+>
+
+<img src="${esc(src)}" alt="Image ${index + 1}">
+
+</button>
+
+`)
+
+.join("");
+
+
+lightboxThumbs
+
+.querySelectorAll("[data-lightbox-index]")
+
+.forEach(button => {
+
+button.onclick = () => {
+
+showImage(Number(button.dataset.lightboxIndex));
+
+renderLightbox();
+
+};
+
+});
+
+}
+
 
 
 function openLightbox() {
 
-    if (!galleryImages.length) {
-        return;
-    }
 
-    renderLightbox();
-    productLightbox.classList.add("show");
-    productLightbox.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
+if (!galleryImages.length) {
+
+return;
+
 }
+
+
+renderLightbox();
+
+productLightbox.classList.add("show");
+
+productLightbox.setAttribute("aria-hidden", "false");
+
+document.body.style.overflow = "hidden";
+
+}
+
 
 
 function closeLightbox() {
 
-    productLightbox.classList.remove("show");
-    productLightbox.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
+
+productLightbox.classList.remove("show");
+
+productLightbox.setAttribute("aria-hidden", "true");
+
+document.body.style.overflow = "";
+
 }
 
 
+
 mainImage.addEventListener("click", openLightbox);
+
 lightboxClose.addEventListener("click", closeLightbox);
 
+
 productLightbox.addEventListener("click", event => {
-    if (event.target === productLightbox) {
-        closeLightbox();
-    }
+
+if (event.target === productLightbox) {
+
+closeLightbox();
+
+}
+
 });
+
 
 lightboxPrev.addEventListener("click", () => {
-    if (!galleryImages.length) return;
-    showImage(currentImageIndex - 1);
-    renderLightbox();
+
+if (!galleryImages.length) return;
+
+showImage(currentImageIndex - 1);
+
+renderLightbox();
+
 });
 
+
 lightboxNext.addEventListener("click", () => {
-    if (!galleryImages.length) return;
-    showImage(currentImageIndex + 1);
-    renderLightbox();
+
+if (!galleryImages.length) return;
+
+showImage(currentImageIndex + 1);
+
+renderLightbox();
+
 });
+
 
 
 function renderVariations() {
 
-    const options =
-        getVariationOptions()
-            .map(option =>
 
-                typeof option === "string"
+const options =
 
-                    ? {
-                        value: option
-                    }
+getVariationOptions()
 
-                    : option
-
-            );
+.map(option =>
 
 
-    if (!options.length) {
-
-        variationSection.style.display =
-            "none";
-
-        variationGroups.innerHTML =
-            "";
-
-        return;
-    }
+typeof option === "string"
 
 
-    variationSection.style.display =
-        "block";
+? {
 
-
-    const defaultValue =
-        product.variations.defaultSelection ||
-        product.variations.defaultColour ||
-        product.variations.defaultColor ||
-        options[0].value;
-
-
-    if (
-        !selectedVariation ||
-        !options.some(
-            option =>
-                option.value ===
-                selectedVariation
-        )
-    ) {
-        selectedVariation =
-            defaultValue;
-    }
-
-
-    const selected =
-        options.find(
-            option =>
-                option.value ===
-                selectedVariation
-        ) || options[0];
-
-
-    selectedVariation =
-        selected.value;
-
-
-    variationGroups.innerHTML = `
-
-        <div class="variation-group">
-
-            <span class="variation-label">
-
-                Colour:
-
-                <strong>
-                    ${esc(selected.value)}
-                </strong>
-
-            </span>
-
-
-            <div class="variation-options">
-
-                ${options
-                    .map(option => `
-
-                        <button
-                            type="button"
-                            class="variation-image-option ${
-                                option.value ===
-                                selectedVariation
-                                    ? "active"
-                                    : ""
-                            }"
-                            data-value="${esc(option.value)}"
-                            aria-label="${esc(option.value)}"
-                        >
-
-                            ${
-                                option.image
-
-                                    ? `
-                                        <img
-                                            src="${esc(option.image)}"
-                                            alt="${esc(option.value)}"
-                                        >
-                                    `
-
-                                    : `
-                                        <span
-                                            style="
-                                                height:72px;
-                                                display:flex;
-                                                align-items:center;
-                                                justify-content:center;
-                                                font-size:10px;
-                                                color:#888;
-                                            "
-                                        >
-                                            No image
-                                        </span>
-                                    `
-                            }
-
-
-                            <span
-                                class="variation-option-text"
-                            >
-                                ${esc(option.value)}
-                            </span>
-
-
-                            ${
-                                option.price !==
-                                    undefined &&
-                                option.price !==
-                                    null &&
-                                option.price !== ""
-
-                                    ? `
-                                        <span
-                                            class="variation-option-price"
-                                        >
-                                            ₹${Number(
-                                                option.price
-                                            ).toLocaleString(
-                                                "en-IN"
-                                            )}
-                                        </span>
-                                    `
-
-                                    : ""
-                            }
-
-                        </button>
-
-                    `)
-                    .join("")}
-
-            </div>
-
-        </div>
-
-    `;
-
-
-    variationGroups
-        .querySelectorAll(
-            "[data-value]"
-        )
-        .forEach(button => {
-
-            button.onclick = () => {
-
-                selectedVariation =
-                    button.dataset.value;
-
-
-                const option =
-                    options.find(
-                        item =>
-                            item.value ===
-                            selectedVariation
-                    );
-
-
-                if (option) {
-                    applyVariant(option);
-                }
-
-
-                renderVariations();
-
-            };
-
-        });
+value: option
 
 }
 
 
-/* =========================================
-   RATING
-========================================= */
+: option
 
-function renderRating(
-    rating,
-    reviews,
-    link
+
+);
+
+
+
+if (!options.length) {
+
+
+variationSection.style.display =
+
+"none";
+
+
+variationGroups.innerHTML =
+
+"";
+
+
+return;
+
+}
+
+
+
+variationSection.style.display =
+
+"block";
+
+
+
+const defaultValue =
+
+product.variations.defaultSelection ||
+
+product.variations.defaultColour ||
+
+product.variations.defaultColor ||
+
+options[0].value;
+
+
+
+if (
+
+!selectedVariation ||
+
+!options.some(
+
+option =>
+
+option.value ===
+
+selectedVariation
+
+)
+
 ) {
 
-    if (rating) {
+selectedVariation =
 
-        $("amazonRating").innerHTML = `
-
-            <span class="amazon-stars">
-                ${stars(rating)}
-            </span>
-
-            <span class="rating-value">
-                ${esc(rating)}
-            </span>
-
-            <span class="rating-count">
-                (${esc(reviews ?? "")} ratings)
-            </span>
-
-            <a
-                href="${esc(link)}"
-                target="_blank"
-                rel="nofollow sponsored noopener"
-                class="amazon-review-link"
-            >
-                Reviews on Amazon ↗
-            </a>
-
-        `;
-
-
-        $("reviewSummary").innerHTML = `
-
-            <strong>
-                ${esc(rating)}
-            </strong>
-
-            <span class="review-stars">
-                ${stars(rating)}
-            </span>
-
-            <span class="rating-count">
-                ${esc(reviews ?? "")}
-                Amazon ratings
-            </span>
-
-        `;
-
-    }
-
-    else {
-
-        $("amazonRating").innerHTML = `
-
-            <span class="amazon-review-link">
-                Rating and reviews available on Amazon
-            </span>
-
-        `;
-
-
-        $("reviewSummary").innerHTML = `
-
-            <strong>
-                Amazon
-            </strong>
-
-            <span class="rating-count">
-                See current rating and reviews
-            </span>
-
-        `;
-
-    }
+defaultValue;
 
 }
 
 
-/* =========================================
-   APPLY SELECTED COLOUR
-========================================= */
 
-function applyVariant(variant) {
+const selected =
 
-    if (!variant) {
-        return;
-    }
+options.find(
 
+option =>
 
-    activeVariantProduct = {
+option.value ===
 
-        ...product,
+selectedVariation
 
-        ...variant,
-
-        name:
-            variant.name ||
-            product.name,
-
-        description:
-            variant.description ??
-            product.description,
-
-        features:
-            Array.isArray(
-                variant.features
-            )
-                ? variant.features
-                : product.features,
-
-        rating:
-            variant.rating ??
-            product.rating,
-
-        reviews:
-            variant.reviews ??
-            product.reviews,
-
-        image:
-            variant.image ||
-            product.image,
-
-        images:
-            variant.images ||
-            (
-                variant.image
-                    ? [variant.image]
-                    : product.images
-            ),
-
-        price:
-            variant.price ??
-            product.price,
-
-        amazonLink:
-            variant.amazonLink ||
-            variant.detailPageURL ||
-            product.amazonLink
-
-    };
+) || options[0];
 
 
-    renderPage(
-        activeVariantProduct,
-        true
-    );
-}
+
+selectedVariation =
+
+selected.value;
 
 
-/* =========================================
-   RENDER PRODUCT
-========================================= */
 
-function renderPage(
-    data,
-    variant = false
-) {
-
-    const current =
-        data || product;
+variationGroups.innerHTML = `
 
 
-    document.title =
-        `${current.name || product.name} | Shivano Store`;
+<div class="variation-group">
 
 
-    $("productCategory").textContent =
-        current.category ||
-        product.category ||
-        "";
+<span class="variation-label">
 
 
-    $("productName").textContent =
-        current.name ||
-        "Amazon product details";
+Colour:
 
 
-    $("productDescription").textContent =
-        current.description ||
-        "";
+<strong>
+
+${esc(selected.value)}
+
+</strong>
 
 
-    $("productPrice").textContent =
-        price(current.price);
+</span>
 
 
-    $("priceNote").textContent =
-        "Check Amazon for the latest price and availability.";
+
+<div class="variation-options">
 
 
-    const amazonLink =
-        current.amazonLink ||
-        product.amazonLink;
+${options
+
+.map(option => `
 
 
-    $("amazonButton").href =
-        amazonLink;
+<button
+
+type="button"
+
+class="variation-image-option ${
+
+option.value ===
+
+selectedVariation
+
+? "active"
+
+: ""
+
+}"
+
+data-value="${esc(option.value)}"
+
+aria-label="${esc(option.value)}"
+
+>
 
 
-    $("reviewButton").href =
-        amazonLink;
+${
+
+option.image
 
 
-    $("reviewsMainButton").href =
-        amazonLink;
+? `
+
+<img
+
+src="${esc(option.image)}"
+
+alt="${esc(option.value)}"
+
+>
+
+`
 
 
-    renderRating(
-        current.rating,
-        current.reviews,
-        amazonLink
-    );
+: `
 
+<span
 
-    $("featureList").innerHTML =
+style="
 
-        Array.isArray(
-            current.features
-        ) &&
-        current.features.length
+height:72px;
 
-            ? current.features
-                .map(
-                    feature =>
-                        `<li>${esc(feature)}</li>`
-                )
-                .join("")
+display:flex;
 
-            : `
-                <li>
-                    Product features will appear here.
-                </li>
-            `;
+align-items:center;
 
+justify-content:center;
 
-    setGallery(
+font-size:10px;
 
-        Array.isArray(
-            current.images
-        )
-            ? current.images
+color:#888;
 
-            : current.image
-                ? [current.image]
-                : [],
+"
 
-        current.name ||
-        product.name
+>
 
-    );
+No image
 
+</span>
 
-    if (!variant) {
-
-        selectedVariation =
-            product.variations?.defaultSelection ||
-            product.variations?.defaultColour ||
-            product.variations?.defaultColor ||
-            "";
-
-
-        renderVariations();
-
-    }
+`
 
 }
 
 
-/* =========================================
-   INITIAL RENDER
-========================================= */
 
-renderPage(product);
-updateProductWishlistUI();
+<span
 
+class="variation-option-text"
 
-/* =========================================
-   SIMILAR PRODUCTS
-========================================= */
+>
 
-$("similarSlider").innerHTML =
+${esc(option.value)}
 
-    products
-
-        .filter(
-            item =>
-                item.id !== product.id
-        )
-
-        .map(
-            item => `
-
-                <article
-                    class="similar-card"
-                    data-product-id="${item.id}"
-                >
-
-                    <div
-                        class="similar-image"
-                    >
-
-                        <img
-                            src="${esc(item.image || "")}"
-                            alt="${esc(item.name || "Product")}"
-                            loading="lazy"
-                        >
-
-                    </div>
-
-
-                    <div
-                        class="similar-info"
-                    >
-
-                        <span
-                            class="similar-category"
-                        >
-                            ${esc(item.category || "")}
-                        </span>
-
-
-                        <h3>
-                            ${esc(
-                                item.name ||
-                                "Product"
-                            )}
-                        </h3>
-
-
-                        <p>
-                            ${esc(
-                                item.description ||
-                                ""
-                            )}
-                        </p>
-
-
-                        <div
-                            class="similar-bottom"
-                        >
-
-                            <span
-                                class="similar-price"
-                            >
-                                ${price(item.price)}
-                            </span>
-
-
-                            <button
-                                class="similar-btn"
-                                data-product-id="${item.id}"
-                            >
-                                View
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-            `
-        )
-
-        .join("");
-
-
-$("similarSlider")
-    .querySelectorAll(".similar-card")
-    .forEach(card => {
-
-        card.addEventListener("click", event => {
-
-            const amazonLink =
-                event.target.closest(".similar-btn");
-
-            const productId =
-                card.dataset.productId;
-
-            if (!productId) {
-                return;
-            }
-
-            location.href =
-                `product.html?id=${productId}`;
-
-        });
-
-    });
+</span>
 
 
 
+${
 
-/* =========================================
-   PRODUCT-PAGE SEARCH
-========================================= */
+option.price !==
 
-const productSearchTrigger =
-    $("productSearchTrigger");
+undefined &&
 
-const productSearchButton =
-    $("productSearchButton");
+option.price !==
 
-const productSearchPanel =
-    $("productSearchPanel");
+null &&
 
-const productSearchClose =
-    $("productSearchClose");
-
-const productSearchInput =
-    $("productSearchInput");
-
-const productSearchResults =
-    $("productSearchResults");
+option.price !== ""
 
 
-function openProductSearch() {
+? `
 
-    document
-        .querySelector(".navbar")
-        ?.classList
-        .add("search-open");
+<span
 
-    productSearchPanel.classList.add("open");
+class="variation-option-price"
 
-    setTimeout(() => {
-        productSearchInput.focus();
-    }, 0);
+>
+
+₹${Number(
+
+option.price
+
+).toLocaleString(
+
+"en-IN"
+
+)}
+
+</span>
+
+`
+
+
+: ""
+
 }
 
 
-function closeProductSearch() {
-
-    document
-        .querySelector(".navbar")
-        ?.classList
-        .remove("search-open");
-
-    productSearchPanel.classList.remove("open");
-    productSearchResults.classList.remove("has-results");
-    productSearchResults.innerHTML = "";
-    productSearchInput.value = "";
-}
+</button>
 
 
-function renderProductSearchResults(query) {
+`)
 
-    const search =
-        query.toLowerCase().trim();
-
-    if (!search) {
-        productSearchResults.classList.remove("has-results");
-        productSearchResults.innerHTML = "";
-        return;
-    }
-
-    const matches =
-        products
-            .filter(item =>
-                `${item.name} ${item.category} ${item.description}`
-                    .toLowerCase()
-                    .includes(search)
-            )
-            .slice(0, 6);
-
-    productSearchResults.innerHTML =
-        matches.length
-            ? matches.map(item => `
-                <button
-                    type="button"
-                    class="product-search-result"
-                    data-search-product-id="${item.id}"
-                >
-                    <img src="${esc(item.image || "")}" alt="${esc(item.name || "Product")}">
-                    <span>
-                        <strong>${esc(item.name || "Product")}</strong>
-                        <small>${esc(item.category || "")}</small>
-                    </span>
-                </button>
-            `).join("")
-            : `<div class="product-search-result">\n                    <span><strong>No products found</strong></span>\n               </div>`;
-
-    productSearchResults.classList.add("has-results");
-
-    productSearchResults
-        .querySelectorAll("[data-search-product-id]")
-        .forEach(button => {
-            button.onclick = () => {
-                location.href =
-                    `product.html?id=${button.dataset.searchProductId}`;
-            };
-        });
-}
+.join("")}
 
 
-productSearchTrigger?.addEventListener(
-    "click",
-    openProductSearch
+</div>
+
+
+</div>
+
+
+`;
+
+
+
+variationGroups
+
+.querySelectorAll(
+
+"[data-value]"
+
+)
+
+.forEach(button => {
+
+
+button.onclick = () => {
+
+
+selectedVariation =
+
+button.dataset.value;
+
+
+
+const option =
+
+options.find(
+
+item =>
+
+item.value ===
+
+selectedVariation
+
 );
 
-productSearchButton?.addEventListener(
-    "click",
-    openProductSearch
-);
 
-productSearchClose?.addEventListener(
-    "click",
-    closeProductSearch
-);
 
-productSearchInput?.addEventListener(
-    "input",
-    event => {
-        renderProductSearchResults(event.target.value);
-    }
-);
+if (option) {
 
-/* =========================================
-   MOBILE MENU
-========================================= */
+applyVariant(option);
 
-$("menuToggle").onclick = () => {
+}
 
-    $("navLinks")
-        .classList
-        .toggle("show");
+
+
+renderVariations();
+
 
 };
 
 
-$("navLinks")
-    .querySelectorAll("a")
-    .forEach(link => {
+});
 
-        link.onclick = () => {
 
-            $("navLinks")
-                .classList
-                .remove("show");
+}
 
-        };
-
-    });
 
 
 /* =========================================
-   FUTURE AMAZON API
 
-   Browser
-       ↓
-   Your backend
-       ↓
-   Amazon Creators API
+APPLY SELECTED COLOUR
 
-   Amazon credentials should remain
-   on the backend.
 ========================================= */
+
+
+function applyVariant(variant) {
+
+
+if (!variant) {
+
+return;
+
+}
+
+
+
+activeVariantProduct = {
+
+
+...product,
+
+
+...variant,
+
+
+name:
+
+variant.name ||
+
+product.name,
+
+
+description:
+
+variant.description ??
+
+product.description,
+
+
+features:
+
+Array.isArray(
+
+variant.features
+
+)
+
+? variant.features
+
+: product.features,
+
+
+rating:
+
+variant.rating ??
+
+product.rating,
+
+
+reviews:
+
+variant.reviews ??
+
+product.reviews,
+
+
+image:
+
+variant.image ||
+
+product.image,
+
+
+images:
+
+variant.images ||
+
+(
+
+variant.image
+
+? [variant.image]
+
+: product.images
+
+),
+
+
+price:
+
+variant.price ??
+
+product.price,
+
+
+amazonLink:
+
+variant.amazonLink ||
+
+variant.detailPageURL ||
+
+product.amazonLink
+
+
+};
+
+
+
+renderPage(
+
+activeVariantProduct,
+
+true
+
+);
+
+}
+
+
+
+/* =========================================
+
+RENDER PRODUCT
+
+========================================= */
+
+
+function renderPage(
+
+data,
+
+variant = false
+
+) {
+
+
+const current =
+
+data || product;
+
+
+
+document.title =
+
+`${current.name || product.name} | Shivano Store`;
+
+
+
+$("productCategory").textContent =
+
+current.category ||
+
+product.category ||
+
+"";
+
+
+
+$("productName").textContent =
+
+current.name ||
+
+"Amazon product details";
+
+
+
+$("productDescription").textContent =
+
+current.description ||
+
+"";
+
+
+
+$("productPrice").textContent =
+
+price(current.price);
+
+
+
+$("priceNote").textContent =
+
+"Check Amazon for the latest price and availability.";
+
+
+
+const amazonLink =
+
+current.amazonLink ||
+
+product.amazonLink;
+
+
+
+$("amazonButton").href =
+
+amazonLink;
+
+$("featureList").innerHTML =
+
+
+Array.isArray(
+
+current.features
+
+) &&
+
+current.features.length
+
+
+? current.features
+
+.map(
+
+feature =>
+
+`<li>${esc(feature)}</li>`
+
+)
+
+.join("")
+
+
+: `
+
+<li>
+
+Product features will appear here.
+
+</li>
+
+`;
+
+
+
+setGallery(
+
+
+Array.isArray(
+
+current.images
+
+)
+
+? current.images
+
+
+: current.image
+
+? [current.image]
+
+: [],
+
+
+current.name ||
+
+product.name
+
+
+);
+
+
+
+if (!variant) {
+
+
+selectedVariation =
+
+product.variations?.defaultSelection ||
+
+product.variations?.defaultColour ||
+
+product.variations?.defaultColor ||
+
+"";
+
+
+
+renderVariations();
+
+
+}
+
+
+}
+
+
+
+/* =========================================
+
+INITIAL RENDER
+
+========================================= */
+
+
+renderPage(product);
+
+updateProductWishlistUI();
+
+
+
+/* =========================================
+
+SIMILAR PRODUCTS
+
+========================================= */
+
+
+function createProductSuggestionCard(item) {
+    return `
+        <article class="similar-card" data-product-id="${item.id}">
+            <div class="similar-image">
+                <img src="${esc(item.image || "")}" alt="${esc(item.name || "Product")}" loading="lazy">
+            </div>
+            <div class="similar-info">
+                <span class="similar-category">${esc(item.category || "")}</span>
+                <h3>${esc(item.name || "Product")}</h3>
+                <p>${esc(item.description || "")}</p>
+                <div class="similar-bottom">
+                    <span class="similar-price">${price(item.price)}</span>
+                    <button class="similar-btn" type="button" data-product-id="${item.id}">View</button>
+                </div>
+            </div>
+        </article>
+    `;
+}
+
+function attachSuggestionNavigation(container) {
+    container.querySelectorAll(".similar-card").forEach(card => {
+        card.addEventListener("click", () => {
+            const nextProductId = card.dataset.productId;
+            if (nextProductId) location.href = `product.html?id=${nextProductId}`;
+        });
+    });
+}
+
+const collectionProducts = product.collection
+    ? products.filter(item =>
+        item.id !== product.id &&
+        item.category === product.category &&
+        String(item.collection || "").trim() === String(product.collection).trim()
+    )
+    : [];
+
+const collectionSection = $("collectionProductsSection");
+const collectionSlider = $("collectionProductsSlider");
+
+if (collectionProducts.length && collectionSection && collectionSlider) {
+    $("collectionProductsTitle").textContent = product.collection;
+    collectionSlider.innerHTML = collectionProducts.map(createProductSuggestionCard).join("");
+    collectionSection.style.display = "";
+    attachSuggestionNavigation(collectionSlider);
+}
+
+const similarProducts = products.filter(item => item.id !== product.id);
+$("similarSlider").innerHTML = similarProducts.map(createProductSuggestionCard).join("");
+attachSuggestionNavigation($("similarSlider"));
+
+
+/* =========================================
+
+PRODUCT-PAGE SEARCH
+
+========================================= */
+
+
+const productSearchTrigger =
+
+$("productSearchTrigger");
+
+
+const productSearchButton =
+
+$("productSearchButton");
+
+
+const productSearchPanel =
+
+$("productSearchPanel");
+
+
+const productSearchClose =
+
+$("productSearchClose");
+
+
+const productSearchInput =
+
+$("productSearchInput");
+
+
+const productSearchResults =
+
+$("productSearchResults");
+
+
+
+function openProductSearch() {
+
+
+document
+
+.querySelector(".navbar")
+
+?.classList
+
+.add("search-open");
+
+
+productSearchPanel.classList.add("open");
+
+
+setTimeout(() => {
+
+productSearchInput.focus();
+
+}, 0);
+
+}
+
+
+
+function closeProductSearch() {
+
+
+document
+
+.querySelector(".navbar")
+
+?.classList
+
+.remove("search-open");
+
+
+productSearchPanel.classList.remove("open");
+
+productSearchResults.classList.remove("has-results");
+
+productSearchResults.innerHTML = "";
+
+productSearchInput.value = "";
+
+}
+
+
+
+function renderProductSearchResults(query) {
+
+
+const search =
+
+query.toLowerCase().trim();
+
+
+if (!search) {
+
+productSearchResults.classList.remove("has-results");
+
+productSearchResults.innerHTML = "";
+
+return;
+
+}
+
+
+const matches =
+
+products
+
+.filter(item =>
+
+`${item.name} ${item.category} ${item.description}`
+
+.toLowerCase()
+
+.includes(search)
+
+)
+
+.slice(0, 6);
+
+
+productSearchResults.innerHTML =
+
+matches.length
+
+? matches.map(item => `
+
+<button
+
+type="button"
+
+class="product-search-result"
+
+data-search-product-id="${item.id}"
+
+>
+
+<img src="${esc(item.image || "")}" alt="${esc(item.name || "Product")}">
+
+<span>
+
+<strong>${esc(item.name || "Product")}</strong>
+
+<small>${esc(item.category || "")}</small>
+
+</span>
+
+</button>
+
+`).join("")
+
+: `<div class="product-search-result">\n <span><strong>No products found</strong></span>\n </div>`;
+
+
+productSearchResults.classList.add("has-results");
+
+
+productSearchResults
+
+.querySelectorAll("[data-search-product-id]")
+
+.forEach(button => {
+
+button.onclick = () => {
+
+location.href =
+
+`product.html?id=${button.dataset.searchProductId}`;
+
+};
+
+});
+
+}
+
+
+
+productSearchTrigger?.addEventListener(
+
+"click",
+
+openProductSearch
+
+);
+
+
+productSearchButton?.addEventListener(
+
+"click",
+
+openProductSearch
+
+);
+
+
+productSearchClose?.addEventListener(
+
+"click",
+
+closeProductSearch
+
+);
+
+
+productSearchInput?.addEventListener(
+
+"input",
+
+event => {
+
+renderProductSearchResults(event.target.value);
+
+}
+
+);
+
+
+/* =========================================
+
+MOBILE MENU
+
+========================================= */
+
+
+$("menuToggle").onclick = () => {
+
+
+$("navLinks")
+
+.classList
+
+.toggle("show");
+
+
+};
+
+
+
+$("navLinks")
+
+.querySelectorAll("a")
+
+.forEach(link => {
+
+
+link.onclick = () => {
+
+
+$("navLinks")
+
+.classList
+
+.remove("show");
+
+
+};
+
+
+});
+
+
+
+/* =========================================
+
+FUTURE AMAZON API
+
+
+Browser
+
+↓
+
+Your backend
+
+↓
+
+Amazon Creators API
+
+
+Amazon credentials should remain
+
+on the backend.
+
+========================================= */
+
 
 async function loadAmazonProduct() {
 
-    try {
 
-        const response =
-            await fetch(
-                `/api/product?asin=${
-                    encodeURIComponent(
-                        product.asin
-                    )
-                }`
-            );
+try {
 
 
-        if (!response.ok) {
+const response =
 
-            throw new Error(
-                "Amazon product endpoint unavailable"
-            );
+await fetch(
 
-        }
+`/api/product?asin=${
+
+encodeURIComponent(
+
+product.asin
+
+)
+
+}`
+
+);
 
 
-        const data =
-            await response.json();
+
+if (!response.ok) {
 
 
-        renderPage(data);
+throw new Error(
 
-    }
+"Amazon product endpoint unavailable"
 
-    catch (error) {
+);
 
-        console.log(
-            "Amazon API not connected yet:",
-            error.message
-        );
-
-    }
 
 }
+
+
+
+const data =
+
+await response.json();
+
+
+
+renderPage(data);
+
+
+}
+
+
+catch (error) {
+
+
+console.log(
+
+"Amazon API not connected yet:",
+
+error.message
+
+);
+
+
+}
+
+
+}
+
 
 
 async function loadAmazonVariations() {
 
-    try {
 
-        const response =
-            await fetch(
-                `/api/variations?asin=${
-                    encodeURIComponent(
-                        product.asin
-                    )
-                }`
-            );
+try {
 
 
-        if (!response.ok) {
+const response =
 
-            throw new Error(
-                "Amazon variations endpoint unavailable"
-            );
+await fetch(
 
-        }
+`/api/variations?asin=${
 
+encodeURIComponent(
 
-        const data =
-            await response.json();
+product.asin
 
+)
 
-        const items =
-            data?.variationsResult?.items ||
-            data?.items ||
-            [];
+}`
+
+);
 
 
-        const options = [];
+
+if (!response.ok) {
 
 
-        items.forEach(item => {
+throw new Error(
 
-            (
-                item.variationAttributes ||
-                []
-            )
-                .forEach(attribute => {
+"Amazon variations endpoint unavailable"
 
-                    const key =
-                        String(
-                            attribute.name ||
-                            ""
-                        ).toLowerCase();
+);
 
-
-                    if (
-                        key !== "color" &&
-                        key !== "colour"
-                    ) {
-                        return;
-                    }
-
-
-                    options.push({
-
-                        value:
-                            attribute.value,
-
-                        image:
-                            item?.images
-                                ?.primary
-                                ?.large
-                                ?.url ||
-                            item?.image,
-
-                        asin:
-                            item?.asin,
-
-                        amazonLink:
-                            item?.detailPageURL ||
-                            item?.detailPageUrl,
-
-                        price:
-                            item?.offersV2
-                                ?.listings?.[0]
-                                ?.price?.money
-                                ?.amount
-
-                    });
-
-                });
-
-        });
-
-
-        const uniqueOptions =
-            [
-                ...new Map(
-                    options.map(
-                        option =>
-                            [
-                                option.value,
-                                option
-                            ]
-                    )
-                ).values()
-            ];
-
-
-        if (uniqueOptions.length) {
-
-            product.variations = {
-
-                defaultSelection:
-                    uniqueOptions[0].value,
-
-                options:
-                    uniqueOptions
-
-            };
-
-
-            selectedVariation =
-                "";
-
-            renderVariations();
-
-        }
-
-    }
-
-    catch (error) {
-
-        console.log(
-            "Amazon variations API not connected yet:",
-            error.message
-        );
-
-    }
 
 }
 
 
+
+const data =
+
+await response.json();
+
+
+
+const items =
+
+data?.variationsResult?.items ||
+
+data?.items ||
+
+[];
+
+
+
+const options = [];
+
+
+
+items.forEach(item => {
+
+
+(
+
+item.variationAttributes ||
+
+[]
+
+)
+
+.forEach(attribute => {
+
+
+const key =
+
+String(
+
+attribute.name ||
+
+""
+
+).toLowerCase();
+
+
+
+if (
+
+key !== "color" &&
+
+key !== "colour"
+
+) {
+
+return;
+
+}
+
+
+
+options.push({
+
+
+value:
+
+attribute.value,
+
+
+image:
+
+item?.images
+
+?.primary
+
+?.large
+
+?.url ||
+
+item?.image,
+
+
+asin:
+
+item?.asin,
+
+
+amazonLink:
+
+item?.detailPageURL ||
+
+item?.detailPageUrl,
+
+
+price:
+
+item?.offersV2
+
+?.listings?.[0]
+
+?.price?.money
+
+?.amount
+
+
+});
+
+
+});
+
+
+});
+
+
+
+const uniqueOptions =
+
+[
+
+...new Map(
+
+options.map(
+
+option =>
+
+[
+
+option.value,
+
+option
+
+]
+
+)
+
+).values()
+
+];
+
+
+
+if (uniqueOptions.length) {
+
+
+product.variations = {
+
+
+defaultSelection:
+
+uniqueOptions[0].value,
+
+
+options:
+
+uniqueOptions
+
+
+};
+
+
+
+selectedVariation =
+
+"";
+
+
+renderVariations();
+
+
+}
+
+
+}
+
+
+catch (error) {
+
+
+console.log(
+
+"Amazon variations API not connected yet:",
+
+error.message
+
+);
+
+
+}
+
+
+}
+
+
+
 /*
-    API ko abhi intentionally call nahi kiya gaya.
 
-    Jab backend ready ho:
+API ko abhi intentionally call nahi kiya gaya.
 
-    loadAmazonProduct();
-    loadAmazonVariations();
+
+Jab backend ready ho:
+
+
+loadAmazonProduct();
+
+loadAmazonVariations();
+
 */
+
 
 </script>
 
+
 </body>
+
 
 </html>

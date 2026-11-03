@@ -1,4 +1,12 @@
 /* =====================================================
+   COLLECTION MANAGEMENT
+   Add collection: set collection: "Collection Name" on a product.
+   Remove from a collection: delete that product's collection property.
+   Collection cards are generated automatically per category.
+   Products without a collection remain in the normal category listing.
+===================================================== */
+
+/* =====================================================
    Shivano.store
    PRODUCT DATABASE
 ===================================================== */
@@ -13,6 +21,7 @@ const products = [
         name: "Premium Flannel Checkered Shirt",
 
         category: "Shirts",
+        collection: "Check Shirts",
 
         price: "499",
 
