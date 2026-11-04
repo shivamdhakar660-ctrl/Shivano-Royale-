@@ -629,7 +629,7 @@ ${
 
 category === "All"
 
-? "All Categories"
+? "All Products"
 
 : escapeHtml(category)
 

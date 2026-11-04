@@ -69,8 +69,8 @@ const products = [
         name:
             "U.S. Polo Assn. Men's Sneakers",
 
-        category:
-            "Shoes",
+        category: "Shoes",
+        collection: "Sneakers",
 
         price:
             "2529",
@@ -427,8 +427,8 @@ const products = [
         name:
             "Men's Basic Half-Open Collar T-Shirt,Textured fabric Solid Colour",
 
-        category:
-            "T-Shirts",
+        category: "T-Shirts",
+        collection: "Full sleeve without collar",
 
         price:
             "373",
@@ -763,8 +763,8 @@ const products = [
         name:
             "Men's Round Neck Pollycotton T-Shirt",
 
-        category:
-            "T-Shirts",
+        category: "T-Shirts",
+        collection: "Full sleeve without collar",
 
         price:
             "349",
@@ -953,8 +953,8 @@ const products = [
         name:
             "Men's Round Neck Printed Pollycotton T-Shirt",
 
-        category:
-            "T-Shirts",
+        category: "T-Shirts",
+        collection: "Oversize",
 
         price:
             "329",
@@ -1107,8 +1107,8 @@ const products = [
         name:
             "Pure Cotton Oversized Multicolour T-Shirt Combo for Men",
 
-        category:
-            "T-Shirts",
+        category: "T-Shirts",
+        collection: "Oversize",
 
         price:
             "1299",
@@ -1641,8 +1641,8 @@ const products = [
         name:
             "Cotton Oversized T-Shirt Unisex Drop Shoulder Dye Washed Street",
 
-        category:
-            "T-Shirts",
+        category: "T-Shirts",
+        collection: "Oversize",
 
         price:
             "359",
@@ -1894,8 +1894,8 @@ const products = [
         name:
             "Men's Plain Pollycotton Relax Fit Round Neck T-Shirt",
 
-        category:
-            "T-Shirts",
+        category: "T-Shirts",
+        collection: "Oversize",
 
         price:
             "329",
@@ -2163,6 +2163,7 @@ const products = [
 
         category:
             "Hoodies",
+        collection: "Half-Zip Hoodies",
 
         price:
             "499",
@@ -2361,8 +2362,8 @@ const products = [
         name:
             "Hoodie Sweatshirt For Unisex",
 
-        category:
-            "Hoodies",
+        category:"Hoodies",
+        collection: "Pullover Hoodies",
 
         price:
             "529",
@@ -2523,6 +2524,7 @@ const products = [
 
         category:
             "Hoodies",
+        collection: "Pullover Hoodies",
 
         price:
             "799",
@@ -2669,161 +2671,182 @@ const products = [
     },
 
     {    
-        id: 14,
+        id: 15,
 
         asin:
-            "B0DHS61VNW",
+            "B07YMZMMRT",
 
         name:
-            "Hooded (Sweatshirt) for Mans| Winter Wear for Mans Fleece",
+            "Men,s Round Nect T-Shirt",
 
         category:
-            "Hoodies",
+            "T-Shirts",
+        collection: "Full sleeve without collar",
 
         price:
-            "529",
-
-        rating:
-            3.8,
-
-        reviews:
-            "460+",
-
-        boughtText:
-            "50+ Bought in last 30 days",
+            "779",
 
         badge:
-            "Winter wear",
+            "Regular Wear",
 
         image:
-            "images/prd14vr1img1.png",
+            "images/prd15vr1img1.png",
 
         images: [
-            "images/prd14vr1img1.png",
-            "images/prd14vr1img2.png",
-            "images/prd14vr1img3.png",
-            "images/prd14vr1img4.png",
+            "images/prd15vr1img1.png",
+            "images/prd15vr1img2.png",
+            "images/prd15vr1img3.png",
         ],
 
         description:
-            "Neckline: Round Neck, Details:Pullover, Sleeve Length: Full Sleeve, Sleeve Type: Regular Sleeve. Length: Regular, Fit Type: Regular Fit. Fabric: 5 % Stretchable , Composition: 95 % Polyster",
+            "Combed Cotton Rich Fabric | Fabric Composition : Cotton and PolyesterFull Sleeve",
 
         features: [
-            "Material: 5 % Stretchable, Composition: 95% Polyster",
-            "Material Type: Fleece",
+            "Material: 80% Cotton, 20% Polycotton",
             "Fit type: Regular fit",
             "Sleeve Type: Long Sleeves",
             "Length: Standard Length",
-            "Neck Style: Hooded Neck",
-            "Country of Origin: India"
+            "Collar style: Round Neck",
         ],
 
         amazonLink:
-            "https://link.amazon/B0hXYEX8J",
+            "https://link.amazon/B039PyyPN",
 
-    variations: {
+    variations: null
+    },
 
-          defaultSelection:
-          "Brown",
+    {    
+        id: 16,
 
-            options: [
+        asin:
+            "B0H9YJSLNJ",
 
+        name:
+            "Men's Textured Fabric Solid Half-Open Collar T-Shirt",
 
+        category:
+            "T-Shirts",
+        collection: "Full sleeve without collar",
 
-                {
-                    value:
-                        "Brown",
+        price:
+            "345",
 
-                    image:
-                        "images/prd14vr1img1.png",
+        badge:
+            "Casual Wear",
 
-                    images: [
-                        "images/prd14vr1img1.png",
-                        "images/prd14vr1img2.png",
-                        "images/prd14vr1img3.png",
-                        "images/prd14vr1img4.png",
-                    ],
+        image:
+            "images/prd16vr1img1.png",
 
-                    price:
-                        "529",
+        images: [
+            "images/prd16vr1img1.png",
+            "images/prd16vr1img2.png",
+            "images/prd16vr1img3.png",
+        ],
 
-                    asin:
-                        "B0DHS61VNW",
+        description:
+            "Perfect for casual outings, office, college, travel, weekend wear, evening gatherings, and layering during the fall and mild winter seasons.",
 
-                    amazonLink:
-                        "https://link.amazon/B0hXYEX8J",
+        features: [
+            "Material: Polycotton",
+            "Fit type: Regular fit",
+            "Sleeve Type: Long Sleeves",
+            "Length: Standard Length",
+            "Collar style: Round Neck",
+        ],
 
-                    name:
-                        "Hooded (Sweatshirt) for Mans| Winter Wear for Mans Fleece",
+        amazonLink:
+            "https://link.amazon/B0fbk51DA",
 
-                    description:
-                        "Neckline: Round Neck, Details:Pullover, Sleeve Length: Full Sleeve, Sleeve Type: Regular Sleeve. Length: Regular, Fit Type: Regular Fit. Fabric: 5 % Stretchable , Composition: 95 % Polyster",
+    variations: null
+    },
 
-                    features: [
-                        "Material: 5 % Stretchable, Composition: 95% Polyster",
-                        "Material Type: Fleece",
-                        "Fit type: Regular fit",
-                        "Sleeve Type: Long Sleeves",
-                        "Length: Standard Length",
-                        "Neck Style: Hooded Neck",
-                        "Country of Origin: India"
-                    ],
+    {    
+        id: 17,
 
-                    rating:
-                        3.8,
+        asin:
+            "B0G2XQ4Y6N",
 
-                    reviews:
-                        "460+"
+        name:
+            "Mens Cotton | Regular Fit | Classic Long Sleeve | Round Neck T-Shirt",
 
-                },
+        category:
+            "T-Shirts",
+        collection: "Full sleeve without collar",
 
-                {
-                    value:
-                        "Black",
+        price:
+            "549",
 
-                    image:
-                        "images/prd14vr2img1.png",
+        badge:
+            "Regular Wear",
 
-                    images: [
-                        "images/prd14vr2img1.png",
-                        "images/prd14vr2img2.png",
-                        "images/prd14vr2img3.png",
-                        "images/prd14vr2img4.png",
-                    ],
+        image:
+            "images/prd17vr1img1.png",
 
-                    price:
-                        "469",
+        images: [
+            "images/prd17vr1img1.png",
+            "images/prd17vr1img2.png",
+            "images/prd17vr1img3.png",
+        ],
 
-                    asin:
-                        "B0DHS6SSPS",
+        description:
+            "Premium cotton poly blend fabric provides a naturally soft, breathable and comfortable wearing experience for all-day use",
 
-                    amazonLink:
-                        "https://link.amazon/B0hXYEX8J",
+        features: [
+            "Material: 100% cotton",
+            "Fit type: Regular fit",
+            "Sleeve Type: Long Sleeves",
+            "Length: Standard Length",
+            "Collar style: Round Neck",
+        ],
 
-                    name:
-                        "Hooded (Sweatshirt) for Mans| Winter Wear for Mans Fleece",
+        amazonLink:
+            "https://link.amazon/B07de6lWU",
 
-                    description:
-                        "Neckline: Round Neck, Details:Pullover, Sleeve Length: Full Sleeve, Sleeve Type: Regular Sleeve. Length: Regular, Fit Type: Regular Fit. Fabric: 5 % Stretchable , Composition: 95 % Polyster",
+    variations: null
+    },
 
-                    features: [
-                        "Material: 5 % Stretchable, Composition: 95% Polyster",
-                        "Material Type: Fleece",
-                        "Fit type: Regular fit",
-                        "Sleeve Type: Long Sleeves",
-                        "Length: Standard Length",
-                        "Neck Style: Hooded Neck",
-                        "Country of Origin: India"
-                    ],
+    {    
+        id: 18,
 
-                    rating:
-                        3.8,
+        asin:
+            "B0DHZJMDTC",
 
-                    reviews:
-                        "460+"
+        name:
+            "Men's Full Sleeves Gym Slim Fit T-Shirt",
 
-                },
-            ]
-        }
+        category:
+            "T-Shirts",
+        collection: "Full sleeve without collar",
+
+        price:
+            "879",
+
+        badge:
+            "Gym slim fit",
+
+        image:
+            "images/prd17vr1img1.png",
+
+        images: [
+            "images/prd17vr1img1.png",
+            "images/prd17vr1img2.png",
+            "images/prd17vr1img3.png",
+        ],
+
+        description:
+            "Fitted Fullsleeves. Sweat wicking breathable fabric. Soft stretch fabric. Raglan sleeves with logo branding on chest",
+
+        features: [
+            "Material: 92%Soft Polyster 8% Spandex",
+            "Fit type: Slim fit",
+            "Sleeve Type: Long Sleeves",
+            "Length: Standard Length",
+            "Collar style: Crew",
+        ],
+
+        amazonLink:
+           "https://link.amazon/B0htOMebL",
+
+    variations: null
     },
 ] 
