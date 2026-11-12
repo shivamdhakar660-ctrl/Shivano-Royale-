@@ -284,7 +284,7 @@ function renderProducts() {
                 collectionMarkup = `
                     <div class="collection-browser-heading">
                         <div>
-                            <h3>Explore Collections</h3>
+                            <h3>'</h3>
                             <p>Choose a collection to find exactly what you're looking for.</p>
                         </div>
                     </div>
@@ -367,7 +367,7 @@ function renderProducts() {
 
     if (resultsInfo) {
         resultsInfo.textContent =
-            `Showing ${visibleProducts.length} product${visibleProducts.length !== 1 ? "s" : ""}`;
+            ` Showing ${visibleProducts.length} product${visibleProducts.length !== 1 ? "s" : ""}`;
     }
 
     if (visibleProducts.length === 0) {
