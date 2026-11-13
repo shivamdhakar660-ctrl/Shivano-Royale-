@@ -59,365 +59,7 @@ const products = [
 
         variations: null
     },
-
-
-    {
-        id: 2,
-
-        asin: "B0DQ8B858G",
-
-        name:
-            "U.S. Polo Assn. Men's Sneakers",
-
-        category: "Shoes",
-        collection: "Sneakers",
-
-        price:
-            "2529",
-
-        rating:
-            4.2,
-
-        reviews:
-            "489+",
-
-        boughtText:
-            "100+ bought in past 30 days",
-
-        badge:
-            "TRENDING",
-
-        image:
-            "images/prd2vr1img1.png",
-
-        images: [
-            "images/prd2vr1img1.png",
-            "images/prd2vr1img2.png",
-            "images/prd2vr1img3.png",
-            "images/prd2vr1img4.png"
-        ],
-
-        description:
-            "U.S. Polo Assn. men's sneakers for everyday casual styling.",
-
-        features: [
-            "heel Type: No heel",
-            "Closure Type: Lace-Up",
-            "Material: Polyurethane",
-            "Casual sneaker design",
-            "Men's footwear",
-            "Everyday styling",
-            "U.S. Polo Assn."
-        ],
-
-        amazonLink:
-            "https://link.amazon/B086lCdBP",
-
-                variations: {
-
-            defaultSelection:
-                "Beige",
-
-            options: [
-
-                {
-                    value:
-                        "Beige",
-
-                    image:
-                        "images/prd2vr1img1.png",
-
-                    images: [
-                        "images/prd2vr1img1.png",
-                        "images/prd2vr1img2.png",
-                        "images/prd2vr1img3.png",
-                        "images/prd2vr1img4.png"
-                    ],
-
-                    price:
-                        "2729",
-
-                    asin:
-                        "B0DQ8B858G",
-
-                    amazonLink:
-                        "https://link.amazon/B086lCdBP",
-
-                    name:
-                        "U.S. Polo Assn. Men's Sneakers",
-
-                    description:
-                        "U.S. Polo Assn. men's sneakers for everyday casual styling.",
-
-                    features: [
-                        "heel Type: No heel",
-                        "Closure Type: Lace-Up",
-                        "Material: Polyurethane",
-                        "Casual sneaker design",
-                        "Men's footwear",
-                        "Everyday styling",
-                        "U.S. Polo Assn."
-                    ],
-
-                    rating:
-                        4.2,
-
-                    reviews:
-                        "494+"
-                },
-
-
-                {
-                    value:
-                        "Cream",
-
-                    image:
-                        "images/prd2vr2img1.png",
-
-                    images: [
-                        "images/prd2vr2img1.png",
-                        "images/prd2vr2img2.png",
-                        "images/prd2vr2img3.png",
-                        "images/prd2vr1img4.png"
-                    ],
-
-                    price:
-                        "2299",
-
-                    asin:
-                        "B0DQP3DGLY",
-
-                    amazonLink:
-                        "https://link.amazon/B086lCdBP",
-
-                    name:
-                        "U.S. Polo Assn. Men's Sneakers",
-
-                    description:
-                        "U.S. Polo Assn. men's sneakers for everyday casual styling.",
-
-                    features: [
-                        "heel Type: No heel",
-                        "Closure Type: Lace-Up",
-                        "Material: Polyurethane",
-                        "Casual sneaker design",
-                        "Men's footwear",
-                        "Everyday styling",
-                        "U.S. Polo Assn."
-                    ],
-
-                    rating:
-                        4.2,
-
-                    reviews:
-                        "494+"
-                },
-
-
-                {
-                    value:
-                        "Off White",
-
-                    image:
-                        "images/prd2vr3img1.png",
-
-                    images: [
-                        "images/prd2vr3img1.png",
-                        "images/prd2vr3img2.png",
-                        "images/prd2vr3img3.png",
-                        "images/prd2vr1img4.png"
-                    ],
-
-                    price:
-                        "2529",
-
-                    asin:
-                        "B0DQ8C1ZZG",
-
-                    amazonLink:
-                        "https://link.amazon/B086lCdBP",
-
-                    name:
-                        "U.S. Polo Assn. Men's Sneakers",
-
-                    description:
-                        "U.S. Polo Assn. men's sneakers for everyday casual styling.",
-
-                    features: [
-                        "heel Type: No heel",
-                        "Closure Type: Lace-Up",
-                        "Material: Polyurethane",
-                        "Casual sneaker design",
-                        "Men's footwear",
-                        "Everyday styling",
-                        "U.S. Polo Assn."
-                    ],
-
-                    rating:
-                        4.2,
-
-                    reviews:
-                        "494+"
-                },
-
-
-                {
-                    value:
-                        "Tan",
-
-                    image:
-                        "images/prd2vr4img1.png",
-
-                    images: [
-                        "images/prd2vr4img1.png",
-                        "images/prd2vr4img2.png",
-                        "images/prd2vr4img3.png",
-                        "images/prd2vr1img4.png"
-                    ],
-
-                    price:
-                        "2300",
-
-                    asin:
-                        "B0DQ8957W2",
-
-                    amazonLink:
-                        "https://link.amazon/B086lCdBP",
-
-                    name:
-                        "U.S. Polo Assn. Men's Sneakers",
-
-                    description:
-                        "U.S. Polo Assn. men's sneakers for everyday casual styling.",
-
-                    features: [
-                        "heel Type: No heel",
-                        "Closure Type: Lace-Up",
-                        "Material: Polyurethane",
-                        "Casual sneaker design",
-                        "Men's footwear",
-                        "Everyday styling",
-                        "U.S. Polo Assn."
-                    ],
-
-                    rating:
-                        4.2,
-
-                    reviews:
-                        "494+"
-                },
-
-                 {
-                    value:
-                        "White",
-
-                    image:
-                        "images/prd2vr5img1.png",
-
-                    images: [
-                        "images/prd2vr5img1.png",
-                        "images/prd2vr5img2.png",
-                        "images/prd2vr5img3.png",
-                        "images/prd2vr1img4.png"
-                    ],
-
-                    price:
-                        "2621",
-
-                    asin:
-                        "B0DQ88ZJCZ",
-
-                    amazonLink:
-                        "https://link.amazon/B086lCdBP",
-
-                    name:
-                        "U.S. Polo Assn. Men's Sneakers",
-
-                    description:
-                        "U.S. Polo Assn. men's sneakers for everyday casual styling.",
-
-                    features: [
-                        "heel Type: No heel",
-                        "Closure Type: Lace-Up",
-                        "Material: Polyurethane",
-                        "Casual sneaker design",
-                        "Men's footwear",
-                        "Everyday styling",
-                        "U.S. Polo Assn."
-                    ],
-
-                    rating:
-                        4.2,
-
-                    reviews:
-                        "494+"
-                },
-
-
-            ]
-
-        },
-
-    },
-
-    {
-        id: 3,
-
-        asin:
-            "B00ISNVQMW",
-
-        name:
-            "Titan Karishma Stainless Steel Watch",
-
-        category:
-            "Watches",
-
-        price:
-            "1993",
-
-        rating:
-            4.4,
-
-        reviews:
-            "3706+",
-
-        boughtText:
-            "1k+ bought in past 30 days",
-
-        badge:
-            "EDITOR'S PICK",
-
-        image:
-            "images/prd3vr1img1.png",
-
-        images: [
-            "images/prd3vr1img1.png",
-            "images/prd3vr1img2.png",
-            "images/prd3vr1img3.png",
-        ],
-
-        description:
-            "stylish and elegant Titan Karishma Stainless Steel Watch for men, perfect for any occasion.",
-
-        features: [
-            "Case Diameter: 38 Millimeters",
-            "Band colour: Silver",
-            "Band Material: Stainless Steel",
-            "Item Weight: 150 Grams",
-            "Display Type: Analog",
-            "Movement Type: Quartz",
-            "Special Features: Water Resistant",
-            "Power Source Type: Battery",
-            "Water Resistance Depth: 30 Meters"
-        ],
-
-        amazonLink:
-            "https://link.amazon/B0hajaGmS",
-
-        variations: null
-    },
-
-
+ 
     {
         id: 4,
 
@@ -2039,119 +1681,7 @@ const products = [
             ]
         }
     },
-
-    {
-        id: 10,
-
-        asin:
-            "B0GP6PR1S8",
-
-        name:
-            "Men's Latest Casual Jacket Low-Cut Standing Collar.",
-
-        category:
-            "Jackets",
-
-        price:
-            "499",
-
-        rating:
-            3.4,
-
-        reviews:
-            "33+",
-
-        boughtText:
-            "100+ bought in last 30 days",
-
-        badge:
-            "casual wear",
-
-        image:
-            "images/prd10vr1img1.png",
-
-        images: [
-            "images/prd10vr1img1.png",
-            "images/prd10vr1img2.png",
-            "images/prd10vr1img3.png",
-            "images/prd10vr1img4.png",
-            "images/prd10vr1img5.png",
-        ],
-
-        description:
-            "Comfort & Style: Best Winter wear with style of Bomber Jacket with Regular Fit. Comfortable and durable: This bomber jacket It has a ribbed collar and cozy fit. It also has a smooth zipper closure and multiple pockets. Fit and size: This bomber jacket has a slim and Regular fit that is neither too tight nor too loose. It runs true to size, but you can refer to the size chart in the product images to find your best fit.",
-
-        features: [
-            "Material: Polyster 80%, Cotton 20%",
-            "Fit type: Regular fit",
-            "Sleeve Type: full Sleeves",
-            "Length: Standard Length",
-            "Care instructions: Machine Wash",
-            "Country of Origin: India"
-        ],
-
-        amazonLink:
-            "https://link.amazon/B0j1WMeDV",
-
-    variations: {
-
-          defaultSelection:
-          "Grey",
-
-            options: [
-
-
-
-                {
-                    value:
-                        "Grey",
-
-                    image:
-                        "images/prd10vr1img1.png",
-
-                    images: [
-                        "images/prd10vr1img1.png",
-                        "images/prd10vr1img2.png",
-                        "images/prd10vr1img3.png",
-                        "images/prd10vr1img4.png",
-                        "images/prd10vr1img5.png"
-                    ],
-
-                    price:
-                        "499",
-
-                    asin:
-                        "B0GP6PR1S8",
-
-                    amazonLink:
-                        "https://link.amazon/B0j1WMeDV",
-
-                    name:
-                        "Men's Latest Casual Jacket Low-Cut Standing Collar.",
-
-                    description:
-                        "Comfort & Style: Best Winter wear with style of Bomber Jacket with Regular Fit. Comfortable and durable: This bomber jacket It has a ribbed collar and cozy fit. It also has a smooth zipper closure and multiple pockets. Fit and size: This bomber jacket has a slim and Regular fit that is neither too tight nor too loose. It runs true to size, but you can refer to the size chart in the product images to find your best fit.",
-
-                    features: [
-                        "Material: Polyster 80%, Cotton 20%",
-                        "Fit type: Regular fit",
-                        "Sleeve Type: full Sleeves",
-                        "Length: Standard Length",
-                        "Care instructions: Machine Wash",
-                        "Country of Origin: India"
-                    ],
-
-                    rating:
-                        3.4,
-
-                    reviews:
-                        "33+"
-                },
-
-            ]
-        }
-    },
-
+ 
     {
         id: 11,
 
@@ -2850,4 +2380,335 @@ const products = [
 
     variations: null
     },
+
+    {    
+        id: 19,
+
+        asin:
+            "B0CPR5N5ZX",
+
+        name:
+            "Men's Cotton Ceck Shirt Relaxed Fit",
+
+        category:
+            "Shirts",
+        collection: "Check Shirts",
+
+        price:
+            "1698",
+
+        badge:
+            "Casual wear",
+
+        image:
+            "images/prd19vr1img1.png",
+
+        images: [
+            "images/prd19vr1img1.png",
+            "images/prd19vr1img2.png",
+            "images/prd19vr1img3.png",
+            "images/prd19vr1img4.png",
+            "images/prd19vr1img5.png"
+        ],
+
+        description:
+            "High Definition Print - Using the highest quality solvents and colors combines with fully automated machines, we ensure our t-shirts have razor-sharp prints that highlight every single detail.",
+
+        features: [
+            "Material: Cotton",
+            "Fit type: casual fit",
+            "Sleeve Type: Long Sleeves",
+            "Length: Standard Length",
+            
+        ],
+
+        amazonLink:
+           "https://link.amazon/B023CVPVC",
+
+    variations: null
+    },
+
+    {    
+        id: 20,
+
+        asin:
+            "B0FJXN534Q",
+
+        name:
+            "Man Stylish Slim Fit Cotton Spread Collar Checked Casual Shirt",
+
+        category:
+            "Shirts",
+        collection: "Check Shirts",
+
+        price:
+            "549",
+
+        badge:
+            "Casual wear",
+
+        image:
+            "images/prd20vr1img1.png",
+
+        images: [
+            "images/prd20vr1img1.png",
+            "images/prd20vr1img2.png",
+            "images/prd20vr1img3.png",
+            "images/prd20vr1img4.png",
+            "images/prd20vr1img5.png"
+        ],
+
+        description:
+            "Fabric - Premium Cotton, Pre-Washed for extremely soft finish and No Shrinkage Post Washing. shirt has a regular spread collar, button placket, and one patch pocket. Long sleeves with buttoned cuffs for an adjustable fit. The curved hem adds a touch of sophistication.",
+
+        features: [
+            "Material: Cotton",
+            "Fit type: casual fit",
+            "Sleeve Type: Long Sleeves",
+            "Length: Standard Length",
+            
+        ],
+
+        amazonLink:
+            "https://link.amazon/B0aLfH9Yx",
+
+    variations: null
+    },
+
+    {    
+        id: 21,
+
+        asin:
+            "B0HCN77QTZ",
+
+        name:
+            "Men’s Checked Casual Shirts | Full Sleeve Dual Flap Pocket Check Style",
+
+        category:
+            "Shirts",
+        collection: "Check Shirts",
+
+        price:
+            "495",
+
+        badge:
+            "casual wear",
+
+        image:
+            "images/prd21vr1img1.png",
+
+        images: [
+            "images/prd21vr1img1.png",
+            "images/prd21vr1img2.png",
+            "images/prd21vr1img3.png",
+            "images/prd21vr1img4.png",
+            "images/prd21vr1img5.png"
+        ],
+
+        description:
+            "Classic Checked Pattern: Stylish grey and white plaid/check design for a timeless yet modern appearance.Dual Flap Chest Pockets: Two statement buttoned pockets enhance the utility and casual streetwear look.",
+
+        features: [
+            "Material: Cotton",
+            "Fit type: casual fit",
+            "Sleeve Type: Long Sleeves",
+            "Length: Standard Length",
+            
+        ],
+
+        amazonLink:
+           "https://link.amazon/B01BGDnIZ",
+
+    variations: null
+    },
+
+    {    
+        id: 22,
+
+        asin:
+            "B0F47X59T2",
+
+        name:
+            "Cotton Men Shirt, Regular Fit",
+
+        category:
+            "Shirts",
+        collection: "Check Shirts",
+
+        price:
+            "413",
+
+        badge:
+            "Casual wear",
+
+        image:
+            "images/prd22vr1img1.png",
+
+        images: [
+            "images/prd22vr1img1.png",
+            "images/prd22vr1img2.png",
+            "images/prd22vr1img3.png",
+            "images/prd22vr1img4.png",
+            "images/prd22vr1img5.png"
+        ],
+
+        description:
+            "🧶👕 Fabric: Made from Poly cotton fabric, this fabric is a smooth, durable & blends the breathability of cotton. It is lightweight & moisture-absorbent. It ensures comfort, wrinkle resistance, and a structured fit",
+
+        features: [
+            "Material: Cotton",
+            "Fit type: casual fit",
+            "Sleeve Type: Long Sleeves",
+            "Length: Standard Length",
+            
+        ],
+
+        amazonLink:
+           "https://link.amazon/B0eO8HpQW",
+
+    variations: null
+    },
+
+    {    
+        id: 23,
+
+        asin:
+            "B0BXLQJNQH",
+
+        name:
+            "Men's Cotton Ceck Shirt Relaxed Fit",
+
+        category:
+            "Shirts",
+        collection: "Check Shirts",
+
+        price:
+            "525",
+
+        badge:
+            "Casual wear",
+
+        image:
+            "images/prd23vr1img1.png",
+
+        images: [
+            "images/prd23vr1img1.png",
+            "images/prd23vr1img2.png",
+            "images/prd23vr1img3.png",
+            "images/prd23vr1img4.png",
+            "images/prd23vr1img5.png"
+        ],
+
+        description:
+            "Comfort : This light weight breathable premium Polycotton soft and smooth fabric designed to enhance comfort without compromising style. This Shirt is crafted to move seamlessly with the body, ensuring that you feel at ease throughout the day.",
+
+        features: [
+            "Material: Cotton",
+            "Fit type: casual fit",
+            "Sleeve Type: Long Sleeves",
+            "Length: Standard Length",
+            
+        ],
+
+        amazonLink:
+           "https://link.amazon/B0cXVbdze",
+
+    variations: null
+    },
+
+    {    
+        id: 24,
+
+        asin:
+        "B0DTG86V7Y",
+
+        name:
+            "Man Comfort Slim Fit Pure Cotton Checked Casual Shirt",
+
+        category:
+            "Shirts",
+        collection: "Check Shirts",
+
+        price:
+            "599",
+
+        badge:
+            "Casual wear",
+
+        image:
+            "images/prd24vr1img1.png",
+
+        images: [
+            "images/prd24vr1img1.png",
+            "images/prd24vr1img2.png",
+            "images/prd24vr1img3.png",
+            "images/prd24vr1img4.png",
+            "images/prd24vr1img5.png"
+        ],
+
+        description:
+            "Fabric - Premium Cotton, Pre-Washed for extremely soft finish and No Shrinkage Post Washing. Details: Comes with a classic button-down front, one patch pocket,a standard collar, and full-length sleeves with adjustable cuffs for a polished yet casual vibe.",
+
+        features: [
+            "Material: Cotton",
+            "Fit type: casual fit",
+            "Sleeve Type: Long Sleeves",
+            "Length: Standard Length",
+            
+        ],
+
+        amazonLink:
+           "https://link.amazon/B0gLvpjjE",
+
+    variations: null
+    },
+
+    {    
+        id: 25,
+
+        asin:
+            "B0HJCV4NGL",
+
+        name:
+            "Men's Cotton Check Casual Shirt for Men Stylish | Regular Fit Full Sleeve.",
+
+        category:
+            "Shirts",
+        collection: "Check Shirts",
+
+        price:
+            "499",
+
+        badge:
+            "Casual wear",
+
+        image:
+            "images/prd25vr1img1.png",
+
+        images: [
+            "images/prd25vr1img1.png",
+            "images/prd25vr1img2.png",
+            "images/prd25vr1img3.png",
+            "images/prd25vr1img4.png",
+            "images/prd25vr1img5.png"
+        ],
+
+        description:
+            "Premium Cotton Blend Fabric: Soft, breathable cotton shirt for men for all-day comfort.Stylish Check Design: Trendy checks create a modern casual look.Regular Fit: Comfortable fit with full sleeves and classic button-down collar.",
+
+        features: [
+            "Material: Cotton",
+            "Fit type: casual fit",
+            "Sleeve Type: Long Sleeves",
+            "Length: Standard Length",
+            
+        ],
+
+        amazonLink:
+           "https://link.amazon/B0fbEzHq1",
+
+    variations: null
+    },
+
+
 ] 
