@@ -23,7 +23,7 @@ const products = [
         category: "Shirts",
         collection: "Check Shirts",
 
-        price: "499",
+        price: "495",
 
         rating: 3.4,
 
@@ -73,7 +73,7 @@ const products = [
         collection: "Full sleeve without collar",
 
         price:
-            "373",
+            "398",
 
         rating:
             3.9,
@@ -133,7 +133,7 @@ const products = [
                     ],
 
                     price:
-                        "373",
+                        "398",
 
                     asin:
                         "CHILD_ASIN_1",
@@ -179,7 +179,7 @@ const products = [
                     ],
 
                     price:
-                        "373",
+                        "398",
 
                     asin:
                         "CHILD_ASIN_2",
@@ -224,7 +224,7 @@ const products = [
                     ],
 
                     price:
-                        "373",
+                        "398",
 
                     asin:
                         "CHILD_ASIN_2",
@@ -269,7 +269,7 @@ const products = [
                     ],
 
                     price:
-                        "373",
+                        "398",
 
                     asin:
                         "CHILD_ASIN_2",
@@ -314,7 +314,7 @@ const products = [
                     ],
 
                     price:
-                        "373",
+                        "398",
 
                     asin:
                         "CHILD_ASIN_2",
@@ -359,7 +359,7 @@ const products = [
                     ],
 
                     price:
-                        "373",
+                        "398",
 
                     asin:
                         "CHILD_ASIN_2",
@@ -599,7 +599,7 @@ const products = [
         collection: "Oversize",
 
         price:
-            "329",
+            "299",
 
         rating:
             3.7,
@@ -661,7 +661,7 @@ const products = [
                     ],
 
                     price:
-                        "329",
+                        "299",
 
                     asin:
                         "B0GQJJYKCK",
@@ -706,7 +706,7 @@ const products = [
                     ],
 
                     price:
-                        "329",
+                        "299",
 
                     asin:
                         "B0GQJ4B1YK",
@@ -1540,7 +1540,7 @@ const products = [
         collection: "Oversize",
 
         price:
-            "329",
+            "349",
 
         rating:
             3.5,
@@ -1603,7 +1603,7 @@ const products = [
                     ],
 
                     price:
-                        "329",
+                        "349",
 
                     asin:
                         "B0GWXJ26QM",
@@ -1648,7 +1648,7 @@ const products = [
                     ],
 
                     price:
-                        "329",
+                        "349",
 
                     asin:
                         "B0GWXBKY4G",
@@ -1896,7 +1896,7 @@ const products = [
         collection: "Pullover Hoodies",
 
         price:
-            "529",
+            "579",
 
         rating:
             3.8,
@@ -1961,7 +1961,7 @@ const products = [
                     ],
 
                     price:
-                        "529",
+                        "579",
 
                     asin:
                         "B0DBDMYWK3",
@@ -2009,7 +2009,7 @@ const products = [
                     ],
 
                     price:
-                        "529",
+                        "579",
 
                     asin:
                         "B0DBDP7RMN",
@@ -2057,7 +2057,7 @@ const products = [
         collection: "Pullover Hoodies",
 
         price:
-            "799",
+            "849",
 
         rating:
             3.9,
@@ -2120,7 +2120,7 @@ const products = [
                     ],
 
                     price:
-                        "799",
+                        "849",
 
                     asin:
                         "B0CJJ7KDJZ",
@@ -2259,7 +2259,7 @@ const products = [
         collection: "Full sleeve without collar",
 
         price:
-            "345",
+            "365",
 
         badge:
             "Casual Wear",
@@ -2304,7 +2304,7 @@ const products = [
         collection: "Full sleeve without collar",
 
         price:
-            "549",
+            "currently unavailable",
 
         badge:
             "Regular Wear",
@@ -2349,7 +2349,7 @@ const products = [
         collection: "Full sleeve without collar",
 
         price:
-            "879",
+            "999",
 
         badge:
             "Gym slim fit",
@@ -2583,7 +2583,7 @@ const products = [
         collection: "Check Shirts",
 
         price:
-            "525",
+            "489",
 
         badge:
             "Casual wear",
@@ -2706,6 +2706,54 @@ const products = [
 
         amazonLink:
            "https://link.amazon/B0fbEzHq1",
+
+    variations: null
+    },
+
+    {    
+        id: 26,
+
+        asin:
+            "B0DL62Y49G",
+
+        name:
+            "Solid Hoodie for Men Stylish Huddy for Men Regular Fit Sweatshirts for Boys .",
+
+        category:
+            "Hoodies",
+        collection: "Pullover Hoodies",
+
+        price:
+            "599",
+
+        badge:
+            "Winter wear",
+
+        image:
+            "images/prd26vr1img1.png",
+
+        images: [
+            "images/prd26vr1img1.png",
+            "images/prd26vr1img2.png",
+            "images/prd26vr1img3.png",
+            "images/prd26vr1img4.png",
+            "images/prd26vr1img5.png"
+        ],
+
+        description:
+            "STYLE & ULTIMATE COMFORT HOODIES: Embrace classic style without compromising on comfort with our hoodie for men. It's expertly crafted from a premium cotton blend that not only feels exceptionally soft against your skin but also provides lasting comfort throughout the day. ",
+
+        features: [
+            "Material: Cotton",
+            "Fit type: casual fit",
+            "Sleeve Type: Long Sleeves",
+            "Length: Standard Length",
+            "Item Weight: 440 G"
+            
+        ],
+
+        amazonLink:
+           "https://link.amazon/B04Jfs9L6",
 
     variations: null
     },
