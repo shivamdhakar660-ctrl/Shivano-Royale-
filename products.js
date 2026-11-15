@@ -2758,5 +2758,99 @@ const products = [
     variations: null
     },
 
+    {    
+        id: 27,
+
+        asin:
+            "B0FK9MGK2Q",
+
+        name:
+            "Sweatshirt for Unisex || Unisex Hoodie and Sweatshirt",
+
+        category:
+            "Hoodies",
+        collection: "Pullover Hoodies",
+
+        price:
+            "599",
+
+        badge:
+            "Winter wear",
+
+        image:
+            "images/prd27vr1img1.png",
+
+        images: [
+            "images/prd27vr1img1.png",
+            "images/prd27vr1img2.png",
+            "images/prd27vr1img3.png",
+            "images/prd27vr1img4.png",
+            "images/prd27vr1img5.png"
+        ],
+
+        description:
+            "Hoodies || Sweatshirt for Unisex || Unisex Hoodie. Actual Products color may vary with product due to monitor settings. Wash care: machine wash cold, tumble dry low, do not bleach. Check our size chart to get your best fit",
+
+        features: [
+            "Material: Cotton",
+            "Fit type: casual fit",
+            "Sleeve Type: Long Sleeves",
+            "Length: Standard Length",
+            
+        ],
+
+        amazonLink:
+           "https://link.amazon/B0b9GFlRT",
+
+    variations: null
+    },
+
+    {    
+        id: 28,
+
+        asin:
+            "B0CJR9QBY7",
+
+        name:
+            "Unisex Woolen Blend Hooded Neck Hoodie",
+
+        category:
+            "Hoodies",
+        collection: "Pullover Hoodies",
+
+        price:
+            "599",
+
+        badge:
+            "Winter wear",
+
+        image:
+            "images/prd28vr1img1.png",
+
+        images: [
+            "images/prd28vr1img1.png",
+            "images/prd28vr1img2.png",
+            "images/prd28vr1img3.png",
+            "images/prd28vr1img4.png",
+            "images/prd28vr1img5.png"
+        ],
+
+        description:
+            "Soft and Breathable Fabric: Crafted Hooie from Wool Blend soft and breathable that keep you Warm and comfortable throughout the day.Style Point : Hoodie with Printed gives a trendy yet Casual look. Durable stitching and Quality finish makes this Product a must have this Winter.",
+
+        features: [
+            "Material: Woollen",
+            "Fit type: casual fit",
+            "Sleeve Type: Long Sleeves",
+            "Length: Standard Length",
+            
+        ],
+
+        amazonLink:
+           "https://link.amazon/B0fGF9fsm",
+
+    variations: null
+    },
+
 
 ] 
