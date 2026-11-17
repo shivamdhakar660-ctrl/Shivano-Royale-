@@ -2536,7 +2536,7 @@ const products = [
         collection: "Check Shirts",
 
         price:
-            "413",
+            "467",
 
         badge:
             "Casual wear",
@@ -2583,7 +2583,7 @@ const products = [
         collection: "Check Shirts",
 
         price:
-            "489",
+            "476",
 
         badge:
             "Casual wear",
