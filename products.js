@@ -2536,7 +2536,7 @@ const products = [
         collection: "Check Shirts",
 
         price:
-            "467",
+            "503",
 
         badge:
             "Casual wear",
@@ -2851,6 +2851,105 @@ const products = [
 
     variations: null
     },
+
+    {    
+        id: 29,
+
+        asin:
+            "B0HKDQ4GTL",
+
+        name:
+            "Men’s Baggy Striped Relaxed Oversized Fit Track Pant | Cotton Rich Fabric",
+
+        category:
+            "Bottoms",
+        collection: "Track Pants",
+
+        price:
+            "469",
+
+        badge:
+            "Relaxed wear",
+
+        image:
+            "images/prd29vr1img1.png",
+
+        images: [
+            "images/prd29vr1img1.png",
+            "images/prd29vr1img2.png",
+            "images/prd29vr1img3.png",
+            "images/prd29vr1img4.png",
+            "images/prd29vr1img5.png"
+        ],
+
+        description:
+            "Soft, breathable, and made from environment-friendly cotton for all-day comfort. Modern oversized silhouette with signature side stripe detailing for a stylish streetwear look. Conveniently designed to carry your phone, wallet, keys, and other daily essentials.Elastic waistband with an adjustable drawstring for a secure and personalized fit.",
+
+        features: [
+            "Colour: Beige",
+            "Rise Style: Mid Style",
+            "Pattern: Stripped",
+            "Closure Type: Drawstring",
+            "Fit type: casual fit",
+            "Length: Standard Length",
+            
+        ],
+
+        amazonLink:
+           "https://link.amazon/B0bX0Pn6a",
+
+    variations: null
+    },
+
+    {    
+        id: 30,
+
+        asin:
+            "B0H4NGCF1C",
+
+        name:
+            "Track Pants for Man. Lower. Pants for Men",
+
+        category:
+            "Bottoms",
+        collection: "Track Pants",
+        price:
+            "599",
+
+        badge:
+            "Casual wear",
+
+        image:
+            "images/prd30vr1img1.png",
+
+        images: [
+            "images/prd30vr1img1.png",
+            "images/prd30vr1img2.png",
+            "images/prd30vr1img3.png",
+            "images/prd30vr1img4.png",
+            "images/prd30vr1img5.png"
+        ],
+
+        description:
+            "Lightweight Stretch Material: Mens track pants s made with lightweight four way stretch fabric, which provides a comfortable and soft experience for daily casual wearOpen Bottom Pants: Loose fit jogging pants with straight leg design offers a roomy feel, enhances the range of motion and easy to match various sports shoes or clothes",
+
+        features: [
+            "Colour: Black2",
+            "Rise Style: Mid Style",
+            "Pattern: Stripped",
+            "Closure Type: Drawstring",
+            "Fit type: casual fit",
+            "Length: Standard Length",
+            
+        ],
+
+        amazonLink:
+           "https://link.amazon/B09rtIztx",
+
+    variations: null
+    },
+
+
 
 
 ] 
