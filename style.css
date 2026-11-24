@@ -4608,3 +4608,71 @@ body:not(.home-page) main {
         font-size: 12px;
     }
 }
+
+/* =========================================
+   PRODUCT CARD - BRAND, TITLE, PRICE
+========================================= */
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    padding: 12px !important;
+}
+
+.product-brand {
+    display: block;
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.product-title {
+    font-size: 14px !important;
+    line-height: 1.35 !important;
+    margin: 0 0 8px !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: 40px;
+    overflow: hidden;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+
+.product-description,
+.product-rating,
+.product-price-note {
+    display: none !important;
+}
+
+.product-bottom {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+    margin-top: auto !important;
+    min-height: auto !important;
+}
+
+.product-price {
+    font-size: 19px !important;
+    font-weight: 700;
+}
+
+.product-actions {
+    width: 100% !important;
+}
+
+.amazon-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+    min-height: 38px !important;
+    border-radius: 30px !important;
+    font-size: 13px !important;
+    font-weight: 600;
+}

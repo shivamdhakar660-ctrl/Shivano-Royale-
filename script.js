@@ -390,8 +390,7 @@ CREATE PRODUCT CARD
 
 function createProductCard(product) {
 
-    const isSaved =
-        wishlist.includes(product.id);
+    const isSaved = wishlist.includes(product.id);
 
     const brandName =
         product.brand ||
@@ -400,7 +399,6 @@ function createProductCard(product) {
         "";
 
     return `
-
         <article
             class="product-card"
             data-product-id="${product.id}"
@@ -410,7 +408,7 @@ function createProductCard(product) {
 
                 <img
                     src="${product.image}"
-                    alt="${product.name}"
+                    alt="${escapeHtml(product.name || "Product")}"
                     loading="lazy"
                 >
 
@@ -430,14 +428,12 @@ function createProductCard(product) {
 
             <div class="product-info">
 
-                ${brandName ? `
-                    <span class="product-category">
-                        ${escapeHtml(brandName)}
-                    </span>
-                ` : ""}
+                <span class="product-brand">
+                    ${escapeHtml(brandName)}
+                </span>
 
                 <h3 class="product-title">
-                    ${product.name}
+                    ${escapeHtml(product.name || "")}
                 </h3>
 
                 <div class="product-bottom">
@@ -454,7 +450,7 @@ function createProductCard(product) {
                             rel="nofollow sponsored noopener"
                             class="amazon-btn"
                         >
-                            Amazon ↗
+                            Shop Now
                         </a>
 
                     </div>
@@ -464,12 +460,8 @@ function createProductCard(product) {
             </div>
 
         </article>
-
     `;
 }
-
-
-
 
 /* =====================================================
 
