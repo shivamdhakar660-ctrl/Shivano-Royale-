@@ -2955,6 +2955,8 @@ const products = [
         asin:
             "B0FVSZ1RGZ",
 
+        Brand:"hii",    
+
         name:
             "Light Fit Straight Fit Track Pant for Men | Lower for Men | Gym Trackpants",
 

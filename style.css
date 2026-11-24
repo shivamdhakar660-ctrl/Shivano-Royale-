@@ -4531,3 +4531,80 @@ body:not(.home-page) main {
     line-clamp: unset !important;
     overflow-wrap: anywhere;
 }
+/* =========================================
+   SHIVANO - COMPACT MOBILE PRODUCT CARDS
+========================================= */
+
+@media (max-width: 600px) {
+
+    .product-card {
+        height: 325px !important;
+        min-height: 325px !important;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    /* Image size same */
+    .product-image {
+        flex-shrink: 0;
+    }
+
+    /* Details section */
+    .product-info {
+        height: 165px !important;
+        min-height: 165px !important;
+        padding: 10px !important;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Brand name */
+    .product-category {
+        font-size: 10px;
+        margin-bottom: 4px;
+    }
+
+    /* Product title */
+    .product-title {
+        font-size: 14px !important;
+        line-height: 1.3;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: 38px;
+        margin: 2px 0 7px !important;
+        overflow: hidden;
+    }
+
+    /* Remove extra information */
+    .product-description,
+    .product-rating,
+    .product-price-note {
+        display: none !important;
+    }
+
+    /* Price and button */
+    .product-bottom {
+        margin-top: auto !important;
+        min-height: auto !important;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 7px;
+    }
+
+    .product-price {
+        font-size: 17px !important;
+    }
+
+    .product-actions {
+        width: 100%;
+    }
+
+    .amazon-btn {
+        width: 100%;
+        min-height: 36px;
+        text-align: center;
+        font-size: 12px;
+    }
+}

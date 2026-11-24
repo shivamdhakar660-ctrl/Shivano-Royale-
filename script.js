@@ -388,153 +388,84 @@ CREATE PRODUCT CARD
 
 ===================================================== */
 
-
 function createProductCard(product) {
 
+    const isSaved =
+        wishlist.includes(product.id);
 
-const isSaved =
+    const brandName =
+        product.brand ||
+        product.brandName ||
+        product.manufacturer ||
+        "";
 
-wishlist.includes(product.id);
+    return `
 
+        <article
+            class="product-card"
+            data-product-id="${product.id}"
+        >
 
+            <div class="product-image">
 
-return `
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                    loading="lazy"
+                >
 
+                <span class="product-badge">
+                    ${product.badge || ""}
+                </span>
 
-<article
+                <button
+                    class="wishlist-btn ${isSaved ? "saved" : ""}"
+                    data-wishlist="${product.id}"
+                    aria-label="Add to wishlist"
+                >
+                    ${isSaved ? "♥" : "♡"}
+                </button>
 
-class="product-card"
+            </div>
 
-data-product-id="${product.id}"
+            <div class="product-info">
 
->
+                ${brandName ? `
+                    <span class="product-category">
+                        ${escapeHtml(brandName)}
+                    </span>
+                ` : ""}
 
+                <h3 class="product-title">
+                    ${product.name}
+                </h3>
 
-<div class="product-image">
+                <div class="product-bottom">
 
+                    <div class="product-price">
+                        ₹${Number(product.price).toLocaleString("en-IN")}
+                    </div>
 
-<img
+                    <div class="product-actions">
 
-src="${product.image}"
+                        <a
+                            href="${product.amazonLink}"
+                            target="_blank"
+                            rel="nofollow sponsored noopener"
+                            class="amazon-btn"
+                        >
+                            Amazon ↗
+                        </a>
 
-alt="${product.name}"
+                    </div>
 
-loading="lazy"
+                </div>
 
->
+            </div>
 
+        </article>
 
-
-<span class="product-badge">
-
-${product.badge}
-
-</span>
-
-
-
-<button
-
-class="wishlist-btn ${isSaved ? "saved" : ""}"
-
-data-wishlist="${product.id}"
-
-aria-label="Add to wishlist"
-
->
-
-${isSaved ? "♥" : "♡"}
-
-</button>
-
-
-</div>
-
-
-
-<div class="product-info">
-
-
-<span class="product-category">
-
-${product.category}
-
-</span>
-
-
-
-<h3 class="product-title">
-
-${product.name}
-
-</h3>
-
-
-
-<p class="product-description">
-
-${product.description}
-
-</p>
-
-
-
-<div class="product-bottom">
-
-
-<div class="product-price">
-
-
-₹${Number(product.price).toLocaleString("en-IN")}
-
-
-<span class="product-price-note">
-
-Check latest price on Amazon ↗
-
-</span>
-
-
-</div>
-
-
-
-<div class="product-actions">
-
-
-
-<a
-
-href="${product.amazonLink}"
-
-target="_blank"
-
-rel="nofollow sponsored noopener"
-
-class="amazon-btn"
-
->
-
-Amazon ↗
-
-</a>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-</article>
-
-
-`;
-
-
+    `;
 }
 
 
