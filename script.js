@@ -869,176 +869,40 @@ renderProducts();
 
 }
 
-
-
-
 /* =====================================================
-
-PRODUCT DETAILS
-
+   PRODUCT CARD → DIRECT AMAZON AFFILIATE LINK
 ===================================================== */
 
+document.addEventListener("click", function (event) {
 
-document.addEventListener(
+    // Wishlist button ko normal kaam karne do
+    if (event.target.closest("[data-wishlist]")) {
+        return;
+    }
 
-"click",
+    // Amazon button ka apna link already hai
+    if (event.target.closest(".amazon-btn")) {
+        return;
+    }
 
-function (event) {
+    const productCard = event.target.closest(".product-card");
 
+    if (!productCard) {
+        return;
+    }
 
+    const productId = Number(productCard.dataset.productId);
 
-/* Amazon link clicked */
+    const product = products.find(item =>
+        Number(item.id) === productId
+    );
 
+    if (!product || !product.amazonLink) {
+        return;
+    }
 
-if (
-
-event.target.closest(".amazon-btn")
-
-) {
-
-
-return;
-
-
-}
-
-
-
-/* Wishlist button clicked */
-
-
-if (
-
-event.target.closest("[data-wishlist]")
-
-) {
-
-
-return;
-
-
-}
-
-
-
-/* Details button clicked */
-
-
-const detailsButton =
-
-event.target.closest(
-
-"[data-details]"
-
-);
-
-
-
-if (detailsButton) {
-
-
-const productId =
-
-Number(
-
-detailsButton.dataset.details
-
-);
-
-
-
-openProductModal(productId);
-
-
-return;
-
-
-}
-
-
-
-/* Product card clicked */
-
-
-const productCard =
-
-event.target.closest(
-
-".product-card"
-
-);
-
-
-
-if (!productCard) {
-
-
-return;
-
-
-}
-
-
-
-const productId =
-
-Number(
-
-productCard.dataset.productId
-
-);
-
-
-
-if (!productId) {
-
-
-return;
-
-
-}
-
-
-
-openProductModal(productId);
-
-
-}
-
-);
-
-
-
-
-function openProductModal(productId) {
-
-
-const product =
-
-products.find(
-
-item => item.id === productId
-
-);
-
-
-
-if (!product) {
-
-
-return;
-
-
-}
-
-
-
-window.location.href =
-
-`product.html?id=${product.id}`;
-
-
-}
+    window.location.href = product.amazonLink;
+});
 
 
 

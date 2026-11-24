@@ -2949,7 +2949,51 @@ const products = [
     variations: null
     },
 
+     {    
+        id: 31,
 
+        asin:
+            "B0FVSZ1RGZ",
 
+        name:
+            "Light Fit Straight Fit Track Pant for Men | Lower for Men | Gym Trackpants",
 
+        category:
+            "Bottoms",
+        collection: "Track Pants",
+        price:
+            "398",
+
+        badge:
+            "Casual wear",
+
+        image:
+            "images/prd31vr1img1.png",
+
+        images: [
+            "images/prd31vr1img1.png",
+            "images/prd31vr1img2.png",
+            "images/prd31vr1img3.png",
+            "images/prd31vr1img4.png",
+            "images/prd31vr1img5.png"
+        ],
+
+        description:
+            "Material: 100% lightweight polyester – breathable, quick-dry, and durable.Fit: Relaxed, straight-leg design for easy movement.Design: Solid dark base with a contrasting side stripe and piping for a sporty look.Waistband: Elastic waistband with adjustable drawstring for a custom fit.Pockets: Two roomy side pockets for convenience.",
+
+        features: [
+            "Colour: Dark Grey",
+            "Rise Style: High Rise",
+            "Pattern: Solid",
+            "Closure Type: Zipper",
+            "Fit type: Straight",
+            "Length: Standard Length",
+            
+        ],
+
+        amazonLink:
+           "https://link.amazon/B024twxrK",
+
+    variations: null
+    },
 ] 
